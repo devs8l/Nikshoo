@@ -31,6 +31,7 @@
 
 .left-content p {
     margin-top: -2vh;
+    color: white;
 }
 
 .left-content h2 {
@@ -45,7 +46,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background: #000;
+    background: #ffffff;
 }
 
 .img-div img {
@@ -72,7 +73,7 @@ li {
 
 .navlink {
     text-decoration: none;
-    color: #363737;
+    color: #ffffff;
     font-weight: 300;
     font-family: Jakarta-med;
     position: relative;

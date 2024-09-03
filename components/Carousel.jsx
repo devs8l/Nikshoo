@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import heroimg from "../assets/hero4.png"
+import heroimg from "../assets/hero-new.png"
 import { Autoplay } from 'swiper/modules';
 
 
