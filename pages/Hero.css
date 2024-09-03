@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Jakarta';
+    src: url(../assets/fonts/PlusJakartaSans-Regular.ttf);
+}
+@font-face {
+    font-family: 'Jakarta-l';
+    src: url(../assets/fonts/PlusJakartaSans-Light.ttf);
+}
+.hero-wrapper{
+    overflow-x: hidden;
+    position: relative;
+    font-family: Jakarta;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+.hero-content{
+    width: 32%;
+    height: 50%;
+    position: absolute;
+    top: 35%;
+    z-index: 100;
+    left: 13%;
+}
+.hero-content h1{
+    font-size: 3vw;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.hero-content p{
+    width: 90%;
+    font-size: 1.3vw;
+    color: rgb(221, 219, 219);
+    font-family: Jakarta-l;
+    font-weight: 100;
+}
+
+.hero-content button{
+    height: 6vh;
+    width: 7vw;
+    border-radius: 30px;
+    background-color: #23AA9B;
+    border: none;
+    cursor: pointer;
+    color: white;
+}

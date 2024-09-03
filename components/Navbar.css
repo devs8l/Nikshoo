@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'Jakarta';
+    src: url(../assets/fonts/PlusJakartaSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Jakarta-med';
+    src: url(../assets/fonts/PlusJakartaSans-Medium.ttf);
+}
+
+.navbar-wrap {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    font-family: Jakarta;
+}
+
+.nav-left {
+    height: 80%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.left-content p {
+    margin-top: -2vh;
+}
+
+.left-content h2 {
+    color: #23AA9B;
+    position: relative;
+}
+
+.left-content h2::after {
+    content: '';
+    width: 70%;
+    height: 1px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #000;
+}
+
+.img-div img {
+    height: 6vh;
+}
+
+
+
+.nav-right {
+    width: 80%;
+    height: 50%;
+}
+
+.nav-right ul {
+    display: flex;
+    width: 100%;
+    gap: 2vw;
+}
+
+li {
+    color: rgba(255, 255, 255, 0);
+    text-decoration: none;
+}
+
+.navlink {
+    text-decoration: none;
+    color: black;
+    font-weight: 300;
+    font-family: Jakarta-med;
+    position: relative;
+}
+
+.navlink::after {
+    content: '';
+    position: absolute;
+    top: 120%;
+    left: 0%;
+    height: 2px;
+    width: 100%;
+    background-color: #23AA9B;
+    transform: scaleX(0);
+    /* Start hidden by scaling X to 0 */
+    transform-origin: left;
+    /* Start the scaling effect from the left */
+    transition: transform 0.3s ease;
+    /* Smooth transition for the effect */
+}
+.navlink:hover::after {
+    transform: scaleX(1); /* Scale to full width on hover */
+}
