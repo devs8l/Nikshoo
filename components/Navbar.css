@@ -12,9 +12,9 @@
     width: 100vw;
     height: 10vh;
     display: flex;
-    position: fixed;
+    position: absolute;
     z-index: 100;
-    background: white;
+    /* background: white; */
     justify-content: center;
     align-items: center;
     font-family: Jakarta;
@@ -72,7 +72,7 @@ li {
 
 .navlink {
     text-decoration: none;
-    color: black;
+    color: #363737;
     font-weight: 300;
     font-family: Jakarta-med;
     position: relative;

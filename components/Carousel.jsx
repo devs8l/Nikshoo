@@ -1,7 +1,9 @@
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import heroimg from "../assets/hero.png"
+import heroimg from "../assets/hero4.png"
+import { Autoplay } from 'swiper/modules';
+
 
 // Import Swiper styles
 import 'swiper/css';
@@ -16,11 +18,15 @@ export default function Carousel() {
   return (
     <>
       <Swiper
-        spaceBetween={30}
+        spaceBetween={0}
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination]}
+        autoplay={{
+          delay: 3500, // Delay between slides (in ms)
+          disableOnInteraction: false, // Continue autoplay after user interactions
+        }}
+        modules={[Pagination,Autoplay]}
         className="mySwiper"
         
       >
