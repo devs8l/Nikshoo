@@ -21,14 +21,20 @@ import bank1 from "../assets/bank1.png"
 import bank2 from "../assets/bank2.png"
 import sbi from "../assets/sbi.png"
 
+import gal from "../assets/gallery.png"
+
 import Footer from '../components/Footer'
 
+import filus from "../assets/footer-ilus.png"
+
+import { Rotate } from '../components/Rotate'
+import GetInTouch from '../components/GetInTouch'
 
 
 const Hero = () => {
   return (
     <div className='hero-wrapper'>
-      <Navbar></Navbar>
+      {/* <Navbar></Navbar> */}
       <div className="container">
         <Carousel></Carousel>
       </div>
@@ -156,12 +162,23 @@ const Hero = () => {
             <img src={bob} alt="" />
             <img src={sbi} alt="" />
             <img src={aziva} alt="" />
-            
           </div>
         </div>
       </div>
+      <Rotate></Rotate>
 
-      <Footer></Footer>
+      <div className="gallery">
+        <h1>Gallery</h1>
+        <p>Have a look at our elegant and eco-friendly furnitures</p>
+        <div className="gal-img-div">
+          <img src={gal} alt="" />
+        </div>
+      </div>
+      <GetInTouch></GetInTouch>
+      <div className="footer-ilus">
+        <img src={filus} alt="" />
+      </div>
+      
     </div>
   )
 }

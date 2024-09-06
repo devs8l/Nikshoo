@@ -9,24 +9,28 @@
 }
 
 .navbar-wrap {
-    width: 100vw;
+    width: 100%;
     height: 10vh;
     display: flex;
+    overflow: hidden;
     position: absolute;
     z-index: 100;
-    /* background: white; */
+    /* background: pink; */
     justify-content: center;
     align-items: center;
     font-family: Jakarta;
+    margin-top: 0.5vw;
 }
 
 .nav-left {
     height: 80%;
-    width: 50%;
+    width: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1vw;
+    padding-left: 7vw;
+    /* background: #000; */
 }
 
 .left-content p {
@@ -63,7 +67,7 @@
 .nav-right ul {
     display: flex;
     width: 100%;
-    gap: 2vw;
+    gap: 4vw;
 }
 
 li {
@@ -97,3 +101,22 @@ li {
 .navlink:hover::after {
     transform: scaleX(1); /* Scale to full width on hover */
 }
+.navlink.active::after{
+    transform: scaleX(1);
+    
+}
+.hero-nav .navlink {
+    color: white;
+}
+
+.other-nav .navlink {
+    color: black;
+}
+.other-nav .left-content p {
+    color: black;
+}
+
+.other-nav .left-content h2::after {
+    background: #000000;
+}
+

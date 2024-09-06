@@ -1,0 +1,124 @@
+.gi-wrap{
+    width: 100vw; 
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .gi-box{
+     width: 70%;
+     height: 60%;
+     border: 1px solid gray;
+     border-bottom-left-radius: 70px;
+     border-top-right-radius: 70px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ .gi-left{
+     width: 30%;
+     height: 70%;
+     border-right: 2px solid rgba(128, 128, 128, 0.189);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ .gi-left h1{
+     position: relative;
+     text-align: center;
+ }
+ .gi-left h1::after{
+     content: '';
+     position: absolute;
+     height: 2px;
+     width: 50%;
+     background: #0000005a;
+     top: 100%;
+     left: 0;
+     margin-top: 2vw;
+ 
+ }
+
+
+
+.gi-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: #f7f7f7; */
+    padding: 2rem;
+    border-radius: 10px;
+    width: 50%;
+    height: 60%;
+    
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.form-container h2 {
+    font-size: 24px;
+    color: teal;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form structure */
+.project-form {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.form-con{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 4vw;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input {
+    padding:7px;
+    border: none;
+    /* border-radius: 5px; */
+    font-size: 16px;
+    width: 50%;
+    border-bottom:2px solid rgba(88, 84, 84, 0.303) ;
+}
+
+.form-group input:focus {
+    /* border-color: teal; */
+    outline: none;
+
+}
+
+/* Submit button styling */
+.submit-btn {
+    padding: 10px 15px;
+    background-color: teal;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 60%;
+    margin: auto;
+    margin-top: 1vw;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: darkslategray;
+}
+
+

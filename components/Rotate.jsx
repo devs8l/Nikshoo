@@ -1,0 +1,195 @@
+import React, { useState } from 'react';
+import '../components/Rotate.css';
+import coencircles from "../assets/circles.png";
+import centerpiece from "../assets/center-left.png";
+import eduImg from "../assets/mg4.png";
+import med from "../assets/mg2.png";
+import Kitchen from "../assets/mg5.png";
+import rec from "../assets/rec.png";
+import lab from "../assets/mg3.png";
+import officetop from "../assets/office-top.png";
+import officeleft from "../assets/office-b-l.png";
+import officeright from "../assets/office-b-r.png";
+
+export const Rotate = () => {
+    const [activeContent, setActiveContent] = useState('Click on a circle to display content');
+    const [activeImage, setActiveImage] = useState(centerpiece);
+    const [activeElectron, setActiveElectron] = useState(1);
+
+    const circles = [
+        {
+            id: 1,
+            heading: 'Office Space',
+            content: 'Content for Office Space',
+            image: centerpiece,
+            rightTop: {
+                h3: 'Dream Office',
+                h1: 'Office Desk',
+                para: 'Beautiful Color Collection',
+                image: officetop
+            },
+            bottomLeft: {
+                h1: 'Rotational Chairs',
+                image: officeleft
+            },
+            bottomRight: {
+                h1: 'Modern Chairs',
+                image: officeright
+            }
+        },
+        {
+            id: 2,
+            heading: 'Education Space',
+            content: 'Content for Education Space',
+            image: eduImg,
+            rightTop: {
+                h3: 'Education Office',
+                h1: 'Office Desk',
+                para: 'Beautiful Color Collection',
+                image: officetop
+            },
+            bottomLeft: {
+                h1: 'Rotational Chairs',
+                image: officeleft
+            },
+            bottomRight: {
+                h1: 'Modern Chairs',
+                image: officeright
+            }
+        },
+        {
+            id: 3,
+            heading: 'Commercial Kitchen',
+            content: 'Content for Commercial Kitchen',
+            image: Kitchen,
+            rightTop: {
+                h3: 'Commercial Kitchen',
+                h1: 'Office Desk',
+                para: 'Beautiful Color Collection',
+                image: officetop
+            },
+            bottomLeft: {
+                h1: 'Rotational Chairs',
+                image: officeleft
+            },
+            bottomRight: {
+                h1: 'Modern Chairs',
+                image: officeright
+            }
+        },
+        {
+            id: 4,
+            heading: 'Healthcare Space',
+            content: 'Content for Healthcare Space',
+            image: med,
+            rightTop: {
+                h3: 'Healthcare Space',
+                h1: 'Office Desk',
+                para: 'Beautiful Color Collection',
+                image: officetop
+            },
+            bottomLeft: {
+                h1: 'Rotational Chairs',
+                image: officeleft
+            },
+            bottomRight: {
+                h1: 'Modern Chairs',
+                image: officeright
+            }
+        },
+        {
+            id: 5,
+            heading: 'Laboratory Space',
+            content: 'Content for Laboratory Space',
+            image: lab,
+            rightTop: {
+                h3: 'Laboratory Space',
+                h1: 'Office Desk',
+                para: 'Beautiful Color Collection',
+                image: officetop
+            },
+            bottomLeft: {
+                h1: 'Rotational Chairs',
+                image: officeleft
+            },
+            bottomRight: {
+                h1: 'Modern Chairs',
+                image: officeright
+            }
+        }
+    ];
+
+    const activeCircle = circles.find(circle => circle.id === activeElectron) || {};
+
+    const handleCircleClick = (content, image, id) => {
+        setActiveContent(content);
+        setActiveImage(image);
+        setActiveElectron(id);
+    };
+
+    return (
+        <div className="rotate-wrap">
+            <div className="heading-rotate">
+                <h1>Explore Our Solutions</h1>
+                <p>Enhance your spaces with the comfortable furniture crafted by us</p>
+            </div>
+            <div className="atomic-model">
+                <div className="left-div">
+                    <div className="circle-div">
+                        <img src={coencircles} alt="" />
+                    </div>
+                    <div className="nucleus">
+                        <img src={activeImage} className="central-image" alt="Central" />
+                        {circles.map((circle, index) => (
+                            <div
+                                key={circle.id}
+                                className={`electron electron-${index + 1} ${activeElectron === circle.id ? 'active' : ''}`}
+                                onMouseEnter={() => handleCircleClick(circle.content, circle.image, circle.id)}
+                            >
+                                <h4>{circle.heading}</h4>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className="right-div">
+                    {activeCircle.rightTop && (
+                        <div className="right-top">
+                            <img src={rec} alt="" className='right-img-ilus' />
+                            <div className="r-t-con">
+                                <h3>{activeCircle.rightTop.h3}</h3>
+                                <h1>{activeCircle.rightTop.h1}</h1>
+                                <p>{activeCircle.rightTop.para}</p>
+                                <a href="">View Collection</a>
+                            </div>
+                            <div className="r-t-img">
+                                <img src={activeCircle.rightTop.image} alt="" />
+                            </div>
+                        </div>
+                    )}
+                    {activeCircle.bottomLeft && (
+                        <div className="right-bottom">
+                            <div className="r-b-l">
+                                <div className="r-b-con">
+                                    <h1>{activeCircle.bottomLeft.h1}</h1>
+                                    <a href="">Shop Now</a>
+                                </div>
+                                <div className="r-b-img">
+                                    <img src={activeCircle.bottomLeft.image} alt="" />
+                                </div>
+                            </div>
+                            <div className="r-b-r">
+                                <div className="r-b-con">
+                                    <h1>{activeCircle.bottomRight.h1}</h1>
+                                    <a href="">Shop Now</a>
+                                </div>
+                                <div className="r-b-img">
+                                    <img src={activeCircle.bottomRight.image} alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+}

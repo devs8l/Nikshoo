@@ -1,17 +1,25 @@
 .footer-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.upper-part{
     width: 100vw;
-    height: 50vh;
+    height: 70vh;
     background: #13655B;
     display: flex;
     justify-content: center;
     align-items: center ;
+    color: white;
+    gap: 16vw;
 }
 .left-foot{
     display: flex;
     flex-direction: column;
-    width: 27%;
+    width: 23%;
     /* background: #e3b9b9; */
-    height: 100%;
+    height: 69%;
     color: white;
     justify-content: space-around;
     /* gap: 1vh; */
@@ -19,7 +27,7 @@
 
 .footer-logo{
     height: 20%;
-    width: 45%;
+    width: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,6 +39,7 @@
     margin-top: -2vh;
     color: white;
 }
+
 
 .footer-left-content h2 {
     color: #ffffff;
@@ -48,7 +57,7 @@
 }
 
 .footer-img-div img {
-    height: 6vh;
+    height: 8vh;
 }
 
 .icon-div-footer{
@@ -56,5 +65,48 @@
     align-items: center;
     justify-content: center;
     gap: 1vw;
-    width: 35%;
+    width: 40%;
+}
+
+.mid-foot{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.right-foot{
+    /* background: #000; */
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.c-top{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+.c-top-heading{
+    gap: 1vw;
+    display: flex;
+    width: 100%;
+    /* background: white; */
+    height: 5vh;
+    align-items: center;
+}
+.links-footer h3{
+    font-weight: 100;
+}
+
+.c-top p{
+    padding-left: 3vw;
+}
+
+
+.copyright{
+    width: 100%;
+    color: white;
+    background: #1A8074;
 }
