@@ -11,6 +11,12 @@
     position: relative;
     font-family: Jakarta;
 }
+.page1{
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+
+}
 
 
 .container{
@@ -25,22 +31,31 @@ video{
     opacity: 0.4;
 }
 .hero-content{
-    width: 32%;
+    width: 100%;
     height: 50%;
     position: absolute;
-    top: 4%;
+    top: 30%;
     z-index: 100;
-    left: 13%;
+    left: 0%;
+    /* background: #000; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 2vw;
+    
 }
 .hero-content h1{
     font-size: 3vw;
     color: white;
     font-weight: bold;
     letter-spacing: 2px;
+    margin-bottom: -1.1vw;
 }
 .hero-content p{
     width: 90%;
-    font-size: 1.3vw;
+    font-size: 1vw;
     color: rgb(221, 219, 219);
     font-family: Jakarta-l;
     font-weight: 100;
@@ -48,12 +63,12 @@ video{
 
 .hero-content button{
     height: 6vh;
-    width: 7vw;
-    border-radius: 30px;
-    background-color: white;
+    width: 9vw;
+    border-radius: 10px;
+    background-color: #23AA9B;
     border: none;
     cursor: pointer;
-    color: #23AA9B;
+    color: white;
 }
 
 
@@ -151,11 +166,12 @@ video{
 }
 .part3-img-div{
     width: 100%;
+    height: 100%;
 }
 
 .part3-img-div img{
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .part3 h2{

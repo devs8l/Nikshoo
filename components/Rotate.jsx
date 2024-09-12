@@ -13,6 +13,10 @@ import officeright from "../assets/office-b-r.png";
 
 import hbed from "../assets/bed-health.png"
 
+
+import kitchenRotate from "../assets/kitchen2.png"
+import labRotate from "../assets/lab2.png"
+
 export const Rotate = () => {
     const [activeContent, setActiveContent] = useState('Click on a circle to display content');
     const [activeImage, setActiveImage] = useState(centerpiece);
@@ -68,7 +72,7 @@ export const Rotate = () => {
                 h3: 'Commercial Kitchen',
                 h1: 'Office Desk',
                 para: 'Beautiful Color Collection',
-                image: officetop
+                image: kitchenRotate
             },
             bottomLeft: {
                 h1: 'Rotational Chairs',
@@ -88,7 +92,7 @@ export const Rotate = () => {
                 h3: 'Healthcare Space',
                 h1: 'Office Desk',
                 para: 'Beautiful Color Collection',
-                image: officetop
+                image: hbed
             },
             bottomLeft: {
                 h1: 'Rotational Chairs',
@@ -108,7 +112,7 @@ export const Rotate = () => {
                 h3: 'Laboratory Space',
                 h1: 'Office Desk',
                 para: 'Beautiful Color Collection',
-                image: officetop
+                image: labRotate
             },
             bottomLeft: {
                 h1: 'Rotational Chairs',
@@ -157,11 +161,14 @@ export const Rotate = () => {
                     {activeElectron === 3 || activeElectron === 4 || activeElectron === 5 ? (
                         <div className="custom-content">
                             <img src={rec} alt="" />
-                            <div className="r-t-con">
+                            <div className="custom-r-t-con">
                                 <h3>{activeCircle.rightTop.h3}</h3>
                                 <h1>{activeCircle.rightTop.h1}</h1>
                                 <p>{activeCircle.rightTop.para}</p>
                                 <a href="">View Collection</a>
+                            </div>
+                            <div className="custom-img-div">
+                                <img src={activeCircle.rightTop.image} alt="" />
                             </div>
                         </div>
                     ) : (

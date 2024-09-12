@@ -7,6 +7,9 @@ import righty from "../assets/righty.png"
 import border from "../assets/hero2.png"
 import office from "../assets/office.png"
 import edu from "../assets/edu.png"
+import health from "../assets/p2h.png"
+import kitchenImg from "../assets/p2k.png"
+import lab from "../assets/p2l.png"
 
 import v1 from "../assets/vector.png"
 import v2 from "../assets/vector2.png"
@@ -38,15 +41,17 @@ import heroVid from "../assets/hero-vid.mp4"
 const Hero = () => {
   return (
     <div className='hero-wrapper'>
-      {/* <Navbar></Navbar> */}
-      <div className="container">
-        {/* <Carousel></Carousel> */}
-        <video src={heroVid} autoPlay muted loop></video>
-      </div>
-      <div className="hero-content">
-        <h1>Amazing Furniture For Your Workspaces</h1>
-        <p>Enhance your spaces with the comfortable furniture crafted by us</p>
-        <button>Shop now</button>
+      <div className="page1">
+        {/* <Navbar></Navbar> */}
+        <div className="container">
+          {/* <Carousel></Carousel> */}
+          <video src={heroVid} autoPlay muted loop></video>
+        </div>
+        <div className="hero-content">
+          <h1>Furniture For The Future</h1>
+          <p>Elevate your spaces with innovative style, functionality and aesthetics</p>
+          <button>Get Started</button>
+        </div>
       </div>
 
       <div className="page2">
@@ -77,7 +82,7 @@ const Hero = () => {
         <div className="part3">
           <div className="part3-sub">
             <div className="part3-img-div">
-              <img src={office} alt="" />
+              <img src={health} alt="" />
             </div>
             <div className="part3-con">
               <h2>Healthcare Space</h2>
@@ -85,7 +90,7 @@ const Hero = () => {
           </div>
           <div className="part3-sub">
             <div className="part3-img-div">
-              <img src={office} alt="" />
+              <img src={lab} alt="" />
             </div>
             <div className="part3-con">
               <h2>Laboratory Space</h2>
@@ -93,7 +98,7 @@ const Hero = () => {
           </div>
           <div className="part3-sub">
             <div className="part3-img-div">
-              <img src={office} alt="" />
+              <img src={kitchenImg} alt="" />
             </div>
             <div className="part3-con">
               <h2>Commercial Kitchen</h2>
@@ -113,7 +118,7 @@ const Hero = () => {
         </div>
         <div className="page3-b">
           <div className="left-ilus">
-            <img src={lefty} alt="" />
+            <img src={lefty} alt="" />  
           </div>
           <div className="center-ilus">
             <img src={border} alt="" />
@@ -174,7 +179,7 @@ const Hero = () => {
       <Rotate></Rotate>
 
       <div className="gallery">
-        <h1>Gallery</h1>
+        <h1>Get Inspired</h1>
         <p>Have a look at our elegant and eco-friendly furnitures</p>
         <div className="gal-img-div">
           <img src={gal} alt="" />
@@ -184,7 +189,7 @@ const Hero = () => {
       <div className="footer-ilus">
         <img src={filus} alt="" />
       </div>
-      
+
     </div>
   )
 }

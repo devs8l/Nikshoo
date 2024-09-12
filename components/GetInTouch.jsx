@@ -39,7 +39,7 @@ const GetInTouch = () => {
         <div className="gi-wrap">
             <div className="gi-box">
                 <div className="gi-left">
-                    <h1>Get In Touch</h1>
+                    <h1>Space <br /> Transformation <br />Starts Here</h1>
                 </div>
                 <div className="gi-right">
                     <form onSubmit={handleSubmit} className="project-form">
