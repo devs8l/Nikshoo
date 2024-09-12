@@ -150,9 +150,10 @@
     height: 100%;
     background: #e9f7f5;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     gap: 0.4vw;
+    position: relative;
     
   }
   .right-div h1{
@@ -171,13 +172,16 @@
   .r-b-con{
     width: 30%;
     font-size: 0.7vw;
+    margin-left: 2vw;
     
   }
   .r-b-img{
-    width: 50%;
+    width: 70%;
     height: 100%;
     z-index: 1000;
-    position: relative;
+    position: absolute;
+    right: 0;
+
     
     
   }
@@ -189,13 +193,14 @@
   .r-b-r{
     width: 50%;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
-    padding: 0.4vw;
+    /* padding: 0.4vw; */
     
     height: 100%;
     border-radius: 10px;
     background: #e9f7f5;
+    position: relative;
   }
 
   
@@ -242,4 +247,24 @@
     color: teal;
     font-weight: 600;
     /* background: #000; */
+  }
+
+  .custom-content{
+    height: 100%;
+    width: 100%;
+    background: #e9f7f5;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+    
+  }
+
+  .custom-content img{
+    width: 20%;
+    height: 100%;
+    position: absolute;
   }

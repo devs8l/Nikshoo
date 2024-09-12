@@ -1,0 +1,42 @@
+.contact-wrap{
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    background: white;
+}
+.contact-wrap>img{
+    position: absolute;
+}
+
+.contact-hero{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+.contact-hero-left{
+    /* height: 70%; */
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}   
+.contact-hero-left h1{
+    font-size: 3vw;
+    font-weight: 700;
+    font-family: 'Jakarta-bold';
+}
+.contact-hero-left p{
+    width: 60%;
+}
+.contact-hero-right{
+    width: 30%;
+    height: 50%;
+}
+.contact-hero-right img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

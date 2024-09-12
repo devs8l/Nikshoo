@@ -30,13 +30,18 @@ import filus from "../assets/footer-ilus.png"
 import { Rotate } from '../components/Rotate'
 import GetInTouch from '../components/GetInTouch'
 
+import Clients from '../components/Clients'
+
+import heroVid from "../assets/hero-vid.mp4"
+
 
 const Hero = () => {
   return (
     <div className='hero-wrapper'>
       {/* <Navbar></Navbar> */}
       <div className="container">
-        <Carousel></Carousel>
+        {/* <Carousel></Carousel> */}
+        <video src={heroVid} autoPlay muted loop></video>
       </div>
       <div className="hero-content">
         <h1>Amazing Furniture For Your Workspaces</h1>
@@ -155,14 +160,15 @@ const Hero = () => {
 
         <div className="our-clients">
           <h1>Our clients</h1>
-          <div className="client-icons">
+          {/* <div className="client-icons">
             <img src={bank1} alt="" />
             <img src={aditya} alt="" />
             <img src={bank2} alt="" />
             <img src={bob} alt="" />
             <img src={sbi} alt="" />
             <img src={aziva} alt="" />
-          </div>
+          </div> */}
+          <Clients></Clients>
         </div>
       </div>
       <Rotate></Rotate>

@@ -11,6 +11,8 @@ import officetop from "../assets/office-top.png";
 import officeleft from "../assets/office-b-l.png";
 import officeright from "../assets/office-b-r.png";
 
+import hbed from "../assets/bed-health.png"
+
 export const Rotate = () => {
     const [activeContent, setActiveContent] = useState('Click on a circle to display content');
     const [activeImage, setActiveImage] = useState(centerpiece);
@@ -94,7 +96,7 @@ export const Rotate = () => {
             },
             bottomRight: {
                 h1: 'Modern Chairs',
-                image: officeright
+                image: hbed
             }
         },
         {
@@ -152,6 +154,59 @@ export const Rotate = () => {
                     </div>
                 </div>
                 <div className="right-div">
+                    {activeElectron === 3 || activeElectron === 4 || activeElectron === 5 ? (
+                        <div className="custom-content">
+                            <img src={rec} alt="" />
+                            <div className="r-t-con">
+                                <h3>{activeCircle.rightTop.h3}</h3>
+                                <h1>{activeCircle.rightTop.h1}</h1>
+                                <p>{activeCircle.rightTop.para}</p>
+                                <a href="">View Collection</a>
+                            </div>
+                        </div>
+                    ) : (
+                        <>
+                            {activeCircle.rightTop && (
+                                <div className="right-top">
+                                    <img src={rec} alt="" className='right-img-ilus' />
+                                    <div className="r-t-con">
+                                        <h3>{activeCircle.rightTop.h3}</h3>
+                                        <h1>{activeCircle.rightTop.h1}</h1>
+                                        <p>{activeCircle.rightTop.para}</p>
+                                        <a href="">View Collection</a>
+                                    </div>
+                                    <div className="r-t-img">
+                                        <img src={activeCircle.rightTop.image} alt="" />
+                                    </div>
+                                </div>
+                            )}
+                            {activeCircle.bottomLeft && (
+                                <div className="right-bottom">
+                                    <div className="r-b-l">
+                                        <div className="r-b-con">
+                                            <h1>{activeCircle.bottomLeft.h1}</h1>
+                                            <a href="">Shop Now</a>
+                                        </div>
+                                        <div className="r-b-img">
+                                            <img src={activeCircle.bottomLeft.image} alt="" />
+                                        </div>
+                                    </div>
+                                    <div className="r-b-r">
+                                        <div className="r-b-con">
+                                            <h1>{activeCircle.bottomRight.h1}</h1>
+                                            <a href="">Shop Now</a>
+                                        </div>
+                                        <div className="r-b-img">
+                                            <img src={activeCircle.bottomRight.image} alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+                        </>
+                    )}
+                </div>
+
+                {/* <div className="right-div">
                     {activeCircle.rightTop && (
                         <div className="right-top">
                             <img src={rec} alt="" className='right-img-ilus' />
@@ -188,7 +243,7 @@ export const Rotate = () => {
                             </div>
                         </div>
                     )}
-                </div>
+                </div> */}
             </div>
         </div>
     );

@@ -32,7 +32,12 @@ const Hww = () => {
               <h1>1</h1>
             </div>
             <div className="num-para">
-              <p>lorem10</p>
+              <h2>Cosultation</h2>
+              <p>
+                - We listen to your needs, goals, and challenges to understand your unique requirements.
+              </p>
+              <p>
+                - Our expert team guides you through a discovery process to identify the perfect furniture solutions.</p>
             </div>
           </div>
         </div>
@@ -43,7 +48,11 @@ const Hww = () => {
               <h1>2</h1>
             </div>
             <div className="num-para">
-              <p>lorem20</p>
+              <h2>Space Planning</h2>
+              <p>
+                - We assess your office space, taking into account layout, functionality, and workflow
+              </p>
+              <p>- Our designers create a customized floor plan, optimizing your space for productivity and comfort.</p>
             </div>
           </div>
         </div>
@@ -54,7 +63,10 @@ const Hww = () => {
               <h1>3</h1>
             </div>
             <div className="num-para">
-              <p>lorem30</p>
+              <h2>Product Selection</h2>
+              <p>- We present a curated selection of furniture options, tailored to your style, budget, and needs.
+              </p>
+              <p>- Our team helps you choose the perfect products, ensuring a cohesive and functional workspace.</p>
             </div>
           </div>
         </div>
@@ -65,7 +77,11 @@ const Hww = () => {
               <h1>4</h1>
             </div>
             <div className="num-para">
-              <p>lorem40</p>
+              <h2>Installation</h2>
+              <p>- Our experienced installation team ensures a seamless and efficient setup process.
+              </p>
+              <p>
+              - We take care of every detail, from delivery to assembly, so you can focus on your business.</p>
             </div>
           </div>
         </div>
@@ -76,7 +92,10 @@ const Hww = () => {
               <h1>5</h1>
             </div>
             <div className="num-para">
-              <p>lorem50</p>
+              <h2>After Sales Support</h2>
+              <p>- We provide comprehensive support, including maintenance, repairs, and replacement services.
+              </p>
+              <p>- Our dedicated team ensures your satisfaction and helps you maximize the value of your investment.</p>
             </div>
           </div>
         </div>
@@ -86,13 +105,17 @@ const Hww = () => {
           <div className="hww-hero-con">
             <h1>Work With Us!</h1>
             <p className='hww-para'>At Nikshoo,  we're dedicated to providing exceptional  furniture solutions that enhance your work environment. Here's an overview of our collaborative and tailored approach:</p>
+            <button>
+            Join US!
+          </button>
           </div>
           <div className="hww-img-div">
             <img src={hwwFoot} alt="" />
           </div>
+          
         </div>
       </div>
-      
+
     </div>
   );
 };

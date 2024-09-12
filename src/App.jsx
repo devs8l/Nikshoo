@@ -6,6 +6,7 @@ import Hero from '../pages/Hero'
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Hww from '../pages/Hww';
+import Contact from '../pages/Contact';
 
 function App() {
 
@@ -16,13 +17,13 @@ function App() {
 
         <Navbar></Navbar>
         <Routes>
-          {/* <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Service />} />
-          <Route path="/contact" element={<Contact />} /> */}
 
 
           <Route path="/" element={<Hero />} />
           <Route path="/howwework" element={<Hww />} />
+          {/* <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Service />} /> */}
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer></Footer>
 
