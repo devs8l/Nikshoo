@@ -11,9 +11,9 @@ import health from "../assets/p2h.png"
 import kitchenImg from "../assets/p2k.png"
 import lab from "../assets/p2l.png"
 
-import v1 from "../assets/vector.png"
-import v2 from "../assets/vector2.png"
-import v3 from "../assets/vector3.png"
+import v1 from "../assets/Vector.png"
+import v2 from "../assets/Vector2.png"
+import v3 from "../assets/Vector3.png"
 
 import page4ilus from "../assets/page4-ilus.png"
 

@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+
 
         <Navbar></Navbar>
         <Routes>
@@ -30,7 +30,6 @@ function App() {
         </Routes>
         <Footer></Footer>
 
-      </BrowserRouter>
     </>
   )
 }
