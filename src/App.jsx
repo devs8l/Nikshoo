@@ -8,6 +8,8 @@ import Footer from '../components/Footer';
 import Hww from '../pages/Hww';
 import Contact from '../pages/Contact';
 
+import Partner from '../pages/Partner';
+
 function App() {
 
 
@@ -24,6 +26,7 @@ function App() {
           {/* <Route path="/about" element={<About />} />
           <Route path="/services" element={<Service />} /> */}
           <Route path="/contact" element={<Contact />} />
+          <Route path="/partner" element={<Partner />} />
         </Routes>
         <Footer></Footer>
 
