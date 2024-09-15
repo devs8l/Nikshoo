@@ -9,6 +9,8 @@ import Hww from '../pages/Hww';
 import Contact from '../pages/Contact';
 
 import Partner from '../pages/Partner';
+import Blogs from '../pages/Blogs';
+import About from '../pages/About';
 
 function App() {
 
@@ -27,6 +29,9 @@ function App() {
           <Route path="/services" element={<Service />} /> */}
           <Route path="/contact" element={<Contact />} />
           <Route path="/partner" element={<Partner />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/about" element={<About />} />
+
         </Routes>
         <Footer></Footer>
 

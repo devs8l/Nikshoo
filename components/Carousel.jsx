@@ -1,38 +1,35 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import heroimg from "../assets/hero-new.png"
-import { Autoplay } from 'swiper/modules';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-
+import 'swiper/css/autoplay';
 import '../components/Carousel.css';
 
-// import required modules
-import { Pagination } from 'swiper/modules';
+// Import required modules
+import { Pagination, Autoplay } from 'swiper/modules';
 
 export default function Carousel() {
   return (
     <>
       <Swiper
-        spaceBetween={0}
+        slidesPerView={1}
+        spaceBetween={30}
         pagination={{
           clickable: true,
         }}
         autoplay={{
-          delay: 3500, // Delay between slides (in ms)
-          disableOnInteraction: false, // Continue autoplay after user interactions
+          delay: 3500,
+          disableOnInteraction: false,
         }}
-        modules={[Pagination,Autoplay]}
+        modules={[Pagination, Autoplay]} // Include Autoplay here
         className="mySwiper"
+        loop={true}
         
       >
-        <SwiperSlide><img src={heroimg} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={heroimg} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={heroimg} alt="" /></SwiperSlide>
-        
+        <SwiperSlide className='sub-swipe'>Slide 1</SwiperSlide>
+        <SwiperSlide className='sub-swipe'>Slide 2</SwiperSlide>
+        <SwiperSlide className='sub-swipe'>Slide 3</SwiperSlide>
       </Swiper>
     </>
   );
