@@ -69,6 +69,13 @@ video{
     border: none;
     cursor: pointer;
     color: white;
+    transition: all ease 0.5s;
+}
+.hero-content button:hover{
+    
+    background-color: white;
+    border: 1px solid #23AA9B;
+    color: #23AA9B;
 }
 
 
@@ -231,7 +238,14 @@ video{
 .page3-con{
     position: absolute;
     top: 10%;
+    
     /* transform: translate(-50%,-50%s);     */
+}
+.page3-con h1{
+    font-size: 4vh;
+}
+.page3-con p{
+    color: #A7A3A2
 }
 .center-ilus{
     width: 45vw;
@@ -314,7 +328,7 @@ video{
     gap: 9vh;
 }
 .page4-heading h1{
-    font-size: 3vw;
+    font-size: 2.4vw;
 }
 .page4-heading p{
     font-size: 1vw;
@@ -380,7 +394,7 @@ video{
 
 }
 .gallery h1{
-    font-size: 2.3vw;
+    font-size: 2.4vw;
     text-align: center;
     
 }

@@ -12,8 +12,12 @@
   /* padding-left: 14vw; */
   text-align: center;
 }
+.heading-rotate p{
+    color: #A7A3A2;
+
+}
 .heading-rotate h1{
-  font-size: 4vh;
+  font-size: 4.4vh;
 }
 
 .atomic-model {
@@ -23,7 +27,9 @@
     width: 100vw;
     height: 80vh;
     background: #ffffff;
-    gap: 12vw;
+    gap: 15vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
     /* margin-top: -2vh; */
   }
   
@@ -33,7 +39,6 @@
     height: 400px; /* Adjust as needed */
     /* background: #000; */
     /* display: flex; */
-    padding-left: 2vw;
 
   }
   
@@ -83,7 +88,7 @@
 
   .electron.active {
 
-      box-shadow: 0 0 30px 2px rgba(0, 128, 128, 0.8); /* Active shadow style */
+      box-shadow: 0 0 30px 2px rgba(0, 128, 128, 0.552); /* Active shadow style */
   }
 
   .nucleus:hover .electron{
