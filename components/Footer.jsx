@@ -8,6 +8,8 @@ import link3 from "../assets/link3.png"
 import c1 from "../assets/Container.png"
 import c2 from "../assets/Container2.png"
 import c3 from "../assets/Container3.png"
+import flast from "../assets/footer-last.png"
+
 
 
 import navimgfooter from "../assets/footerlogo.png"
@@ -31,6 +33,11 @@ const Footer = () => {
                     <img src={link1}alt="" />
                     <img src={link2}alt="" />
                     <img src={link3}alt="" />
+                </div>
+
+                <div className="gem">
+                    <img src={flast} alt="" />
+                    <h3>We’re a GeM Registered Seller</h3>
                 </div>
             </div>
             <div className="mid-foot">
@@ -72,7 +79,7 @@ const Footer = () => {
             </div>
             </div>
             <div className="copyright">
-                <h3>@copy</h3>
+                <h3>Copyright © 2024</h3>
             </div>
         </div>
     )

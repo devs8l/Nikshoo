@@ -399,7 +399,8 @@ video{
     
 }
 .gallery p{
-    padding-bottom: 1vw;
+    padding-bottom: 3vw;
+    margin-top: -0.4vh;
     color: #A7A3A2;
     text-align: center;
 }
