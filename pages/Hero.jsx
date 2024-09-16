@@ -7,9 +7,9 @@ import righty from "../assets/righty.png"
 import border from "../assets/hero2.png"
 import office from "../assets/office.png"
 import edu from "../assets/edu.png"
-import health from "../assets/p2h.png"
-import kitchenImg from "../assets/p2k.png"
-import lab from "../assets/p2l.png"
+import health from "../assets/hww-lefty.png"
+import kitchenImg from "../assets/hww-righty.png"
+import lab from "../assets/hww-mid.png"
 
 import v1 from "../assets/Vector.png"
 import v2 from "../assets/Vector2.png"
@@ -180,7 +180,7 @@ const Hero = () => {
 
       <div className="gallery">
         <h1>Get Inspired</h1>
-        <p>Have a look at our elegant and eco-friendly furnitures</p>
+        <p>Browse our gallery for a glimpse into perfectly designed workspaces</p>
         <div className="gal-img-div">
           <img src={gal} alt="" />
         </div>

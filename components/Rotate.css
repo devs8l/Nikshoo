@@ -9,7 +9,8 @@
 }
 .heading-rotate{
   padding-top: 3vw;
-  padding-left: 14vw;
+  /* padding-left: 14vw; */
+  text-align: center;
 }
 .heading-rotate h1{
   font-size: 4vh;
@@ -22,7 +23,7 @@
     width: 100vw;
     height: 80vh;
     background: #ffffff;
-    gap: 15vw;
+    gap: 12vw;
     /* margin-top: -2vh; */
   }
   
@@ -32,6 +33,7 @@
     height: 400px; /* Adjust as needed */
     /* background: #000; */
     /* display: flex; */
+    padding-left: 2vw;
 
   }
   
