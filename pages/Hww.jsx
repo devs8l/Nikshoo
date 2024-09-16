@@ -27,7 +27,7 @@ const Hww = () => {
       <div className="image-container">
         <div className="image-part part-1">
           <img src={hww1} alt="Segment 1" />
-          <div className="hww-con">
+          <div className="hww-con ">
             <div className="num">
               <h1>1</h1>
             </div>

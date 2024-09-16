@@ -36,7 +36,8 @@ body, html {
   .hww-img-div{
     width: 30%;
     /* background: #000; */
-    height: 50%;    
+    height: 50%;  
+    position: relative;  
   }
   .hww-para{
     font-size: 1.1vw;
@@ -52,7 +53,7 @@ body, html {
     position: sticky;
     width: 100%;
     top: 0;
-    height: 440vh; /* Adjust as needed */
+    height: 450vh; /* Adjust as needed */
   }
   
   .image-part {
@@ -105,6 +106,10 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
+  }
+  .one{
+    height: 30%;
   }
   .num{
     width: 30%;
