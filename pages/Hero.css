@@ -142,6 +142,13 @@ video{
 .heading-page2{
     text-align: center;
 }
+.heading-page2 h1{
+    font-size: 2.1vw;
+}
+.heading-page2 p{
+    font-size: 1.3vw;
+    color: #A7A3A2;
+}
 
 .part2 h2{
     position: relative;
@@ -178,6 +185,8 @@ video{
 .part3-img-div{
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 .part3-img-div img{
@@ -237,7 +246,9 @@ video{
 }
 .page3-con{
     position: absolute;
-    top: 10%;
+    top: 7%;
+    width: 30%;
+    
     
     /* transform: translate(-50%,-50%s);     */
 }
@@ -293,6 +304,9 @@ video{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.info-sub img{
+    width: 10%;
 }
 .info-sub p{
     width: 80%;
@@ -403,6 +417,7 @@ video{
     margin-top: -0.4vh;
     color: #A7A3A2;
     text-align: center;
+    font-size: 1vw;
 }
 
 .footer-ilus{

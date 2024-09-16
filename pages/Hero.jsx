@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react';
 import "../pages/Hero.css"
 import Carousel from "../components/Carousel"
 import Navbar from '../components/Navbar'
@@ -11,9 +11,9 @@ import health from "../assets/hww-lefty.png"
 import kitchenImg from "../assets/hww-righty.png"
 import lab from "../assets/hww-mid.png"
 
-import v1 from "../assets/Vector.png"
-import v2 from "../assets/Vector2.png"
-import v3 from "../assets/Vector3.png"
+import v1 from "../assets/icon1.png"
+import v2 from "../assets/icon2.png"
+import v3 from "../assets/icon3.png"
 
 import page4ilus from "../assets/page4-ilus.png"
 
@@ -39,6 +39,13 @@ import heroVid from "../assets/hero-vid.mp4"
 
 
 const Hero = () => {
+  const getInTouchRef = useRef(null); // Create a ref for GetInTouch component
+
+  const scrollToGetInTouch = () => {
+    // Function to scroll to the GetInTouch section
+    getInTouchRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className='hero-wrapper'>
       <div className="page1">
@@ -50,14 +57,14 @@ const Hero = () => {
         <div className="hero-content">
           <h1>Furniture For The Future</h1>
           <p>Elevate your spaces with innovative style, functionality and aesthetics</p>
-          <button>Get Started</button>
+          <button onClick={scrollToGetInTouch}>Get Started</button>
         </div>
       </div>
 
       <div className="page2">
         <div className="heading-page2">
           <h1>What Are You Building?</h1>
-          <p>Enhance your spaces with the comfortable furniture crafted by us</p>
+          <p>Transform your spaces with high performance furniture solutions crafted by us</p>
         </div>
         <div className="part2">
           <div className="part2-l">
@@ -113,8 +120,7 @@ const Hero = () => {
 
       <div className="page3">
         <div className="page3-con">
-          <h1>Imagine Your Future Spaces</h1>
-          <p>Enhance your spaces with the comfortable furniture crafted by us</p>
+          <h1>Imagine Your Future Spaces Crafted with Precision & Style</h1>
         </div>
         <div className="page3-b">
           <div className="left-ilus">
@@ -127,7 +133,7 @@ const Hero = () => {
             <img src={righty} alt="" />
           </div>
           <button className='btn'>
-            Shop Now
+            Enquire Now
           </button>
 
         </div>
@@ -135,27 +141,27 @@ const Hero = () => {
       <div className="info">
         <div className="info-sub">
           <img src={v1} alt="" />
-          <h2>Eco-Smart Furniture</h2>
-          <p>Handcrafted Furniture That Honors the Earth and Elevates Your Home</p>
+          <h2>Innovative Design</h2>
+          <p>We provide research-driven designs that combine style, functionality,  and ergonomics.</p>
         </div>
         <div className="info-sub">
           <img src={v2} alt="" />
-          <h2>Sustainable Craftmanship</h2>
-          <p>Beautiful Furniture Made from 100% Recycled and Reclaimed Materials</p>
+          <h2>Durability & Quality</h2>
+          <p>Our furniture is built to last, with high-quality materials and construction that withstands heavy use.</p>
 
         </div>
         <div className="info-sub">
           <img src={v3} alt="" />
           <h2>
-            Long-Lasting & Durable
+          Broad Choice
           </h2>
-          <p>Eco-Friendly Furniture with a Focus on Durability and Beauty</p>
+          <p>We have a wide range of products and materiality options to meet style, preferences & budget needs</p>
         </div>
       </div>
 
       <div className="page4">
         <div className="page4-heading">
-          <h1>How We are Different?</h1>
+          <h1>How Are We Different?</h1>
           <p>Enhance your spaces with the comfortable furniture crafted by us</p>
 
         </div>
@@ -164,7 +170,7 @@ const Hero = () => {
         </div>
 
         <div className="our-clients">
-          <h1>Our clients</h1>
+          <h1>Our Clients</h1>
           {/* <div className="client-icons">
             <img src={bank1} alt="" />
             <img src={aditya} alt="" />
@@ -185,7 +191,9 @@ const Hero = () => {
           <img src={gal} alt="" />
         </div>
       </div>
-      <GetInTouch></GetInTouch>
+      <div ref={getInTouchRef}>
+        <GetInTouch />
+      </div>
       <div className="footer-ilus">
         <img src={filus} alt="" />
       </div>

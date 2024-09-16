@@ -34,10 +34,10 @@ const Hww = () => {
             <div className="num-para">
               <h2>Cosultation</h2>
               <p>
-                - We listen to your needs, goals, and challenges to understand your unique requirements.
+                We listen to your needs, goals, and challenges to understand your unique requirements.
               </p>
               <p>
-                - Our expert team guides you through a discovery process to identify the perfect furniture solutions.</p>
+                Our expert team guides you through a discovery process to identify the perfect furniture solutions.</p>
             </div>
           </div>
         </div>
@@ -103,10 +103,10 @@ const Hww = () => {
       <div className="content-section">
         <div className="hero-hww">
           <div className="hww-hero-con">
-            <h1>Work With Us!</h1>
-            <p className='hww-para'>At Nikshoo,  we're dedicated to providing exceptional  furniture solutions that enhance your work environment. Here's an overview of our collaborative and tailored approach:</p>
+            <h1>Let’s Chat!</h1>
+            <p className='hww-para'>Got a question, concern, or idea? We’re all ears! Fill out the form, and let’s get your answer or solution on its way!</p>
             <button>
-            Join US!
+            Enquire Now
           </button>
           </div>
           <div className="hww-img-div">

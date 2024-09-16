@@ -50,7 +50,7 @@ const Partner = () => {
                 <div className="partner1">
                     <div className="partner1-left">
                         <h1>Become A Partner</h1>
-                        <p>We are changing the way in which spaces are designed , and we would love to collaborate. !</p>
+                        <p>We are changing the way in which spaces are designed, and we would love to collaborate!</p>
                         <a href="">Join Us!</a>
                     </div>
                     <div className="partner1-right">
@@ -58,16 +58,16 @@ const Partner = () => {
                     </div>
                 </div>
                 <div className="partner2">
-                    <h1>We Believe,Collaboration:</h1>
+                    <h1>We Believe, Collaboration:</h1>
                     <div className="partner-2-sub">
                         <div className="partner2-colab">
                             <img src={iconPartnerleft} alt="" />
-                            <p>fosters a dynamic exchange of ideas, stimulating creativity and innovation.
+                            <p>Fosters a dynamic exchange of ideas, stimulating creativity and innovation.
                             </p>
                         </div>
                         <div className="partner2-colab">
                             <img src={iconPartnerRight} alt="" />
-                            <p>builds trust, strengthens communication, and develops stronger relationships.
+                            <p>Builds trust, strengthens communication, and develops stronger relationships.
                             </p>
 
                         </div>
@@ -118,10 +118,10 @@ const Partner = () => {
                                 value={formData.partnerRole}
                                 onChange={handleChange}
                             >
-                                <option value="" disabled hidden>Partner as</option>
+                                <option value="" disabled hidden>Partner as a</option>
                                 <option value="Designer">Designer</option>
                                 <option value="Turnkey Contractor">Turnkey Contractor</option>
-                                <option value="Subcontractor">Subcontractor</option>
+                                {/* <option value="Subcontractor">Subcontractor</option> */}
                                 <option value="Product Supplier">Product Supplier</option>
                             </select>
                         </div>
@@ -181,9 +181,9 @@ const Partner = () => {
                         {/* Upload Document */}
                         <div className="form-row">
                             <h4>
-                                {fileName ? fileName : 'Upload Document (small size preferred)'}
+                                {fileName ? fileName : 'Upload Document (Upto 5MB)'}
                             </h4>
-                            <label htmlFor="document" id='doc'>Upload</label>
+                            <label htmlFor="document" id='doc'>Upload Document</label>
                             <input
                                 type="file"
                                 id="document"

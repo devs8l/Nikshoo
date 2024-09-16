@@ -27,10 +27,12 @@
 .contact-hero-left h1{
     font-size: 3vw;
     font-weight: 700;
+    margin-bottom: -2vh;
     font-family: 'Jakarta-bold';
 }
 .contact-hero-left p{
     width: 60%;
+    color: #A7A3A2;
 }
 .contact-hero-right{
     width: 30%;
@@ -103,6 +105,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #23AA9B;
+    font-size: 1.2vw;
     flex-direction: column;
     border-right: 1px solid rgba(0, 0, 0, 0.282);
     /* background: #000; */
@@ -145,11 +149,20 @@
     position: relative;
 
 }
+.contact3 h1{
+  font-size: 2vw;
+  margin-bottom: -0.1vw;
+}
+
+textarea{
+  font-family: "Inter";
+}
 
 .contact3 p{
     width: 30%;
     text-align: center;
     margin-top: -3vh;
+    color: #A7A3A2;
 }
 .contactus-form {
     width: 50%;
@@ -183,12 +196,14 @@
   .contactus-form input[type="email"],
   .contactus-form textarea {
     width: 95%;
-    padding: 10px;
+    padding: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
   }
-  
+  textarea{
+    font-family: "Neu-reg";
+  }
   .contactus-form .half-row {
     display: flex;
     justify-content: space-between;

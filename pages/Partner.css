@@ -35,6 +35,7 @@
 }
 .partner1-left{
     width: 30%;
+    position: relative;
 
 }
 .partner1-left p{
@@ -85,8 +86,13 @@
     align-items: center;
     flex-direction: column;
     margin-top: 12vh;
-    padding: 4vw;
+    /* padding: 4vw; */
+    
     /* height: 170vh; */
+}
+.partner3 h1{
+  font-size: 2vw;
+  text-align: center;
 }
 
 .partner3-sub{
@@ -95,10 +101,14 @@
     justify-content: center;
     align-items: center;
     gap: 10vw;
+    margin-top: 2vw;
 }
 .partner3-sub img{
     width: 45%;
     object-fit: contain;
+}
+.partner3 p{
+  color: #A7A3A2;
 }
 
 .reverse{
@@ -155,7 +165,10 @@
     border-radius: 4px;
   }
   
-  
+  textarea{
+    
+    font-family: "Neu-reg";
+  }
   
   .custom-form .file-label {
     display: inline-block;
@@ -175,17 +188,17 @@
   }
   
   .custom-form button {
-    padding: 15px 40px;
+    padding: 10px 50px;
     background-color: #23AA9B;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 16px;
     cursor: pointer;
   }
   
   .custom-form button:hover {
-    background-color: #45a049;
+    background-color: #0c4942;
   }
   
   .partner-section {
@@ -199,13 +212,15 @@
   }
   
   .partner-section select {
-    padding: 10px;
+    padding: 13px;
     font-size: 16px;
+    padding-left: 20px;
     /* border: 1px solid #23AA9B; */
     border-radius: 4px;
     width: auto;
     display: inline-block;
-    background-color: #23AA9B;
+    background-color: #148779;
+    /* font-family: 'Inter'; */
   }
 
 
@@ -219,6 +234,7 @@ input[type="file"]{
     background: #23AA9B;
     padding: 1vw;
     text-align: center;
+    border-radius: 10px;
 }
 
 

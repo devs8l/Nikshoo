@@ -10,6 +10,9 @@
     width: 100%;
     object-fit: cover;
 }
+.hero-left p{
+    color: #A7A3A2;
+}
 
 .blogs-hero{
     display: flex;
@@ -27,6 +30,7 @@
 }
 .hero-right{
     width: 30%;
+    position: relative;
 
 }
 .hero-right img{

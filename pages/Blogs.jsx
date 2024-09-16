@@ -21,7 +21,7 @@ const Blogs = () => {
                 <div className="blogs-hero">
                     <div className="hero-left">
                         <h1>Featured Blogs</h1>
-                        <p>Enhance your spaces with the comfortable furniture crafted by us</p>
+                        <p>Enhance your spaces with the comfortable furniture crafted by us!</p>
                     </div>
                     <div className="hero-right">
                         <img src={heroright} alt="" />
