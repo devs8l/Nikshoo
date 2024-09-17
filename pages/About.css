@@ -41,16 +41,19 @@
 }
 
 .about2{
-    width: 45vw;
+    width: 25vw;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto;
-    height: 30vh;
+    /* margin: auto; */
+    height: 60vh;
+    margin-left: 18vw;
+    
 }
 .about2 p{
     color: #7A8584;
+    font-size: 1.2vw;
 }
 
 .about3{

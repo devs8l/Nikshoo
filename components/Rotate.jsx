@@ -10,6 +10,7 @@ import lab from "../assets/mg3.png";
 import officetop from "../assets/office-top.png";
 import officeleft from "../assets/office-b-l.png";
 import officeright from "../assets/office-b-r.png";
+import edutop from "../assets/edu-top.png";
 
 import hbed from "../assets/bed-health.png"
 
@@ -49,10 +50,10 @@ export const Rotate = () => {
             content: 'Content for Education Space',
             image: eduImg,
             rightTop: {
-                h3: 'Education Office',
-                h1: 'Office Desk',
+                h3: 'Elevating',
+                h1: 'Education Space',
                 para: 'Beautiful Color Collection',
-                image: officetop
+                image: edutop
             },
             bottomLeft: {
                 h1: 'Rotational Chairs',
@@ -69,9 +70,9 @@ export const Rotate = () => {
             content: 'Content for Commercial Kitchen',
             image: Kitchen,
             rightTop: {
-                h3: 'Commercial Kitchen',
-                h1: 'Office Desk',
-                para: 'Beautiful Color Collection',
+                h3: 'Top-notch',
+                h1: 'Commercial Kitchen',
+                para: '',
                 image: kitchenRotate
             },
             bottomLeft: {
@@ -89,9 +90,9 @@ export const Rotate = () => {
             content: 'Content for Healthcare Space',
             image: med,
             rightTop: {
-                h3: 'Healthcare Space',
-                h1: 'Office Desk',
-                para: 'Beautiful Color Collection',
+                h3: 'Top-Notch',
+                h1: 'Healthcare Space',
+                para: '',
                 image: hbed
             },
             bottomLeft: {
@@ -109,9 +110,9 @@ export const Rotate = () => {
             content: 'Content for Laboratory Space',
             image: lab,
             rightTop: {
-                h3: 'Laboratory Space',
-                h1: 'Office Desk',
-                para: 'Beautiful Color Collection',
+                h3: 'Top-Notch',
+                h1: 'Laboratory Space',
+                para: '',
                 image: labRotate
             },
             bottomLeft: {

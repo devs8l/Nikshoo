@@ -15,7 +15,7 @@ import v1 from "../assets/icon1.png"
 import v2 from "../assets/icon2.png"
 import v3 from "../assets/icon3.png"
 
-import page4ilus from "../assets/page4-ilus.png"
+import page4ilus from "../assets/bento.mp4"
 
 import aditya from "../assets/aditya.png"
 import bob from "../assets/bob.png"
@@ -166,7 +166,7 @@ const Hero = () => {
 
         </div>
         <div className="page4-img-div">
-          <img src={page4ilus} alt="" />
+          <video src={page4ilus} alt="" autoPlay muted loop />
         </div>
 
         <div className="our-clients">

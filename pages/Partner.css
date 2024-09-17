@@ -166,8 +166,7 @@
   }
   
   textarea{
-    
-    font-family: "Neu-reg";
+    font-family: "Sans-Serif";
   }
   
   .custom-form .file-label {
@@ -211,17 +210,25 @@
     color: white;
   }
   
+  
   .partner-section select {
     padding: 13px;
     font-size: 16px;
-    padding-left: 20px;
-    /* border: 1px solid #23AA9B; */
+    padding-left: 0;
+    padding-right: 30px; /* Space for the dropdown arrow */
     border-radius: 4px;
-    width: auto;
+    width: 25%; /* Makes the select box take full width of the parent */
     display: inline-block;
     background-color: #148779;
-    /* font-family: 'Inter'; */
-  }
+    color: white; /* Text color */
+    text-align: center;
+    appearance: none; /* Hides the default dropdown arrow */
+    background-image: url('../assets/dropdown-icon.png'); /* Add a custom dropdown icon */
+    background-repeat: no-repeat;
+    background-position: right 20px center; /* Align the dropdown icon */
+    background-size: 12px;
+}
+
 
 
   /* Style for the file input button */
