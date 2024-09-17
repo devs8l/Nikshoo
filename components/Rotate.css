@@ -88,8 +88,11 @@
 }
 
   .electron.active {
-
+      
       box-shadow: 0 0 30px 2px rgba(0, 128, 128, 0.222); /* Active shadow style */
+  }
+  .electron.active h4{
+    color: teal;
   }
 
   .nucleus:hover .electron{
@@ -258,7 +261,7 @@
     font-size: 0.7vw;
     width: 90%;
     text-align: center;
-    color: teal;
+    color: rgba(0, 128, 128, 0.471);
     font-weight: 600;
     /* background: #000; */
   }
