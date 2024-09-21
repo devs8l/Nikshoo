@@ -119,12 +119,17 @@ const Hero = () => {
       </div>
 
       <div className="page3">
+        <div className="page3-mobile">
+          <h1>Imagine Your Future Spaces Crafted with Precision & Style</h1>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, nihil?</p>
+          <a href="">Enquire now!</a>
+        </div>
         <div className="page3-con">
           <h1>Imagine Your Future Spaces Crafted with Precision & Style</h1>
         </div>
         <div className="page3-b">
           <div className="left-ilus">
-            <img src={lefty} alt="" />  
+            <img src={lefty} alt="" />
           </div>
           <div className="center-ilus">
             <img src={border} alt="" />
@@ -140,22 +145,35 @@ const Hero = () => {
       </div>
       <div className="info">
         <div className="info-sub">
-          <img src={v1} alt="" />
-          <h2>Innovative Design</h2>
-          <p>We provide research-driven designs that combine style, functionality,  and ergonomics.</p>
+          <div className="info-img-div">
+            <img src={v1} alt="" />
+          </div>
+          <div className="info-sub-con">
+            <h2>Innovative Design</h2>
+            <p>We provide research-driven designs that combine style, functionality,  and ergonomics.</p>
+          </div>
         </div>
         <div className="info-sub">
-          <img src={v2} alt="" />
-          <h2>Durability & Quality</h2>
-          <p>Our furniture is built to last, with high-quality materials and construction that withstands heavy use.</p>
+          <div className="info-img-div">
+            <img src={v2} alt="" />
+          </div>
+          <div className="info-sub-con">
+            <h2>Durability & Quality</h2>
+            <p>Our furniture is built to last, with high-quality materials and construction that withstands heavy use.</p>
+          </div>
 
         </div>
         <div className="info-sub">
-          <img src={v3} alt="" />
-          <h2>
-          Broad Choice
-          </h2>
-          <p>We have a wide range of products and materiality options to meet style, preferences & budget needs</p>
+          <div className="info-img-div">
+            <img src={v3} alt="" />
+          </div>
+          <div className="info-sub-con">
+
+            <h2>
+              Broad Choice
+            </h2>
+            <p>We have a wide range of products and materiality options to meet style, preferences & budget needs</p>
+          </div>
         </div>
       </div>
 

@@ -10,6 +10,8 @@
     overflow-x: hidden;
     position: relative;
     font-family: Jakarta;
+    background: #000000ae;
+
 }
 .page1{
     position: relative;
@@ -100,9 +102,6 @@ video{
     align-items: center;
     justify-content: center;
     width: 70%;
-
-  
-    /* padding-left: 8%; */
 }
 .part2-l{
     width: 60%;
@@ -221,6 +220,38 @@ video{
 }
 
 
+@media (max-width: 768px){
+    .side{
+        display: none;
+    }
+
+    .part2{
+        width: 90%;
+        display: flex;
+        /* background: #c61212; */
+    }
+    .page2 h2{
+        font-size: 3vw;
+    }
+    .part3{
+        flex-wrap: wrap;
+        /* background: #000; */
+        gap: 5vw;
+
+    }
+    .page2{
+        /* background: #000; */
+        border-radius: 0px 0px 30px 30px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .part3-sub{
+        width: 40%;
+    }
+    
+}
+
 
 
 
@@ -333,6 +364,130 @@ video{
     margin-top: 10px;
 
 }
+.page3-mobile{
+    display: none;
+}
+.info-img-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.info-sub-con{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    align-items: center;
+
+}
+
+
+@media (max-width: 768px){
+    .page3{
+        /* background: #00000052; */
+        background: url(../assets/mg4.png);
+        min-height: 40vh;
+        margin-top: -4vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .page3 a{
+        font-size: 4vw;
+    }
+    .page3::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.866); /* Adjust opacity here */
+        /* z-index: 1; */
+    }
+    .page3-b{
+        display: none;
+    }
+    .page3 h1{
+        color: white;
+        font-size: 2.5vh;
+    }
+    .page3-con{
+        display: none;
+    }
+    .page3-mobile{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        margin-top: -6vh;
+    }
+    .page3 p{
+        color: white;
+    }
+
+    .info{
+        /* padding-top:10vh ; */
+        /* position: absolute; */
+        background: #E9F7F5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        /* padding-left:8vw; */
+        min-height: 50vh;
+        flex-wrap: wrap;
+        /* padding-bottom: 3vh; */
+        border-radius: 20px 20px 0 0 ;
+        margin-top: -4vh;
+        position: relative;
+        z-index: 3;
+        padding: 8vw 0;
+    }
+    
+    .info-sub{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 10vw;
+        /* padding: 0vw 10vw; */
+
+        /* background: #000; */
+        
+    }
+    .info-img-div{
+        width: 10%;
+        margin-top: -4vh;
+    }
+    .info-img-div img{
+        width: 100%;
+    }
+    .info-sub h2::after{
+        display: none;
+    }
+    .info-sub-con{
+        display: flex;
+        /* background: #f12b2b; */
+    }
+    .info-sub-con p{
+        text-align: left;
+        font-size: 3.5vw;
+    }
+    .info-sub-con h2{
+        text-align: left;
+        width: 75%;
+
+    }
+}
+
+
 
 .page4{
     width: 100vw;
@@ -433,3 +588,30 @@ video{
     width: 100%;
     object-fit: cover;
 }
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 8vw; /* Further adjust for smaller screens */
+    }
+    .hero-content p {
+        font-size: 4vw; /* Further adjust for smaller screens */
+    }
+    .hero-content button {
+        width: 40vw; /* Further adjust for smaller screens */
+    }
+    .heading-page2 h1 {
+        font-size: 6vw;
+    }
+    .heading-page2 p {
+        font-size: 4.5vw;
+    }
+    
+    .part3, .page4-heading {
+        width: 100%;
+        text-align: center;
+    }
+
+
+
+}
+
