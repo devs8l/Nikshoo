@@ -309,3 +309,29 @@
     height: 100%;
     object-fit: contain;
   }
+
+  @media (max-width:768px) {
+    .heading-rotate h1{
+      font-size: 6vw;
+    }
+    .heading-rotate p{
+      font-size: 3vw;
+    }
+    .right-div{
+      display: none;
+    }
+    .left-div{
+      margin-right:2vh ;
+      /* width: 90%; */
+
+      margin-top: -15vh;
+    }
+    .electron h4{
+      font-size: 3vw;
+    }
+    
+    .atomic-model{
+      /* padding: 1vh; */
+    }
+    
+  }

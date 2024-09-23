@@ -55,7 +55,7 @@ const Hero = () => {
           <video src={heroVid} autoPlay muted loop></video>
         </div>
         <div className="hero-content">
-          <h1>Furniture For The Future</h1>
+          <h1>Furniture For The <span>Future</span></h1>
           <p>Elevate your spaces with innovative style, functionality and aesthetics</p>
           <button onClick={scrollToGetInTouch}>Get Started</button>
         </div>

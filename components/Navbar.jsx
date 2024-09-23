@@ -45,13 +45,13 @@ export default function Navbar() {
             <div className={toggle ? "fullscr toggle" : "fullscr"}>
                 <div id="full-div1">
                 <div id="fulldiv-text">
-                        <li><NavLink to="/" className="navlink" onClick={handleNavLinkClick}>Home</NavLink></li>
-                        <li><NavLink to="/howwework" className="navlink" onClick={handleNavLinkClick}>How we Work</NavLink></li>
-                        <li><NavLink to="/partner" className="navlink" onClick={handleNavLinkClick}>Become a Partner</NavLink></li>
-                        <li><NavLink to="/blogs" className="navlink" onClick={handleNavLinkClick}>Blogs</NavLink></li>
-                        <li><NavLink to="/about" className="navlink" onClick={handleNavLinkClick}>About</NavLink></li>
-                        <li><NavLink to="/shop" className="navlink" onClick={handleNavLinkClick}>Shop</NavLink></li>
-                        <li><NavLink to="/contact" className="navlink" onClick={handleNavLinkClick}>Contact Us</NavLink></li>
+                        <li><NavLink to="/" className="navlink" onClick={handleNavLinkClick}><h1>Home</h1></NavLink></li>
+                        <li><NavLink to="/howwework" className="navlink" onClick={handleNavLinkClick}><h1>How we Work</h1></NavLink></li>
+                        <li><NavLink to="/partner" className="navlink" onClick={handleNavLinkClick}><h1>Become a Partner</h1></NavLink></li>
+                        <li><NavLink to="/blogs" className="navlink" onClick={handleNavLinkClick}><h1>Blogs</h1></NavLink></li>
+                        <li><NavLink to="/about" className="navlink" onClick={handleNavLinkClick}><h1>About</h1></NavLink></li>
+                        <li><NavLink to="/shop" className="navlink" onClick={handleNavLinkClick}><h1>Shop</h1></NavLink></li>
+                        <li><NavLink to="/contact" className="navlink" onClick={handleNavLinkClick}><h1>Contact Us</h1></NavLink></li>
                     </div>
                 </div>
             </div>

@@ -123,3 +123,19 @@
 }
 
 
+@media (max-width:768px) {
+    .gi-box{
+        flex-direction: column;
+        min-height: 90%;
+
+    }
+    .gi-left{
+        border: none;
+        height: 20%;
+    }
+    .form-con{
+        flex-direction: column;
+        gap: 2vw;
+    }
+    
+}

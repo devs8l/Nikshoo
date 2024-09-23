@@ -10,7 +10,7 @@
     overflow-x: hidden;
     position: relative;
     font-family: Jakarta;
-    background: #000000ae;
+    background: #000000d0;
 
 }
 .page1{
@@ -37,7 +37,7 @@ video{
     height: 50%;
     position: absolute;
     top: 30%;
-    z-index: 100;
+    z-index: 10;
     left: 0%;
     /* background: #000; */
     display: flex;
@@ -78,6 +78,31 @@ video{
     background-color: white;
     border: 1px solid #23AA9B;
     color: #23AA9B;
+}
+
+@media (max-width:768px) {
+    .hero-content{
+        top: 45%;
+        width: 80%;
+        text-align: left;
+        left: 10%;
+        align-items: baseline;
+    }
+    .hero-content button{
+        width: 80vw;
+
+    }
+    .hero-content span{
+        color: #23AA9B;
+    }
+    .hero-content h1{
+        width: 60%;
+        font-size: 11vw;
+    }
+    .container video{
+        opacity: 0.3;
+    }
+
 }
 
 
@@ -224,6 +249,9 @@ video{
     .side{
         display: none;
     }
+    .page2{
+        margin-top: -2vh;
+    }
 
     .part2{
         width: 90%;
@@ -239,9 +267,10 @@ video{
         gap: 5vw;
 
     }
+    
     .page2{
         /* background: #000; */
-        border-radius: 0px 0px 30px 30px;
+        border-radius: 30px 30px 30px 30px;
         position: relative;
         z-index: 1;
     }
@@ -250,6 +279,7 @@ video{
         width: 40%;
     }
     
+   
 }
 
 
@@ -519,6 +549,19 @@ video{
     opacity: 1;
 }
 
+@media (max-width:768px) {
+    .page4-heading h1{
+        font-size: 6vw;
+    }
+    .page4-heading p{
+        font-size: 3vw;
+        width: 60%;
+        text-align: center;
+        margin: auto;
+        color: #545353b9;
+    }
+}
+
 
 .our-clients{
     width: 100vw;
@@ -590,15 +633,14 @@ video{
 }
 
 @media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 8vw; /* Further adjust for smaller screens */
-    }
+  
     .hero-content p {
         font-size: 4vw; /* Further adjust for smaller screens */
     }
-    .hero-content button {
-        width: 40vw; /* Further adjust for smaller screens */
+    .our-clients h1{
+        font-size: 6vw;
     }
+   
     .heading-page2 h1 {
         font-size: 6vw;
     }

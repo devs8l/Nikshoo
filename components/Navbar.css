@@ -138,7 +138,7 @@ li {
     top: 0%;
 }
 #full-div1{
-    height: 40%;
+    height: 100%;
     width: 100%;
     
     background: #23AA9B;
@@ -146,24 +146,25 @@ li {
     border-bottom-right-radius:20px ;
     position: relative;
     
+    
 }
 #fulldiv-text{
     /* border-top: 1px solid black; */
     width: 100%;
     position: absolute;
     text-align: right;
-    bottom: 10px;
+    bottom: 150px;
     display: flex;
     flex-direction: column;
-    gap: 1vw;
+    /* gap: 1vw; */
     right: 20px;
 }
 #fulldiv-text h1{
-    font-size: 4vw;
-    /* color: #8b0a0a; */
+    font-size: 3vh;
+    font-weight: 100;
 }
 #fulldiv-text a{
-    font-size: 7vw;
+    /* font-size: 7vw; */
     /* color: #8b0a0a; */
     text-decoration: none;
     

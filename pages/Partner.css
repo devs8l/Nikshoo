@@ -36,6 +36,7 @@
 .partner1-left{
     width: 30%;
     position: relative;
+    /* height: 40%; */
 
 }
 .partner1-left p{
@@ -260,4 +261,71 @@ input[type="file"]{
     right: -10%;
   }
   
-  
+  @media (max-width:768px) {
+    .partner1{
+      flex-direction: column-reverse;
+      gap: 5vh;
+    }
+    .partner1-left{
+      width: 100%;
+      
+
+    }
+    .partner1-left h1{
+      font-size: 6vw;
+      text-align: center;
+    }
+    .partner1-left p{
+      font-size: 4vw;
+      text-align: center;
+      margin: auto;
+      margin-bottom: 3vh;
+    }
+    .partner1-left a{
+      
+      text-align: center;
+      font-size: 4vw;
+      margin-left: 43%;
+    }
+    .partner1-right img{
+      width: 100%;
+    }
+
+
+    .partner-2-sub{
+      flex-direction: column;
+    }
+
+    .partner2-colab{
+      width: 100%;
+    }
+    .partner2-colab p{
+      width: 100%;
+    }
+    .partner2{
+      gap: 8vh;
+      background: #E9F7F5;
+      padding: 6vh 0vh;
+    }
+    .partner2 h1{
+      font-size: 6vw;
+      width: 50%;
+      margin: auto;
+      /* background: #eb0505; */
+      text-align: center;
+    }
+
+
+    .partner3 h1{
+      font-size: 6vw;
+    }
+    .partner3-sub{
+      flex-direction: column-reverse;
+    }
+    .partner3-sub img{
+      width: 70%;
+    }
+    .partner3-sub h2{
+      text-align: center;
+    }
+  }
