@@ -180,18 +180,21 @@ li {
     .nav-left{
         width: 70%;
         /* background: palegoldenrod; */
-        margin-right: 44vh;
+        margin-right: 40vh;
     }
     .nav-left .img-div{
         /* background: white; */
-        height: 5vh;
+        height: 6.5vh;
+        
+        overflow: hidden;
         margin-top: 10vw;
+        width: 90%;
     }
 
     .nav-left .img-div img{
         height: 100%;
         width: 100%;
-        object-fit: cover;
+        object-fit: contain;
 
     }
     .left-content{

@@ -16,7 +16,7 @@
 .page1{
     position: relative;
     width: 100vw;
-    min-height: 100vh;
+    height: 100svh;
 
 }
 
@@ -90,7 +90,6 @@ video{
     }
     .hero-content button{
         width: 80vw;
-
     }
     .hero-content span{
         color: #23AA9B;
@@ -251,6 +250,7 @@ video{
     }
     .page2{
         margin-top: -2vh;
+        min-height: 120vh;
     }
 
     .part2{
@@ -273,6 +273,7 @@ video{
         border-radius: 30px 30px 30px 30px;
         position: relative;
         z-index: 1;
+        
     }
 
     .part3-sub{
@@ -637,6 +638,7 @@ video{
     .hero-content p {
         font-size: 4vw; /* Further adjust for smaller screens */
     }
+    
     .our-clients h1{
         font-size: 6vw;
     }
@@ -645,7 +647,8 @@ video{
         font-size: 6vw;
     }
     .heading-page2 p {
-        font-size: 4.5vw;
+        font-size: 4vw;
+        
     }
     
     .part3, .page4-heading {
