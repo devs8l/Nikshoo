@@ -309,6 +309,9 @@
     height: 100%;
     object-fit: contain;
   }
+  .mobile-carousel{
+    display: none;
+  }
 
   @media (max-width:768px) {
     .heading-rotate h1{
@@ -318,9 +321,9 @@
       font-size: 3vw;
     }
     .right-div{
-      display: none;
     }
     .left-div{
+      display: none;
       margin-right:2vh ;
       /* width: 90%; */
 
@@ -331,7 +334,32 @@
     }
     
     .atomic-model{
-      /* padding: 1vh; */
+      flex-direction: column-reverse;
     }
+
+    .mobile-carousel{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 17vw;
+    }
+    .mobile-arrow{
+      width: 30vw;
+      background: #b91717;
+      height: 22vw;
+      border-radius: 50%;
+      text-align: center;
+      
+    }
+    .mobile-circle{
+      width: 30vw;
+      background: #723838;
+      height: 22vw;
+      border-radius: 50%;
+      text-align: center;
+    }
+    
+
     
   }

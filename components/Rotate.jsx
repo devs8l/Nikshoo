@@ -134,6 +134,14 @@ export const Rotate = () => {
         setActiveElectron(id);
     };
 
+    const handleNext = () => {
+        setActiveElectron(prev => (prev === circles.length ? 1 : prev + 1));
+    };
+
+    const handlePrev = () => {
+        setActiveElectron(prev => (prev === 1 ? circles.length : prev - 1));
+    };
+
     return (
         <div className="rotate-wrap">
             <div className="heading-rotate">
@@ -157,6 +165,14 @@ export const Rotate = () => {
                             </div>
                         ))}
                     </div>
+                </div>
+
+                <div className="mobile-carousel">
+                    <div className="mobile-arrow left-arrow" onClick={handlePrev}>◀</div>
+                    <div className="mobile-circle">
+                        <h4>{activeCircle.heading}</h4>
+                    </div>
+                    <div className="mobile-arrow right-arrow" onClick={handleNext}>▶</div>
                 </div>
                 <div className="right-div">
                     {activeElectron === 3 || activeElectron === 4 || activeElectron === 5 ? (

@@ -3,7 +3,10 @@ import React, { useState } from 'react'
 import { NavLink, useLocation } from "react-router-dom"
 import "../components/Navbar.css"
 import navimg from "../assets/Frame.png"
-import { GiHamburgerMenu } from "react-icons/gi";
+import { GiHamburgerMenu} from "react-icons/gi";
+import { RxCross1 } from "react-icons/rx";
+import navimgfooter from "../assets/footerlogo.png"
+
 export default function Navbar() {
     const location = useLocation();
     const isHeroPage = location.pathname === '/';
@@ -26,9 +29,12 @@ export default function Navbar() {
             <div className="menu" onClick={() => {
                 setToggle(!toggle)
             }}>
-                <h3><GiHamburgerMenu
-                    style={{ color: isHeroPage ? 'white' : 'black' }}
-                /></h3>
+                <h3>
+                    {toggle 
+                        ? <RxCross1 />
+                        : <GiHamburgerMenu style={{ color: isHeroPage ? 'white' : 'black' }} />
+                    }
+                </h3>
             </div>
 
             <div className="nav-right">
@@ -46,7 +52,7 @@ export default function Navbar() {
                 <div id="full-div1">
                     <div className="full-nav-left">
                         <div className="full-img-div">
-                            <img src={navimg} alt="" />
+                            <img src={navimgfooter} alt="" />
                         </div>
                         <div className="full-left-content">
                             <h2>Nikshoo</h2>

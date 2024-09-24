@@ -52,7 +52,9 @@ const Hero = () => {
         {/* <Navbar></Navbar> */}
         <div className="container">
           {/* <Carousel></Carousel> */}
-          <video src={heroVid} autoPlay muted loop></video>
+          <video src={heroVid} autoPlay
+            muted
+            playsInline loop></video>
         </div>
         <div className="hero-content">
           <h1>Furniture For The <span>Future</span></h1>
@@ -184,7 +186,9 @@ const Hero = () => {
 
         </div>
         <div className="page4-img-div">
-          <video src={page4ilus} alt="" autoPlay muted loop />
+          <video src={page4ilus} alt="" autoPlay
+            muted
+            playsInline />
         </div>
 
         <div className="our-clients">
