@@ -258,5 +258,36 @@ textarea{
     right: -10%;
  
   }
+
+  @media (max-width:768px) {
+
+    .contact-hero{
+      flex-direction: column-reverse;
+    }
+
+    .contact-hero-right{
+      width: 90%;
+    }
+    .contact-hero-left{
+      width: 90%;
+    }
+
+    .contact-hero-left h1{
+      font-size: 6vw;
+      text-align: center;
+    }
+    .contact-hero-left p{
+      font-size: 4vw;
+      text-align: center;
+      margin: auto;
+      margin-top: 6vh;
+    }
+    .contact-hero-left a{
+      font-size: 4vw;
+      margin-top: 4vh;
+      text-align: center;
+    }
+    
+  }
   
 
