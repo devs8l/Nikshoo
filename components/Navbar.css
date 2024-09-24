@@ -180,11 +180,11 @@ li {
     .nav-left{
         width: 70%;
         /* background: palegoldenrod; */
-        margin-right: 37vh;
+        margin-right: 44vh;
     }
     .nav-left .img-div{
         /* background: white; */
-        /* height: 5.5vh; */
+        height: 5vh;
         margin-top: 10vw;
     }
 
