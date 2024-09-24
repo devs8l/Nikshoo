@@ -11,7 +11,7 @@ body, html {
   
   
   .hero-hww {
-    height: 100vh;
+    height: 100svh;
     width: 100vw;
     background: white;
     display: flex;
@@ -207,16 +207,19 @@ body, html {
   @media (max-width:768px) {
     .hero-hww{
       flex-direction: column-reverse;
+      gap: 1vh;
     }
     .hww-img-div{
-      width: 90%;
+      width:85%;
+      margin-top: 2vh;
     }
     .hww-hero-con{
       width: 60%;
     }
     .hww-hero-con h1{
       font-size: 6vw;
-      width: 70%;
+      width: 80%;
+      text-align: center;
       margin: auto;
     }
     .hww-hero-con p{
@@ -224,6 +227,7 @@ body, html {
       width: 100%;
       text-align: center;
       margin: auto;
+      margin-top: 4vh;
     }
 
       
