@@ -26,9 +26,9 @@ export default function Navbar() {
             <div className="menu" onClick={() => {
                 setToggle(!toggle)
             }}>
-                <h3><GiHamburgerMenu 
-                        style={{ color: isHeroPage ? 'white' : 'black' }} 
-                    /></h3>
+                <h3><GiHamburgerMenu
+                    style={{ color: isHeroPage ? 'white' : 'black' }}
+                /></h3>
             </div>
 
             <div className="nav-right">
@@ -44,7 +44,17 @@ export default function Navbar() {
             </div>
             <div className={toggle ? "fullscr toggle" : "fullscr"}>
                 <div id="full-div1">
-                <div id="fulldiv-text">
+                    <div className="full-nav-left">
+                        <div className="full-img-div">
+                            <img src={navimg} alt="" />
+                        </div>
+                        <div className="full-left-content">
+                            <h2>Nikshoo</h2>
+
+                            <p>Furniture Solutions</p>
+                        </div>
+                    </div>
+                    <div id="fulldiv-text">
                         <li><NavLink to="/" className="navlink" onClick={handleNavLinkClick}><h1>Home</h1></NavLink></li>
                         <li><NavLink to="/howwework" className="navlink" onClick={handleNavLinkClick}><h1>How we Work</h1></NavLink></li>
                         <li><NavLink to="/partner" className="navlink" onClick={handleNavLinkClick}><h1>Become a Partner</h1></NavLink></li>

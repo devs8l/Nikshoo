@@ -113,3 +113,15 @@
     object-fit: contain;
     aspect-ratio: 4/3;
 }
+
+@media (max-width:768px) {
+    .about-hero{
+        flex-direction: column-reverse;
+    }
+    .about-hero-left{
+        width: 100%;
+    }
+    .about-hero-right{
+        width: 70%;
+    }
+}
