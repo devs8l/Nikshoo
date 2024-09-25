@@ -332,4 +332,23 @@ input[type="file"]{
     .partner3-sub h2{
       text-align: center;
     }
+    .custom-form{
+      width: 80%;
+    }
+    .partner-section select{
+      width: 45%;
+      padding: 3vw;
+
+    }
+    .form-row input {
+      width: 90%;
+    }
+    .form-row textarea{
+      width: 90%;
+    }
+    .form-column input{
+      width: 80%;
+    }
+
+
   }
