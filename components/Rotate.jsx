@@ -168,11 +168,11 @@ export const Rotate = () => {
                 </div>
 
                 <div className="mobile-carousel">
-                    <div className="mobile-arrow left-arrow" onClick={handlePrev}>◀</div>
+                    <div className="mobile-arrow left-arrow" onClick={handlePrev}>&#60;</div>
                     <div className="mobile-circle">
                         <h4>{activeCircle.heading}</h4>
                     </div>
-                    <div className="mobile-arrow right-arrow" onClick={handleNext}>▶</div>
+                    <div className="mobile-arrow right-arrow" onClick={handleNext}>&#62;</div>
                 </div>
                 <div className="right-div">
                     {activeElectron === 3 || activeElectron === 4 || activeElectron === 5 ? (

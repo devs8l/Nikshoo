@@ -125,13 +125,36 @@
 
 @media (max-width:768px) {
     .gi-box{
+        margin-top: -5vh;
         flex-direction: column;
         min-height: 90%;
+        width: 90%;
+        
 
+
+    }
+    .form-group input{
+        width: 80%;
+        
+    }
+    .gi-wrap{
+        height: 110vh;
     }
     .gi-left{
         border: none;
         height: 20%;
+        width: 100%;
+        font-size: 1.4vh;
+        margin-left: 10vw;
+        margin-top: -17vh;
+    }
+    .gi-left h1{
+        width: 100%;
+    }
+    .gi-right{
+        width: 100%;
+        margin-left: 10vw;
+        margin-top: -3vh;
     }
     .form-con{
         flex-direction: column;
