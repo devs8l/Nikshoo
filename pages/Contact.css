@@ -258,6 +258,9 @@ textarea{
     right: -10%;
  
   }
+  .location p{
+    display: none;
+  }
 
   @media (max-width:768px) {
 
@@ -287,6 +290,99 @@ textarea{
       margin-top: 4vh;
       text-align: center;
     }
+
+    .contact-top{
+      /* background: #000; */
+      width: 100%;
+      /* background: #bb6161; */
+      flex-direction: column;
+      padding: 4vh;
+      position: relative;
+    }
+    .contact-ways{
+      width: 80%;
+      /* background: #000; */
+      border: 1px solid black;
+      border-radius: 20px;
+      padding: 2vh;
+    }
+    .contact-top p{
+      display: none;
+    }
+    .contact-top h3::after{
+      display: none;
+    }
+    .contact-top h3{
+      font-size: 1.6vh;
+    }
+
+    .contact-bottom{
+      flex-direction: column;
+      width: 100%;
+      border: none;
+      background: #E9F7F5;
+    }
+    .contact-b-l img{
+      display: none;
+    }
+    .contact-b-l{
+      border: none;
+      font-size: 2vh;
+      margin-top: 3vh;
+      position: relative;
+    }
+    .contact-b-r{
+      flex-direction: row;
+      width: 100%;
+      
+    }
+    .location{
+      width: 50%;
+      margin-left: 2vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* background: #000; */
+      flex-direction: column;
+
+      
+    }
+    .location img{
+      object-fit: contain;
+      width: 10%;
+    }
+    .contact-b-r h4{
+      display: none;
+    }
+    .location p{
+      display: block;
+      width: 70%;
+      text-align: center;
+    }
+
+    .contact3 h1{
+      display: none;
+    }
+    .contact3 p{
+      display: none;
+    }
+    .contactus-form{
+      width: 70%;
+      margin-top: -23vh;
+      border: 2px dashed #23aa9a62;
+      
+    }
+    .contactus-form input[type="tel"],
+  .contactus-form input[type="email"]{
+      width: 74%;
+      
+    }
+    .contactus-form button{
+      width: 60%;
+      margin-left: 15vw;
+    }
+    
+
     
   }
   

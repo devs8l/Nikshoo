@@ -78,11 +78,13 @@ const Contact = () => {
             <div className="location">
               <img src={location} alt="" />
               <h3>Indore:</h3>
+              <p>123 Innovation Drive, Tech City, Indore</p>
             </div>
             <h4>123 Innovation Drive, Tech City, Indore</h4>
             <div className="location">
               <img src={location} alt="" />
               <h3>Gurugram:</h3>
+              <p>123 Innovation Drive, Tech City, Indore</p>
             </div>
             <h4>123 Innovation Drive, Tech City, Gurugram</h4>
 

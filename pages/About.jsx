@@ -17,7 +17,7 @@ const About = () => {
             <img src={heroMain} alt="" />
             <div className="about-hero">
                 <div className="about-hero-left">
-                    <h1>About </h1>
+                    <h1>About Us</h1>
                     <p>At Nikshoo Furniture solutions,  we're passionate about creating inspiring workspaces that boost productivity, collaboration, and well-being. As a seasoned furniture supplier, we believe that a well-designed space is the foundation of a successful business.
                     </p>
                 </div>
