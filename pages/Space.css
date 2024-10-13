@@ -94,11 +94,21 @@
     object-fit: contain;
     border-radius: 8px;
   }
+  .health{
+    right: 0;
+  }
+  .kitchen{
+    right: 0;
+    scale: 0.6;
+  }
   
   .card-title {
     margin-top: 10px;
     font-size: 18px;
     color: #333;
+  }
+  .edu{
+    right: 0;
   }
   
   @media (max-width: 768px) {

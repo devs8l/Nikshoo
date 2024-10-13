@@ -13,6 +13,8 @@ import Blogs from '../pages/Blogs';
 import About from '../pages/About';
 import Office from '../pages/Office';
 import Education from '../pages/Education';
+import Healthcare from '../pages/Healthcare';
+import Kitchen from '../pages/Kitchen';
 
 function App() {
 
@@ -37,6 +39,8 @@ function App() {
           {/* spaces */}
           <Route path="/office" element={<Office />} />
           <Route path="/education" element={<Education />} />
+          <Route path="/healthcare" element={<Healthcare />} />
+          <Route path="/kitchen" element={<Kitchen />} />
 
         </Routes>
         <Footer></Footer>

@@ -86,8 +86,8 @@ const Hero = () => {
               <img src={edu} alt="" />
             </div>
             <div className="r-con">
-            <h2><a href="/education" className="spaces">Education Space <MdOutlineArrowOutward />
-            </a></h2>
+              <h2><a href="/education" className="spaces">Education Space <MdOutlineArrowOutward />
+              </a></h2>
             </div>
           </div>
         </div>
@@ -98,7 +98,8 @@ const Hero = () => {
               <img src={health} alt="" />
             </div>
             <div className="part3-con">
-              <h2>Healthcare Space</h2>
+              <h2><a href="/healthcare" className="spaces">Healthcare Space <MdOutlineArrowOutward />
+              </a></h2>
             </div>
           </div>
           <div className="part3-sub">
@@ -114,7 +115,8 @@ const Hero = () => {
               <img src={kitchenImg} alt="" />
             </div>
             <div className="part3-con">
-              <h2>Commercial Kitchen</h2>
+            <h2><a href="/kitchen" className="spaces">Commerical Kitchen<MdOutlineArrowOutward />
+            </a></h2>
             </div>
           </div>
         </div>

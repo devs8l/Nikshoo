@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react'
 import "../pages/Space.css"
 import officeHero from "../assets/office-hero.png"
 import officeHeroRight from "../assets/office-hero-right.png"
 
-import officechair from "../assets/officechair.png"
+import DoctorExam from "../assets/Doctor-table.png"
 import exeDesk from "../assets/exeDesk.png"
 import Workstation from "../assets/Workstation.png"
 import Cube from "../assets/cubicles.png"
@@ -15,42 +15,37 @@ import Pods from "../assets/pods.png"
 import Cafe from "../assets/cafeteria.png"
 import Storage from "../assets/storage.png"
 import Locker from "../assets/locker.png"
-import edudesk from "../assets/edudesk.png"
-
 
 import heroMain from "../assets/hero-main.png"
-import admin from "../assets/furn.png"
-import eduHero from "../assets/edu-hero.png"
-import eduHeroRight from "../assets/edu-hero-right.png"
-import waiting from "../assets/wait.png"
+
+import HealthcareHero from "../assets/Health-hero.png"
+import HealthcareHeroRight from "../assets/Health-right-hero.png"
 import Principal from "../assets/Principal.png"
+import GreySofa from "../assets/grey-sofa.png"
+
+import waiting from "../assets/wait.png"
 import soft from "../assets/soft-seat.png"
-import Library from "../assets/library.png"
-import Dining from "../assets/dining.png"
-import Hostel from "../assets/Hostel.png"
-import Lab from "../assets/lab.png"
+import tward from "../assets/two.png"
+import HospitalRoom from "../assets/hos-room.png"
 
 
 
-const Education = () => {
-  
+
+
+const Healthcare = () => {
     const furnitureData = [
-        { id: 1, img: edudesk, title: 'Classroom Desking' },
-        { id: 2, img: exeDesk, title: 'Executive Desk' },
-        { id: 3, img: admin, title: 'Administration Office Furniture' },
-        { id: 4, img: Sofas, title: 'Sofas' },
-        { id: 5, img: waiting, title: 'Waiting Area Furniture' },
-        { id: 6, img: soft, title: 'Soft Seating' },
-        { id: 8, img: Compact, title: 'Compactors' },
+        { id: 1, img: DoctorExam, title: 'Doctor Examination' },
+        { id: 2, img: Principal, title: 'Administration Desk' },
+        { id: 3, img: GreySofa, title: 'Sofas' },
+        { id: 4, img: waiting, title: 'Waiting area' },
+        { id: 5, img: soft, title: 'Soft Seating' },
         { id: 9, img: Pods, title: 'Pods' },
         { id: 10, img: Cafe, title: 'Cafeteria/Recreation' },
         { id: 11, img: Storage, title: 'Storages' },
         { id: 12, img: Locker, title: 'Lockers' },
-        { id: 12, img: Library, title: 'Library' },
-        { id: 12, img: Dining, title: 'Dining' },
-        { id: 12, img: Hostel, title: 'Hostel' },
-        { id: 12, img: Lab, title: 'Lab' },
-        { id: 7, img: Principal, title: 'Principal /Dean Cabin' },
+        { id: 6, img: tward, title: 'Transfer , ward & OT ' },
+        { id: 7, img: HospitalRoom, title: 'Hospital room' },
+        { id: 8, img: Compact, title: 'Compactors' },
     
         // Add more furniture data here
       ];
@@ -58,21 +53,21 @@ const Education = () => {
     return (
         <div className='space-wrap'>
             <div className="space-hero">
-                <img src={eduHero} alt="" />
+                <img src={HealthcareHero} alt="" />
                 <div className="space-hero-left">
-                    <h1>Education Spaces</h1>
+                    <h1>Healthcare Spaces</h1>
                     <a href="">Enquire Now</a>
                 </div>
-                <div className="space-hero-right edu">
-                    <img src={eduHeroRight} alt="" />
+                <div className="space-hero-right health">
+                    <img src={HealthcareHeroRight} alt="" />
                 </div>
             </div>
 
             <div className="space2">
                 <img src={heroMain} alt="" />
                 <div className="space2-heading">
-                <h1>Products in Education Spaces</h1>
-                <p>Our Solutions for  Education Spaces include, but are not limited to:</p>
+                <h1>Products in Healthcare Spaces</h1>
+                <p>Our Solutions for  Healthcare Spaces include, but are not limited to:</p>
                 </div>
 
                 <div className="cards-container">
@@ -88,4 +83,4 @@ const Education = () => {
     )
 }
 
-export default Education
+export default Healthcare
