@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../pages/Hww.css';
 import hww1 from "../assets/hww1.png";
 import hww2 from "../assets/hww2.png";
@@ -12,6 +12,32 @@ import hwwHero from "../assets/hww-hero.png"
 import hwwFoot from "../assets/hww-footer.png"
 
 const Hww = () => {
+  const [isFormVisible, setFormVisible] = useState(false);
+
+  const toggleFormVisibility = () => {
+    setFormVisible(!isFormVisible);
+  };
+
+  const [formData, setFormData] = useState({
+    fullName: '',
+    phoneNumber: '',
+    location: '',
+    message: '',
+    email: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form Data:', formData);
+  };
   return (
     <div className="hww-wrap">
       <div className="hero-hww">
@@ -81,7 +107,7 @@ const Hww = () => {
               <p>- Our experienced installation team ensures a seamless and efficient setup process.
               </p>
               <p>
-              - We take care of every detail, from delivery to assembly, so you can focus on your business.</p>
+                - We take care of every detail, from delivery to assembly, so you can focus on your business.</p>
             </div>
           </div>
         </div>
@@ -105,16 +131,84 @@ const Hww = () => {
           <div className="hww-hero-con">
             <h1>Let’s Chat!</h1>
             <p className='hww-para'>Got a question, concern, or idea? We’re all ears! Fill out the form, and let’s get your answer or solution on its way!</p>
-            <button>
-            Enquire Now
-          </button>
+            <button onClick={toggleFormVisibility}>
+              Enquire Now
+            </button>
           </div>
           <div className="hww-img-div">
             <img src={hwwFoot} alt="" />
           </div>
-          
         </div>
       </div>
+      {isFormVisible && (
+        <div className="popup-form">
+          <div className="form-content">
+            <button className="close-btn" onClick={toggleFormVisibility}>
+              &times;
+            </button>
+            
+            <form onSubmit={handleSubmit}>
+              <div>
+                <label>Your Full Name</label>
+                <input
+                  type="text"
+                  name="fullName"
+                  value={formData.fullName}
+                  onChange={handleChange}
+                  placeholder="Your Full Name"
+                  required
+                />
+              </div>
+              <div className="half-row">
+                <div>
+                  <label>Phone Number</label>
+                  <input
+                    type="tel"
+                    name="phoneNumber"
+                    value={formData.phoneNumber}
+                    onChange={handleChange}
+                    placeholder="Enter Phone Number"
+                    required
+                  />
+                </div>
+                <div>
+                  <label>Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="Enter Your Email"
+                    required
+                  />
+                </div>
+              </div>
+              <div>
+                <label>Location</label>
+                <input
+                  type="text"
+                  name="location"
+                  value={formData.location}
+                  onChange={handleChange}
+                  placeholder="Your Location"
+                  required
+                />
+              </div>
+              <div>
+                <label>Message</label>
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Type Your Message"
+                  required
+                />
+              </div>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      )}
 
     </div>
   );

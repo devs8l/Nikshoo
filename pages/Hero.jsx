@@ -1,4 +1,6 @@
 import React, { useRef } from 'react';
+import { NavLink, useLocation } from "react-router-dom"
+import { MdOutlineArrowOutward } from "react-icons/md";
 import "../pages/Hero.css"
 import Carousel from "../components/Carousel"
 import Navbar from '../components/Navbar'
@@ -74,7 +76,8 @@ const Hero = () => {
               <img src={office} alt="" />
             </div>
             <div className="l-con">
-              <h2>Office Space</h2>
+              <h2><a href="/office" className="spaces" >Office Space <MdOutlineArrowOutward />
+              </a></h2>
             </div>
           </div>
 
@@ -83,7 +86,8 @@ const Hero = () => {
               <img src={edu} alt="" />
             </div>
             <div className="r-con">
-              <h2>Education Space</h2>
+            <h2><a href="/education" className="spaces">Education Space <MdOutlineArrowOutward />
+            </a></h2>
             </div>
           </div>
         </div>

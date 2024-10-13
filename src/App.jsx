@@ -11,6 +11,8 @@ import Contact from '../pages/Contact';
 import Partner from '../pages/Partner';
 import Blogs from '../pages/Blogs';
 import About from '../pages/About';
+import Office from '../pages/Office';
+import Education from '../pages/Education';
 
 function App() {
 
@@ -31,6 +33,10 @@ function App() {
           <Route path="/partner" element={<Partner />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/about" element={<About />} />
+
+          {/* spaces */}
+          <Route path="/office" element={<Office />} />
+          <Route path="/education" element={<Education />} />
 
         </Routes>
         <Footer></Footer>

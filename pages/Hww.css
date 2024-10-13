@@ -297,14 +297,14 @@ html {
 
   .image-part.part-1 .hww-con {
     top: 10%;
-    right: 5%;
+    right: 0%;
     z-index: 100;
   }
 
   .image-part.part-2 .hww-con {
     top: -6%;
     /* Same top as part-1 */
-    right: 5%;
+    right: 0%;
     /* Same right as part-1 */
     z-index: 2;
   }
@@ -312,7 +312,7 @@ html {
   .image-part.part-3 .hww-con {
     top: -20%;
     /* Same top as part-1 */
-    right: 5%;
+    right: 0%;
     /* Align to the left */
     z-index: 3;
   }
@@ -320,7 +320,7 @@ html {
   .image-part.part-4 .hww-con {
     top: -35%;
     /* Same top as part-1 */
-    right: 5%;
+    right: 0%;
     /* Same left as part-3 */
     z-index: 4;
   }
@@ -328,7 +328,7 @@ html {
   .image-part.part-5 .hww-con {
     top: -50%;
     /* Same top as part-1 */
-    right: 5%;
+    right: 0%;
     /* Same left as part-3 */
     z-index: 5;
   }
@@ -400,3 +400,74 @@ html {
 
 
 }
+
+
+.popup-form {
+  position: fixed;
+  top: -25%;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #217067c7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  min-height: 140vh; /* Similar height property */
+  flex-direction: column; /* Makes the form center with vertical alignment */
+}
+
+.form-content {
+  width: 40%; /* Adjusted width similar to .custom-form */
+  margin: 0 auto;
+  padding: 6vw;
+  background-color: white;
+  border: 2px dashed #23AA9B; /* Dashed border similar to .custom-form */
+  border-radius: 8px;
+  position: relative;
+}
+
+.popup-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-form label {
+  margin: 10px 0;
+}
+
+form input,
+form textarea {
+  width: 100%; /* To make inputs take full width */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px 50px; /* Wider padding similar to the custom button */
+  background-color: #23AA9B;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form button:hover {
+  background-color: #0c4942;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+
