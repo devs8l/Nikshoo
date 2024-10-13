@@ -5,7 +5,7 @@ import KitchenHeroRight from "../assets/kitchen-hero-right.png"
 import heroMain from "../assets/hero-main.png"
 import Bakery from "../assets/Bakery.png"
 import Fridge from "../assets/fridge.png"
-import restraunt from "../assets/restraunt.png"
+import restraunt from "../assets/Restraunt.png"
 import kitchenStorage from "../assets/kitchen-storage.png"
 import cloud from "../assets/cloud.png"
 
