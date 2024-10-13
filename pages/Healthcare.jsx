@@ -12,7 +12,7 @@ import Sofas from "../assets/sofas.png"
 import Lounge from "../assets/lounge.png"
 import Compact from "../assets/compact.png"
 import Pods from "../assets/pods.png"
-import Cafe from "../assets/cafeteria.png"
+import Cafe from "../assets/Cafeteria.png"
 import Storage from "../assets/storage.png"
 import Locker from "../assets/locker.png"
 
