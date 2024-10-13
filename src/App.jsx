@@ -15,6 +15,7 @@ import Office from '../pages/Office';
 import Education from '../pages/Education';
 import Healthcare from '../pages/Healthcare';
 import Kitchen from '../pages/Kitchen';
+import Lab from '../pages/Lab';
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
           <Route path="/education" element={<Education />} />
           <Route path="/healthcare" element={<Healthcare />} />
           <Route path="/kitchen" element={<Kitchen />} />
+          <Route path="/lab" element={<Lab />} />
 
         </Routes>
         <Footer></Footer>

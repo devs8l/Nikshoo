@@ -107,7 +107,8 @@ const Hero = () => {
               <img src={lab} alt="" />
             </div>
             <div className="part3-con">
-              <h2>Laboratory Space</h2>
+            <h2><a href="/lab" className="spaces">Laboratory Spaces<MdOutlineArrowOutward />
+            </a></h2>
             </div>
           </div>
           <div className="part3-sub">
