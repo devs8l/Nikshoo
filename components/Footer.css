@@ -132,6 +132,17 @@
     justify-content: left;
     padding-left: 8vw;
 }
+.gem{
+    gap: 2svw;
+    
+}
+.gem img{
+    width: 80%;
+}
+.gem h3{
+    width: 70%;
+    text-align: center;
+}
 
 
 @media (max-width:768px) {
@@ -169,8 +180,8 @@
      }
      .icon-div-footer{
         position: absolute;
-        top: 80%;
-        left: 0%;
+        top: 87%;
+        left: -1%;
      }
      .upper-part h2{
         font-size: 2vh;
@@ -187,25 +198,30 @@
 
      .gem{
         position: absolute;
-        top: 11%;
-        left: 64%;
-        width: 50vw;
+        top: 34%;
+        left: 5%;
+        width: 65vw;
+        gap: 3vw;
         /* padding: 2vw; */
      }
-     .gem h3{
-        display: none;
+     .gem p{
+        /* display: none; */
+        font-size: 3vw;
+        width: 120%;
      }
      .mid-foot{
         width: 40%;
-        margin-top: -6vh;
+        margin-top: 19vh;
         margin-left: 5vw;
      }
      .right-foot{
         width: 55%;
+        margin-top: 0vh;
+        margin-bottom: -27vh;
         
      }
      .gem img{
-        width: 50%;
+        width: 90%;
      }
      .copyright{
         margin: 0;

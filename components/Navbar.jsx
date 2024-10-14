@@ -42,9 +42,9 @@ export default function Navbar() {
                     <li><NavLink to="/" className="navlink">Home</NavLink></li>
                     <li><NavLink to="/howwework" className="navlink">How we Work</NavLink></li>
                     <li><NavLink to="/partner" className="navlink">Become a Partner</NavLink></li>
-                    <li><NavLink to="/blogs" className="navlink">Blogs</NavLink></li>
+                    {/* <li><NavLink to="/blogs" className="navlink">Blogs</NavLink></li> */}
                     <li><NavLink to="/about" className="navlink">About</NavLink></li>
-                    <li><NavLink to="/shop" className="navlink">Shop</NavLink></li>
+                    {/* <li><NavLink to="/shop" className="navlink">Shop</NavLink></li> */}
                     <li><NavLink to="/contact" className="navlink">Contact Us</NavLink></li>
                 </ul>
             </div>

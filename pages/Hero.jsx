@@ -7,6 +7,8 @@ import Navbar from '../components/Navbar'
 import lefty from "../assets/lefty.png"
 import righty from "../assets/righty.png"
 import border from "../assets/hero2.png"
+import avizva from "../assets/AVIZVA.mp4"
+
 import office from "../assets/office.png"
 import edu from "../assets/edu.png"
 import health from "../assets/hww-lefty.png"
@@ -61,7 +63,10 @@ const Hero = () => {
         <div className="hero-content">
           <h1>Furniture For The <span>Future</span></h1>
           <p>Elevate your spaces with innovative style, functionality and aesthetics</p>
-          <button onClick={scrollToGetInTouch}>Get Started</button>
+          <div className="hero-button">
+            <button onClick={scrollToGetInTouch}>Get Started</button>
+            <a href=""><p>Get a Free Consultation</p></a>
+          </div>
         </div>
       </div>
 
@@ -73,51 +78,74 @@ const Hero = () => {
         <div className="part2">
           <div className="part2-l">
             <div className="l-img">
-              <img src={office} alt="" />
+              <a href="/office">
+                <img src={office} alt="Office" />
+              </a>
             </div>
             <div className="l-con">
-              <h2><a href="/office" className="spaces" >Office Space <MdOutlineArrowOutward />
+              <h2><a href="/office" className="spaces" >Office Space <MdOutlineArrowOutward className='green' />
               </a></h2>
             </div>
           </div>
 
-          <div className="part2-r">
+          <div className="part2-r mobileabs">
             <div className="r-img">
-              <img src={edu} alt="" />
+              <a href="/education">
+                <img src={edu} alt="Office" />
+              </a>
             </div>
             <div className="r-con">
-              <h2><a href="/education" className="spaces">Education Space <MdOutlineArrowOutward />
+              <h2><a href="/education" className="spaces">Education Space <MdOutlineArrowOutward className='green' />
               </a></h2>
             </div>
           </div>
         </div>
 
         <div className="part3">
+
+          <div className="part2-r abs">
+            <div className="r-img">
+              <a href="/education">
+                <img src={edu} alt="Office" />
+              </a>
+            </div>
+            <div className="r-con">
+              <h2><a href="/education" className="spaces">Education Space <MdOutlineArrowOutward className='green' />
+              </a></h2>
+            </div>
+          </div>
+
           <div className="part3-sub">
             <div className="part3-img-div">
-              <img src={health} alt="" />
+              <a href="/healthcare">
+                <img src={health} alt="Office" />
+              </a>
             </div>
             <div className="part3-con">
-              <h2><a href="/healthcare" className="spaces">Healthcare Space <MdOutlineArrowOutward />
+              <h2><a href="/healthcare" className="spaces">Healthcare Space <MdOutlineArrowOutward className='green' />
               </a></h2>
             </div>
           </div>
           <div className="part3-sub">
             <div className="part3-img-div">
-              <img src={lab} alt="" />
+              <a href="/lab">
+                <img src={lab} alt="Office" />
+              </a>
             </div>
             <div className="part3-con">
-            <h2><a href="/lab" className="spaces">Laboratory Spaces<MdOutlineArrowOutward />
-            </a></h2>
+              <h2><a href="/lab" className="spaces">Laboratory Spaces<MdOutlineArrowOutward className='green' />
+              </a></h2>
             </div>
           </div>
           <div className="part3-sub">
             <div className="part3-img-div">
-              <img src={kitchenImg} alt="" />
+              <a href="/kitchen">
+                <img src={kitchenImg} alt="Office" />
+              </a>
             </div>
             <div className="part3-con">
-            <h2><a href="/kitchen" className="spaces">Commerical Kitchen<MdOutlineArrowOutward />
-            </a></h2>
+              <h2><a href="/kitchen" className="spaces">Commerical Kitchen<MdOutlineArrowOutward className='green' />
+              </a></h2>
             </div>
           </div>
         </div>
@@ -141,7 +169,9 @@ const Hero = () => {
             <img src={lefty} alt="" />
           </div>
           <div className="center-ilus">
-            <img src={border} alt="" />
+            <video src={avizva} alt="" autoPlay
+              muted
+              playsInline loop />
           </div>
           <div className="right-ilus">
             <img src={righty} alt="" />

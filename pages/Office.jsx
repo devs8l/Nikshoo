@@ -17,6 +17,7 @@ import Storage from "../assets/storage.png"
 import Locker from "../assets/locker.png"
 
 import heroMain from "../assets/hero-main.png"
+import officeHeroMobile from "../assets/mobile-office-hero.png"
 
 
 
@@ -41,7 +42,8 @@ const Office = () => {
     return (
         <div className='space-wrap'>
             <div className="space-hero">
-                <img src={officeHero} alt="" />
+                <img src={officeHeroMobile} className="mobile" alt="" />
+                <img src={officeHero} className="desktop" alt="" />
                 <div className="space-hero-left">
                     <h1>Office Spaces</h1>
                     <a href="">Enquire Now</a>

@@ -21,6 +21,7 @@ import edudesk from "../assets/edudesk.png"
 import heroMain from "../assets/hero-main.png"
 import admin from "../assets/furn.png"
 import eduHero from "../assets/edu-hero.png"
+import eduHeroMobile from "../assets/mobile-education-hero.png"
 import eduHeroRight from "../assets/edu-hero-right.png"
 import waiting from "../assets/wait.png"
 import Principal from "../assets/Principal.png"
@@ -58,7 +59,8 @@ const Education = () => {
     return (
         <div className='space-wrap'>
             <div className="space-hero">
-                <img src={eduHero} alt="" />
+                <img src={eduHero} className='desktop' alt="" />
+                <img src={eduHeroMobile} className='mobile' alt="" />
                 <div className="space-hero-left">
                     <h1>Education Spaces</h1>
                     <a href="">Enquire Now</a>

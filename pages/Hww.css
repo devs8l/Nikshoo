@@ -170,6 +170,11 @@ html {
   color: white;
   margin-top: 2vw;
 }
+.hww-hero-con button:hover{
+  border: none;
+  background: #1c7d72;
+  cursor: pointer;
+}
 
 .image-part.part-1 .hww-con {
   top: 10%;
@@ -436,8 +441,8 @@ html {
   margin: 10px 0;
 }
 
-form input,
-form textarea {
+.popup-form input,
+.popup-form textarea {
   width: 100%; /* To make inputs take full width */
   padding: 10px;
   font-size: 16px;
@@ -445,7 +450,7 @@ form textarea {
   border-radius: 5px;
 }
 
-form button {
+.popup-form button {
   padding: 10px 50px; /* Wider padding similar to the custom button */
   background-color: #23AA9B;
   color: white;
@@ -455,8 +460,8 @@ form button {
   font-size: 16px;
 }
 
-form button:hover {
-  background-color: #0c4942;
+.popup-form button:hover {
+  background-color: #107d70;
 }
 
 .close-btn {
@@ -467,6 +472,7 @@ form button:hover {
   border: none;
   font-size: 24px;
   cursor: pointer;
+  background-color: transparent;
 }
 
 

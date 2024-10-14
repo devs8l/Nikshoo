@@ -1,6 +1,7 @@
 import React from 'react'
 import "../pages/Space.css"
 import KitchenHero from "../assets/kitchen-hero.png"
+import KitchenHeroMobile from "../assets/mobile-kitchen-hero.png"
 import KitchenHeroRight from "../assets/kitchen-hero-right.png"
 import heroMain from "../assets/hero-main.png"
 import Bakery from "../assets/Bakery.png"
@@ -26,7 +27,8 @@ const Kitchen = () => {
     return (
         <div className='space-wrap'>
             <div className="space-hero">
-                <img src={KitchenHero} alt="" />
+                <img src={KitchenHero} className='desktop' alt="" />
+                <img src={KitchenHeroMobile} className='mobile' alt="" />
                 <div className="space-hero-left">
                     <h1>Commercial Kitchen</h1>
                     <a href="">Enquire Now</a>
@@ -36,7 +38,7 @@ const Kitchen = () => {
                 </div>
             </div>
 
-            <div className="space2">
+            <div className="space2 kit">
                 <img src={heroMain} alt="" />
                 <div className="space2-heading">
                 <h1>Products in Commercial Kitchen</h1>

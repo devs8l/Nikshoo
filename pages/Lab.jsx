@@ -1,6 +1,7 @@
 import React from 'react'
 import "../pages/Space.css"
 import LabHero from "../assets/lab-hero.png"
+import LabHeroMobile from "../assets/mobile-laboratory-hero.png"
 import LabHeroRight from "../assets/lab-hero-right.png"
 import heroMain from "../assets/hero-main.png"
 import LabWork from "../assets/lab-work.png"
@@ -25,7 +26,8 @@ const Lab = () => {
     return (
         <div className='space-wrap'>
             <div className="space-hero">
-                <img src={LabHero} alt="" />
+                <img src={LabHero} className='desktop' alt="" />
+                <img src={LabHeroMobile} className='mobile' alt="" />
                 <div className="space-hero-left">
                     <h1>Laboratory Spaces</h1>
                     <a href="">Enquire Now</a>
@@ -35,11 +37,12 @@ const Lab = () => {
                 </div>
             </div>
 
-            <div className="space2">
+            <div className="space2 lab">
                 <img src={heroMain} alt="" />
                 <div className="space2-heading">
                 <h1>Products in Commercial Kitchen</h1>
-                <p>Our Solutions for  Commercial Kitchen include, but are not limited to:</p>
+                <p>Our Solutions for Laboratory Spaces
+                include, but are not limited to:</p>
                 </div>
 
                 <div className="cards-container">

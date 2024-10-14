@@ -87,6 +87,11 @@
     gap: 2vh;
     width: calc(20%); /* 4 cards per row with a gap */
   }
+
+  .card:hover{
+    background: white;
+    border: .1px solid #91D4CD ;
+  }
   
   .card img {
     width: 90%;
@@ -111,15 +116,83 @@
     right: 0;
   }
   
+ .mobile{
+  display: none;
+ }
+  
   @media (max-width: 768px) {
     .card {
-      width: calc(50% - 16px); /* 2 cards per row on tablet */
+      width: 35%; /* 1 card per row on mobile */
+      padding: 5vw;
+      height: 25vh;
     }
-  }
-  
-  @media (max-width: 480px) {
-    .card {
-      width: 100%; /* 1 card per row on mobile */
+    .space-hero-left{
+      position: relative;
+      z-index: 10;
+      top: 0%;
+      width: 80%;
+    }
+    .space-hero-left h1{
+      font-size: 4vh;
+      text-align: center;
+      font-weight: bold;
+    }
+    .space-hero-left a{
+      display: none;
+    }
+    .space-hero img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      position: absolute;
+      top: -25%;
+    }
+
+    .desktop{
+      display: none;
+
+    }
+    .mobile{
+      display: block;
+      position: absolute;
+      z-index: 1;
+    }
+    .card h3{
+      font-size: 3vw;
+
+    }
+
+    .space-hero-right{
+      display: none;
+    }
+
+    .cards-container{
+      width: 90%;
+    }
+
+
+    .space2-heading h1{
+      display: none;
+    }
+    .space2-heading p{
+      width: 70%;
+      margin-left: 15%;
+      text-align: center;
+      margin-top: -100%;
+    }
+    .cards-container{
+      margin-top: -100%;
+    }
+
+    
+
+    .lab{
+      margin-top: -75%;
+      margin-bottom: -70%;
+    }
+    .kit{
+      margin-top: -40%;
+      margin-bottom: -30%;
     }
   }
   

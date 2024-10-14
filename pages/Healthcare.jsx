@@ -19,6 +19,7 @@ import Locker from "../assets/locker.png"
 import heroMain from "../assets/hero-main.png"
 
 import HealthcareHero from "../assets/Health-hero.png"
+import HealthcareHeroMobile from "../assets/mobile-healthcare-hero.png"
 import HealthcareHeroRight from "../assets/Health-right-hero.png"
 import Principal from "../assets/Principal.png"
 import GreySofa from "../assets/grey-sofa.png"
@@ -53,7 +54,8 @@ const Healthcare = () => {
     return (
         <div className='space-wrap'>
             <div className="space-hero">
-                <img src={HealthcareHero} alt="" />
+                <img src={HealthcareHeroMobile} className='mobile' alt="" />
+                <img src={HealthcareHero} className='desktop' alt="" />
                 <div className="space-hero-left">
                     <h1>Healthcare Spaces</h1>
                     <a href="">Enquire Now</a>
