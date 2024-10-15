@@ -56,7 +56,7 @@ const Footer = () => {
                         <h3><a href="/partner">Become A Partner</a></h3>
                         <h3><a href="/about">About Us</a></h3>
                         <h3><a href="/contact">Contact Us</a></h3>
-                        <h3>Privacy Policy</h3>
+                        <h3><a href="/privacy">Privacy Policy</a></h3>
                     </div>
                 </div>
                 <div className="right-foot">
