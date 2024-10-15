@@ -51,13 +51,11 @@ const Footer = () => {
                 <div className="mid-foot">
                     <h2>Quick Links</h2>
                     <div className="links-footer">
-                        <h3>Home</h3>
-                        <h3>Shop now</h3>
-                        <h3>How we work</h3>
-                        <h3>Become A Partner</h3>
-                        <h3>About Us</h3>
-                        <h3>Contact Us</h3>
-                        <h3>Blogs</h3>
+                        <h3><a href="/">Home</a></h3>
+                        <h3><a href="/howwework">How we work</a></h3>
+                        <h3><a href="/partner">Become A Partner</a></h3>
+                        <h3><a href="/about">About Us</a></h3>
+                        <h3><a href="/contact">Contact Us</a></h3>
                         <h3>Privacy Policy</h3>
                     </div>
                 </div>
@@ -70,18 +68,18 @@ const Footer = () => {
                                 <img src={c1} alt="" />
                                 <h3>Address:</h3>
                             </div>
-                            <p>Greenshots Retail Pvt. Ltd.
-                                Indore, Madhya Pradesh, 452003</p>
+                            <p><u>Greenshots Retail Pvt. Ltd.
+                            Indore, Madhya Pradesh, 452003</u></p>
                             <div className="c-top-heading">
                                 <img src={c2} alt="" />
                                 <h3>Reach us by phone:</h3>
                             </div>
-                            <p>011-411-69125</p>
+                            <p><u>741-577-5000</u></p>
                             <div className="c-top-heading">
                                 <img src={c3} alt="" />
                                 <h3>Email us:</h3>
                             </div>
-                            <p>inquiry@nikshoo.com</p>
+                            <p><u>marketing@nikshoo.com</u></p>
                         </div>
                     </div>
                 </div>

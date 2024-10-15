@@ -33,6 +33,7 @@
     /* background: #000; */
     align-items: center;
     margin-left: -0.3vw;
+    margin-top: 5vh;
 }
 .gem h3{
     font-size: 0.9vw;
@@ -79,6 +80,7 @@
     justify-content: center;
     gap: 1vw;
     width: 40%;
+    margin-top: 2vh;
 }
 
 .mid-foot{
@@ -99,7 +101,7 @@
 .c-top{
     display: flex;
     flex-direction: column;
-    gap: 1vw;
+    gap: 0.4vw;
 }
 .c-top-heading{
     gap: 1vw;
@@ -108,9 +110,14 @@
     /* background: white; */
     height: 5vh;
     align-items: center;
+    position: relative;
 }
-.links-footer h3{
+
+
+.links-footer a{
     font-weight: 100;
+    text-decoration: none;
+    color: white;
 }
 
 .c-top p{
@@ -139,7 +146,7 @@
 .gem img{
     width: 80%;
 }
-.gem h3{
+.gem p{
     width: 70%;
     text-align: center;
 }
@@ -202,6 +209,7 @@
         left: 5%;
         width: 65vw;
         gap: 3vw;
+        margin-top: 0vh;
         /* padding: 2vw; */
      }
      .gem p{

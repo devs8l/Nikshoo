@@ -55,7 +55,6 @@ const Education = () => {
     
         // Add more furniture data here
       ];
-      
     return (
         <div className='space-wrap'>
             <div className="space-hero">

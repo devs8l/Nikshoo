@@ -9,13 +9,20 @@ import rec from "../assets/rec.png";
 import lab from "../assets/mg3.png";
 import officetop from "../assets/office-top.png";
 import officeleft from "../assets/office-b-l.png";
-import officeright from "../assets/office-b-r.png";
+import officeright from "../assets/office-workstation.png";
 import edutop from "../assets/edu-top.png";
+import eduHeroRight from "../assets/edu-hero-right.png"
 
 import hbed from "../assets/bed-health.png"
+import CafeEdu from "../assets/Cafe-edu.png"
+import Library from "../assets/library.png"
+import Lounge from "../assets/lounge.png"
 
 
-import kitchenRotate from "../assets/kitchen2.png"
+
+
+
+import kitchenRotate from "../assets/com-kitchen.png"
 import labRotate from "../assets/lab2.png"
 
 export const Rotate = () => {
@@ -30,7 +37,7 @@ export const Rotate = () => {
             content: 'Content for Office Space',
             image: centerpiece,
             rightTop: {
-                h3: 'Dream Office',
+                link: '/office',
                 h1: 'Office Desk',
                 para: 'Beautiful Color Collection',
                 image: officetop
@@ -40,7 +47,7 @@ export const Rotate = () => {
                 image: officeleft
             },
             bottomRight: {
-                h1: 'Modern Chairs',
+                h1: 'Workstations',
                 image: officeright
             }
         },
@@ -50,18 +57,18 @@ export const Rotate = () => {
             content: 'Content for Education Space',
             image: eduImg,
             rightTop: {
-                h3: 'Elevating',
+                link: '/education',
                 h1: 'Education Space',
                 para: 'Beautiful Color Collection',
-                image: edutop
+                image: eduHeroRight
             },
             bottomLeft: {
-                h1: 'Rotational Chairs',
-                image: officeleft
+                h1: 'Cafeteria',
+                image: Lounge
             },
             bottomRight: {
-                h1: 'Modern Chairs',
-                image: officeright
+                h1: 'Library',
+                image: Library
             }
         },
         {
@@ -70,7 +77,7 @@ export const Rotate = () => {
             content: 'Content for Commercial Kitchen',
             image: Kitchen,
             rightTop: {
-                h3: 'Top-notch',
+                link: '/kitchen',
                 h1: 'Commercial Kitchen',
                 para: '',
                 image: kitchenRotate
@@ -90,7 +97,7 @@ export const Rotate = () => {
             content: 'Content for Healthcare Space',
             image: med,
             rightTop: {
-                h3: 'Top-Notch',
+                link: '/healthcare',
                 h1: 'Healthcare Space',
                 para: '',
                 image: hbed
@@ -110,7 +117,7 @@ export const Rotate = () => {
             content: 'Content for Laboratory Space',
             image: lab,
             rightTop: {
-                h3: 'Top-Notch',
+                link: '/lab',
                 h1: 'Laboratory Space',
                 para: '',
                 image: labRotate
@@ -179,10 +186,10 @@ export const Rotate = () => {
                         <div className="custom-content">
                             <img src={rec} alt="" />
                             <div className="custom-r-t-con">
-                                <h3>{activeCircle.rightTop.h3}</h3>
+                                {/* <h3>{activeCircle.rightTop.h3}</h3> */}
                                 <h1>{activeCircle.rightTop.h1}</h1>
                                 <p>{activeCircle.rightTop.para}</p>
-                                <a href="">View Collection</a>
+                                <a href={activeCircle.rightTop.link}>Explore</a>
                             </div>
                             <div className="custom-img-div">
                                 <img src={activeCircle.rightTop.image} alt="" />
@@ -194,10 +201,10 @@ export const Rotate = () => {
                                 <div className="right-top">
                                     <img src={rec} alt="" className='right-img-ilus' />
                                     <div className="r-t-con">
-                                        <h3>{activeCircle.rightTop.h3}</h3>
+                                        {/* <h3>{activeCircle.rightTop.h3}</h3> */}
                                         <h1>{activeCircle.rightTop.h1}</h1>
-                                        <p>{activeCircle.rightTop.para}</p>
-                                        <a href="">View Collection</a>
+                                        {/* <p>{activeCircle.rightTop.para}</p> */}
+                                        <a href={activeCircle.rightTop.link}>Explore</a>
                                     </div>
                                     <div className="r-t-img">
                                         <img src={activeCircle.rightTop.image} alt="" />
@@ -207,20 +214,20 @@ export const Rotate = () => {
                             {activeCircle.bottomLeft && (
                                 <div className="right-bottom">
                                     <div className="r-b-l">
-                                        <div className="r-b-con">
+                                        <div className="r-b-con bottomabs">
                                             <h1>{activeCircle.bottomLeft.h1}</h1>
-                                            <a href="">Shop Now</a>
+                                            <a href={activeCircle.rightTop.link}>Explore</a>
                                         </div>
                                         <div className="r-b-img">
                                             <img src={activeCircle.bottomLeft.image} alt="" />
                                         </div>
                                     </div>
                                     <div className="r-b-r">
-                                        <div className="r-b-con">
+                                        <div className="r-b-con bottomabs">
                                             <h1>{activeCircle.bottomRight.h1}</h1>
-                                            <a href="">Shop Now</a>
+                                            <a href={activeCircle.rightTop.link}>Explore</a>
                                         </div>
-                                        <div className="r-b-img">
+                                        <div className="r-b-img btmimgabs">
                                             <img src={activeCircle.bottomRight.image} alt="" />
                                         </div>
                                     </div>

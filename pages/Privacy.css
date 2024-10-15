@@ -1,0 +1,29 @@
+.privacy-wrap{
+    width: 100vw;
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20vh 0vh;
+}
+
+.privacy-con{
+    width: 80%;
+    display: flex;
+    
+    flex-direction: column;
+    /* background: #ef9595; */
+}
+
+.privacy-con h1{
+    text-align: center;
+}
+.privacy-con>p{
+    text-align: center;
+}
+.privacy-con h5{
+    font-weight: 100;
+}
+.privacy-con span{
+    color: #23AA9B;
+}

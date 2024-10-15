@@ -74,7 +74,7 @@ const GetInTouch = () => {
                                     name="location"
                                     value={formData.location}
                                     onChange={handleChange}
-                                    required
+                                    
                                 />
                             </div>
 
@@ -85,7 +85,7 @@ const GetInTouch = () => {
                                     name="budget"
                                     value={formData.budget}
                                     onChange={handleChange}
-                                    required
+                                    
                                 />
                             </div>
                         </div>
@@ -108,7 +108,7 @@ const GetInTouch = () => {
                                     name="organisation"
                                     value={formData.organisation}
                                     onChange={handleChange}
-                                    required
+                                    
                                 />
                             </div>
 
@@ -119,7 +119,7 @@ const GetInTouch = () => {
                                     name="area"
                                     value={formData.area}
                                     onChange={handleChange}
-                                    required
+                                    
                                 />
                             </div>
                         </div>

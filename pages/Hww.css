@@ -409,7 +409,7 @@ html {
 
 .popup-form {
   position: fixed;
-  top: -25%;
+  top: -20%;
   left: 0;
   width: 100vw;
   height: 100vh;
@@ -425,7 +425,7 @@ html {
 .form-content {
   width: 40%; /* Adjusted width similar to .custom-form */
   margin: 0 auto;
-  padding: 6vw;
+  padding: 4vw;
   background-color: white;
   border: 2px dashed #23AA9B; /* Dashed border similar to .custom-form */
   border-radius: 8px;
@@ -438,7 +438,8 @@ html {
 }
 
 .popup-form label {
-  margin: 10px 0;
+  
+  
 }
 
 .popup-form input,
@@ -448,9 +449,12 @@ html {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom:15px;
+
 }
 
-.popup-form button {
+#submit{
   padding: 10px 50px; /* Wider padding similar to the custom button */
   background-color: #23AA9B;
   color: white;
@@ -458,6 +462,9 @@ html {
   border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
+  /* margin-left: 1vw; */
+  margin-top: 2vw;
+  width: 30%;
 }
 
 .popup-form button:hover {

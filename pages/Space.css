@@ -85,7 +85,8 @@
     justify-content: center;
     align-items: center;
     gap: 2vh;
-    width: calc(20%); /* 4 cards per row with a gap */
+    border: .1px solid transparent;
+    width: 20%; /* 4 cards per row with a gap */
   }
 
   .card:hover{
@@ -118,6 +119,10 @@
   
  .mobile{
   display: none;
+ }
+
+ .lab{
+  margin-top: -9vh;
  }
   
   @media (max-width: 768px) {

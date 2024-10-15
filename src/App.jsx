@@ -16,6 +16,7 @@ import Education from '../pages/Education';
 import Healthcare from '../pages/Healthcare';
 import Kitchen from '../pages/Kitchen';
 import Lab from '../pages/Lab';
+import Privacy from '../pages/Privacy';
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
           <Route path="/services" element={<Service />} /> */}
           <Route path="/contact" element={<Contact />} />
           <Route path="/partner" element={<Partner />} />
+          <Route path="/privacy" element={<Privacy />} />
           
           <Route path="/about" element={<About />} />
 

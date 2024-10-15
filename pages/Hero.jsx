@@ -78,7 +78,7 @@ const Hero = () => {
         <div className="part2">
           <div className="part2-l">
             <div className="l-img">
-              <a href="/office">
+              <a href="/office" target="_blank">
                 <img src={office} alt="Office" />
               </a>
             </div>
@@ -90,7 +90,7 @@ const Hero = () => {
 
           <div className="part2-r mobileabs">
             <div className="r-img">
-              <a href="/education">
+              <a href="/education" target="_blank">
                 <img src={edu} alt="Office" />
               </a>
             </div>
@@ -105,7 +105,7 @@ const Hero = () => {
 
           <div className="part2-r abs">
             <div className="r-img">
-              <a href="/education">
+              <a href="/education" target="_blank">
                 <img src={edu} alt="Office" />
               </a>
             </div>
@@ -117,7 +117,7 @@ const Hero = () => {
 
           <div className="part3-sub">
             <div className="part3-img-div">
-              <a href="/healthcare">
+              <a href="/healthcare" target="_blank">
                 <img src={health} alt="Office" />
               </a>
             </div>
@@ -128,7 +128,7 @@ const Hero = () => {
           </div>
           <div className="part3-sub">
             <div className="part3-img-div">
-              <a href="/lab">
+              <a href="/lab" target="_blank">
                 <img src={lab} alt="Office" />
               </a>
             </div>
@@ -139,7 +139,7 @@ const Hero = () => {
           </div>
           <div className="part3-sub">
             <div className="part3-img-div">
-              <a href="/kitchen">
+              <a href="/kitchen"  target="_blank">
                 <img src={kitchenImg} alt="Office" />
               </a>
             </div>
@@ -176,7 +176,7 @@ const Hero = () => {
           <div className="right-ilus">
             <img src={righty} alt="" />
           </div>
-          <button className='btn'>
+          <button className='btn' onClick={scrollToGetInTouch}>
             Enquire Now
           </button>
 

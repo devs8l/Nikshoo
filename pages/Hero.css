@@ -87,7 +87,6 @@ video{
 
 }
 .hero-content button:hover{
-    
     background-color: white;
     border: 1px solid #23AA9B;
     color: #23AA9B;
@@ -118,11 +117,8 @@ video{
         display: none;
     }
     .hero-content button{
-        
-        width: 60vw;
-        
+        width: 60vw;   
     }
-
 }
 
 
