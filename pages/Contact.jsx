@@ -27,15 +27,29 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form Data:', formData);
+    const response = await fetch(`https://nikshoo-backend.vercel.app/contact/submit`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData),
+    })
+    // console.log(response);
+    setFormData({
+      fullName: '',
+      phoneNumber: '',
+      location: '',
+      message: '',
+      email: ''
+    });
   };
   return (
     <div className='contact-wrap'>
       <img src={heroMain} alt="" />
-      <img src={lefty} alt="" id='leftyy'/>
-      <img src={righty} alt="" id='rightyy'/>
+      <img src={lefty} alt="" id='leftyy' />
+      <img src={righty} alt="" id='rightyy' />
 
       <div className="contact-hero">
         <div className="contact-hero-left">
@@ -93,7 +107,7 @@ const Contact = () => {
         </div>
       </div>
       <div className="contact3">
-      
+
         <h1>Get In Touch</h1>
         <p>Ready to transform your workspace? Contact us today to explore how we can help you create a space that inspires success.
         </p>
