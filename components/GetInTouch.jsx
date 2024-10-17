@@ -21,7 +21,7 @@ const GetInTouch = () => {
 
     const handleSubmit = async(e) => {
         e.preventDefault();
-        const response =await fetch(`https://thingproxy.freeboard.io/fetch/https://nikshoo-backend.vercel.app/enquiry/submit`,{
+        const response =await fetch(`https://nikshoo-backend.vercel.app/enquiry/submit`,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
