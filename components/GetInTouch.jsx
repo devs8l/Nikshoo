@@ -8,7 +8,7 @@ const GetInTouch = () => {
         budget: '',
         email: '',
         organisation: '',
-        area: ''
+        areaSqFt: ''
     });
 
     const handleChange = (e) => {
@@ -19,12 +19,16 @@ const GetInTouch = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault();
-
-        console.log(formData);
-
-
+        const response =await fetch(`https://thingproxy.freeboard.io/fetch/https://nikshoo-backend.vercel.app/enquiry/submit`,{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(formData),
+        })
+        // console.log(response);
         setFormData({
             name: '',
             contactNo: '',
@@ -32,7 +36,7 @@ const GetInTouch = () => {
             budget: '',
             email: '',
             organisation: '',
-            area: ''
+            areaSqFt: ''
         });
     };
     return (
@@ -74,10 +78,8 @@ const GetInTouch = () => {
                                     name="location"
                                     value={formData.location}
                                     onChange={handleChange}
-                                    
                                 />
                             </div>
-
                             <div className="form-group">
                                 <label>Budget for project:</label>
                                 <input
@@ -116,8 +118,8 @@ const GetInTouch = () => {
                                 <label>Area in sq. ft.:</label>
                                 <input
                                     type="text"
-                                    name="area"
-                                    value={formData.area}
+                                    name="areaSqFt"
+                                    value={formData.areaSqFt}
                                     onChange={handleChange}
                                     
                                 />
