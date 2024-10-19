@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-import "../pages/Partner.css"
-import heroMain from "../assets/hero-main.png"
-import bp from "../assets/become-partner.png"
+import "../pages/Partner.css";
+import heroMain from "../assets/hero-main.png";
+import bp from "../assets/become-partner.png";
 
-import iconPartnerleft from "../assets/partner-2-r.png"
-import iconPartnerRight from "../assets/partner-2-l.png"
+import iconPartnerleft from "../assets/partner-2-r.png";
+import iconPartnerRight from "../assets/partner-2-l.png";
 
-import partnerone from "../assets/partner3-1.png"
-import partnertwo from "../assets/partner3-2.png"
-import partnerthree from "../assets/partner3-3.png"
-import lefty from "../assets/lefty.png"
-import righty from "../assets/righty.png"
+import partnerone from "../assets/partner3-1.png";
+import partnertwo from "../assets/partner3-2.png";
+import partnerthree from "../assets/partner3-3.png";
+import lefty from "../assets/lefty.png";
+import righty from "../assets/righty.png";
+
 const Partner = () => {
     const [formData, setFormData] = useState({
         partnerRole: '',
@@ -24,28 +25,87 @@ const Partner = () => {
     });
 
     const [fileName, setFileName] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [responseMessage, setResponseMessage] = useState(null);
+    const [documentUrl, setDocumentUrl] = useState('');
 
     const handleChange = (e) => {
         const { name, value, files } = e.target;
         if (name === 'document' && files.length > 0) {
             setFileName(files[0].name);
+            setFormData({
+                ...formData,
+                [name]: files[0] // This should set the file object
+            });
+        } else {
+            setFormData({
+                ...formData,
+                [name]: value // Update other fields
+            });
         }
-        setFormData({
-            ...formData,
-            [name]: files ? files[0] : value
-        });
     };
 
-    const handleSubmit = (e) => {
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // console.log(formData);
+
+        // Create FormData object to include form fields and the file
+        const data = new FormData();
+        data.append('partnerRole', formData.partnerRole);
+        data.append('partnerName', formData.partnerName);
+        data.append('companyName', formData.companyName);
+        data.append('phoneNumber', formData.phoneNumber);
+        data.append('email', formData.email);
+        data.append('city', formData.city);
+        data.append('comments', formData.comments);
+        data.append('document', formData.document); // Add the document file
+
+
+
+        try {
+            setLoading(true);
+
+            // Send POST request to the API
+            const response = await fetch('https://nikshoo-backend.vercel.app/partner/submit', {
+                method: "POST",
+                body: data,
+            });
+            // console.log(formData);
+            setFormData({
+                partnerRole: '',
+                partnerName: '',
+                companyName: '',
+                phoneNumber: '',
+                email: '',
+                city: '',
+                document: null,
+                comments: ''
+            })
+
+
+            const result = await response.json();
+            console.log(result);
+
+            setLoading(false);
+
+            if (response.ok) {
+                setResponseMessage('Partner request submitted successfully!');
+
+            } else {
+                setResponseMessage(result.error || 'Failed to submit the partner request');
+            }
+        } catch (error) {
+            setLoading(false);
+            setResponseMessage('Error: Unable to submit the request.');
+        }
     };
+
     return (
         <div>
             <div className="partner-wrap">
                 <img src={heroMain} alt="" />
-                <img src={lefty} alt="" id='leftyy' />
-                <img src={righty} alt="" id='rightyy' />
+                <img src={lefty} alt="" id='leftyy-part' />
+                <img src={righty} alt="" id='rightyy-part' />
 
                 <div className="partner1">
                     <div className="partner1-left">
@@ -57,6 +117,7 @@ const Partner = () => {
                         <img src={bp} alt="" />
                     </div>
                 </div>
+
                 <div className="partner2">
                     <h1>We Believe, Collaboration:</h1>
                     <div className="partner-2-sub">
@@ -106,12 +167,13 @@ const Partner = () => {
                         <img src={partnerthree} alt="" />
                     </div>
                 </div>
+
+                {/* Form Section */}
                 <div className="partner-form">
                     <h1>Almost There</h1>
                     <form className="custom-form" onSubmit={handleSubmit}>
                         {/* Partner Dropdown */}
                         <div className="partner-section">
-
                             <select
                                 id="partnerRole"
                                 name="partnerRole"
@@ -121,14 +183,13 @@ const Partner = () => {
                                 <option value="" disabled hidden>Partner as a</option>
                                 <option value="Designer">Designer</option>
                                 <option value="Turnkey Contractor">Turnkey Contractor</option>
-                                {/* <option value="Subcontractor">Subcontractor</option> */}
                                 <option value="Product Supplier">Product Supplier</option>
                             </select>
                         </div>
 
-                        {/* Person/Company Name & Your/Company Name */}
+                        {/* Person/Company Name */}
                         <div className="form-row">
-                            <label htmlFor="partnerName">Person/Company Name</label>
+                            <label htmlFor="partnerName">Person Name</label>
                             <input
                                 type="text"
                                 id="partnerName"
@@ -138,8 +199,19 @@ const Partner = () => {
                                 onChange={handleChange}
                             />
                         </div>
+                        <div className="form-row">
+                            <label htmlFor="companyName">Company Name</label>
+                            <input
+                                type="text"
+                                id="companyName"
+                                name="companyName"
+                                placeholder="Company name"
+                                value={formData.companyName}
+                                onChange={handleChange}
+                            />
+                        </div>
 
-                        {/* Phone Number & Email in the Same Line */}
+                        {/* Phone Number & Email */}
                         <div className="form-row two-columns">
                             <div className="form-column">
                                 <label htmlFor="phoneNumber">Phone Number</label>
@@ -180,9 +252,7 @@ const Partner = () => {
 
                         {/* Upload Document */}
                         <div className="form-row">
-                            <h4>
-                                {fileName ? fileName : 'Upload Document (Upto 5MB)'}
-                            </h4>
+                            <h4>{fileName ? fileName : 'Upload Document (Upto 5MB)'}</h4>
                             <label htmlFor="document" id='doc'>Upload Document</label>
                             <input
                                 type="file"
@@ -208,13 +278,22 @@ const Partner = () => {
 
                         {/* Submit Button */}
                         <div className="form-row submit-row">
-                            <button type="submit">Submit</button>
+                            <button type="submit" disabled={loading}>
+                                {loading ? 'Submitting...' : 'Submit'}
+                            </button>
                         </div>
                     </form>
+
+                    {/* Response Message */}
+                    {responseMessage && (
+                        <div className="response-message">
+                            <p>{responseMessage}</p>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Partner
+export default Partner;

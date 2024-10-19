@@ -248,24 +248,24 @@ input[type="file"]{
 }
 
 
-#leftyy{
+#leftyy-part{
     position: absolute;
     width: 60%;
-    bottom: -40%;
+    top: 70%;
     left: -20%;
     width: 60%;
-    height: 100%;
+    height: 40%;
     object-fit: contain;
     
   }
   
-  #rightyy{
+  #rightyy-part{
     position: absolute;
     width: 40%;
-    bottom: -40%;
+    top: 75%;
     right: -20%;
     width: 60%;
-    height: 100%;
+    height: 40%;
     object-fit: contain;
   }
   

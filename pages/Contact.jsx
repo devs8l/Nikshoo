@@ -95,11 +95,11 @@ const Contact = () => {
               <p>123 Innovation Drive, Tech City, Indore</p>
             </div>
             <h4>123 Innovation Drive, Tech City, Indore</h4>
-            <div className="location">
+            {/* <div className="location">
               <img src={location} alt="" />
               <h3>Gurugram:</h3>
               <p>123 Innovation Drive, Tech City, Indore</p>
-            </div>
+            </div> */}
             <h4>123 Innovation Drive, Tech City, Gurugram</h4>
 
           </div>

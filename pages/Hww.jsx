@@ -34,9 +34,23 @@ const Hww = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form Data:', formData);
+    const response = await fetch(`https://nikshoo-backend.vercel.app/contact/submit`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData),
+    })
+    // console.log(response);
+    setFormData({
+      fullName: '',
+      phoneNumber: '',
+      location: '',
+      message: '',
+      email: ''
+    });
   };
   return (
     <div className="hww-wrap">

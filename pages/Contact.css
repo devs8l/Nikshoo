@@ -246,7 +246,7 @@ textarea{
   #leftyy{
     position: absolute;
     width: 60%;
-    bottom: 0;
+    bottom: -10%;
     left: -20%;
     
   }
