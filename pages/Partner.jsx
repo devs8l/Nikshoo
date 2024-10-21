@@ -11,6 +11,7 @@ import partnertwo from "../assets/partner3-2.png";
 import partnerthree from "../assets/partner3-3.png";
 import lefty from "../assets/lefty.png";
 import righty from "../assets/righty.png";
+import { Thanks } from '../components/Thanks';
 
 const Partner = () => {
     const [formData, setFormData] = useState({
@@ -26,6 +27,13 @@ const Partner = () => {
 
     const [fileName, setFileName] = useState('');
     const [loading, setLoading] = useState(false);
+    const [popupVisible, setPopupVisible] = useState(false);
+    const [popupMessage, setPopupMessage] = useState({
+        title: '',
+        body: ''
+    });
+
+
     const [responseMessage, setResponseMessage] = useState(null);
     const [documentUrl, setDocumentUrl] = useState('');
 
@@ -89,16 +97,27 @@ const Partner = () => {
             setLoading(false);
 
             if (response.ok) {
-                setResponseMessage('Partner request submitted successfully!');
+                setPopupMessage({
+                    title: 'Thank you for your submission!',
+                    body: 'Our team shall get back to you shortly.'
+                });
+                setPopupVisible(true);
 
             } else {
-                setResponseMessage(result.error || 'Failed to submit the partner request');
+                setPopupMessage({
+                    title: 'Something went wrong',
+                    body: 'Try again later.'
+                });
+                setPopupVisible(true);   
             }
         } catch (error) {
             setLoading(false);
-            setResponseMessage('Error: Unable to submit the request.');
         }
     };
+    const handleClosePopup = () => {
+        setPopupVisible(false); // Close the popup
+    };
+
 
     return (
         <div>
@@ -284,14 +303,17 @@ const Partner = () => {
                         </div>
                     </form>
 
-                    {/* Response Message */}
-                    {responseMessage && (
-                        <div className="response-message">
-                            <p>{responseMessage}</p>
-                        </div>
-                    )}
+                    
                 </div>
             </div>
+               {/* Popup Component */}
+               {popupVisible && (
+                <Thanks
+                    message={popupMessage}
+                    onClose={handleClosePopup}
+                    buttonText="Explore More"
+                />
+            )}
         </div>
     );
 };

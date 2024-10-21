@@ -658,8 +658,8 @@ video{
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    
-
+    min-height: 100vh;
+    overflow: hidden;
 }
 .gal-img-div{
     width: 90%;

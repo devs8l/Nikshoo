@@ -1,6 +1,9 @@
 import React, { useRef } from 'react';
 import { NavLink, useLocation } from "react-router-dom"
 import { MdOutlineArrowOutward } from "react-icons/md";
+
+import { Gallery } from '../components/Gallery';
+
 import "../pages/Hero.css"
 import Carousel from "../components/Carousel"
 import Navbar from '../components/Navbar'
@@ -246,9 +249,7 @@ const Hero = () => {
       <div className="gallery">
         <h1>Get Inspired</h1>
         <p>Browse our gallery for a glimpse into perfectly designed workspaces</p>
-        <div className="gal-img-div">
-          <img src={gal} alt="" />
-        </div>
+        <Gallery></Gallery>
       </div>
       <div ref={getInTouchRef}>
         <GetInTouch />

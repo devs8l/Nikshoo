@@ -5,19 +5,13 @@ import hww2 from "../assets/hww2.png";
 import hww3 from "../assets/hww3.png";
 import hww4 from "../assets/hww4.png";
 import hww5 from "../assets/hww5.png";
-import heroMain from "../assets/hero-main.png"
-
-
-import hwwHero from "../assets/hww-hero.png"
-import hwwFoot from "../assets/hww-footer.png"
+import heroMain from "../assets/hero-main.png";
+import hwwHero from "../assets/hww-hero.png";
+import hwwFoot from "../assets/hww-footer.png";
+import { Thanks } from '../components/Thanks'; // Import the Thanks component
 
 const Hww = () => {
   const [isFormVisible, setFormVisible] = useState(false);
-
-  const toggleFormVisibility = () => {
-    setFormVisible(!isFormVisible);
-  };
-
   const [formData, setFormData] = useState({
     fullName: '',
     phoneNumber: '',
@@ -25,6 +19,17 @@ const Hww = () => {
     message: '',
     email: ''
   });
+
+  // Popup state
+  const [popupVisible, setPopupVisible] = useState(false);
+  const [popupMessage, setPopupMessage] = useState({
+    title: '',
+    body: ''
+  });
+
+  const toggleFormVisibility = () => {
+    setFormVisible(!isFormVisible);
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,22 +41,51 @@ const Hww = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(`https://nikshoo-backend.vercel.app/contact/submit`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(formData),
-    })
-    // console.log(response);
-    setFormData({
-      fullName: '',
-      phoneNumber: '',
-      location: '',
-      message: '',
-      email: ''
-    });
+    try {
+      const response = await fetch(`https://nikshoo-backend.vercel.app/contact/submit`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setPopupMessage({
+          title: 'Thank you for your enquiry!',
+          body: 'We will get back to you shortly.'
+        });
+      } else {
+        setPopupMessage({
+          title: 'Something went wrong',
+          body: 'Please try again later.'
+        });
+      }
+      setPopupVisible(true);
+
+      // Clear form
+      setFormData({
+        fullName: '',
+        phoneNumber: '',
+        location: '',
+        message: '',
+        email: ''
+      });
+
+    } catch (error) {
+      setPopupMessage({
+        title: 'Something went wrong',
+        body: 'Please try again later.'
+      });
+      setPopupVisible(true);
+    }
   };
+
+  const handleClosePopup = () => {
+    setPopupVisible(false);
+    toggleFormVisibility(); // Optionally close the form when the popup is closed
+  };
+
   return (
     <div className="hww-wrap">
       <div className="hero-hww">
@@ -67,12 +101,12 @@ const Hww = () => {
       <div className="image-container">
         <div className="image-part part-1">
           <img src={hww1} alt="Segment 1" />
-          <div className="hww-con ">
+          <div className="hww-con">
             <div className="num">
               <h1>1</h1>
             </div>
             <div className="num-para">
-              <h2>Cosultation</h2>
+              <h2>Consultation</h2>
               <p>
                 We listen to your needs, goals, and challenges to understand your unique requirements.
               </p>
@@ -160,7 +194,6 @@ const Hww = () => {
             <button className="close-btn" onClick={toggleFormVisibility}>
               &times;
             </button>
-            
             <form onSubmit={handleSubmit}>
               <div>
                 <label>Your Full Name</label>
@@ -223,7 +256,15 @@ const Hww = () => {
           </div>
         </div>
       )}
-
+      
+      {/* Popup Component */}
+      {popupVisible && (
+        <Thanks
+          message={popupMessage}
+          onClose={handleClosePopup}
+          buttonText="Explore More"
+        />
+      )}
     </div>
   );
 };
