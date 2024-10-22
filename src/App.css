@@ -12,7 +12,30 @@ html, body {
     /* background: #a00e0e; */
     top: 85%;
     right: 0;
-    width: 10%;
+    width: 5%;
     height: 10%;
     z-index: 100;
+    padding: 2vw;
+}
+
+.whatsapp-ct img{
+    width: 70%;
+}
+
+
+@media (max-width:500px) {
+    .whatsapp-ct{
+        width: 25%;
+        height: 7%;
+        top: 86.5%;
+        background: #23aa9a2d;
+        display: flex;
+        border-radius: 40px 0px 0px 40px;
+        align-items: center;
+    }
+    .whatsapp-ct img{
+        width: 48%;
+        
+        margin-left:4vw;
+    }
 }

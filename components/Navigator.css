@@ -1,0 +1,36 @@
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+    /* background: #000; */
+  }
+  
+  .carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition when moving */
+  }
+  
+  .circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #aaa;
+    margin: 0 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    flex-shrink: 0;  /* Prevent shrinking */
+  }
+  
+  .circle.active {
+    transform: scale(1.5);
+    background-color: green;
+  }
+  
+  .circle.inactive {
+    transform: scale(1);
+  }
+  

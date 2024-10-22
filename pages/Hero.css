@@ -714,6 +714,15 @@ video{
         text-align: center;
     }
 
+    .gallery h1{
+        font-size: 6vw;
+    }
+    .gallery p{
+        font-size: 3vw;
+        width: 90%;
+        text-align: center;
+        margin: auto;
+    }
 
 
 }

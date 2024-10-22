@@ -17,7 +17,7 @@ import Kitchen from '../pages/Kitchen';
 import Lab from '../pages/Lab';
 import Privacy from '../pages/Privacy';
 import Admin from '../pages/Admin';
-import navimg from "../assets/Frame.png"
+import navimg from "../assets/whatsapp-icon.png"
 
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
     <>
       {!isAdminRoute && <Navbar />} {/* Conditionally render Navbar */}
       <div className="whatsapp-ct">
-        <a href="https://wa.me/+918103702839">
+        <a href="https://wa.me/+918103702839" target='_blank'>
           <img src={navimg} alt="" />
         </a>
 

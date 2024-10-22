@@ -71,3 +71,16 @@
     object-fit: cover;
   }
   
+
+  @media (max-width:500px) {
+    .custom-grid{
+      flex-direction: column;
+      padding: 0px 20px;
+    }
+    .left-section{
+      width: 100%;
+    }
+    .right-section{
+      width: 100%;
+    }
+  }

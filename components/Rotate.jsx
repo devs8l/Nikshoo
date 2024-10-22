@@ -175,12 +175,29 @@ export const Rotate = () => {
                 </div>
 
                 <div className="mobile-carousel">
-                    <div className="mobile-arrow left-arrow" onClick={handlePrev}>&#60;</div>
+                    {/* Previous of Previous Heading */}
+                    <div className="mobile-prev-prev">
+                        {activeCircle.id > 2 ? circles[activeCircle.id - 3].heading : (activeCircle.id === 2 ? circles[circles.length - 1].heading : circles[circles.length - 2].heading)}
+                    </div>
+                    {/* Previous Heading */}
+                    <div className="mobile-arrow left-arrow" onClick={handlePrev}>
+                        {activeCircle.id > 1 ? circles[activeCircle.id - 2].heading : circles[circles.length - 1].heading}
+                    </div>
+                    {/* Active Circle Heading */}
                     <div className="mobile-circle">
                         <h4>{activeCircle.heading}</h4>
                     </div>
-                    <div className="mobile-arrow right-arrow" onClick={handleNext}>&#62;</div>
+                    {/* Next Heading */}
+                    <div className="mobile-arrow right-arrow" onClick={handleNext}>
+                        {activeCircle.id < circles.length ? circles[activeCircle.id].heading : circles[0].heading}
+                    </div>
+                    {/* Next of Next Heading */}
+                    <div className="mobile-next-next">
+                        {activeCircle.id < circles.length - 1 ? circles[activeCircle.id + 1].heading : (activeCircle.id === circles.length - 1 ? circles[0].heading : circles[1].heading)}
+                    </div>
                 </div>
+
+
                 <div className="right-div">
                     {activeElectron === 3 || activeElectron === 4 || activeElectron === 5 ? (
                         <div className="custom-content">
