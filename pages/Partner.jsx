@@ -14,6 +14,7 @@ import righty from "../assets/righty.png";
 import { Thanks } from '../components/Thanks';
 
 const Partner = () => {
+    const [phoneError, setPhoneError] = useState(''); // State to manage phone number error
     const [formData, setFormData] = useState({
         partnerRole: '',
         partnerName: '',
@@ -50,6 +51,14 @@ const Partner = () => {
                 ...formData,
                 [name]: value // Update other fields
             });
+        }
+
+        if (name === 'phoneNumber') {
+            if (value.length < 10) {
+                setPhoneError('Must be 10 digits.');
+            } else {
+                setPhoneError(''); // Clear error if valid
+            }
         }
     };
 
@@ -242,6 +251,8 @@ const Partner = () => {
                                     value={formData.phoneNumber}
                                     onChange={handleChange}
                                 />
+                                {phoneError && <p className="error gitouch partner">{phoneError}</p>} {/* Display phone error */}
+                                
                             </div>
                             <div className="form-column">
                                 <label htmlFor="email">Email</label>

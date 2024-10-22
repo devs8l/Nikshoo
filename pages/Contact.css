@@ -17,6 +17,15 @@
     gap: 2vw;
     position: relative;
 }
+
+
+.error{
+  color: red;
+}
+.gitouch{
+  width: 70%;
+}
+
 .contact-hero-left{
     /* height: 70%; */
     width: 30%;

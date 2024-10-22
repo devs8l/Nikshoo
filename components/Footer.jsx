@@ -1,4 +1,6 @@
 import React from 'react'
+import { useState, useEffect } from 'react';
+
 import "../components/Footer.css"
 import link1 from "../assets/Link.png"
 import link2 from "../assets/link2.png"
@@ -15,6 +17,32 @@ import flast2 from "../assets/startup.png"
 
 import navimgfooter from "../assets/footerlogo.png"
 const Footer = () => {
+    const [contactData, setContactData] = useState({
+        email: '',
+        phone: '',
+        whatsapp: '',
+        addresses: ''
+    });
+
+
+    useEffect(() => {
+        const fetchContactData = async () => {
+            try {
+                const response = await fetch('https://nikshoo-backend.vercel.app/api/contact-info-1');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch contact data.');
+                }
+                const data = await response.json();
+                setContactData(data);
+
+            } catch (err) {
+
+            }
+        };
+        fetchContactData();
+    }, []);
+
+
     return (
         <div className="footer-wrap">
             <div className="upper-part">
@@ -43,8 +71,8 @@ const Footer = () => {
                         </div>
                         <div className="gem2">
                             <img src={flast2} alt="" />
-                            <p>We're a DPIIT 
-                            Registered Startup</p>
+                            <p>We're a DPIIT
+                                Registered Startup</p>
                         </div>
                     </div>
                 </div>
@@ -68,18 +96,17 @@ const Footer = () => {
                                 <img src={c1} alt="" />
                                 <h3>Address:</h3>
                             </div>
-                            <p><u>Greenshots Retail Pvt. Ltd.
-                            Indore, Madhya Pradesh, 452003</u></p>
+                            <p><u>{contactData.addresses}</u></p>
                             <div className="c-top-heading">
                                 <img src={c2} alt="" />
                                 <h3>Reach us by phone:</h3>
                             </div>
-                            <p><u>741-577-5000</u></p>
+                            <p><u>{contactData.phone}</u></p>
                             <div className="c-top-heading">
                                 <img src={c3} alt="" />
                                 <h3>Email us:</h3>
                             </div>
-                            <p><u>marketing@nikshoo.com</u></p>
+                            <p><u>{contactData.email}</u></p>
                         </div>
                     </div>
                 </div>

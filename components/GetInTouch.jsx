@@ -16,6 +16,7 @@ const GetInTouch = () => {
     const [showPopup, setShowPopup] = useState(false); // State to manage popup visibility
     const [popupMessage, setPopupMessage] = useState({ title: '', body: '' }); // State for popup message
     const [hasError, setHasError] = useState(false); // State to manage error
+    const [phoneError, setPhoneError] = useState(''); // State to manage phone number error
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -23,10 +24,25 @@ const GetInTouch = () => {
             ...prevData,
             [name]: value
         }));
+
+        // Validate phone number
+        if (name === 'contactNo') {
+            if (value.length < 10) {
+                setPhoneError('Must be 10 digits.');
+            } else {
+                setPhoneError(''); // Clear error if valid
+            }
+        }
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        // Check if there are any errors before submitting
+        if (phoneError) {
+            return; // Prevent submission if there's a phone error
+        }
+
         try {
             const response = await fetch(`https://nikshoo-backend.vercel.app/enquiry/submit`, {
                 method: "POST",
@@ -111,6 +127,7 @@ const GetInTouch = () => {
                                         onChange={handleChange}
                                         required
                                     />
+                                    {phoneError && <p className="error gitouch">{phoneError}</p>} {/* Display phone error */}
                                 </div>
 
                                 <div className="form-group">

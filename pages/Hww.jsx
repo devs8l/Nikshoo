@@ -11,6 +11,7 @@ import hwwFoot from "../assets/hww-footer.png";
 import { Thanks } from '../components/Thanks'; // Import the Thanks component
 
 const Hww = () => {
+  const [phoneError, setPhoneError] = useState(''); // State to manage phone number error
   const [isFormVisible, setFormVisible] = useState(false);
   const [formData, setFormData] = useState({
     fullName: '',
@@ -37,10 +38,22 @@ const Hww = () => {
       ...formData,
       [name]: value
     });
+
+    if (name === 'phoneNumber') {
+      if (value.length < 10) {
+        setPhoneError('Must be 10 digits.');
+      } else {
+        setPhoneError(''); // Clear error if valid
+      }
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (phoneError) {
+      return; // Prevent submission if there's a phone error
+    }
     try {
       const response = await fetch(`https://nikshoo-backend.vercel.app/contact/submit`, {
         method: "POST",
@@ -217,6 +230,8 @@ const Hww = () => {
                     placeholder="Enter Phone Number"
                     required
                   />
+                  {phoneError && <p className="error hww">{phoneError}</p>} {/* Display phone error */}
+
                 </div>
                 <div>
                   <label>Email</label>
@@ -256,7 +271,7 @@ const Hww = () => {
           </div>
         </div>
       )}
-      
+
       {/* Popup Component */}
       {popupVisible && (
         <Thanks

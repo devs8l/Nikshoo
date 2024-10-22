@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState ,useEffect} from 'react';
 import "../pages/Contact.css"
 import heroMain from "../assets/hero-main.png"
 import contactImg from "../assets/contact-img.png"
@@ -18,6 +18,13 @@ const Contact = () => {
     email: ''
   });
 
+  const [contactData, setContactData] = useState({
+    email: '',
+    phone: '',
+    whatsapp: '',
+    addresses: ''
+  });
+
   // State to handle popup
   const [popupVisible, setPopupVisible] = useState(false);
   const [popupMessage, setPopupMessage] = useState({
@@ -25,8 +32,39 @@ const Contact = () => {
     body: ''
   });
 
+  // State to track phone number validation error
+  const [phoneError, setPhoneError] = useState('');
+
+  useEffect(() => {
+    const fetchContactData = async () => {
+      try {
+        const response = await fetch('https://nikshoo-backend.vercel.app/api/contact-info-1');
+        if (!response.ok) {
+          throw new Error('Failed to fetch contact data.');
+        }
+        const data = await response.json();
+        setContactData(data);
+  
+      } catch (err) {
+  
+      }
+    };
+    fetchContactData();
+  }, []);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
+
+    // Check if the input field is for phone number and apply validation
+    if (name === "phoneNumber") {
+      if (value.length < 10) {
+        setPhoneError('Phone number must be at least 10 digits.');
+      } else {
+        setPhoneError(''); // Clear error if phone number is valid
+      }
+    }
+
+    // Update form data state
     setFormData({
       ...formData,
       [name]: value
@@ -35,6 +73,12 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Skip form submission if there's a phone number error
+    if (phoneError) {
+      return;
+    }
+
     try {
       const response = await fetch(`https://nikshoo-backend.vercel.app/contact/submit`, {
         method: "POST",
@@ -106,17 +150,17 @@ const Contact = () => {
           <div className="contact-ways">
             <img src="" alt="" />
             <h3>Call Us</h3>
-            <p>+91 9123 456789</p>
+            <p>{contactData.phone}</p>
           </div>
           <div className="contact-ways">
             <img src="" alt="" />
             <h3>Email Us</h3>
-            <p>contact@nikshoo.com</p>
+            <p>{contactData.email}</p>
           </div>
           <div className="contact-ways">
             <img src="" alt="" />
             <h3>WhatsApp Us</h3>
-            <p>+91 9123 456789</p>
+            <p>{contactData.whatsapp}</p>
           </div>
         </div>
         <div className="contact-bottom">
@@ -128,10 +172,10 @@ const Contact = () => {
             <div className="location">
               <img src={location} alt="" />
               <h3>Indore:</h3>
-              <p>123 Innovation Drive, Tech City, Indore</p>
+              <p>{contactData.addresses}</p>
             </div>
-            <h4>123 Innovation Drive, Tech City, Indore</h4>
-            <h4>123 Innovation Drive, Tech City, Gurugram</h4>
+            <h4>{contactData.addresses}</h4>
+            
           </div>
         </div>
       </div>
@@ -164,6 +208,7 @@ const Contact = () => {
                   placeholder="Enter Phone Number"
                   required
                 />
+                {phoneError && <span className="error">{phoneError}</span>} {/* Display error */}
               </div>
               <div>
                 <label>Email</label>

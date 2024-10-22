@@ -11,6 +11,9 @@ html {
   src: url(../assets/fonts/PlusJakartaSans-Bold.ttf);
 }
 
+.hww{
+  margin-top: -1vh;
+}
 
 .hero-hww {
   height: 100svh;

@@ -11,6 +11,9 @@
     object-fit: cover;
     position: absolute;
 }
+.partner{
+  margin-top: -0vh;
+}
 
 .partner1{
     width: 100%;

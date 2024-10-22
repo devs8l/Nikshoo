@@ -17,6 +17,8 @@ import Kitchen from '../pages/Kitchen';
 import Lab from '../pages/Lab';
 import Privacy from '../pages/Privacy';
 import Admin from '../pages/Admin';
+import navimg from "../assets/Frame.png"
+
 
 function App() {
   const location = useLocation(); // Hook to get the current route
@@ -26,7 +28,12 @@ function App() {
   return (
     <>
       {!isAdminRoute && <Navbar />} {/* Conditionally render Navbar */}
-      
+      <div className="whatsapp-ct">
+        <a href="https://wa.me/+918103702839">
+          <img src={navimg} alt="" />
+        </a>
+
+      </div>
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/howwework" element={<Hww />} />
