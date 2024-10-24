@@ -49,7 +49,7 @@ const Office = () => {
                     <a href="">Enquire Now</a>
                 </div>
                 <div className="space-hero-right">
-                    <img src={officeHeroRight} alt="" />
+                    <img src={officeHeroRight} alt="" loading='lazy'/>
                 </div>
             </div>
 
