@@ -138,11 +138,15 @@
     display: flex;
     justify-content: left;
     padding-left: 8vw;
+    align-items: center;
+    gap: 60vw;
 }
 .gem{
     gap: 2svw;
     
 }
+
+
 .gem img{
     width: 80%;
 }
@@ -150,6 +154,14 @@
     width: 70%;
     text-align: center;
 }
+
+.drop-read{
+    margin-bottom: -1px;
+    margin-right: 2px;
+    font-size: 0.7vw;
+}
+
+
 
 
 @media (max-width:768px) {

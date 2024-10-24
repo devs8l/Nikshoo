@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
+import { useState, useEffect,useRef} from 'react';
 
 import "../components/Footer.css"
 import link1 from "../assets/Link.png"
@@ -13,9 +13,12 @@ import c3 from "../assets/Container3.png"
 import flast from "../assets/footer-last.png"
 import flast2 from "../assets/startup.png"
 
+import { IoIosArrowDropdown } from "react-icons/io";
+
 
 
 import navimgfooter from "../assets/footerlogo.png"
+import { FootCon } from './FootCon';
 const Footer = () => {
     const [contactData, setContactData] = useState({
         email: '',
@@ -23,6 +26,8 @@ const Footer = () => {
         whatsapp: '',
         addresses: ''
     });
+    const footerRef = useRef(null);
+    const [isFooterVisible, setFooterVisible] = useState(false);
 
 
     useEffect(() => {
@@ -41,6 +46,17 @@ const Footer = () => {
         };
         fetchContactData();
     }, []);
+
+    const toggleFooter = () => {
+        setFooterVisible(!isFooterVisible);
+        // Set the footer to be visible
+        // Scroll into view only after the footer becomes visible
+        setTimeout(() => {
+            footerRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100); 
+    };
+
+   
 
 
     return (
@@ -113,7 +129,13 @@ const Footer = () => {
             </div>
             <div className="copyright">
                 <h3>Copyright © 2024</h3>
+                <p onClick={toggleFooter} style={{ cursor: 'pointer'}}><IoIosArrowDropdown className='drop-read' />Read more</p>
             </div>
+            {isFooterVisible && (
+                <div ref={footerRef} className="footer-foot ">
+                    <FootCon />
+                </div>
+            )}
         </div>
     )
 }

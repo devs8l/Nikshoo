@@ -12,6 +12,7 @@ import partnerthree from "../assets/partner3-3.png";
 import lefty from "../assets/lefty.png";
 import righty from "../assets/righty.png";
 import { Thanks } from '../components/Thanks';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const Partner = () => {
     const [phoneError, setPhoneError] = useState(''); // State to manage phone number error
@@ -117,7 +118,7 @@ const Partner = () => {
                     title: 'Something went wrong',
                     body: 'Try again later.'
                 });
-                setPopupVisible(true);   
+                setPopupVisible(true);
             }
         } catch (error) {
             setLoading(false);
@@ -252,7 +253,7 @@ const Partner = () => {
                                     onChange={handleChange}
                                 />
                                 {phoneError && <p className="error gitouch partner">{phoneError}</p>} {/* Display phone error */}
-                                
+
                             </div>
                             <div className="form-column">
                                 <label htmlFor="email">Email</label>
@@ -305,6 +306,9 @@ const Partner = () => {
                                 onChange={handleChange}
                             />
                         </div>
+                        <ReCAPTCHA
+                            sitekey="Your client site key"
+                        />
 
                         {/* Submit Button */}
                         <div className="form-row submit-row">
@@ -314,11 +318,11 @@ const Partner = () => {
                         </div>
                     </form>
 
-                    
+
                 </div>
             </div>
-               {/* Popup Component */}
-               {popupVisible && (
+            {/* Popup Component */}
+            {popupVisible && (
                 <Thanks
                     message={popupMessage}
                     onClose={handleClosePopup}

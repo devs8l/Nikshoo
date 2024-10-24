@@ -1,0 +1,38 @@
+/* NikshooFurniture.css */
+.nikshoo-furniture {
+    /* max-width: 800px; */
+    /* margin: 20px auto; */
+    padding: 20px;
+    background-color: #cdece8;
+    /* border: 1px solid #e1e1e1; */
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.nikshoo-furniture h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #23AA9B; /* Primary color */
+}
+
+.nikshoo-furniture h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #2c3e50; /* Darker shade for subheadings */
+}
+
+.nikshoo-furniture ul, .nikshoo-furniture ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.nikshoo-furniture li {
+    margin-bottom: 10px;
+    color: black;
+}
+
+.nikshoo-furniture p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}

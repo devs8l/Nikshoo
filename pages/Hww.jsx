@@ -9,6 +9,7 @@ import heroMain from "../assets/hero-main.png";
 import hwwHero from "../assets/hww-hero.png";
 import hwwFoot from "../assets/hww-footer.png";
 import { Thanks } from '../components/Thanks'; // Import the Thanks component
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const Hww = () => {
   const [phoneError, setPhoneError] = useState(''); // State to manage phone number error
@@ -266,6 +267,9 @@ const Hww = () => {
                   required
                 />
               </div>
+              <ReCAPTCHA
+              sitekey="Your client site key"
+            />
               <button type="submit" id='submit'>Submit</button>
             </form>
           </div>

@@ -24,16 +24,7 @@ import v3 from "../assets/icon3.png"
 
 import page4ilus from "../assets/bento.mp4"
 
-import aditya from "../assets/aditya.png"
-import bob from "../assets/bob.png"
-import aziva from "../assets/aziva.png"
-import bank1 from "../assets/bank1.png"
-import bank2 from "../assets/bank2.png"
-import sbi from "../assets/sbi.png"
 
-import gal from "../assets/gallery.png"
-
-import Footer from '../components/Footer'
 
 import filus from "../assets/footer-ilus.png"
 
@@ -43,6 +34,7 @@ import GetInTouch from '../components/GetInTouch'
 import Clients from '../components/Clients'
 
 import heroVid from "../assets/hero-vid.mp4"
+import { Helmet } from 'react-helmet';
 
 
 const Hero = () => {
@@ -55,13 +47,43 @@ const Hero = () => {
 
   return (
     <div className='hero-wrapper'>
+      <Helmet>
+        <title>Nikshoo Furniture Solutions</title>
+        <meta name="description" content="Explore a wide range of furniture solutions including sofas, tables, and more." />
+        <meta 
+          name="keywords" 
+          content="
+            furniture, 
+            sofa, 
+            sofa set, 
+            table, 
+            study table, 
+            beds, 
+            dining table, 
+            dressing table, 
+            chair, 
+            wardrobe, 
+            cupboards, 
+            furniture shop near me, 
+            double bed, 
+            tv unit, 
+            bookshelves, 
+            folding bed, 
+            computer table, 
+            desk top, 
+            sofa come bed, 
+            furniture stores near me, 
+            bed sets, 
+            plastic chairs, 
+            godrej almirah, 
+            chests, 
+            bed room
+          " 
+        />
+      </Helmet>
       <div className="page1">
-        {/* <Navbar></Navbar> */}
         <div className="container">
-          {/* <Carousel></Carousel> */}
-          <video src={heroVid} autoPlay
-            muted
-            playsInline loop></video>
+          <video src={heroVid} autoPlay muted playsInline loop loading="lazy"></video>
         </div>
         <div className="hero-content">
           <h1>Furniture For The <span>Future</span></h1>
@@ -82,24 +104,22 @@ const Hero = () => {
           <div className="part2-l">
             <div className="l-img">
               <a href="/office" target="_blank">
-                <img src={office} alt="Office" />
+                <img src={office} alt="Office Space" loading="lazy" />
               </a>
             </div>
             <div className="l-con">
-              <h2><a href="/office" className="spaces" >Office Space <MdOutlineArrowOutward className='green' />
-              </a></h2>
+              <h2><a href="/office" className="spaces">Office Space <MdOutlineArrowOutward className='green' /></a></h2>
             </div>
           </div>
 
           <div className="part2-r mobileabs">
             <div className="r-img">
               <a href="/education" target="_blank">
-                <img src={edu} alt="Office" />
+                <img src={edu} alt="Education Space" loading="lazy" />
               </a>
             </div>
             <div className="r-con">
-              <h2><a href="/education" className="spaces">Education Space <MdOutlineArrowOutward className='green' />
-              </a></h2>
+              <h2><a href="/education" className="spaces">Education Space <MdOutlineArrowOutward className='green' /></a></h2>
             </div>
           </div>
         </div>
@@ -109,46 +129,42 @@ const Hero = () => {
           <div className="part2-r abs">
             <div className="r-img">
               <a href="/education" target="_blank">
-                <img src={edu} alt="Office" />
+                <img src={edu} alt="Education Space" loading="lazy" />
               </a>
             </div>
             <div className="r-con">
-              <h2><a href="/education" className="spaces">Education Space <MdOutlineArrowOutward className='green' />
-              </a></h2>
+              <h2><a href="/education" className="spaces">Education Space <MdOutlineArrowOutward className='green' /></a></h2>
             </div>
           </div>
 
           <div className="part3-sub">
             <div className="part3-img-div">
               <a href="/healthcare" target="_blank">
-                <img src={health} alt="Office" />
+                <img src={health} alt="Healthcare Space" loading="lazy" />
               </a>
             </div>
             <div className="part3-con">
-              <h2><a href="/healthcare" className="spaces">Healthcare Space <MdOutlineArrowOutward className='green' />
-              </a></h2>
+              <h2><a href="/healthcare" className="spaces">Healthcare Space <MdOutlineArrowOutward className='green' /></a></h2>
             </div>
           </div>
           <div className="part3-sub">
             <div className="part3-img-div">
               <a href="/lab" target="_blank">
-                <img src={lab} alt="Office" />
+                <img src={lab} alt="Laboratory Space" loading="lazy" />
               </a>
             </div>
             <div className="part3-con">
-              <h2><a href="/lab" className="spaces">Laboratory Spaces<MdOutlineArrowOutward className='green' />
-              </a></h2>
+              <h2><a href="/lab" className="spaces">Laboratory Spaces <MdOutlineArrowOutward className='green' /></a></h2>
             </div>
           </div>
           <div className="part3-sub">
             <div className="part3-img-div">
-              <a href="/kitchen"  target="_blank">
-                <img src={kitchenImg} alt="Office" />
+              <a href="/kitchen" target="_blank">
+                <img src={kitchenImg} alt="Commercial Kitchen" loading="lazy" />
               </a>
             </div>
             <div className="part3-con">
-              <h2><a href="/kitchen" className="spaces">Commerical Kitchen<MdOutlineArrowOutward className='green' />
-              </a></h2>
+              <h2><a href="/kitchen" className="spaces">Commercial Kitchen <MdOutlineArrowOutward className='green' /></a></h2>
             </div>
           </div>
         </div>
@@ -169,52 +185,46 @@ const Hero = () => {
         </div>
         <div className="page3-b">
           <div className="left-ilus">
-            <img src={lefty} alt="" />
+            <img src={lefty} alt="Lefty Illustration" loading="lazy" />
           </div>
           <div className="center-ilus">
-            <video src={avizva} alt="" autoPlay
-              muted
-              playsInline loop />
+            <video src={avizva} alt="AVIZVA Video" autoPlay muted playsInline loop />
           </div>
           <div className="right-ilus">
-            <img src={righty} alt="" />
+            <img src={righty} alt="Righty Illustration" loading="lazy" />
           </div>
           <button className='btn' onClick={scrollToGetInTouch}>
             Enquire Now
           </button>
-
         </div>
       </div>
+
       <div className="info">
         <div className="info-sub">
           <div className="info-img-div">
-            <img src={v1} alt="" />
+            <img src={v1} alt="Innovative Design Icon" loading="lazy" />
           </div>
           <div className="info-sub-con">
             <h2>Innovative Design</h2>
-            <p>We provide research-driven designs that combine style, functionality,  and ergonomics.</p>
+            <p>We provide research-driven designs that combine style, functionality, and ergonomics.</p>
           </div>
         </div>
         <div className="info-sub">
           <div className="info-img-div">
-            <img src={v2} alt="" />
+            <img src={v2} alt="Durability & Quality Icon" loading="lazy" />
           </div>
           <div className="info-sub-con">
             <h2>Durability & Quality</h2>
             <p>Our furniture is built to last, with high-quality materials and construction that withstands heavy use.</p>
           </div>
-
         </div>
         <div className="info-sub">
           <div className="info-img-div">
-            <img src={v3} alt="" />
+            <img src={v3} alt="Broad Choice Icon" loading="lazy" />
           </div>
           <div className="info-sub-con">
-
-            <h2>
-              Broad Choice
-            </h2>
-            <p>We have a wide range of products and materiality options to meet style, preferences & budget needs</p>
+            <h2>Broad Choice</h2>
+            <p>We have a wide range of products and materiality options to meet style, preferences & budget needs.</p>
           </div>
         </div>
       </div>
@@ -223,24 +233,13 @@ const Hero = () => {
         <div className="page4-heading">
           <h1>How Are We Different?</h1>
           <p>Enhance your spaces with the comfortable furniture crafted by us</p>
-
         </div>
         <div className="page4-img-div">
-          <video src={page4ilus} alt="" autoPlay
-            muted
-            playsInline />
+          <video src={page4ilus} alt="Bento Video" autoPlay muted playsInline loading="lazy"/>
         </div>
 
         <div className="our-clients">
           <h1>Our Clients</h1>
-          {/* <div className="client-icons">
-            <img src={bank1} alt="" />
-            <img src={aditya} alt="" />
-            <img src={bank2} alt="" />
-            <img src={bob} alt="" />
-            <img src={sbi} alt="" />
-            <img src={aziva} alt="" />
-          </div> */}
           <Clients></Clients>
         </div>
       </div>
@@ -255,7 +254,7 @@ const Hero = () => {
         <GetInTouch />
       </div>
       <div className="footer-ilus">
-        <img src={filus} alt="" />
+        <img src={filus} loading="lazy" alt="Sofa table Sofa set Furniture" />
       </div>
 
     </div>

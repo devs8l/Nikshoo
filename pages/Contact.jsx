@@ -1,4 +1,4 @@
-import React, { useState ,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import "../pages/Contact.css"
 import heroMain from "../assets/hero-main.png"
 import contactImg from "../assets/contact-img.png"
@@ -6,6 +6,8 @@ import navimg from "../assets/Frame.png"
 import location from "../assets/location.png"
 import lefty from "../assets/lefty.png"
 import righty from "../assets/righty.png"
+import ReCAPTCHA from "react-google-recaptcha";
+
 import { Thanks } from '../components/Thanks'; // Import the Thanks component
 
 const Contact = () => {
@@ -44,9 +46,9 @@ const Contact = () => {
         }
         const data = await response.json();
         setContactData(data);
-  
+
       } catch (err) {
-  
+
       }
     };
     fetchContactData();
@@ -87,7 +89,7 @@ const Contact = () => {
         },
         body: JSON.stringify(formData),
       });
-      
+
       if (response.ok) {
         // If successful, show the thank you popup
         setPopupMessage({
@@ -112,7 +114,7 @@ const Contact = () => {
         message: '',
         email: ''
       });
-      
+
     } catch (error) {
       // Show error message on exception
       setPopupMessage({
@@ -175,7 +177,7 @@ const Contact = () => {
               <p>{contactData.addresses}</p>
             </div>
             <h4>{contactData.addresses}</h4>
-            
+
           </div>
         </div>
       </div>
@@ -243,6 +245,9 @@ const Contact = () => {
                 required
               />
             </div>
+            <ReCAPTCHA
+              sitekey="Your client site key"
+            />
             <button type="submit">Submit</button>
           </form>
         </div>

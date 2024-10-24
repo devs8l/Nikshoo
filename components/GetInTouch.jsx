@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import "../components/GetInTouch.css";
+import ReCAPTCHA from "react-google-recaptcha";
 import { Thanks } from '../components/Thanks'; // Import the Thanks component
 
 const GetInTouch = () => {
+    const [verified,setVerified]=useState(false)
     const [formData, setFormData] = useState({
         name: '',
         contactNo: '',
@@ -34,6 +36,10 @@ const GetInTouch = () => {
             }
         }
     };
+
+    const onChange = ()=>{
+        setVerified(true)
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -180,9 +186,13 @@ const GetInTouch = () => {
                                         onChange={handleChange}
                                     />
                                 </div>
+                                <ReCAPTCHA
+                                    sitekey="6Leo2moqAAAAANTwPPI-CokkG_njK0x2fn6qATVk"
+                                    onChange={onChange}
+                                />
                             </div>
                         </div>
-                        <button type="submit" className="submit-btn">Enquire Now</button>
+                        <button type="submit" className="submit-btn" disabled={!verified}>Enquire Now</button>
                     </form>
                 </div>
             </div>
