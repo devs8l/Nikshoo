@@ -46,6 +46,7 @@
 }
 .partner1-left p{
     width: 80%;
+    color: #585C5B;
 }
 .partner1-left h1{
     font-size: 3vw;
@@ -79,6 +80,7 @@
 .partner2-colab p{
     width: 55%;
     text-align: center;
+    color: #585C5B;
 }
 .partner2 h1{
     font-size: 2.3vw;
@@ -123,23 +125,29 @@
 .partner-form{
     width: 100%;
     /* background: white; */
-    min-height:140vh;
+    min-height:170vh;
     display: flex;
+    margin-top: 15vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+
     position: relative;
+}
+.upload{
+  margin-bottom: -0.6vh;
+  font-size: 1.5vw;
 }
 
 
 .custom-form {
-    width: 40%;
+    width: 45%;
     margin: 0 auto;
-    padding: 6vw;
+    padding: 4vw;
     background-color: white;
     border: 2px dashed #23AA9B;
     border-radius: 8px;
+    margin-bottom: 3vh;
   }
   
   .custom-form label {
@@ -200,6 +208,7 @@
     border-radius: 6px;
     font-size: 16px;
     cursor: pointer;
+    margin-top: 4vh;
   }
   
   .custom-form button:hover {
@@ -265,9 +274,9 @@ input[type="file"]{
   #rightyy-part{
     position: absolute;
     width: 40%;
-    top: 75%;
+    top: 65%;
     right: -20%;
-    width: 60%;
+    width: 70%;
     height: 40%;
     object-fit: contain;
   }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useRef } from 'react';
 import "../pages/Contact.css"
 import heroMain from "../assets/hero-main.png"
 import contactImg from "../assets/contact-img.png"
@@ -21,6 +21,11 @@ const Contact = () => {
     message: '',
     email: ''
   });
+  const query = useRef(null);
+  const scrollToGetInTouch = () => {
+    // Function to scroll to the GetInTouch section
+    query.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   const [contactData, setContactData] = useState({
     email: '',
@@ -175,7 +180,7 @@ const Contact = () => {
         <div className="contact-hero-left">
           <h1>Contact Us</h1>
           <p>Drop us a note and we’ll get back to you as quickly as possible</p>
-          <a href="">Write Us Your Query</a>
+          <p onClick={scrollToGetInTouch} className='paragreen'><u>Write To Us</u></p>
         </div>
         <div className="contact-hero-right">
           <img src={contactImg} alt="Contact Hero Image" loading="lazy" />
@@ -219,19 +224,19 @@ const Contact = () => {
       </div>
 
       {/* Contact Form Section */}
-      <div className="contact3">
+      <div className="contact3" ref={query}>
         <h1>Get In Touch</h1>
         <p>Ready to transform your workspace? Contact us today to explore how we can help you create a space that inspires success.</p>
-        <div className="contactus-form">
+        <div className="contactus-form" ref={query}>
           <form onSubmit={handleSubmit}>
             <div>
-              <label>Your Full Name</label>
+              <label>Your Name</label>
               <input
                 type="text"
                 name="fullName"
                 value={formData.fullName}
                 onChange={handleChange}
-                placeholder="Your Full Name"
+                placeholder="Type Your Name"
                 required
               />
             </div>

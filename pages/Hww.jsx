@@ -135,10 +135,10 @@ const Hww = () => {
             <div className="num-para">
               <h2>Consultation</h2>
               <p>
-                -We listen to your needs, goals, and challenges to understand your unique requirements.
+                -We listen to your needs, and challenges to understand your requirements.
               </p>
               <p>
-                -Our expert team guides you through a discovery process to identify the perfect furniture solutions.</p>
+                -Our expert team guides you <br />through a discovery process to <br />identify the perfect furniture solutions.</p>
             </div>
           </div>
         </div>
@@ -152,9 +152,9 @@ const Hww = () => {
             <div className="num-para">
               <h2>Space Planning</h2>
               <p>
-                - We assess your office space, taking into account layout, functionality, and workflow
+                - We assess your office space, <br />taking into account layout, functionality, and workflow
               </p>
-              <p>- Our designers create a customized floor plan, optimizing your space for productivity and comfort.</p>
+              <p>- Our designers create a <br />customized floor plan, optimizing your space for productivity and comfort.</p>
             </div>
           </div>
         </div>

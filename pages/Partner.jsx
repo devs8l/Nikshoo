@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import "../pages/Partner.css";
 import heroMain from "../assets/hero-main.png";
 import bp from "../assets/become-partner.png";
@@ -12,6 +12,8 @@ import partnerthree from "../assets/partner3-3.png";
 import lefty from "../assets/lefty.png";
 import righty from "../assets/righty.png";
 import { Thanks } from '../components/Thanks';
+import { MdOutlineFileUpload } from "react-icons/md";
+
 import ReCAPTCHA from 'react-google-recaptcha';
 
 import { Helmet } from 'react-helmet';
@@ -131,6 +133,11 @@ const Partner = () => {
         setPopupVisible(false); // Close the popup
     };
 
+    const query = useRef(null);
+    const scrollToGetInTouch = () => {
+      // Function to scroll to the GetInTouch section
+      query.current?.scrollIntoView({ behavior: 'smooth' });
+    };
 
     return (
         <header>
@@ -177,7 +184,7 @@ const Partner = () => {
                     <div className="partner1-left">
                         <h1>Become A Partner</h1>
                         <p>We are changing the way in which spaces are designed, and we would love to collaborate!</p>
-                        <a href="">Join Us!</a>
+                        <p href="" className='paragreen' onClick={scrollToGetInTouch}><u>Join Us!</u></p>
                     </div>
                     <div className="partner1-right">
                         <img src={bp} alt="" />
@@ -206,9 +213,9 @@ const Partner = () => {
                     <div className="partner3-sub">
                         <div className="partner3-con">
                             <h2>Designer</h2>
-                            <p>1.Opportunity to work on innovative projects</p>
-                            <p>2.Access to new technologies and tools</p>
-                            <p>3.Exposure to new markets or clients</p>
+                            <p>1. Opportunity to work on innovative projects</p>
+                            <p>2. Access to new technologies and tools</p>
+                            <p>3. Exposure to new markets or clients</p>
                         </div>
                         <img src={partnerone} alt="" />
                     </div>
@@ -216,9 +223,9 @@ const Partner = () => {
                         <div className="partner3-con">
                             <h2>Product Suppliers</h2>
 
-                            <p>1.Potential for increased sales and revenue</p>
-                            <p>2.Joint marketing efforts</p>
-                            <p>3.Greater reach and brand exposure</p>
+                            <p>1. Potential for increased sales and revenue</p>
+                            <p>2. Joint marketing efforts</p>
+                            <p>3. Greater reach and brand exposure</p>
                         </div>
                         <img src={partnertwo} alt="" />
                     </div>
@@ -226,16 +233,16 @@ const Partner = () => {
                         <div className="partner3-con">
                             <h2>Execution Partner</h2>
 
-                            <p>1.Potential for long-term collaborations</p>
-                            <p>2.Steady stream of projects</p>
-                            <p>3.Priority access to new projects</p>
+                            <p>1. Potential for long-term collaborations</p>
+                            <p>2. Steady stream of projects</p>
+                            <p>3. Priority access to new projects</p>
                         </div>
                         <img src={partnerthree} alt="" />
                     </div>
                 </div>
 
                 {/* Form Section */}
-                <div className="partner-form">
+                <div className="partner-form" ref={query}>
                     <h1>Almost There</h1>
                     <form className="custom-form" onSubmit={handleSubmit}>
                         {/* Partner Dropdown */}
@@ -255,14 +262,15 @@ const Partner = () => {
 
                         {/* Person/Company Name */}
                         <div className="form-row">
-                            <label htmlFor="partnerName">Person Name</label>
+                            <label htmlFor="partnerName">Your Name</label>
                             <input
                                 type="text"
                                 id="partnerName"
                                 name="partnerName"
-                                placeholder="Your company/name"
+                                placeholder="Your name"
                                 value={formData.partnerName}
                                 onChange={handleChange}
+                                required
                             />
                         </div>
                         <div className="form-row">
@@ -274,6 +282,7 @@ const Partner = () => {
                                 placeholder="Company name"
                                 value={formData.companyName}
                                 onChange={handleChange}
+                                required
                             />
                         </div>
 
@@ -288,6 +297,7 @@ const Partner = () => {
                                     placeholder="Enter your phone number"
                                     value={formData.phoneNumber}
                                     onChange={handleChange}
+                                    required
                                 />
                                 {phoneError && <p className="error gitouch partner">{phoneError}</p>} {/* Display phone error */}
 
@@ -301,6 +311,7 @@ const Partner = () => {
                                     placeholder="Enter your email"
                                     value={formData.email}
                                     onChange={handleChange}
+                                    required
                                 />
                             </div>
                         </div>
@@ -315,13 +326,14 @@ const Partner = () => {
                                 placeholder="Your city"
                                 value={formData.city}
                                 onChange={handleChange}
+                                required
                             />
                         </div>
 
                         {/* Upload Document */}
                         <div className="form-row">
                             <h4>{fileName ? fileName : 'Upload Document (Upto 5MB)'}</h4>
-                            <label htmlFor="document" id='doc'>Upload Document</label>
+                            <label htmlFor="document" id='doc'><MdOutlineFileUpload className='upload'/>Upload Document </label>
                             <input
                                 type="file"
                                 id="document"
@@ -344,7 +356,7 @@ const Partner = () => {
                             />
                         </div>
                         <ReCAPTCHA
-                            sitekey="Your client site key"
+                            sitekey="6Leo2moqAAAAANTwPPI-CokkG_njK0x2fn6qATVk"
                         />
 
                         {/* Submit Button */}

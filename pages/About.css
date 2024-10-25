@@ -25,6 +25,11 @@
 }
 .about-hero p{
     width: 100%;
+  color: #585C5B;
+  font-size: 1.2vw;
+
+
+
 }
 .about-hero-left{
     width: 30%;
@@ -38,6 +43,23 @@
 .about-hero-right img{
     width: 100%;
     object-fit: contain;
+}
+
+.about-offer{
+    width: 60%;
+    height: 40vh;
+    margin: auto;
+    text-align: center;
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center; */
+}
+
+.about-offer p{
+  color: #585C5B;
+  font-size: 1.2vw;
+  
 }
 
 .about2{
@@ -54,6 +76,7 @@
 .about2 p{
     color: #7A8584;
     font-size: 1.2vw;
+    text-align: left;
 }
 
 .about3{
@@ -78,11 +101,13 @@
     justify-content: center;
     align-items: center;
     height: 60vh;
-    width: 40%;
+    width: 50%;
+    gap: 4vw;
     /* background: #000; */
 }
 .founder-sub{
     width: 50%;
+    height: 50vh;
     /* background: palevioletred; */
 }
 .founder-img{
@@ -91,6 +116,16 @@
 }
 .founder-img img{
     width: 100%;
+}
+
+.founder-con{
+    color: #585C5B;
+    width: 100%;
+    text-align: justify;
+}
+.founder-sub p{
+    color: #585C5B;
+    
 }
 
 
@@ -102,16 +137,19 @@
     flex-direction: column;
     height: 80vh;
     gap: 4vw;
+    margin-top: 40vh;
 }
 .about4-img-div{
     width: 80%;
     display: flex;
+    
     justify-content: center;
     
 }
 .about4-img-div img{
     object-fit: contain;
     aspect-ratio: 4/3;
+    
 }
 
 @media (max-width:768px) {

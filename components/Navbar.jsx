@@ -57,11 +57,11 @@ export default function Navbar() {
                             Spaces <RiArrowDropDownLine className='dropdown-icon'/>
                             {dropdownOpen && (
                                 <ul className="spaces-dropdown-menu">
-                                    <li><NavLink to="/office" onClick={handleNavLinkClick}>Office Space</NavLink></li>
-                                    <li><NavLink to="/education" onClick={handleNavLinkClick}>Education Space</NavLink></li>
-                                    <li><NavLink to="/lab" onClick={handleNavLinkClick}>Laboratory Space</NavLink></li>
-                                    <li><NavLink to="/healthcare" onClick={handleNavLinkClick}>Healthcare Space</NavLink></li>
-                                    <li><NavLink to="/kitchen" onClick={handleNavLinkClick}>Kitchen Space</NavLink></li>
+                                    <li><NavLink to="/office" onClick={handleNavLinkClick}>Office Spaces</NavLink></li>
+                                    <li><NavLink to="/education" onClick={handleNavLinkClick}>Education Spaces</NavLink></li>
+                                    <li><NavLink to="/lab" onClick={handleNavLinkClick}>Laboratory Spaces</NavLink></li>
+                                    <li><NavLink to="/healthcare" onClick={handleNavLinkClick}>Healthcare Spaces</NavLink></li>
+                                    <li><NavLink to="/kitchen" onClick={handleNavLinkClick}>Kitchen Spaces</NavLink></li>
                                 </ul>
                             )}
                         </div>
