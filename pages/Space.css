@@ -64,6 +64,11 @@
 
 }
 
+.space2-heading p{
+  color: #585C5B !important;
+
+}
+
 .cards-container {
     display: flex;
     flex-wrap: wrap;

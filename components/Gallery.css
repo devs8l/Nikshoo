@@ -43,8 +43,8 @@
     border-radius: 10px;
     overflow: hidden;
     height: 100%;
-    
-    
+    /* border: 0.3px solid black; */
+  
   }
   
   /* In the top half, first image has less width and second has more */

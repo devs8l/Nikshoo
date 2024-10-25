@@ -4,9 +4,9 @@ import coencircles from "../assets/circles.png";
 import centerpiece from "../assets/center-left.png";
 import eduImg from "../assets/mg4.png";
 import med from "../assets/mg2.png";
-import Kitchen from "../assets/mg5.png";
+import Kitchen from "../assets/mg5-2.png";
 import rec from "../assets/rec.png";
-import lab from "../assets/mg3.png";
+import lab from "../assets/mg3-2.png";
 import officetop from "../assets/office-top.png";
 import officeleft from "../assets/office-b-l.png";
 import officeright from "../assets/office-workstation.png";
@@ -16,7 +16,7 @@ import eduHeroRight from "../assets/edu-hero-right.png"
 import hbed from "../assets/bed-health.png"
 import CafeEdu from "../assets/Cafe-edu.png"
 import Library from "../assets/library.png"
-import Lounge from "../assets/lounge.png"
+import metalBed from "../assets/metalbed.png"
 
 
 
@@ -63,12 +63,12 @@ export const Rotate = () => {
                 image: eduHeroRight
             },
             bottomLeft: {
-                h1: 'Cafeteria',
-                image: Lounge
-            },
-            bottomRight: {
                 h1: 'Library',
                 image: Library
+            },
+            bottomRight: {
+                h1: 'Acommodation',
+                image: metalBed
             }
         },
         {

@@ -11,6 +11,8 @@ import hwwFoot from "../assets/hww-footer.png";
 import { Thanks } from '../components/Thanks'; // Import the Thanks component
 import ReCAPTCHA from 'react-google-recaptcha';
 
+import { Helmet } from 'react-helmet';
+
 const Hww = () => {
   const [phoneError, setPhoneError] = useState(''); // State to manage phone number error
   const [isFormVisible, setFormVisible] = useState(false);
@@ -21,6 +23,8 @@ const Hww = () => {
     message: '',
     email: ''
   });
+
+
 
   // Popup state
   const [popupVisible, setPopupVisible] = useState(false);
@@ -101,20 +105,29 @@ const Hww = () => {
   };
 
   return (
-    <div className="hww-wrap">
+    <header className="hww-wrap">
+
+      <Helmet>
+        <title>How We Work | Nikshoo Furniture Solutions</title>
+        <meta name="description" content="Explore how we work at Nikshoo Furniture Solutions through consultation, space planning, product selection, installation, and after-sales support." />
+        <meta name="keywords" content="furniture, consultation, space planning, installation, product selection, after-sales support" />
+      </Helmet>
       <div className="hero-hww">
-        <img src={heroMain} alt="" />
+        <img src={heroMain} alt="Hero main" loading="lazy" />
+
         <div className="hww-hero-con">
           <h1>How We Work</h1>
           <p className='hww-para'>At Nikshoo,  we're dedicated to providing exceptional  furniture solutions that enhance your work environment. Here's an overview of our collaborative and tailored approach:</p>
         </div>
         <div className="hww-img-div">
-          <img src={hwwHero} alt="" />
+          <img src={hwwHero} alt="How we work hero" loading="lazy" />
+
         </div>
       </div>
       <div className="image-container">
         <div className="image-part part-1">
-          <img src={hww1} alt="Segment 1" />
+          <img src={hww1} alt="Consultation process" loading="lazy" />
+
           <div className="hww-con">
             <div className="num">
               <h1>1</h1>
@@ -122,15 +135,16 @@ const Hww = () => {
             <div className="num-para">
               <h2>Consultation</h2>
               <p>
-                We listen to your needs, goals, and challenges to understand your unique requirements.
+                -We listen to your needs, goals, and challenges to understand your unique requirements.
               </p>
               <p>
-                Our expert team guides you through a discovery process to identify the perfect furniture solutions.</p>
+                -Our expert team guides you through a discovery process to identify the perfect furniture solutions.</p>
             </div>
           </div>
         </div>
         <div className="image-part part-2">
-          <img src={hww2} alt="Segment 2" />
+          <img src={hww2} alt="Space planning process" loading="lazy" />
+
           <div className="hww-con">
             <div className="num">
               <h1>2</h1>
@@ -145,7 +159,8 @@ const Hww = () => {
           </div>
         </div>
         <div className="image-part part-3">
-          <img src={hww3} alt="Segment 3" />
+          <img src={hww3} alt="Product selection process" loading="lazy" />
+
           <div className="hww-con">
             <div className="num">
               <h1>3</h1>
@@ -159,7 +174,8 @@ const Hww = () => {
           </div>
         </div>
         <div className="image-part part-4">
-          <img src={hww4} alt="Segment 4" />
+          <img src={hww4} alt="Installation process" loading="lazy" />
+
           <div className="hww-con">
             <div className="num">
               <h1>4</h1>
@@ -174,7 +190,8 @@ const Hww = () => {
           </div>
         </div>
         <div className="image-part part-5">
-          <img src={hww5} alt="Segment 5" />
+          <img src={hww5} alt="After sales support process" loading="lazy" />
+
           <div className="hww-con">
             <div className="num">
               <h1>5</h1>
@@ -198,7 +215,7 @@ const Hww = () => {
             </button>
           </div>
           <div className="hww-img-div">
-            <img src={hwwFoot} alt="" />
+            <img src={hwwFoot} alt="How we work footer" loading="lazy" />
           </div>
         </div>
       </div>
@@ -268,8 +285,8 @@ const Hww = () => {
                 />
               </div>
               <ReCAPTCHA
-              sitekey="Your client site key"
-            />
+                sitekey="Your client site key"
+              />
               <button type="submit" id='submit'>Submit</button>
             </form>
           </div>
@@ -284,7 +301,7 @@ const Hww = () => {
           buttonText="Explore More"
         />
       )}
-    </div>
+    </header>
   );
 };
 

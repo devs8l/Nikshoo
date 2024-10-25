@@ -42,8 +42,8 @@ const Office = () => {
     return (
         <div className='space-wrap'>
             <div className="space-hero">
-                <img src={officeHeroMobile} className="mobile" alt="" />
-                <img src={officeHero} className="desktop" alt="" />
+                <img src={officeHeroMobile} className="mobile" alt="" loading='lazy'/>
+                <img src={officeHero} className="desktop" alt="" loading='lazy'/>
                 <div className="space-hero-left">
                     <h1>Office Spaces</h1>
                     <a href="">Enquire Now</a>

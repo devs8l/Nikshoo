@@ -470,6 +470,10 @@ video{
     align-items: center;
 
 }
+.info-sub-con p{
+    color: #585C5B;
+
+}
 
 
 @media (max-width: 768px){
@@ -594,7 +598,7 @@ video{
     font-size: 2.4vw;
 }
 .page4-heading p{
-    font-size: 1vw;
+    font-size: 1.3vw;
     color: #545353b9;
 }
 
@@ -660,6 +664,11 @@ video{
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
+}
+
+.gallery p{
+    color: #585C5B !important;
+    
 }
 .gal-img-div{
     width: 90%;

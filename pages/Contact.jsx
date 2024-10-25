@@ -6,6 +6,8 @@ import navimg from "../assets/Frame.png"
 import location from "../assets/location.png"
 import lefty from "../assets/lefty.png"
 import righty from "../assets/righty.png"
+import { Helmet } from 'react-helmet';
+
 import ReCAPTCHA from "react-google-recaptcha";
 
 import { Thanks } from '../components/Thanks'; // Import the Thanks component
@@ -130,10 +132,44 @@ const Contact = () => {
   };
 
   return (
-    <div className='contact-wrap'>
-      <img src={heroMain} alt="" />
-      <img src={lefty} alt="" id='leftyy' />
-      <img src={righty} alt="" id='rightyy' />
+    <header className='contact-wrap'>
+      <Helmet>
+        <title>Contact Us | Nikshoo Furniture Solutions</title>
+        <meta name="description" content="Explore a wide range of furniture solutions including sofas, tables, and more." />
+        <meta
+          name="keywords"
+          content="
+            furniture, 
+            sofa, 
+            sofa set, 
+            table, 
+            study table, 
+            beds, 
+            dining table, 
+            dressing table, 
+            chair, 
+            wardrobe, 
+            cupboards, 
+            furniture shop near me, 
+            double bed, 
+            tv unit, 
+            bookshelves, 
+            folding bed, 
+            computer table, 
+            desk top, 
+            sofa come bed, 
+            furniture stores near me, 
+            bed sets, 
+            plastic chairs, 
+            godrej almirah, 
+            chests, 
+            bed room
+          "
+        />
+      </Helmet>
+      <img src={heroMain} alt="Main Hero Image" loading="lazy" />
+      <img src={lefty} alt="Left Decoration" loading="lazy" id='leftyy' />
+      <img src={righty} alt="Right Decoration" loading="lazy" id='rightyy' />
 
       <div className="contact-hero">
         <div className="contact-hero-left">
@@ -142,7 +178,7 @@ const Contact = () => {
           <a href="">Write Us Your Query</a>
         </div>
         <div className="contact-hero-right">
-          <img src={contactImg} alt="" />
+          <img src={contactImg} alt="Contact Hero Image" loading="lazy" />
         </div>
       </div>
 
@@ -167,12 +203,12 @@ const Contact = () => {
         </div>
         <div className="contact-bottom">
           <div className="contact-b-l">
-            <img src={navimg} alt="" />
+            <img src={navimg} alt="Visit Icon" loading="lazy" />
             <h3>Visit Us</h3>
           </div>
           <div className="contact-b-r">
             <div className="location">
-              <img src={location} alt="" />
+              <img src={location} alt="Location Icon" loading="lazy" />
               <h3>Indore:</h3>
               <p>{contactData.addresses}</p>
             </div>
@@ -261,7 +297,7 @@ const Contact = () => {
           buttonText="Explore More"
         />
       )}
-    </div>
+    </header>
   );
 }
 

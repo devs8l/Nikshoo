@@ -15,7 +15,7 @@
 }
 
 .heading-rotate p {
-  color: #A7A3A2;
+  color: #585C5B;
   font-size: 1vw;
 
 }
@@ -356,8 +356,9 @@ a {
 .custom-img-div {
   width: 100%;
   position: relative;
-  top: 0;
-  left: -20%;
+  top: 27%;
+  scale: 1.9;
+  left: -30%;
 
   /* background: #000; */
 }
@@ -377,7 +378,7 @@ a {
     font-size: 6vw;
   }
 
-  
+
 
   .heading-rotate p {
     font-size: 3vw;
@@ -411,7 +412,7 @@ a {
     align-items: center;
     width: 90%;
     gap: 2vw;
-    
+
     /* Adjusted for better spacing */
     margin: 3vh auto;
     /* Centering the carousel */
@@ -422,47 +423,59 @@ a {
     justify-content: center;
     align-items: center;
     width: 90%;
-    gap: 10px; /* Adjust as needed */
+    gap: 10px;
+    /* Adjust as needed */
     margin-right: 4vh;
-}
+  }
 
-.mobile-prev-prev,
-.mobile-next-next,
-.mobile-arrow,
-.mobile-circle {
-    min-width: 70px; /* Fixed width */
-    min-height: 80px; /* Fixed height */
+  .mobile-prev-prev,
+  .mobile-next-next,
+  .mobile-arrow,
+  .mobile-circle {
+    min-width: 70px;
+    /* Fixed width */
+    min-height: 80px;
+    /* Fixed height */
     background: #ffffff;
-    border-radius: 50%; /* Makes them circular */
+    border-radius: 50%;
+    /* Makes them circular */
     text-align: center;
     box-shadow: 0 0 20px rgba(0, 128, 128, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
-    font-size: 3vw; /* Adjust font size as needed */
+    font-size: 3vw;
+    /* Adjust font size as needed */
     color: #23AA9B;
-    transition: all 1s ease; /* Smooth scaling transition */
-}
+    transition: all 1s ease;
+    /* Smooth scaling transition */
+  }
 
-.mobile-circle {
+  .mobile-circle {
     font-size: 3.5vw;
-    background: #23AA9B; /* Active circle background color */
-    color: white; /* Text color for active circle */
-    padding: 20px; /* Remove padding */
-}
+    background: #23AA9B;
+    /* Active circle background color */
+    color: white;
+    /* Text color for active circle */
+    padding: 20px;
+    /* Remove padding */
+  }
 
-.mobile-prev-prev.active,
-.mobile-next-next.active,
-.mobile-arrow.active,
-.mobile-circle.active {
-    transform: scale(1.1); /* Slightly scale up the active element */
-}
+  .mobile-prev-prev.active,
+  .mobile-next-next.active,
+  .mobile-arrow.active,
+  .mobile-circle.active {
+    transform: scale(1.1);
+    /* Slightly scale up the active element */
+  }
 
-.mobile-arrow {
-    background: #ffffff; /* Background color for arrows */
-    cursor: pointer; /* Change cursor to pointer */
-}
+  .mobile-arrow {
+    background: #ffffff;
+    /* Background color for arrows */
+    cursor: pointer;
+    /* Change cursor to pointer */
+  }
 
 
   .right-div {
@@ -506,7 +519,7 @@ a {
   }
 
 
-  
+
 
 
 

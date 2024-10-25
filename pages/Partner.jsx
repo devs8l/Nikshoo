@@ -14,6 +14,9 @@ import righty from "../assets/righty.png";
 import { Thanks } from '../components/Thanks';
 import ReCAPTCHA from 'react-google-recaptcha';
 
+import { Helmet } from 'react-helmet';
+
+
 const Partner = () => {
     const [phoneError, setPhoneError] = useState(''); // State to manage phone number error
     const [formData, setFormData] = useState({
@@ -130,8 +133,42 @@ const Partner = () => {
 
 
     return (
-        <div>
-            <div className="partner-wrap">
+        <header>
+            <header className="partner-wrap">
+                <Helmet>
+                    <title>Become Partner | Nikshoo Furniture Solutions</title>
+                    <meta name="description" content="Explore a wide range of furniture solutions including sofas, tables, and more." />
+                    <meta
+                        name="keywords"
+                        content="
+            furniture, 
+            sofa, 
+            sofa set, 
+            table, 
+            study table, 
+            beds, 
+            dining table, 
+            dressing table, 
+            chair, 
+            wardrobe, 
+            cupboards, 
+            furniture shop near me, 
+            double bed, 
+            tv unit, 
+            bookshelves, 
+            folding bed, 
+            computer table, 
+            desk top, 
+            sofa come bed, 
+            furniture stores near me, 
+            bed sets, 
+            plastic chairs, 
+            godrej almirah, 
+            chests, 
+            bed room
+          "
+                    />
+                </Helmet>
                 <img src={heroMain} alt="" />
                 <img src={lefty} alt="" id='leftyy-part' />
                 <img src={righty} alt="" id='rightyy-part' />
@@ -320,7 +357,7 @@ const Partner = () => {
 
 
                 </div>
-            </div>
+            </header>
             {/* Popup Component */}
             {popupVisible && (
                 <Thanks
@@ -329,7 +366,7 @@ const Partner = () => {
                     buttonText="Explore More"
                 />
             )}
-        </div>
+        </header>
     );
 };
 
