@@ -500,12 +500,12 @@ a {
   }
 
   .mobile-carousel.slide-left {
-    transform: translateX(-10%);
+    /* transform: translateX(-10%); */
     /* Adjust based on the effect you want */
   }
 
   .mobile-carousel.slide-right {
-    transform: translateX(10%);
+    /* transform: translateX(10%); */
     /* Adjust based on the effect you want */
   }
 
