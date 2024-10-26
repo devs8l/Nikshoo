@@ -12,9 +12,9 @@ export function Thanks({ message, onClose, buttonText }) {
 
         <h2>{message.title}</h2>
         <p>{message.body}</p>
-        <button className="custom-explore-btn" onClick={onClose}>
+        {/* <button className="custom-explore-btn" onClick={onClose}>
           {buttonText}
-        </button>
+        </button> */}
       </div>
     </div>
   );
