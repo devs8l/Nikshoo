@@ -117,7 +117,7 @@ const Footer = () => {
                                 <img src={c2} alt="" />
                                 <h3>Reach us by phone:</h3>
                             </div>
-                            <p><u>{contactData.phone}</u></p>
+                            <p><u>+91{contactData.phone}</u></p>
                             <div className="c-top-heading">
                                 <img src={c3} alt="" />
                                 <h3>Email us:</h3>

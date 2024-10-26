@@ -193,7 +193,7 @@ const Contact = () => {
           <div className="contact-ways">
             <img src="" alt="" />
             <h3>Call Us</h3>
-            <p>{contactData.phone}</p>
+            <p>+91{contactData.phone}</p>
           </div>
           <div className="contact-ways">
             <img src="" alt="" />

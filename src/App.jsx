@@ -19,6 +19,8 @@ import Privacy from '../pages/Privacy';
 import Admin from '../pages/Admin';
 import navimg from "../assets/whatsapp-icon.png"
 
+import Cookie from '../components/Cookie';
+
 
 function App() {
   const location = useLocation(); // Hook to get the current route
@@ -32,7 +34,7 @@ function App() {
         <a href="https://wa.me/+918103702839" target='_blank'>
           <img src={navimg} alt="" />
         </a>
-
+      <Cookie></Cookie>
       </div>
       <Routes>
         <Route path="/" element={<Hero />} />
