@@ -40,7 +40,7 @@ const Lab = () => {
             <div className="space2 lab">
                 <img src={heroMain} alt="" />
                 <div className="space2-heading">
-                <h1>Products in Commercial Kitchen</h1>
+                <h1>Products in Laboratory Spaces</h1>
                 <p>Our Solutions for Laboratory Spaces
                 include, but are not limited to:</p>
                 </div>
