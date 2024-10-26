@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import '../components/Rotate.css';
 import coencircles from "../assets/circles.png";
 import centerpiece from "../assets/center-left.png";
@@ -22,6 +22,8 @@ import metalBed from "../assets/metalbed.png"
 
 
 
+
+
 import kitchenRotate from "../assets/com-kitchen.png"
 import labRotate from "../assets/lab2.png"
 
@@ -29,6 +31,8 @@ export const Rotate = () => {
     const [activeContent, setActiveContent] = useState('Click on a circle to display content');
     const [activeImage, setActiveImage] = useState(centerpiece);
     const [activeElectron, setActiveElectron] = useState(1);
+    const [animationDirection, setAnimationDirection] = useState('');
+
 
     const circles = [
         {
@@ -132,7 +136,16 @@ export const Rotate = () => {
             }
         }
     ];
-
+    useEffect(() => {
+        if (animationDirection) {
+            const timeout = setTimeout(() => {
+                setAnimationDirection('');
+            }, 300); // Match the duration of the CSS transition
+    
+            return () => clearTimeout(timeout);
+        }
+    }, [animationDirection]);
+    
     const activeCircle = circles.find(circle => circle.id === activeElectron) || {};
 
     const handleCircleClick = (content, image, id) => {
@@ -142,10 +155,12 @@ export const Rotate = () => {
     };
 
     const handleNext = () => {
+        setAnimationDirection('left');
         setActiveElectron(prev => (prev === circles.length ? 1 : prev + 1));
     };
 
     const handlePrev = () => {
+        setAnimationDirection('right');
         setActiveElectron(prev => (prev === 1 ? circles.length : prev - 1));
     };
 
@@ -174,7 +189,7 @@ export const Rotate = () => {
                     </div>
                 </div>
 
-                <div className="mobile-carousel">
+                <div className={`mobile-carousel ${animationDirection === 'left' ? 'slide-left' : ''} ${animationDirection === 'right' ? 'slide-right' : ''}`}>
                     {/* Previous of Previous Heading */}
                     <div className="mobile-prev-prev">
                         {activeCircle.id > 2 ? circles[activeCircle.id - 3].heading : (activeCircle.id === 2 ? circles[circles.length - 1].heading : circles[circles.length - 2].heading)}
@@ -208,7 +223,7 @@ export const Rotate = () => {
                                 <p>{activeCircle.rightTop.para}</p>
                                 <a href={activeCircle.rightTop.link}>Explore</a>
                             </div>
-                            <div className="custom-img-div">
+                            <div className={`custom-img-div ${activeCircle.id === 4 ? 'special-align' : ''}`}>
                                 <img src={activeCircle.rightTop.image} alt="" />
                             </div>
                         </div>
@@ -235,7 +250,7 @@ export const Rotate = () => {
                                             <h1>{activeCircle.bottomLeft.h1}</h1>
                                             <a href={activeCircle.rightTop.link}>Explore</a>
                                         </div>
-                                        <div className="r-b-img">
+                                        <div className={`r-b-img ${activeCircle.id === 2 ? 'special' : ''}`}>
                                             <img src={activeCircle.bottomLeft.image} alt="" />
                                         </div>
                                     </div>

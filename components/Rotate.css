@@ -343,6 +343,7 @@ a {
   width: 30%;
   padding: 2vw;
   padding-left: 4vw;
+  z-index: 1000;
 
   /* background: #000; */
 }
@@ -373,16 +374,31 @@ a {
   display: none;
 }
 
+.call{
+  display: none;
+}
 @media (max-width:768px) {
+  .call{
+    display: block;
+    color: white;
+    position: absolute;
+    right: 16%;
+    font-size: 7vw;
+    top: 54%;
+  }
+
   .heading-rotate h1 {
     font-size: 6vw;
   }
 
+  .heading-rotate{
+    margin-bottom: 6vh;
+  }
 
 
   .heading-rotate p {
     font-size: 3vw;
-    width: 83%;
+    width: 70%;
     text-align: center;
     margin: auto;
     margin-bottom: 2vh;
@@ -458,7 +474,8 @@ a {
     /* Active circle background color */
     color: white;
     /* Text color for active circle */
-    padding: 20px;
+    padding: 27px;
+    transition: all 1s ease-in;
     /* Remove padding */
   }
 
@@ -477,15 +494,52 @@ a {
     /* Change cursor to pointer */
   }
 
+  .mobile-carousel {
+
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .mobile-carousel.slide-left {
+    transform: translateX(-10%);
+    /* Adjust based on the effect you want */
+  }
+
+  .mobile-carousel.slide-right {
+    transform: translateX(10%);
+    /* Adjust based on the effect you want */
+  }
+
+  @keyframes resetSlide {
+    to {
+      transform: translateX(0);
+    }
+  }
+
+
 
   .right-div {
-    width: 80%;
+    width: 90%;
     margin-right: 6.7vh;
+    /* height: 70%; */
+    
   }
 
   .right-div img {
     width: 100%;
     object-fit: contain;
+  }
+  .special-align{
+    right: 0%;
+    scale: 2.5;
+    
+    
+  }
+  .special img{
+    width: 80% !important;
+    margin-left: 2vw;
+  }
+  .custom-content img{
+    left: 30%;
   }
 
   .r-t-con {
@@ -494,27 +548,65 @@ a {
     height: 100%;
     width: 100%;
     /* background: #000; */
-    padding-top: 3vh;
+    padding-top: 6vh;
     padding-left: 3vw;
+    font-weight: bold;
   }
 
-  .r-t-con h3 {
-    font-size: 3vw;
+  .custom-content{
+    height: 94%;
+  }
+
+  .right-top{
+    height: 40%;
   }
 
   .r-t-con h1 {
-    font-size: 4vw;
+    font-size: 6vw;
     margin-top: -1vh;
+    width: 30%;
+  }
+  .right-top a{
+    font-size: 3vw;
   }
 
   .r-t-con p {
     font-size: 2.4vw;
     margin-top: -1vh;
   }
+  .bottomabs{
+    top: 0;
+  }
 
   .r-t-img {
     /* background: #000; */
-    width: 60%;
+    width: 70%;
+    right: -10%;
+  }
+  .r-t-img img{
+    width: 90%;
+    object-fit: cover;
+  }
+
+  .right-bottom h1{
+    font-size: 2vh;
+  }
+  .r-b-con{
+    padding: 0vw 1vw;
+  }
+
+  .r-b-img{
+    margin-top: 5.5vh;
+    right: -3%;
+  }
+
+  .r-b-con a{
+    font-size: 1.6vh;
+  }
+
+  .btmimgabs{
+    width: 97%;
+    left: 0;
 
   }
 

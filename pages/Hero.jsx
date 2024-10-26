@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef,useState,useEffect } from 'react';
 import { NavLink, useLocation } from "react-router-dom"
 import { MdOutlineArrowOutward } from "react-icons/md";
 
@@ -35,15 +35,34 @@ import Clients from '../components/Clients'
 
 import heroVid from "../assets/hero-vid.mp4"
 import { Helmet } from 'react-helmet';
+import mobileBento from "../assets/mobile-bento.mp4"
 
 
 const Hero = () => {
   const getInTouchRef = useRef(null); // Create a ref for GetInTouch component
-
+  const [page4VideoSrc, setPage4VideoSrc] = useState(page4ilus);
   const scrollToGetInTouch = () => {
     // Function to scroll to the GetInTouch section
     getInTouchRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
+  useEffect(() => {
+    const updateVideoSrc = () => {
+      // Check if the screen width is mobile-size and update video src
+      if (window.innerWidth <= 768) {
+        setPage4VideoSrc(mobileBento); // Mobile video
+      } else {
+        setPage4VideoSrc(page4ilus); // Desktop video
+      }
+    };
+
+    updateVideoSrc(); // Initial check
+    window.addEventListener('resize', updateVideoSrc); // Listen for resize events
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', updateVideoSrc);
+    };
+  }, []);
 
   return (
     <div className='hero-wrapper'>
@@ -177,7 +196,7 @@ const Hero = () => {
       <div className="page3">
         <div className="page3-mobile">
           <h1>Imagine Your Future Spaces Crafted with Precision & Style</h1>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, nihil?</p>
+          <p>Enhance your spaces with the comfortable furniture crafted by us</p>
           <a href="">Enquire now!</a>
         </div>
         <div className="page3-con">
@@ -235,7 +254,7 @@ const Hero = () => {
           <p>Enhance your spaces with the comfortable furniture crafted by us</p>
         </div>
         <div className="page4-img-div">
-          <video src={page4ilus} alt="Bento Video" autoPlay muted playsInline loading="lazy"/>
+          <video src={page4VideoSrc} alt="Bento Video" autoPlay muted playsInline loop loading="lazy"/>
         </div>
 
         <div className="our-clients">

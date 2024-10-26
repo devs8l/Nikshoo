@@ -192,14 +192,14 @@
      .upper-part{
         flex-wrap: wrap;
         padding: 15vw;
-        height: 70%;
+        height: 75%;
         gap: 0vw;
         font-weight: 100;
         /* letter-spacing: 0.2vw; */
      }
      .icon-div-footer{
         position: absolute;
-        top: 87%;
+        top: 85%;
         left: -1%;
      }
      .upper-part h2{
@@ -213,6 +213,9 @@
      }
      .gem h3{
         font-size: 0.7vh;
+     }
+     .upper-part{
+        height: 80vh;
      }
 
      .gem{
@@ -231,13 +234,16 @@
      }
      .mid-foot{
         width: 40%;
-        margin-top: 19vh;
+        margin-top: 10vh;
         margin-left: 5vw;
+     }
+     .mid-foot a{
+        font-size: 2vh;
      }
      .right-foot{
         width: 55%;
         margin-top: 0vh;
-        margin-bottom: -27vh;
+        margin-bottom: -20vh;
         
      }
      .gem img{

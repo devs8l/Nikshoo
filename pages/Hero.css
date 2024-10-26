@@ -521,7 +521,7 @@ video{
         margin-top: -6vh;
     }
     .page3 p{
-        color: white;
+        color: #A7A3A2;
     }
 
     .info{
@@ -537,7 +537,7 @@ video{
         flex-wrap: wrap;
         /* padding-bottom: 3vh; */
         border-radius: 20px 20px 0 0 ;
-        margin-top: -4vh;
+        margin-top: -1vh;
         position: relative;
         z-index: 3;
         padding: 8vw 0;
@@ -623,6 +623,9 @@ video{
         margin: auto;
         color: #545353b9;
     }
+    .page4-img-div{
+        width: 80%;
+    }
 }
 
 
@@ -705,6 +708,10 @@ video{
   
     .hero-content p {
         font-size: 4vw; /* Further adjust for smaller screens */
+    }
+    .our-clients{
+        height: 25vh;
+        margin-bottom: 5vh;
     }
     
     .our-clients h1{

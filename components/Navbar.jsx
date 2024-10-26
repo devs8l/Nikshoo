@@ -4,9 +4,10 @@ import { NavLink, useLocation } from "react-router-dom"
 import { RiArrowDropDownLine } from "react-icons/ri";
 import "../components/Navbar.css"
 import navimg from "../assets/Frame.png"
-import { GiHamburgerMenu} from "react-icons/gi";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross1 } from "react-icons/rx";
 import navimgfooter from "../assets/footerlogo.png"
+import { IoIosCall } from "react-icons/io";
 
 export default function Navbar() {
     const location = useLocation();
@@ -33,11 +34,15 @@ export default function Navbar() {
                     <p>Furniture Solutions</p>
                 </div>
             </div>
+            <div className="call">
+                {/* <a href=""></a> */}
+                <IoIosCall onClick={() => window.location.href = 'tel:+91 7415775000'} style={{ color: isHeroPage ? 'white' : 'black' }} />
+            </div>
             <div className="menu" onClick={() => {
                 setToggle(!toggle)
             }}>
                 <h3>
-                    {toggle 
+                    {toggle
                         ? <RxCross1 />
                         : <GiHamburgerMenu style={{ color: isHeroPage ? 'white' : 'black' }} />
                     }
@@ -54,7 +59,7 @@ export default function Navbar() {
                     {/* <li><NavLink to="/shop" className="navlink">Shop</NavLink></li> */}
                     <li>
                         <div className="spaces-dropdown scolor" onClick={handleDropdownToggle}>
-                            Spaces <RiArrowDropDownLine className='dropdown-icon'/>
+                            Spaces <RiArrowDropDownLine className='dropdown-icon' />
                             {dropdownOpen && (
                                 <ul className="spaces-dropdown-menu">
                                     <li><NavLink to="/office" onClick={handleNavLinkClick}>Office Spaces</NavLink></li>
@@ -90,19 +95,19 @@ export default function Navbar() {
                         <li><NavLink to="/shop" className="navlink" onClick={handleNavLinkClick}><h1>Shop</h1></NavLink></li> */}
                         <li><NavLink to="/contact" className="navlink" onClick={handleNavLinkClick}><h1>Contact Us</h1></NavLink></li>
                         <li>
-                        <div className="spaces-dropdown" onClick={handleDropdownToggle}>
-                            Spaces
-                            {dropdownOpen && (
-                                <ul className="spaces-dropdown-menu">
-                                    <li><NavLink to="/office" className="navlink" onClick={handleNavLinkClick}><h1>Office Space</h1></NavLink></li>
-                                    <li><NavLink to="/education" onClick={handleNavLinkClick}><h1>Education</h1></NavLink></li>
-                                    <li><NavLink to="/lab" onClick={handleNavLinkClick}><h1>Laboratory</h1></NavLink></li>
-                                    <li><NavLink to="/healthcare" onClick={handleNavLinkClick}><h1>Healthcare</h1></NavLink></li>
-                                    <li><NavLink to="/kitchen" onClick={handleNavLinkClick}><h1>Kitchen</h1></NavLink></li>
-                                </ul>
-                            )}
-                        </div>
-                    </li>
+                            <div className="spaces-dropdown" onClick={handleDropdownToggle}>
+                                Spaces
+                                {dropdownOpen && (
+                                    <ul className="spaces-dropdown-menu">
+                                        <li><NavLink to="/office" className="navlink" onClick={handleNavLinkClick}><h1>Office Space</h1></NavLink></li>
+                                        <li><NavLink to="/education" onClick={handleNavLinkClick}><h1>Education</h1></NavLink></li>
+                                        <li><NavLink to="/lab" onClick={handleNavLinkClick}><h1>Laboratory</h1></NavLink></li>
+                                        <li><NavLink to="/healthcare" onClick={handleNavLinkClick}><h1>Healthcare</h1></NavLink></li>
+                                        <li><NavLink to="/kitchen" onClick={handleNavLinkClick}><h1>Kitchen</h1></NavLink></li>
+                                    </ul>
+                                )}
+                            </div>
+                        </li>
                     </div>
                 </div>
             </div>

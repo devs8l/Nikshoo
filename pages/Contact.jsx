@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import "../pages/Contact.css"
 import heroMain from "../assets/hero-main.png"
 import contactImg from "../assets/contact-img.png"
@@ -287,7 +287,8 @@ const Contact = () => {
               />
             </div>
             <ReCAPTCHA
-              sitekey="Your client site key"
+              sitekey="6Leo2moqAAAAANTwPPI-CokkG_njK0x2fn6qATVk"
+              
             />
             <button type="submit">Submit</button>
           </form>
