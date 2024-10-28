@@ -72,6 +72,7 @@ const Partner = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+
         // Create FormData object to include form fields and the file
         const data = new FormData();
         data.append('partnerRole', formData.partnerRole);

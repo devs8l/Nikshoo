@@ -22,6 +22,7 @@
 
 .space-hero-left{
     width: 50%;
+    position: relative;
 
 }
 .space-hero-left h1{
