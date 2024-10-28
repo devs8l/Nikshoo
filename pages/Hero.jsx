@@ -96,7 +96,7 @@ const Hero = () => {
             plastic chairs, 
             godrej almirah, 
             chests, 
-            bed room
+            bed room,
           " 
         />
       </Helmet>
