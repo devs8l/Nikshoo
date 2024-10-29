@@ -35,6 +35,10 @@ const Contact = () => {
   });
   const recaptchaKey = import.meta.env.VITE_RECAPTCHA_KEY;
   const [verified, setVerified] = useState(false)
+  
+    const onChange = () => {
+      setVerified(true)
+    }
 
   // State to handle popup
   const [popupVisible, setPopupVisible] = useState(false);
@@ -42,10 +46,6 @@ const Contact = () => {
     title: '',
     body: ''
   });
-
-  const onChange = () => {
-    setVerified(true)
-  }
 
 
   // State to track phone number validation error

@@ -114,7 +114,7 @@ const Partner = () => {
 
 
             const result = await response.json();
-            console.log(result);
+ 
 
             setLoading(false);
 

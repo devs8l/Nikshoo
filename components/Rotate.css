@@ -529,10 +529,14 @@ a {
     object-fit: contain;
   }
   .special-align{
-    right: 0%;
-    scale: 2.5;
+    left: -35%;
+    top:40%;
+    scale: 2.8;
     
     
+  }
+  .special-align-kitchen{
+    scale: 1.6;
   }
   .special img{
     width: 80% !important;
@@ -565,9 +569,12 @@ a {
     font-size: 6vw;
     margin-top: -1vh;
     width: 30%;
+    
+    margin-left: 1vh;
   }
   .right-top a{
     font-size: 3vw;
+    margin-left: 1vh;
   }
 
   .r-t-con p {
@@ -576,6 +583,10 @@ a {
   }
   .bottomabs{
     top: 0;
+  }
+
+  .r-b-con{
+    margin: 4vw;
   }
 
   .r-t-img {
@@ -598,6 +609,7 @@ a {
   .r-b-img{
     margin-top: 5.5vh;
     right: -3%;
+    width: 60%;
   }
 
   .r-b-con a{
@@ -605,9 +617,24 @@ a {
   }
 
   .btmimgabs{
-    width: 97%;
-    left: 0;
+    width: 90%;
+    left: 5%;
 
+  }
+
+  .custom-r-t-con{
+    height: 100%;
+    position: relative;
+    width: 30%;
+    padding: 2vw;
+    /* padding-left: 5vw; */
+    margin-left: 5vw;
+    z-index: 1000;
+  }
+  
+  .custom-r-t-con a{
+    font-size: 3vw;
+    left: 7%;
   }
 
 

@@ -24,6 +24,13 @@ const Hww = () => {
     email: ''
   });
 
+  const recaptchaKey = import.meta.env.VITE_RECAPTCHA_KEY;
+  const [verified, setVerified] = useState(false)
+
+  const onChange = () => {
+    setVerified(true)
+  }
+
 
 
   // Popup state
@@ -285,9 +292,11 @@ const Hww = () => {
                 />
               </div>
               <ReCAPTCHA
-                sitekey="Your client site key"
+                sitekey={recaptchaKey}
+                onChange={onChange}
+
               />
-              <button type="submit" id='submit'>Submit</button>
+              <button type="submit" id='submit' disabled={!verified}>Submit</button>
             </form>
           </div>
         </div>

@@ -223,7 +223,7 @@ export const Rotate = () => {
                                 <p>{activeCircle.rightTop.para}</p>
                                 <a href={activeCircle.rightTop.link}>Explore</a>
                             </div>
-                            <div className={`custom-img-div ${activeCircle.id === 4 ? 'special-align' : ''}`}>
+                            <div className={`custom-img-div ${activeCircle.id === 4 ? 'special-align' : ''}  ${activeCircle.id === 3 ? 'special-align-kitchen' : ''}`}>
                                 <img src={activeCircle.rightTop.image} alt="" />
                             </div>
                         </div>
