@@ -188,7 +188,7 @@ const GetInTouch = () => {
                                     />
                                 </div>
                                 <ReCAPTCHA
-                                    sitekey={recaptchaKey}
+                                    sitekey="6Lc_P28qAAAAAPqwuBuRhDut05O66VPruIVrjjXQ"
                                     onChange={onChange}
                                 />
                             </div>
