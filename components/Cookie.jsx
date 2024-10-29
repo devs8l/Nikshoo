@@ -11,18 +11,22 @@ const setCookie = (name, value, days) => {
     document.cookie = `${name}=${value}; expires=${expires}; path=/`;
 };
 
+const ANALYTICS = import.meta.env.VITE_ANALYTICS;
+
+
+
 const loadGoogleAnalytics = () => {
     if (!getCookie('cookieConsent')) return;
 
     const script = document.createElement('script');
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TT543V0CV9';
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${ANALYTICS}`;
     script.async = true;
     document.head.appendChild(script);
 
     window.dataLayer = window.dataLayer || [];
     function gtag() { window.dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'G-TT543V0CV9');
+    gtag('config', ANALYTICS);
 };
 
 const Cookie = () => {

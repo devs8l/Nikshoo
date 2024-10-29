@@ -1,4 +1,4 @@
-import {React,useState,useEffect} from 'react'
+import { React, useState, useEffect } from 'react'
 import "../pages/Space.css"
 import officeHero from "../assets/office-hero.png"
 import officeHeroRight from "../assets/office-hero-right.png"
@@ -58,7 +58,8 @@ const Office = () => {
         phoneNumber: '',
         location: '',
         message: '',
-        email: ''
+        email: '',
+        space: 'Office Space'
     });
 
 
@@ -124,7 +125,7 @@ const Office = () => {
                 <img src={officeHero} className="desktop" alt="" loading='lazy' />
                 <div className="space-hero-left">
                     <h1>Office Spaces</h1>
-                    <p onClick={toggleFormVisibility}>Enquire Now</p>
+                    <p onClick={toggleFormVisibility} className='space-para'><u>Enquire Now</u></p>
                 </div>
                 <div className="space-hero-right">
                     <img src={officeHeroRight} alt="" loading='lazy' />
@@ -177,7 +178,7 @@ const Office = () => {
                                         placeholder="Enter Phone Number"
                                         required
                                     />
-                                    
+
 
                                 </div>
                                 <div>
@@ -191,6 +192,15 @@ const Office = () => {
                                         required
                                     />
                                 </div>
+                            </div>
+                            <div>
+                                <label>Space</label>
+                                <input
+                                    type="text"
+                                    name="space"
+                                    value="Office Space"
+                                    readOnly
+                                />
                             </div>
                             <div>
                                 <label>Location</label>

@@ -51,6 +51,8 @@
 }
 .partner1-left h1{
     font-size: 3vw;
+    font-weight: bold;
+    font-family: 'Jakarta';
 }
 
 .partner2{
@@ -82,6 +84,7 @@
     width: 55%;
     text-align: center;
     color: #585C5B;
+    font-size: 1.1vw;
 }
 .partner2 h1{
     font-size: 2.3vw;
@@ -118,6 +121,7 @@
 }
 .partner3 p{
   color: #A7A3A2;
+  font-size: 1.1vw;
 }
 
 .reverse{

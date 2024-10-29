@@ -40,6 +40,8 @@ html {
 
 .hww-hero-con h1 {
   font-size: 3vw;
+  font-weight: bold;
+    font-family: 'Jakarta';
 }
 
 .hww-img-div {
@@ -487,6 +489,13 @@ html {
   cursor: pointer;
   background-color: transparent;
 }
+
+.close-btn:hover{
+  color: #23AA9B;
+  background: white !important;
+}
+
+
 
 
 

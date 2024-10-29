@@ -6,6 +6,12 @@ import navimg from "../assets/Frame.png"
 import location from "../assets/location.png"
 import lefty from "../assets/lefty.png"
 import righty from "../assets/righty.png"
+
+import call from "../assets/call.png"
+import wsp from "../assets/wsp.png"
+import email from "../assets/email.png"
+
+
 import { Helmet } from 'react-helmet';
 
 import ReCAPTCHA from "react-google-recaptcha";
@@ -198,17 +204,17 @@ const Contact = () => {
         {/* Contact Info Section */}
         <div className="contact-top">
           <div className="contact-ways">
-            <img src="" alt="" />
+            <img src={call} alt="" />
             <h3>Call Us</h3>
             <p>+91{contactData.phone}</p>
           </div>
-          <div className="contact-ways">
-            <img src="" alt="" />
+          <div className="contact-ways email">
+            <img src={email} alt="" />
             <h3>Email Us</h3>
             <p>{contactData.email}</p>
           </div>
           <div className="contact-ways">
-            <img src="" alt="" />
+            <img src={wsp} alt="" />
             <h3>WhatsApp Us</h3>
             <p>{contactData.whatsapp}</p>
           </div>

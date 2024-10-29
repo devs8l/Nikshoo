@@ -18,6 +18,9 @@ import CafeEdu from "../assets/Cafe-edu.png"
 import Library from "../assets/library.png"
 import metalBed from "../assets/metalbed.png"
 
+import { MdOutlineArrowOutward } from "react-icons/md";
+
+
 
 
 
@@ -221,7 +224,7 @@ export const Rotate = () => {
                                 {/* <h3>{activeCircle.rightTop.h3}</h3> */}
                                 <h1>{activeCircle.rightTop.h1}</h1>
                                 <p>{activeCircle.rightTop.para}</p>
-                                <a href={activeCircle.rightTop.link}>Explore</a>
+                                <a href={activeCircle.rightTop.link}>Explore<MdOutlineArrowOutward className='green' /></a>
                             </div>
                             <div className={`custom-img-div ${activeCircle.id === 4 ? 'special-align' : ''}  ${activeCircle.id === 3 ? 'special-align-kitchen' : ''}`}>
                                 <img src={activeCircle.rightTop.image} alt="" />
@@ -236,7 +239,7 @@ export const Rotate = () => {
                                         {/* <h3>{activeCircle.rightTop.h3}</h3> */}
                                         <h1>{activeCircle.rightTop.h1}</h1>
                                         {/* <p>{activeCircle.rightTop.para}</p> */}
-                                        <a href={activeCircle.rightTop.link}>Explore</a>
+                                        <a href={activeCircle.rightTop.link}>Explore<MdOutlineArrowOutward className='green' /></a>
                                     </div>
                                     <div className="r-t-img">
                                         <img src={activeCircle.rightTop.image} alt="" />
@@ -248,7 +251,7 @@ export const Rotate = () => {
                                     <div className="r-b-l">
                                         <div className="r-b-con bottomabs">
                                             <h1>{activeCircle.bottomLeft.h1}</h1>
-                                            <a href={activeCircle.rightTop.link}>Explore</a>
+                                            <a href={activeCircle.rightTop.link}>Explore<MdOutlineArrowOutward className='green' /></a>
                                         </div>
                                         <div className={`r-b-img ${activeCircle.id === 2 ? 'special' : ''}`}>
                                             <img src={activeCircle.bottomLeft.image} alt="" />
@@ -257,7 +260,7 @@ export const Rotate = () => {
                                     <div className="r-b-r">
                                         <div className="r-b-con bottomabs">
                                             <h1>{activeCircle.bottomRight.h1}</h1>
-                                            <a href={activeCircle.rightTop.link}>Explore</a>
+                                            <a href={activeCircle.rightTop.link}>Explore<MdOutlineArrowOutward className='green' /></a>
                                         </div>
                                         <div className="r-b-img btmimgabs">
                                             <img src={activeCircle.bottomRight.image} alt="" />
