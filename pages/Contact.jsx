@@ -33,6 +33,8 @@ const Contact = () => {
     whatsapp: '',
     addresses: ''
   });
+  const recaptchaKey = import.meta.env.VITE_RECAPTCHA_KEY;
+  const [verified, setVerified] = useState(false)
 
   // State to handle popup
   const [popupVisible, setPopupVisible] = useState(false);
@@ -40,6 +42,11 @@ const Contact = () => {
     title: '',
     body: ''
   });
+
+  const onChange = () => {
+    setVerified(true)
+  }
+
 
   // State to track phone number validation error
   const [phoneError, setPhoneError] = useState('');
@@ -287,10 +294,11 @@ const Contact = () => {
               />
             </div>
             <ReCAPTCHA
-              sitekey="6Leo2moqAAAAANTwPPI-CokkG_njK0x2fn6qATVk"
-              
+              sitekey={recaptchaKey}
+              onChange={onChange}
+
             />
-            <button type="submit">Submit</button>
+            <button type="submit" disabled={!verified}>Submit</button>
           </form>
         </div>
       </div>

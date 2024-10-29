@@ -1,4 +1,4 @@
-import React, { useState,useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import "../pages/Partner.css";
 import heroMain from "../assets/hero-main.png";
 import bp from "../assets/become-partner.png";
@@ -68,6 +68,12 @@ const Partner = () => {
         }
     };
 
+    const recaptchaKey = import.meta.env.VITE_RECAPTCHA_KEY;
+    const [verified, setVerified] = useState(false)
+
+    const onChange = () => {
+        setVerified(true)
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -136,8 +142,8 @@ const Partner = () => {
 
     const query = useRef(null);
     const scrollToGetInTouch = () => {
-      // Function to scroll to the GetInTouch section
-      query.current?.scrollIntoView({ behavior: 'smooth' });
+        // Function to scroll to the GetInTouch section
+        query.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
     return (
@@ -184,7 +190,7 @@ const Partner = () => {
                 <div className="partner1">
                     <div className="partner1-left">
                         <h1>Become A Partner</h1>
-                        <p>We are changing the way in which spaces are designed, and we would love to collaborate!</p>
+                        <p>We are transforming the approach to designing spaces, creating innovative, adaptable environments that inspire. Let's collaborate and make visionary spaces reality!</p>
                         <p href="" className='paragreen' onClick={scrollToGetInTouch}><u>Join Us!</u></p>
                     </div>
                     <div className="partner1-right">
@@ -334,7 +340,7 @@ const Partner = () => {
                         {/* Upload Document */}
                         <div className="form-row">
                             <h4>{fileName ? fileName : 'Upload Document (Upto 5MB)'}</h4>
-                            <label htmlFor="document" id='doc'><MdOutlineFileUpload className='upload'/>Upload Document </label>
+                            <label htmlFor="document" id='doc'><MdOutlineFileUpload className='upload' />Upload Document </label>
                             <input
                                 type="file"
                                 id="document"
@@ -357,12 +363,14 @@ const Partner = () => {
                             />
                         </div>
                         <ReCAPTCHA
-                            sitekey="6Leo2moqAAAAANTwPPI-CokkG_njK0x2fn6qATVk"
+                            sitekey={recaptchaKey}
+                            onChange={onChange}
+
                         />
 
                         {/* Submit Button */}
                         <div className="form-row submit-row">
-                            <button type="submit" disabled={loading}>
+                            <button type="submit" disabled={loading || !verified}>
                                 {loading ? 'Submitting...' : 'Submit'}
                             </button>
                         </div>

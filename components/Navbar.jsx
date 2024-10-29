@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 import { NavLink, useLocation } from "react-router-dom"
 import { RiArrowDropDownLine } from "react-icons/ri";
@@ -13,7 +13,7 @@ export default function Navbar() {
     const location = useLocation();
     const isHeroPage = location.pathname === '/';
     const [toggle, setToggle] = useState(false);
-
+    const dropdownRef = useRef(null);
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const handleNavLinkClick = () => {
         setToggle(false);  // Close the dropdown when a link is clicked
@@ -21,6 +21,17 @@ export default function Navbar() {
     const handleDropdownToggle = () => {
         setDropdownOpen(!dropdownOpen);  // Toggle the Spaces dropdown menu
     };
+
+    const handleClickOutside = (event) => {
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+            setDropdownOpen(false); // Close dropdown when clicking outside of it
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
 
     return (
         <div className={`navbar-wrap ${isHeroPage ? 'hero-nav' : 'other-nav'}`}>
@@ -57,8 +68,11 @@ export default function Navbar() {
                     {/* <li><NavLink to="/blogs" className="navlink">Blogs</NavLink></li> */}
                     {/* <li><NavLink to="/about" className="navlink">About</NavLink></li> */}
                     {/* <li><NavLink to="/shop" className="navlink">Shop</NavLink></li> */}
-                    <li>
-                        <div className="spaces-dropdown scolor" onClick={handleDropdownToggle}>
+                    <li ref={dropdownRef}>
+                        <div className="spaces-dropdown scolor" onClick={(e) => {
+                            e.stopPropagation(); // Prevent closing dropdown when clicking inside it
+                            handleDropdownToggle();
+                        }}>
                             Spaces <RiArrowDropDownLine className='dropdown-icon' />
                             {dropdownOpen && (
                                 <ul className="spaces-dropdown-menu">

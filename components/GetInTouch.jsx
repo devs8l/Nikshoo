@@ -4,6 +4,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { Thanks } from '../components/Thanks'; // Import the Thanks component
 
 const GetInTouch = () => {
+    const recaptchaKey = import.meta.env.VITE_RECAPTCHA_KEY;
     const [verified,setVerified]=useState(false)
     const [formData, setFormData] = useState({
         name: '',
@@ -187,7 +188,7 @@ const GetInTouch = () => {
                                     />
                                 </div>
                                 <ReCAPTCHA
-                                    sitekey="6Leo2moqAAAAANTwPPI-CokkG_njK0x2fn6qATVk"
+                                    sitekey={recaptchaKey}
                                     onChange={onChange}
                                 />
                             </div>

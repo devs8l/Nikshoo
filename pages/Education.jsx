@@ -72,6 +72,7 @@ const Education = () => {
             <div className="space2">
                 <img src={heroMain} alt="" />
                 <div className="space2-heading">
+                    
                 <h1>Products in Education Spaces</h1>
                 <p>Our Solutions for  Education Spaces include, but are not limited to:</p>
                 </div>

@@ -46,7 +46,8 @@
 }
 .partner1-left p{
     width: 80%;
-    color: #585C5B;
+    font-size: 1.1vw;
+    color: rgba(126, 122, 122, 0.866);
 }
 .partner1-left h1{
     font-size: 3vw;
