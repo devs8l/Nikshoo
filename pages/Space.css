@@ -41,6 +41,7 @@
 
 }
 
+
 .space-hero-left h1 {
   font-size: 6vh;
 
@@ -239,5 +240,12 @@
   .kit {
     margin-top: -40%;
     margin-bottom: -30%;
+  }
+
+
+  .space-hero-left p{
+    font-size: 3vw;
+    width: 100%;
+    text-align: center;
   }
 }

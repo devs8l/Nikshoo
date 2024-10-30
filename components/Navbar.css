@@ -353,11 +353,28 @@ li {
 
 @media (max-width:500px) {
     .spaces-dropdown{
-        font-size: 2.9vh;
-        margin-left: -3.2vw;
+        font-size: 2.7vh;
+        margin-left: -3.7vw;
         margin-top: 1vh;
+        
     }
     .spaces-dropdown ul{
-        gap: 1vh;
+        gap: 0.5vh;
+        background: #0f6d62bb;
     }
+
+    .mobile {
+        display: block; /* Ensure it's visible in mobile view */
+        position: absolute; /* Position it above other items */
+        z-index: 100000; /* High z-index to appear above other elements */
+        left: 0;
+        /* background: white; */
+    }
+
+    .navlink::after {
+        display: none;
+    }
+    
+ 
+    
 }

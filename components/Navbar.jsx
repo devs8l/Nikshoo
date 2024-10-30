@@ -15,11 +15,23 @@ export default function Navbar() {
     const [toggle, setToggle] = useState(false);
     const dropdownRef = useRef(null);
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [dropdownOpenMob, setDropdownOpenMob] = useState(false);
     const handleNavLinkClick = () => {
+        
+        setToggle(false);  // Close the dropdown when a link is clicked
+        
+    };
+    const handleNavLinkClickMob = () => {
         setToggle(false);  // Close the dropdown when a link is clicked
     };
+
+
     const handleDropdownToggle = () => {
         setDropdownOpen(!dropdownOpen);  // Toggle the Spaces dropdown menu
+    };
+
+    const handleDropdownToggleMobile = () => {
+        setDropdownOpenMob(!dropdownOpenMob);  // Toggle the Spaces dropdown menu
     };
 
     const handleClickOutside = (event) => {
@@ -27,6 +39,7 @@ export default function Navbar() {
             setDropdownOpen(false); // Close dropdown when clicking outside of it
         }
     };
+
 
     useEffect(() => {
         document.addEventListener('mousedown', handleClickOutside);
@@ -109,15 +122,15 @@ export default function Navbar() {
                         <li><NavLink to="/shop" className="navlink" onClick={handleNavLinkClick}><h1>Shop</h1></NavLink></li> */}
                         <li><NavLink to="/contact" className="navlink" onClick={handleNavLinkClick}><h1>Contact Us</h1></NavLink></li>
                         <li>
-                            <div className="spaces-dropdown" onClick={handleDropdownToggle}>
-                                Spaces
-                                {dropdownOpen && (
-                                    <ul className="spaces-dropdown-menu">
-                                        <li><NavLink to="/office" className="navlink" onClick={handleNavLinkClick}><h1>Office Space</h1></NavLink></li>
-                                        <li><NavLink to="/education" onClick={handleNavLinkClick}><h1>Education</h1></NavLink></li>
-                                        <li><NavLink to="/lab" onClick={handleNavLinkClick}><h1>Laboratory</h1></NavLink></li>
-                                        <li><NavLink to="/healthcare" onClick={handleNavLinkClick}><h1>Healthcare</h1></NavLink></li>
-                                        <li><NavLink to="/kitchen" onClick={handleNavLinkClick}><h1>Kitchen</h1></NavLink></li>
+                            <div className="spaces-dropdown" onClick={handleDropdownToggleMobile}>
+                                Spaces <RiArrowDropDownLine className='dropdown-icon' />
+                                {dropdownOpenMob && (
+                                    <ul className="spaces-dropdown-menu mobile">
+                                        <li><NavLink to="/office" className="navlink" onClick={handleNavLinkClickMob}><h1>Office Spaces</h1></NavLink></li>
+                                        <li><NavLink to="/education" onClick={handleNavLinkClickMob}><h1>Education Spaces</h1></NavLink></li>
+                                        <li><NavLink to="/lab" onClick={handleNavLinkClickMob}><h1>Laboratory Spaces</h1></NavLink></li>
+                                        <li><NavLink to="/healthcare" onClick={handleNavLinkClickMob}><h1>Healthcare Spaces</h1></NavLink></li>
+                                        <li><NavLink to="/kitchen" onClick={handleNavLinkClickMob}><h1>Kitchen Spaces</h1></NavLink></li>
                                     </ul>
                                 )}
                             </div>

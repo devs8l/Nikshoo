@@ -1,4 +1,4 @@
-import React from 'react'
+import { React, useState, useEffect } from 'react'
 import "../pages/Space.css"
 import KitchenHero from "../assets/kitchen-hero.png"
 import KitchenHeroMobile from "../assets/mobile-kitchen-hero.png"
@@ -9,7 +9,8 @@ import Fridge from "../assets/fridge.png"
 import restraunt from "../assets/Restraunt.png"
 import kitchenStorage from "../assets/kitchen-storage.png"
 import cloud from "../assets/cloud.png"
-
+import { Thanks } from '../components/Thanks'; // Import the Thanks component
+import ReCAPTCHA from 'react-google-recaptcha';
 
 
 const Kitchen = () => {
@@ -19,11 +20,92 @@ const Kitchen = () => {
         { id: 3, img: restraunt, title: 'Restraunt Equipment' },
         { id: 4, img: kitchenStorage, title: 'Storage Equipment' },
         { id: 5, img: cloud, title: 'Cloud Equipment' },
-   
-    
+
+
         // Add more furniture data here
-      ];
-      
+    ];
+
+
+    const [isFormVisible, setFormVisible] = useState(false);
+    const toggleFormVisibility = () => {
+        setFormVisible(!isFormVisible);
+    };
+
+    const [popupVisible, setPopupVisible] = useState(false);
+    const [popupMessage, setPopupMessage] = useState({
+        title: '',
+        body: ''
+    });
+
+    const [formData, setFormData] = useState({
+        fullName: '',
+        phoneNumber: '',
+        location: '',
+        message: '',
+        email: '',
+        space: 'Kitchen Space'
+    });
+
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
+
+    const recaptchaKey = import.meta.env.VITE_RECAPTCHA_KEY;
+
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await fetch(`https://nikshoo-backend.vercel.app/contact/submit`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setPopupMessage({
+                    title: 'Thank you for your enquiry!',
+                    body: 'We will get back to you shortly.'
+                });
+            } else {
+                setPopupMessage({
+                    title: 'Something went wrong',
+                    body: 'Please try again later.'
+                });
+            }
+            setPopupVisible(true);
+
+            // Clear form
+            setFormData({
+                fullName: '',
+                phoneNumber: '',
+                location: '',
+                message: '',
+                email: ''
+            });
+
+        } catch (error) {
+            setPopupMessage({
+                title: 'Something went wrong',
+                body: 'Please try again later.'
+            });
+            setPopupVisible(true);
+        }
+    };
+
+    const handleClosePopup = () => {
+        setPopupVisible(false);
+        toggleFormVisibility(); // Optionally close the form when the popup is closed
+    };
+
+
     return (
         <div className='space-wrap'>
             <div className="space-hero">
@@ -31,7 +113,7 @@ const Kitchen = () => {
                 <img src={KitchenHeroMobile} className='mobile' alt="" />
                 <div className="space-hero-left">
                     <h1>Commercial Kitchen</h1>
-                    <a href="">Enquire Now</a>
+                    <p onClick={toggleFormVisibility} className='space-para'><u>Enquire Now</u></p>
                 </div>
                 <div className="space-hero-right kitchen">
                     <img src={KitchenHeroRight} alt="" />
@@ -41,8 +123,8 @@ const Kitchen = () => {
             <div className="space2 kit">
                 <img src={heroMain} alt="" />
                 <div className="space2-heading">
-                <h1>Products in Commercial Kitchen</h1>
-                <p>Our Solutions for  Commercial Kitchen include, but are not limited to:</p>
+                    <h1>Products in Commercial Kitchen</h1>
+                    <p>Our Solutions for  Commercial Kitchen include, but are not limited to:</p>
                 </div>
 
                 <div className="cards-container">
@@ -54,6 +136,98 @@ const Kitchen = () => {
                     ))}
                 </div>
             </div>
+
+            {isFormVisible && (
+                <div className="popup-form">
+                    <div className="form-content">
+                        <button className="close-btn" onClick={toggleFormVisibility}>
+                            &times;
+                        </button>
+                        <form onSubmit={handleSubmit}>
+                            <div>
+                                <label>Your Full Name</label>
+                                <input
+                                    type="text"
+                                    name="fullName"
+                                    value={formData.fullName}
+                                    onChange={handleChange}
+                                    placeholder="Your Full Name"
+                                    required
+                                />
+                            </div>
+                            <div className="half-row">
+                                <div>
+                                    <label>Phone Number</label>
+                                    <input
+                                        type="tel"
+                                        name="phoneNumber"
+                                        value={formData.phoneNumber}
+                                        onChange={handleChange}
+                                        placeholder="Enter Phone Number"
+                                        required
+                                    />
+
+
+                                </div>
+                                <div>
+                                    <label>Email</label>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        placeholder="Enter Your Email"
+                                        required
+                                    />
+                                </div>
+                            </div>
+                            <div>
+                                <label>Space</label>
+                                <input
+                                    type="text"
+                                    name="space"
+                                    value="Kitchen Space"
+                                    readOnly
+                                />
+                            </div>
+                            <div>
+                                <label>Location</label>
+                                <input
+                                    type="text"
+                                    name="location"
+                                    value={formData.location}
+                                    onChange={handleChange}
+                                    placeholder="Your Location"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                <label>Message</label>
+                                <textarea
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    placeholder="Type Your Message"
+                                    required
+                                />
+                            </div>
+                            <ReCAPTCHA
+                                sitekey={recaptchaKey}
+                            />
+                            <button type="submit" id='submit'>Submit</button>
+                        </form>
+                    </div>
+                </div>
+            )}
+
+            {/* Popup Component */}
+            {popupVisible && (
+                <Thanks
+                    message={popupMessage}
+                    onClose={handleClosePopup}
+                    buttonText="Explore More"
+                />
+            )}
         </div>
     )
 }

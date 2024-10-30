@@ -11,7 +11,7 @@ html {
   src: url(../assets/fonts/PlusJakartaSans-Bold.ttf);
 }
 
-.hww{
+.hww {
   margin-top: -1vh;
 }
 
@@ -41,7 +41,7 @@ html {
 .hww-hero-con h1 {
   font-size: 3vw;
   font-weight: bold;
-    font-family: 'Jakarta';
+  font-family: 'Jakarta';
 }
 
 .hww-img-div {
@@ -151,14 +151,14 @@ html {
   display: flex;
   /* background: #000; */
   flex-direction: column;
-  
+
   text-align: left;
   padding: 3px;
 }
 
 .num-para h3 {
   text-align: left;
-  
+
   font-size: 1vw;
 }
 
@@ -178,7 +178,8 @@ html {
   margin-top: 2vw;
   width: 40%;
 }
-.hww-hero-con button:hover{
+
+.hww-hero-con button:hover {
   border: none;
   background: #1c7d72;
   cursor: pointer;
@@ -371,7 +372,8 @@ html {
 
 
   }
-  .num{
+
+  .num {
     font-size: 6vh;
   }
 
@@ -381,34 +383,40 @@ html {
     /* object-fit: cover; */
   }
 
-  .num-para h2{
+  .num-para h2 {
     font-size: 2vh;
   }
-  .num-para p{
+
+  .num-para p {
     font-size: 1.7vh;
   }
 
-  .content-section{
+  .content-section {
     /* background: #000; */
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .content-section .hero-hww{
+
+  .content-section .hero-hww {
     margin-right: 13vh;
     width: 100%;
   }
-  .content-section .hww-img-div{
+
+  .content-section .hww-img-div {
     width: 100%;
   }
 
-  .content-section h1{
+  .content-section h1 {
     font-size: 6vw;
   }
-  .content-section button{
+
+  .content-section button {
     width: 100%;
     margin-top: 3vh;
   }
+
+
 
 
 
@@ -426,16 +434,20 @@ html {
   justify-content: center;
   align-items: center;
   z-index: 999;
-  min-height: 140vh; /* Similar height property */
-  flex-direction: column; /* Makes the form center with vertical alignment */
+  min-height: 140vh;
+  /* Similar height property */
+  flex-direction: column;
+  /* Makes the form center with vertical alignment */
 }
 
 .form-content {
-  width: 40%; /* Adjusted width similar to .custom-form */
+  width: 40%;
+  /* Adjusted width similar to .custom-form */
   margin: 0 auto;
   padding: 4vw;
   background-color: white;
-  border: 2px dashed #23AA9B; /* Dashed border similar to .custom-form */
+  border: 2px dashed #23AA9B;
+  /* Dashed border similar to .custom-form */
   border-radius: 8px;
   position: relative;
 }
@@ -445,25 +457,24 @@ html {
   flex-direction: column;
 }
 
-.popup-form label {
-  
-  
-}
+.popup-form label {}
 
 .popup-form input,
 .popup-form textarea {
-  width: 100%; /* To make inputs take full width */
+  width: 100%;
+  /* To make inputs take full width */
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-top: 5px;
-  margin-bottom:15px;
+  margin-bottom: 15px;
 
 }
 
-#submit{
-  padding: 10px 50px; /* Wider padding similar to the custom button */
+#submit {
+  padding: 10px 50px;
+  /* Wider padding similar to the custom button */
   background-color: #23AA9B;
   color: white;
   border: none;
@@ -490,12 +501,53 @@ html {
   background-color: transparent;
 }
 
-.close-btn:hover{
+
+
+.close-btn:hover {
   color: #23AA9B;
   background: white !important;
 }
 
 
+@media (max-width:500px) {
+  .form-content {
+    width: 80vw;
+    margin-top: -15vh;
+    padding: 6vw;
+  }
 
+  .close-btn {
+    top: 5pxpx;
+    right: -5px;
+  }
 
+  .popup-form input,
+  .popup-form textarea {
+    width: 85%;
+    /* To make inputs take full width */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
 
+  }
+
+  #submit {
+    padding: 10px 50px;
+    /* Wider padding similar to the custom button */
+    background-color: #23AA9B;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    /* margin-left: 1vw; */
+    margin-top: 4vw;
+    margin-left: 15%;
+    /* margin: auto; */
+    width: 70%;
+  }
+
+}

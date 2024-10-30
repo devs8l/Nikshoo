@@ -43,6 +43,7 @@ function App() {
         <Route path="/partner" element={<Partner />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blogs />} />
         <Route path="/office" element={<Office />} />
         <Route path="/education" element={<Education />} />
         <Route path="/healthcare" element={<Healthcare />} />

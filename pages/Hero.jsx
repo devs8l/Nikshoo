@@ -197,7 +197,7 @@ const Hero = () => {
         <div className="page3-mobile">
           <h1>Imagine Your Future Spaces Crafted with Precision & Style</h1>
           <p>Enhance your spaces with the comfortable furniture crafted by us</p>
-          <a href="">Enquire now!</a>
+          <a onClick={scrollToGetInTouch}>Enquire now!</a>
         </div>
         <div className="page3-con">
           <h1>Imagine Your Future Spaces Crafted with Precision & Style</h1>

@@ -58,6 +58,13 @@ const GetInTouch = () => {
                 },
                 body: JSON.stringify(formData),
             });
+            const response2 = await fetch(`https://apps.cratiocrm.com/Customize/Webhooks/webhook.php?id=671112`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData),
+            });
 
             if (response.ok) {
                 // Success case - show thank you popup
@@ -188,12 +195,12 @@ const GetInTouch = () => {
                                     />
                                 </div>
                                 <ReCAPTCHA
-                                    sitekey="6Lc_P28qAAAAAPqwuBuRhDut05O66VPruIVrjjXQ"
+                                    sitekey={recaptchaKey}
                                     onChange={onChange}
                                 />
                             </div>
                         </div>
-                        <button type="submit" className="submit-btn" disabled={!verified}>Enquire Now</button>
+                        <button type="submit" className="submit-btn" >Enquire Now</button>
                     </form>
                 </div>
             </div>

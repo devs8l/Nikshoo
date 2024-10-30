@@ -124,6 +124,7 @@
 
 
 @media (max-width:768px) {
+   
     .gi-box{
         margin-top: -5vh;
         flex-direction: column;
@@ -138,7 +139,7 @@
         
     }
     .gi-wrap{
-        height: 110vh;
+        height: 120vh;
     }
     .gi-left{
         border: none;

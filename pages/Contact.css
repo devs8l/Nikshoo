@@ -336,13 +336,15 @@ textarea{
       padding: 2vh;
     }
     .contact-top p{
-      display: none;
+      /* display: none; */
+      font-size: 3.5vw;
     }
     .contact-top h3::after{
       display: none;
     }
     .contact-top h3{
       font-size: 1.6vh;
+      display: none;
     }
 
     .contact-bottom{
@@ -367,12 +369,13 @@ textarea{
     }
     .location{
       width: 50%;
-      margin-left: 2vh;
+      margin-left: 0vh;
       display: flex;
       justify-content: center;
       align-items: center;
       /* background: #000; */
       flex-direction: column;
+      
 
       
     }
@@ -385,7 +388,7 @@ textarea{
     }
     .location p{
       display: block;
-      width: 70%;
+      width: 80%;
       text-align: center;
     }
 

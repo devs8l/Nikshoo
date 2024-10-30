@@ -254,9 +254,18 @@
         margin-top: -1vh;
         display: flex;
         align-items: center;
+        font-size: 2vw;
         border-top: 0.1px solid #1db5a4;
         
         /* height: 8vh; */
+     }
+
+     .copyright p{
+        font-size: 2vw;
+        margin-left: -15vw;
+     }
+     .drop-read{
+        font-size: 2vw;
      }
 
 }

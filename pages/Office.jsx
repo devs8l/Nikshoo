@@ -71,6 +71,9 @@ const Office = () => {
         });
     };
 
+    const recaptchaKey = import.meta.env.VITE_RECAPTCHA_KEY;
+
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
@@ -224,7 +227,7 @@ const Office = () => {
                                 />
                             </div>
                             <ReCAPTCHA
-                                sitekey="Your client site key"
+                                sitekey={recaptchaKey}
                             />
                             <button type="submit" id='submit'>Submit</button>
                         </form>
