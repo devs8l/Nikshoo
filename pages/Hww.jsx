@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import '../pages/Hww.css';
 import hww1 from "../assets/hww1.png";
 import hww2 from "../assets/hww2.png";
@@ -59,9 +59,18 @@ const Hww = () => {
       }
     }
   };
+  const recaptchaRef = useRef(null);
+  const [isCaptchaVerified, setCaptchaVerified] = useState(false);
+  const handleCaptchaChange = (value) => {
+    setCaptchaVerified(!!value); // Sets to true if CAPTCHA is verified, false otherwise
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!isCaptchaVerified) {
+      alert("Please complete the CAPTCHA before submitting the form.");
+      return;
+    }
 
     if (phoneError) {
       return; // Prevent submission if there's a phone error
@@ -96,6 +105,9 @@ const Hww = () => {
         message: '',
         email: ''
       });
+
+      setCaptchaVerified(false);
+      recaptchaRef.current.reset();
 
     } catch (error) {
       setPopupMessage({
@@ -292,11 +304,12 @@ const Hww = () => {
                 />
               </div>
               <ReCAPTCHA
+                ref={recaptchaRef}
                 sitekey={recaptchaKey}
-                onChange={onChange}
+                onChange={handleCaptchaChange}
 
               />
-              <button type="submit" id='submit' disabled={!verified}>Submit</button>
+              <button type="submit" id='submit' >Submit</button>
             </form>
           </div>
         </div>

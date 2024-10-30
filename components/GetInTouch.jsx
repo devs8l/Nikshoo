@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import "../components/GetInTouch.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import { Thanks } from '../components/Thanks'; // Import the Thanks component
 
 const GetInTouch = () => {
     const recaptchaKey = import.meta.env.VITE_RECAPTCHA_KEY;
-    const [verified,setVerified]=useState(false)
+    const [verified, setVerified] = useState(false)
     const [formData, setFormData] = useState({
         name: '',
         contactNo: '',
@@ -15,12 +15,12 @@ const GetInTouch = () => {
         organisation: '',
         areaSqFt: ''
     });
-
+    
     const [showPopup, setShowPopup] = useState(false); // State to manage popup visibility
     const [popupMessage, setPopupMessage] = useState({ title: '', body: '' }); // State for popup message
     const [hasError, setHasError] = useState(false); // State to manage error
     const [phoneError, setPhoneError] = useState(''); // State to manage phone number error
-
+    const recaptchaRef = useRef(null);
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData(prevData => ({
@@ -38,12 +38,18 @@ const GetInTouch = () => {
         }
     };
 
-    const onChange = ()=>{
-        setVerified(true)
-    }
+    const [isCaptchaVerified, setCaptchaVerified] = useState(false);
+    const handleCaptchaChange = (value) => {
+        setCaptchaVerified(!!value); // Sets to true if CAPTCHA is verified, false otherwise
+    };
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (!isCaptchaVerified) {
+            alert("Please complete the CAPTCHA before submitting the form.");
+            return;
+        }
 
         // Check if there are any errors before submitting
         if (phoneError) {
@@ -94,6 +100,8 @@ const GetInTouch = () => {
                 organisation: '',
                 areaSqFt: ''
             });
+            setCaptchaVerified(false);
+            recaptchaRef.current.reset();
 
         } catch (error) {
             console.error("Error submitting form:", error);
@@ -195,8 +203,9 @@ const GetInTouch = () => {
                                     />
                                 </div>
                                 <ReCAPTCHA
+                                    ref={recaptchaRef}
                                     sitekey={recaptchaKey}
-                                    onChange={onChange}
+                                    onChange={handleCaptchaChange}
                                 />
                             </div>
                         </div>

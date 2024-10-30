@@ -40,11 +40,11 @@ const Contact = () => {
     addresses: ''
   });
   const recaptchaKey = import.meta.env.VITE_RECAPTCHA_KEY;
-  const [verified, setVerified] = useState(false)
-  
-    const onChange = () => {
-      setVerified(true)
-    }
+  const recaptchaRef = useRef(null);
+  const [isCaptchaVerified, setCaptchaVerified] = useState(false);
+  const handleCaptchaChange = (value) => {
+    setCaptchaVerified(!!value); // Sets to true if CAPTCHA is verified, false otherwise
+  };
 
   // State to handle popup
   const [popupVisible, setPopupVisible] = useState(false);
@@ -95,6 +95,10 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!isCaptchaVerified) {
+      alert("Please complete the CAPTCHA before submitting the form.");
+      return;
+    }
 
     // Skip form submission if there's a phone number error
     if (phoneError) {
@@ -300,11 +304,12 @@ const Contact = () => {
               />
             </div>
             <ReCAPTCHA
-              sitekey={recaptchaKey}
-              onChange={onChange}
+               ref={recaptchaRef}
+               sitekey={recaptchaKey}
+               onChange={handleCaptchaChange}
 
             />
-            <button type="submit" disabled={!verified}>Submit</button>
+            <button type="submit" >Submit</button>
           </form>
         </div>
       </div>

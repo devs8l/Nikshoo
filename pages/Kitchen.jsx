@@ -56,17 +56,29 @@ const Kitchen = () => {
     };
 
     const recaptchaKey = import.meta.env.VITE_RECAPTCHA_KEY;
-
+    const [isCaptchaVerified, setCaptchaVerified] = useState(false);
+    const handleCaptchaChange = (value) => {
+        setCaptchaVerified(!!value); // Sets to true if CAPTCHA is verified, false otherwise
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if (!isCaptchaVerified) {
+            alert("Please complete the CAPTCHA before submitting the form.");
+            return;
+        }
+        const dataToSend = {
+            ...formData,
+            space: 'Kitchen Space'
+        };
         try {
-            const response = await fetch(`https://nikshoo-backend.vercel.app/contact/submit`, {
+            const response = await fetch(`https://nikshoo-backend.vercel.app/api/form-submission`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify(dataToSend),
             });
 
             if (response.ok) {
@@ -213,6 +225,7 @@ const Kitchen = () => {
                             </div>
                             <ReCAPTCHA
                                 sitekey={recaptchaKey}
+                                onChange={handleCaptchaChange}
                             />
                             <button type="submit" id='submit'>Submit</button>
                         </form>

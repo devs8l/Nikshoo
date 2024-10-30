@@ -1,4 +1,4 @@
-import React, { useEffect ,useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import "../pages/Space.css"
 import officeHero from "../assets/office-hero.png"
 import officeHeroRight from "../assets/office-hero-right.png"
@@ -37,7 +37,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 
 
 const Education = () => {
-  
+
     const furnitureData = [
         { id: 1, img: edudesk, title: 'Classroom Desking' },
         { id: 2, img: exeDesk, title: 'Executive Desk' },
@@ -55,12 +55,12 @@ const Education = () => {
         { id: 12, img: Hostel, title: 'Hostel' },
         { id: 12, img: Lab, title: 'Lab' },
         { id: 7, img: Principal, title: 'Principal /Dean Cabin' },
-    
+
         // Add more furniture data here
-      ];
+    ];
 
 
-      
+
     const [isFormVisible, setFormVisible] = useState(false);
     const toggleFormVisibility = () => {
         setFormVisible(!isFormVisible);
@@ -81,6 +81,9 @@ const Education = () => {
         space: 'Education Space'
     });
 
+    const recaptchaKey = import.meta.env.VITE_RECAPTCHA_KEY;
+
+
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -90,15 +93,29 @@ const Education = () => {
         });
     };
 
+    const [isCaptchaVerified, setCaptchaVerified] = useState(false);
+    const handleCaptchaChange = (value) => {
+        setCaptchaVerified(!!value); // Sets to true if CAPTCHA is verified, false otherwise
+    };
+
+
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (!isCaptchaVerified) {
+            alert("Please complete the CAPTCHA before submitting the form.");
+            return;
+        }
+        const dataToSend = {
+            ...formData,
+            space: 'Education Space'
+        };
         try {
-            const response = await fetch(`https://nikshoo-backend.vercel.app/contact/submit`, {
+            const response = await fetch(`https://nikshoo-backend.vercel.app/api/form-submission`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify(dataToSend),
             });
 
             if (response.ok) {
@@ -144,7 +161,7 @@ const Education = () => {
                 <div className="space-hero-left">
                     <h1>Education Spaces</h1>
                     <p onClick={toggleFormVisibility} className='space-para'><u>Enquire Now</u></p>
-                    
+
                 </div>
                 <div className="space-hero-right edu">
                     <img src={eduHeroRight} alt="" />
@@ -154,9 +171,9 @@ const Education = () => {
             <div className="space2">
                 <img src={heroMain} alt="" />
                 <div className="space2-heading">
-                    
-                <h1>Products in Education Spaces</h1>
-                <p>Our Solutions for  Education Spaces include, but are not limited to:</p>
+
+                    <h1>Products in Education Spaces</h1>
+                    <p>Our Solutions for  Education Spaces include, but are not limited to:</p>
                 </div>
 
                 <div className="cards-container">
@@ -245,7 +262,8 @@ const Education = () => {
                                 />
                             </div>
                             <ReCAPTCHA
-                                sitekey="Your client site key"
+                                sitekey={recaptchaKey}
+                                onChange={handleCaptchaChange}
                             />
                             <button type="submit" id='submit'>Submit</button>
                         </form>

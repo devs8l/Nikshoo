@@ -71,13 +71,19 @@ const Partner = () => {
     const recaptchaKey = import.meta.env.VITE_RECAPTCHA_KEY;
     const [verified, setVerified] = useState(false)
 
-    const onChange = () => {
-        setVerified(true)
-    }
+    const recaptchaRef = useRef(null);
+    const [isCaptchaVerified, setCaptchaVerified] = useState(false);
+    const handleCaptchaChange = (value) => {
+        setCaptchaVerified(!!value); // Sets to true if CAPTCHA is verified, false otherwise
+    };
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
 
+        e.preventDefault();
+        if (!isCaptchaVerified) {
+            alert("Please complete the CAPTCHA before submitting the form.");
+            return;
+        }
 
         // Create FormData object to include form fields and the file
         const data = new FormData();
@@ -114,7 +120,7 @@ const Partner = () => {
 
 
             const result = await response.json();
- 
+
 
             setLoading(false);
 
@@ -124,6 +130,9 @@ const Partner = () => {
                     body: 'Our team shall get back to you shortly.'
                 });
                 setPopupVisible(true);
+
+                setCaptchaVerified(false);
+                recaptchaRef.current.reset();
 
             } else {
                 setPopupMessage({
@@ -262,7 +271,7 @@ const Partner = () => {
                             >
                                 <option value="" disabled hidden>Partner as a</option>
                                 <option value="Designer">Designer</option>
-                                <option value="Turnkey Contractor">Turnkey Contractor</option>
+                                <option value="Execution Partner">Execution Partner</option>
                                 <option value="Product Supplier">Product Supplier</option>
                             </select>
                         </div>
@@ -363,14 +372,15 @@ const Partner = () => {
                             />
                         </div>
                         <ReCAPTCHA
+                            ref={recaptchaRef}
                             sitekey={recaptchaKey}
-                            onChange={onChange}
+                            onChange={handleCaptchaChange}
 
                         />
 
                         {/* Submit Button */}
                         <div className="form-row submit-row">
-                            <button type="submit" disabled={loading || !verified}>
+                            <button type="submit" disabled={loading}>
                                 {loading ? 'Submitting...' : 'Submit'}
                             </button>
                         </div>
