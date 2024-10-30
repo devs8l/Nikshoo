@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    /* transition: all 1s ease-in; */
   }
   
   .custom-popup-content {
@@ -21,13 +22,13 @@
   }
 
   .custom-popup-content h2{
-    width: 70%;
+    width: 90%;
     text-align: center;
     margin: auto;
     font-weight: bold;
   }
   .custom-popup-content p{
-    width: 70%;
+    width: 90%;
     text-align: center;
     margin: auto;
     margin-top: 1vw;
@@ -42,6 +43,7 @@
     border: none;
     font-size: 24px;
     cursor: pointer;
+    color: #23AA9B;
   }
   
   .custom-close-btn:hover {
@@ -64,3 +66,9 @@
     background-color: #1a897d; /* Darker shade for hover */
   }
   
+
+  @media (max-width:500px) {
+    .custom-popup-content{
+      width: 50%;
+    }
+  }
