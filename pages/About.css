@@ -168,9 +168,19 @@
     .about-hero-left h1{
         font-size: 3vh;
     }
+    .about-hero-left p{
+        font-size: 3vw;
+    }
     .about-hero-right{
-        width: 80%;
-        margin-top: 23vh;
+        width: 70%;
+        /* margin-top: -5vh; */
+    }
+
+    .about-offer p{
+        font-size: 3vw;
+    }
+    .about-offer h1{
+        font-size: 3vh;
     }
     .about2{
         width: 60%;
@@ -180,14 +190,18 @@
         justify-content: center;
         text-align: center;
     }
+    .about3{
+        min-height: 100vh;
+    }
     .about2 h1{
         font-size: 3vh;
     }
     .about2 p{
-        font-size: 1.8vh;
+        font-size: 3vw;
     }
     .about3 h1{
         font-size: 3vh;
+        /* margin-top: -5vh; */
     }
     .about3 p{
         font-size: 1.8vh;
@@ -195,19 +209,40 @@
     }
     .founders{
         flex-direction: column;
-        margin-top: 10vh;
-        margin-bottom: 6vh;
+        margin-top: 25vh;
+        margin-bottom: 16vh;
+        width: 70%;
     }
     .founder-sub{
         width: 100%;
         text-align: center;
         padding: 2vh;
+        margin-top: 25vh;
     }
     .founder-sub p{
         width: 100%;
     }
+
+    .founder-con{
+        text-align: center;
+        
+        /* background: #000; */
+    }
     .founder-sub a{
         font-size: 1.4vh;
+    }
+    .about4{
+        
+    }
+    .about4-img-div{
+        display: flex;
+        width:50%;
+        /* flex-wrap: wrap; */
+        
+    }
+
+    .about4-img-div img{
+        width: 100%;
     }
 
 }

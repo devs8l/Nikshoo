@@ -67,6 +67,12 @@ const About = () => {
                 <div className="about4-img-div">
                     <img src={ab1} alt="" />
                     <img src={ab2} alt="" />
+                    {/* <img src={ab3} alt="" />
+                    <img src={ab4} alt="" /> */}
+                </div>
+                <div className="about4-img-div">
+                    {/* <img src={ab1} alt="" />
+                    <img src={ab2} alt="" /> */}
                     <img src={ab3} alt="" />
                     <img src={ab4} alt="" />
                 </div>

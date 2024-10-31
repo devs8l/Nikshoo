@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../components/Rotate.css';
 import coencircles from "../assets/circles.png";
 import centerpiece from "../assets/center-left.png";
@@ -144,11 +144,11 @@ export const Rotate = () => {
             const timeout = setTimeout(() => {
                 setAnimationDirection('');
             }, 300); // Match the duration of the CSS transition
-    
+
             return () => clearTimeout(timeout);
         }
     }, [animationDirection]);
-    
+
     const activeCircle = circles.find(circle => circle.id === activeElectron) || {};
 
     const handleCircleClick = (content, image, id) => {
@@ -213,7 +213,17 @@ export const Rotate = () => {
                     <div className="mobile-next-next">
                         {activeCircle.id < circles.length - 1 ? circles[activeCircle.id + 1].heading : (activeCircle.id === circles.length - 1 ? circles[0].heading : circles[1].heading)}
                     </div>
+
                 </div>
+                    <div className="carousel-indicator">
+                        {circles.map((circle, index) => (
+                            <div
+                                key={circle.id}
+                                className={`carousel-dot ${index + 1 === activeCircle.id ? 'active-dot' : ''}`}
+                                onClick={() => handleCircleClick(circle.content, circle.image, circle.id)}
+                            ></div>
+                        ))}
+                    </div>
 
 
                 <div className="right-div">

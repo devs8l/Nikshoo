@@ -442,6 +442,7 @@ a {
     gap: 10px;
     /* Adjust as needed */
     margin-right: 4vh;
+    margin-top: -8vh;
   }
 
   .mobile-prev-prev,
@@ -642,4 +643,28 @@ a {
 
 
 
+}
+
+.carousel-indicator {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  position: relative;
+  left: -2%;
+  top: 25%;
+  z-index: 100;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-dot.active-dot {
+  background-color: #23AA9B; /* Active color to highlight the current index */
 }
