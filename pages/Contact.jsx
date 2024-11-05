@@ -74,6 +74,56 @@ const Contact = () => {
     fetchContactData();
   }, []);
 
+
+
+  const dropdownRef = useRef(null);
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setShowDropdown(false); // Hide dropdown if clicked outside
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+
+  const [cities, setCities] = useState([]); // State to hold the list of cities
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const fetchCities = async (query) => {
+    try {
+      if (!query) {
+        setCities([]);
+        return;
+      }
+
+      const response = await fetch(`https://api.countrystatecity.in/v1/countries/IN/cities`, {
+        headers: {
+          "X-CSCAPI-KEY": "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA==" // Replace with your API key
+        }
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        const filteredCities = data
+          .filter(city => city.name.toLowerCase().startsWith(query.toLowerCase()))
+          .slice(0, 10); // Limit to 10 cities for display
+        setCities(filteredCities); // Update state with filtered city names
+      }
+    } catch (error) {
+      console.error("Error fetching cities:", error);
+    }
+  };
+
+  const selectCity = (city) => {
+    setFormData({ ...formData, location: city });
+    setShowDropdown(false); // Hide dropdown after selection
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -91,6 +141,11 @@ const Contact = () => {
       ...formData,
       [name]: value
     });
+
+    if (name === "location") {
+      setShowDropdown(true); // Show dropdown when typing in location
+      fetchCities(value); // Fetch cities as the user types
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -282,16 +337,26 @@ const Contact = () => {
                 />
               </div>
             </div>
-            <div>
+            <div ref={dropdownRef}>
               <label>Location</label>
               <input
                 type="text"
                 name="location"
                 value={formData.location}
                 onChange={handleChange}
-                placeholder="Your Location"
+                placeholder='Your City'
+                autoComplete="off"
                 required
               />
+              {showDropdown && cities.length > 0 && (
+                <ul className="dropdown">
+                  {cities.map(city => (
+                    <li key={city.id} onClick={() => selectCity(city.name)}>
+                      {city.name}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
             <div>
               <label>Message</label>
@@ -304,9 +369,9 @@ const Contact = () => {
               />
             </div>
             <ReCAPTCHA
-               ref={recaptchaRef}
-               sitekey={recaptchaKey}
-               onChange={handleCaptchaChange}
+              ref={recaptchaRef}
+              sitekey={recaptchaKey}
+              onChange={handleCaptchaChange}
 
             />
             <button type="submit" >Submit</button>

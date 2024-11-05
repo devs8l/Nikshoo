@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from 'react'
+import { React, useState, useEffect,useRef } from 'react'
 import "../pages/Space.css"
 import KitchenHero from "../assets/kitchen-hero.png"
 import KitchenHeroMobile from "../assets/mobile-kitchen-hero.png"
@@ -47,12 +47,65 @@ const Kitchen = () => {
     });
 
 
+    const dropdownRef = useRef(null);
+    const handleClickOutside = (event) => {
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+            setShowDropdown(false); // Hide dropdown if clicked outside
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
+
+    const [cities, setCities] = useState([]); // State to hold the list of cities
+    const [showDropdown, setShowDropdown] = useState(false);
+
+    const fetchCities = async (query) => {
+        try {
+            if (!query) {
+                setCities([]);
+                return;
+            }
+
+            const response = await fetch(`https://api.countrystatecity.in/v1/countries/IN/cities`, {
+                headers: {
+                    "X-CSCAPI-KEY": "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA==" // Replace with your API key
+                }
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                const filteredCities = data
+                    .filter(city => city.name.toLowerCase().startsWith(query.toLowerCase()))
+                    .slice(0, 10); // Limit to 10 cities for display
+                setCities(filteredCities); // Update state with filtered city names
+            }
+        } catch (error) {
+            console.error("Error fetching cities:", error);
+        }
+    };
+
+    const selectCity = (city) => {
+        setFormData({ ...formData, location: city });
+        setShowDropdown(false); // Hide dropdown after selection
+    };
+
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
             ...formData,
             [name]: value
         });
+        if (name === "location") {
+            setShowDropdown(true); // Show dropdown when typing in location
+            fetchCities(value); // Fetch cities as the user types
+        }
     };
 
     const recaptchaKey = import.meta.env.VITE_RECAPTCHA_KEY;
@@ -202,7 +255,7 @@ const Kitchen = () => {
                                     readOnly
                                 />
                             </div>
-                            <div>
+                            <div ref={dropdownRef}>
                                 <label>Location</label>
                                 <input
                                     type="text"
@@ -210,8 +263,18 @@ const Kitchen = () => {
                                     value={formData.location}
                                     onChange={handleChange}
                                     placeholder="Your Location"
+                                    autoComplete="off"
                                     required
                                 />
+                                {showDropdown && cities.length > 0 && (
+                                    <ul className="dropdown">
+                                        {cities.map(city => (
+                                            <li key={city.id} onClick={() => selectCity(city.name)}>
+                                                {city.name}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
                             </div>
                             <div>
                                 <label>Message</label>

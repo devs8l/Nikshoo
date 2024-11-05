@@ -285,6 +285,11 @@ input[type="file"]{
     height: 40%;
     object-fit: contain;
   }
+
+  .git-partner{
+    margin-top: 1vh !important;
+    width: 30% !important;
+  }
   
   @media (max-width:768px) {
     .partner1{

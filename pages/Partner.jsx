@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef,useEffect } from 'react';
 import "../pages/Partner.css";
 import heroMain from "../assets/hero-main.png";
 import bp from "../assets/become-partner.png";
@@ -44,6 +44,54 @@ const Partner = () => {
     const [responseMessage, setResponseMessage] = useState(null);
     const [documentUrl, setDocumentUrl] = useState('');
 
+    const dropdownRef = useRef(null);
+    const handleClickOutside = (event) => {
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+            setShowDropdown(false); // Hide dropdown if clicked outside
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
+
+    const [cities, setCities] = useState([]); // State to hold the list of cities
+    const [showDropdown, setShowDropdown] = useState(false);
+
+    const fetchCities = async (query) => {
+        try {
+            if (!query) {
+                setCities([]);
+                return;
+            }
+
+            const response = await fetch(`https://api.countrystatecity.in/v1/countries/IN/cities`, {
+                headers: {
+                    "X-CSCAPI-KEY": "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA==" // Replace with your API key
+                }
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                const filteredCities = data
+                    .filter(city => city.name.toLowerCase().startsWith(query.toLowerCase()))
+                    .slice(0, 10); // Limit to 10 cities for display
+                setCities(filteredCities); // Update state with filtered city names
+            }
+        } catch (error) {
+            console.error("Error fetching cities:", error);
+        }
+    };
+
+    const selectCity = (city) => {
+        setFormData({ ...formData, city: city });
+        setShowDropdown(false); // Hide dropdown after selection
+    };
+
     const handleChange = (e) => {
         const { name, value, files } = e.target;
         if (name === 'document' && files.length > 0) {
@@ -57,6 +105,11 @@ const Partner = () => {
                 ...formData,
                 [name]: value // Update other fields
             });
+        }
+
+        if (name === "city") {
+            setShowDropdown(true); // Show dropdown when typing in location
+            fetchCities(value); // Fetch cities as the user types
         }
 
         if (name === 'phoneNumber') {
@@ -333,17 +386,26 @@ const Partner = () => {
                         </div>
 
                         {/* City */}
-                        <div className="form-row">
-                            <label htmlFor="city">City</label>
+                        <div ref={dropdownRef} className='form-row'>
+                            <label>City</label>
                             <input
                                 type="text"
-                                id="city"
                                 name="city"
-                                placeholder="Your city"
                                 value={formData.city}
                                 onChange={handleChange}
+                                placeholder='Enter Your city'
+                                autoComplete="off"
                                 required
                             />
+                            {showDropdown && cities.length > 0 && (
+                                <ul className="dropdown git-partner">
+                                    {cities.map(city => (
+                                        <li key={city.id} onClick={() => selectCity(city.name)}>
+                                            {city.name}
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
                         </div>
 
                         {/* Upload Document */}

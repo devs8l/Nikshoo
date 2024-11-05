@@ -122,6 +122,11 @@
     background-color: darkslategray;
 }
 
+.git-home{
+    width: 20% !important;
+    margin-top: 7vh !important;
+}
+
 
 @media (max-width:768px) {
    
