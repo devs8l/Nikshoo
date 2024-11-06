@@ -1,8 +1,8 @@
-import { useState } from 'react'
-import ReactDOM from 'react-dom';
+import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import './App.css'
-import Hero from '../pages/Hero'
+import './App.css';
+import Loader from '../components/Loader'; // Import the Loader component
+import Hero from '../pages/Hero';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Hww from '../pages/Hww';
@@ -17,42 +17,62 @@ import Kitchen from '../pages/Kitchen';
 import Lab from '../pages/Lab';
 import Privacy from '../pages/Privacy';
 import Admin from '../pages/Admin';
-import navimg from "../assets/whatsapp-icon.png"
-
+import navimg from "../assets/whatsapp-icon.png";
 import Cookie from '../components/Cookie';
 
-
 function App() {
-  const location = useLocation(); // Hook to get the current route
+  const location = useLocation();
+  const isAdminRoute = location.pathname.includes("/123nikshoo/admin");
 
-  const isAdminRoute = location.pathname.includes("/123nikshoo/admin"); // Check if the current route is admin
+  // State to manage loading
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Effect to handle loading state on route change
+  useEffect(() => {
+    // Show loader at the beginning of each route change
+    setIsLoading(true);
+
+    // Hide loader after a delay (simulate loading time)
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000); // Adjust delay as needed
+
+    return () => clearTimeout(timer); // Clean up timer on unmount
+  }, [location.pathname]); // Trigger on route change
 
   return (
     <>
-      {!isAdminRoute && <Navbar />} {/* Conditionally render Navbar */}
+      {isLoading && <Loader />} {/* Render loader if isLoading is true */}
+      
+      {!isAdminRoute && !isLoading && <Navbar />} {/* Conditionally render Navbar */}
+      
       <div className="whatsapp-ct">
-        <a href="https://wa.me/+918103702839" target='_blank'>
-          <img src={navimg} alt="" />
+        <a href="https://wa.me/+918103702839" target='_blank' rel="noopener noreferrer">
+          <img src={navimg} alt="WhatsApp Icon" />
         </a>
-      <Cookie></Cookie>
+        <Cookie />
       </div>
-      <Routes>
-        <Route path="/" element={<Hero />} />
-        <Route path="/howwework" element={<Hww />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/partner" element={<Partner />} />
-        <Route path="/privacy" element={<Privacy />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/blog" element={<Blogs />} />
-        <Route path="/office" element={<Office />} />
-        <Route path="/education" element={<Education />} />
-        <Route path="/healthcare" element={<Healthcare />} />
-        <Route path="/kitchen" element={<Kitchen />} />
-        <Route path="/lab" element={<Lab />} />
-        <Route path="/123nikshoo/admin" element={<Admin />} />
-      </Routes>
 
-      {!isAdminRoute && <Footer />} {/* Conditionally render Footer */}
+      {/* Conditionally render routes when not loading */}
+      {!isLoading && (
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/howwework" element={<Hww />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/partner" element={<Partner />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/blog" element={<Blogs />} />
+          <Route path="/office" element={<Office />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/healthcare" element={<Healthcare />} />
+          <Route path="/kitchen" element={<Kitchen />} />
+          <Route path="/lab" element={<Lab />} />
+          <Route path="/123nikshoo/admin" element={<Admin />} />
+        </Routes>
+      )}
+
+      {!isAdminRoute && !isLoading && <Footer />} {/* Conditionally render Footer */}
     </>
   );
 }

@@ -102,7 +102,7 @@ const Hero = () => {
       </Helmet>
       <div className="page1">
         <div className="container">
-          <video src={heroVid} autoPlay muted playsInline loop loading="lazy"></video>
+          <video src="https://res.cloudinary.com/dx0eyuux2/video/upload/v1730900831/hero-vid_fenuaw.mp4" autoPlay muted playsInline loop loading="lazy"></video>
         </div>
         <div className="hero-content">
           <h1>Furniture For The <span>Future</span></h1>
@@ -123,7 +123,7 @@ const Hero = () => {
           <div className="part2-l">
             <div className="l-img">
               <a href="/office">
-                <img src={office} alt="Office Space" loading="lazy" />
+                <img src="https://res.cloudinary.com/dx0eyuux2/image/upload/v1730900815/office_c7jkzu.png" alt="Office Space" loading="lazy" />
               </a>
             </div>
             <div className="l-con">
@@ -134,7 +134,7 @@ const Hero = () => {
           <div className="part2-r mobileabs">
             <div className="r-img">
               <a href="/education">
-                <img src={edu} alt="Education Space" loading="lazy" />
+                <img src="https://res.cloudinary.com/dx0eyuux2/image/upload/v1730900793/edu_fvt7of.png" alt="Education Space" loading="lazy" />
               </a>
             </div>
             <div className="r-con">
@@ -148,7 +148,7 @@ const Hero = () => {
           <div className="part2-r abs">
             <div className="r-img">
               <a href="/education">
-                <img src={edu} alt="Education Space" loading="lazy" />
+                <img src="https://res.cloudinary.com/dx0eyuux2/image/upload/v1730900793/edu_fvt7of.png" alt="Education Space" loading="lazy" />
               </a>
             </div>
             <div className="r-con">
@@ -159,7 +159,7 @@ const Hero = () => {
           <div className="part3-sub">
             <div className="part3-img-div">
               <a href="/healthcare">
-                <img src={health} alt="Healthcare Space" loading="lazy" />
+                <img src="https://res.cloudinary.com/dx0eyuux2/image/upload/v1730900803/hww-lefty_gxccle.png" alt="Healthcare Space" loading="lazy" />
               </a>
             </div>
             <div className="part3-con">
@@ -169,7 +169,7 @@ const Hero = () => {
           <div className="part3-sub">
             <div className="part3-img-div">
               <a href="/lab">
-                <img src={lab} alt="Laboratory Space" loading="lazy" />
+                <img src="https://res.cloudinary.com/dx0eyuux2/image/upload/v1730900804/hww-mid_vogg9n.png" alt="Laboratory Space" loading="lazy" />
               </a>
             </div>
             <div className="part3-con">
@@ -179,7 +179,7 @@ const Hero = () => {
           <div className="part3-sub">
             <div className="part3-img-div">
               <a href="/kitchen">
-                <img src={kitchenImg} alt="Commercial Kitchen" loading="lazy" />
+                <img src="https://res.cloudinary.com/dx0eyuux2/image/upload/v1730900804/hww-righty_ke83mt.png" alt="Commercial Kitchen" loading="lazy" />
               </a>
             </div>
             <div className="part3-con">

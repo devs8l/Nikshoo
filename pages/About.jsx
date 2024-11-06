@@ -44,7 +44,7 @@ const About = () => {
                             <img src={neha} alt="" />
                         </div>
                         <h2>Neha Halen</h2>
-                        <p>Director at Greenshoots Retail Pvt Ltd.</p>
+                        <p>Co-Founder at Greenshoots Retail Pvt Ltd.</p>
                         <a href="https://www.linkedin.com/in/neha-halen-216b82200/" target='_blank'>Connect on LinkedIn</a>
                         <p className='founder-con'>Neha , an entrepreneur,  has over a decade of experience in  commercial furniture solutions.  A commerce graduate from SRCC, Delhi University, Neha cleared all 3 levels of the Chartered Financial Analyst Program. With a strong business acumen, Neha co-founded Nikshoo furniture Solutions, under Greenshoots Retail Pvt. Ltd. She has established herself in this industry,  delivering tailored solutions to enhance workplace productivity and aesthetics.</p>
                     </div>
@@ -53,7 +53,7 @@ const About = () => {
                             <img src={anirudh} alt="" />
                         </div>
                         <h2>Anirudh Halen</h2>
-                        <p>Director at Halen Ceramics Pvt Ltd.</p>
+                        <p>Co-Founder at Greenshoots Retail Pvt Ltd.</p>
                         <a href="https://www.linkedin.com/in/anirudh-halen-5ab69b56/" target='_blank'>Connect on LinkedIn</a>
                         <p className='founder-con'>Anirudh, an entrepreneur, holds a commerce graduation. With over 15 years of experience in the furniture industry, Anirudh has a profound understanding of the products and is passionate about delivering solutions, thus fuelling our mission.   He is adept at managing teams .  Having a knack for executing projects, he helps shape the future of commercial furniture solutions. </p>
                     </div>
