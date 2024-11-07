@@ -130,6 +130,7 @@
     color: #23AA9B;
     font-size: 1.2vw;
     flex-direction: column;
+    margin-top: 3vh;
     border-right: 1px solid rgba(0, 0, 0, 0.282);
     /* background: #000; */
 }

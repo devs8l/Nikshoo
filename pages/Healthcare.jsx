@@ -209,6 +209,8 @@ const Healthcare = () => {
                 <div className="space-hero-left">
                     <h1>Healthcare Spaces</h1>
                     <p onClick={toggleFormVisibility} className='space-para'><u>Enquire Now</u></p>
+                    <p id='hero-space-para'>Our Solutions for  Healthcare Spaces include, but are not limited to</p>
+                    
                 </div>
                 <div className="space-hero-right health">
                     <img src={HealthcareHeroRight} alt="" />
@@ -219,7 +221,7 @@ const Healthcare = () => {
                 <img src={heroMain} alt="" />
                 <div className="space2-heading">
                     <h1>Products in Healthcare Spaces</h1>
-                    <p>Our Solutions for  Healthcare Spaces include, but are not limited to:</p>
+                    <p>Our Solutions for  Healthcare Spaces include, but are not limited to</p>
                 </div>
 
                 <div className="cards-container">

@@ -5,42 +5,42 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 import { Gallery } from '../components/Gallery';
 
 import "../pages/Hero.css"
-import Carousel from "../components/Carousel"
-import Navbar from '../components/Navbar'
-import lefty from "../assets/lefty.png"
-import righty from "../assets/righty.png"
-import border from "../assets/hero2.png"
-import avizva from "../assets/AVIZVA.mp4"
+// import Carousel from "../components/Carousel"
+// import Navbar from '../components/Navbar'
+// import lefty from "../assets/lefty.png"
+// import righty from "../assets/righty.png"
+// import border from "../assets/hero2.png"
+// import avizva from "../assets/AVIZVA.mp4"
 
-import office from "../assets/office.png"
-import edu from "../assets/edu.png"
-import health from "../assets/hww-lefty.png"
-import kitchenImg from "../assets/hww-righty.png"
-import lab from "../assets/hww-mid.png"
+// import office from "../assets/office.png"
+// import edu from "../assets/edu.png"
+// import health from "../assets/hww-lefty.png"
+// import kitchenImg from "../assets/hww-righty.png"
+// import lab from "../assets/hww-mid.png"
 
-import v1 from "../assets/icon1.png"
-import v2 from "../assets/icon2.png"
-import v3 from "../assets/icon3.png"
+// import v1 from "../assets/icon1.png"
+// import v2 from "../assets/icon2.png"
+// import v3 from "../assets/icon3.png"
 
-import page4ilus from "../assets/bento.mp4"
+// import page4ilus from "../assets/bento.mp4"
 
 
 
-import filus from "../assets/footer-ilus.png"
+// import filus from "../assets/footer-ilus.png"
 
 import { Rotate } from '../components/Rotate'
 import GetInTouch from '../components/GetInTouch'
 
 import Clients from '../components/Clients'
 
-import heroVid from "../assets/hero-vid.mp4"
+// import heroVid from "../assets/hero-vid.mp4"
+// import mobileBento from "../assets/mobile-bento.mp4"
 import { Helmet } from 'react-helmet';
-import mobileBento from "../assets/mobile-bento.mp4"
 
 
 const Hero = () => {
   const getInTouchRef = useRef(null); // Create a ref for GetInTouch component
-  const [page4VideoSrc, setPage4VideoSrc] = useState(page4ilus);
+  const [page4VideoSrc, setPage4VideoSrc] = useState("https://res.cloudinary.com/dicusurfx/video/upload/v1730985153/bento_f8vgds.mp4");
   const scrollToGetInTouch = () => {
     // Function to scroll to the GetInTouch section
     getInTouchRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -49,9 +49,9 @@ const Hero = () => {
     const updateVideoSrc = () => {
       // Check if the screen width is mobile-size and update video src
       if (window.innerWidth <= 768) {
-        setPage4VideoSrc(mobileBento); // Mobile video
+        setPage4VideoSrc("https://res.cloudinary.com/dicusurfx/video/upload/v1730985127/mobile-bento_gdoslo.mp4"); // Mobile video
       } else {
-        setPage4VideoSrc(page4ilus); // Desktop video
+        setPage4VideoSrc("https://res.cloudinary.com/dicusurfx/video/upload/v1730985153/bento_f8vgds.mp4"); // Desktop video
       }
     };
 
@@ -60,7 +60,7 @@ const Hero = () => {
 
     // Cleanup the event listener on component unmount
     return () => {
-      window.removeEventListener('resize', updateVideoSrc);
+      window.removeEventListener('resize', updateVideoSrc); 
     };
   }, []);
 
@@ -102,7 +102,7 @@ const Hero = () => {
       </Helmet>
       <div className="page1">
         <div className="container">
-          <video src="https://res.cloudinary.com/dx0eyuux2/video/upload/v1730900831/hero-vid_fenuaw.mp4" autoPlay muted playsInline loop loading="lazy"></video>
+          <video src="https://res.cloudinary.com/dicusurfx/video/upload/v1730985155/hero-vid_fkeafx.mp4" autoPlay muted playsInline loop loading="lazy"></video>
         </div>
         <div className="hero-content">
           <h1>Furniture For The <span>Future</span></h1>
@@ -123,7 +123,7 @@ const Hero = () => {
           <div className="part2-l">
             <div className="l-img">
               <a href="/office">
-                <img src="https://res.cloudinary.com/dx0eyuux2/image/upload/v1730900815/office_c7jkzu.png" alt="Office Space" loading="lazy" />
+                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985133/office_gohucx.png" alt="Office Space" loading="lazy" />
               </a>
             </div>
             <div className="l-con">
@@ -134,7 +134,7 @@ const Hero = () => {
           <div className="part2-r mobileabs">
             <div className="r-img">
               <a href="/education">
-                <img src="https://res.cloudinary.com/dx0eyuux2/image/upload/v1730900793/edu_fvt7of.png" alt="Education Space" loading="lazy" />
+                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985094/edu_fuf0it.png" alt="Education Space" loading="lazy" />
               </a>
             </div>
             <div className="r-con">
@@ -148,7 +148,7 @@ const Hero = () => {
           <div className="part2-r abs">
             <div className="r-img">
               <a href="/education">
-                <img src="https://res.cloudinary.com/dx0eyuux2/image/upload/v1730900793/edu_fvt7of.png" alt="Education Space" loading="lazy" />
+                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985094/edu_fuf0it.png" alt="Education Space" loading="lazy" />
               </a>
             </div>
             <div className="r-con">
@@ -159,7 +159,7 @@ const Hero = () => {
           <div className="part3-sub">
             <div className="part3-img-div">
               <a href="/healthcare">
-                <img src="https://res.cloudinary.com/dx0eyuux2/image/upload/v1730900803/hww-lefty_gxccle.png" alt="Healthcare Space" loading="lazy" />
+                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985108/hww-lefty_fpguk9.png" alt="Healthcare Space" loading="lazy" />
               </a>
             </div>
             <div className="part3-con">
@@ -169,7 +169,7 @@ const Hero = () => {
           <div className="part3-sub">
             <div className="part3-img-div">
               <a href="/lab">
-                <img src="https://res.cloudinary.com/dx0eyuux2/image/upload/v1730900804/hww-mid_vogg9n.png" alt="Laboratory Space" loading="lazy" />
+                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985108/hww-mid_srltbk.png" alt="Laboratory Space" loading="lazy" />
               </a>
             </div>
             <div className="part3-con">
@@ -179,7 +179,7 @@ const Hero = () => {
           <div className="part3-sub">
             <div className="part3-img-div">
               <a href="/kitchen">
-                <img src="https://res.cloudinary.com/dx0eyuux2/image/upload/v1730900804/hww-righty_ke83mt.png" alt="Commercial Kitchen" loading="lazy" />
+                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985108/hww-righty_wpfkt1.png" alt="Commercial Kitchen" loading="lazy" />
               </a>
             </div>
             <div className="part3-con">
@@ -204,13 +204,13 @@ const Hero = () => {
         </div>
         <div className="page3-b">
           <div className="left-ilus">
-            <img src={lefty} alt="Lefty Illustration" loading="lazy" />
+            <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985117/lefty_bvf6e7.png" alt="Lefty Illustration" loading="lazy" />
           </div>
           <div className="center-ilus">
-            <video src={avizva} alt="AVIZVA Video" autoPlay muted playsInline loop />
+            <video src="https://res.cloudinary.com/dicusurfx/video/upload/v1730985154/AVIZVA_s9sy6v.mp4" alt="AVIZVA Video" autoPlay muted playsInline loop />
           </div>
           <div className="right-ilus">
-            <img src={righty} alt="Righty Illustration" loading="lazy" />
+            <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985138/righty_el1zci.png" alt="Righty Illustration" loading="lazy" />
           </div>
           <button className='btn' onClick={scrollToGetInTouch}>
             Enquire Now
@@ -221,7 +221,7 @@ const Hero = () => {
       <div className="info">
         <div className="info-sub">
           <div className="info-img-div">
-            <img src={v1} alt="Innovative Design Icon" loading="lazy" />
+            <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985110/icon1_ydge9o.png" alt="Innovative Design Icon" loading="lazy" />
           </div>
           <div className="info-sub-con">
             <h2>Innovative Design</h2>
@@ -230,7 +230,7 @@ const Hero = () => {
         </div>
         <div className="info-sub">
           <div className="info-img-div">
-            <img src={v2} alt="Durability & Quality Icon" loading="lazy" />
+            <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985111/icon2_gppets.png" alt="Durability & Quality Icon" loading="lazy" />
           </div>
           <div className="info-sub-con">
             <h2>Durability & Quality</h2>
@@ -239,7 +239,7 @@ const Hero = () => {
         </div>
         <div className="info-sub">
           <div className="info-img-div">
-            <img src={v3} alt="Broad Choice Icon" loading="lazy" />
+            <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985111/icon3_cpe7vs.png" alt="Broad Choice Icon" loading="lazy" />
           </div>
           <div className="info-sub-con">
             <h2>Broad Choice</h2>
@@ -273,7 +273,7 @@ const Hero = () => {
         <GetInTouch />
       </div>
       <div className="footer-ilus">
-        <img src={filus} loading="lazy" alt="Sofa table Sofa set Furniture" />
+        <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985099/footer-ilus_ffxt4i.png" loading="lazy" alt="Sofa table Sofa set Furniture" />
       </div>
 
     </div>

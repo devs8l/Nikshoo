@@ -14,15 +14,27 @@
     width: calc(var(--uib-size) * 0.64);
   }
 
-  .loader-wrap{
+  .loader-wrap {
     height: 100vh;
     width: 100vw;
-    background: #000000;
+    background: rgb(0, 0, 0); /* Semi-transparent background */
     display: flex;
     align-items: center;
     justify-content: center;
-
+    opacity: 1;
+    transition: opacity 0.5s ease; /* Smooth fade-out */
+    z-index: 1000;
   }
+  
+  .loader-wrap.hidden {
+    opacity: 0; /* Fade out */
+    pointer-events: none; /* Prevent interactions while fading out */
+  }
+  
+  /* Ensure rest of your existing CSS for the dots remains unchanged */
+  
+
+
 
   @keyframes jump {
     0%,
