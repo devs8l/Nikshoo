@@ -1,34 +1,34 @@
 import { React, useState, useEffect,useRef } from 'react'
 
 import "../pages/Space.css"
-import officeHero from "../assets/office-hero.png"
-import officeHeroRight from "../assets/office-hero-right.png"
+// import officeHero from "../assets/office-hero.png"
+// import officeHeroRight from "../assets/office-hero-right.png"
 
-import DoctorExam from "../assets/Doctor-table.png"
-import exeDesk from "../assets/exeDesk.png"
-import Workstation from "../assets/Workstation.png"
-import Cube from "../assets/cubicles.png"
-import Conf from "../assets/con-room.png"
-import Sofas from "../assets/sofas.png"
-import Lounge from "../assets/lounge.png"
-import Compact from "../assets/compact.png"
-import Pods from "../assets/pods.png"
-import Cafe from "../assets/Cafeteria.png"
-import Storage from "../assets/storage.png"
-import Locker from "../assets/locker.png"
+// import DoctorExam from "../assets/Doctor-table.png"
+// import exeDesk from "../assets/exeDesk.png"
+// import Workstation from "../assets/Workstation.png"
+// import Cube from "../assets/cubicles.png"
+// import Conf from "../assets/con-room.png"
+// import Sofas from "../assets/sofas.png"
+// import Lounge from "../assets/lounge.png"
+// import Compact from "../assets/compact.png"
+// import Pods from "../assets/pods.png"
+// import Cafe from "../assets/Cafeteria.png"
+// import Storage from "../assets/storage.png"
+// import Locker from "../assets/locker.png"
 
-import heroMain from "../assets/hero-main.png"
+// import heroMain from "../assets/hero-main.png"
 
-import HealthcareHero from "../assets/Health-hero.png"
-import HealthcareHeroMobile from "../assets/mobile-healthcare-hero.png"
-import HealthcareHeroRight from "../assets/Health-right-hero.png"
-import Principal from "../assets/Principal.png"
-import GreySofa from "../assets/grey-sofa.png"
+// import HealthcareHero from "../assets/Health-hero.png"
+// import HealthcareHeroMobile from "../assets/mobile-healthcare-hero.png"
+// import HealthcareHeroRight from "../assets/Health-right-hero.png"
+// import Principal from "../assets/Principal.png"
+// import GreySofa from "../assets/grey-sofa.png"
 
-import waiting from "../assets/wait.png"
-import soft from "../assets/soft-seat.png"
-import tward from "../assets/two.png"
-import HospitalRoom from "../assets/hos-room.png"
+// import waiting from "../assets/wait.png"
+// import soft from "../assets/soft-seat.png"
+// import tward from "../assets/two.png"
+// import HospitalRoom from "../assets/hos-room.png"
 
 import { Thanks } from '../components/Thanks'; // Import the Thanks component
 import ReCAPTCHA from 'react-google-recaptcha';
@@ -39,18 +39,18 @@ import ReCAPTCHA from 'react-google-recaptcha';
 
 const Healthcare = () => {
     const furnitureData = [
-        { id: 1, img: DoctorExam, title: 'Doctor Examination' },
-        { id: 2, img: Principal, title: 'Administration Desk' },
-        { id: 3, img: GreySofa, title: 'Sofas' },
-        { id: 4, img: waiting, title: 'Waiting area' },
-        { id: 5, img: soft, title: 'Soft Seating' },
-        { id: 9, img: Pods, title: 'Pods' },
-        { id: 10, img: Cafe, title: 'Cafeteria/Recreation' },
-        { id: 11, img: Storage, title: 'Storages' },
-        { id: 12, img: Locker, title: 'Lockers' },
-        { id: 6, img: tward, title: 'Transfer , ward & OT ' },
-        { id: 7, img: HospitalRoom, title: 'Hospital room' },
-        { id: 8, img: Compact, title: 'Compactors' },
+        { id: 1, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985089/Doctor-table_ei03ox.png", title: 'Doctor Examination' },
+        { id: 2, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985136/Principal_mhgqgl.png", title: 'Administration Desk' },
+        { id: 3, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985101/grey-sofa_jiefic.png", title: 'Sofas' },
+        { id: 4, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985142/wait_ht3p7n.png", title: 'Waiting area' },
+        { id: 5, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985139/soft-seat_za8thc.png", title: 'Soft Seating' },
+        { id: 9, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985137/pods_xpi29z.png", title: 'Pods' },
+        { id: 10, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985083/Cafeteria_jw4bow.png", title: 'Cafeteria/Recreation' },
+        { id: 11, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985141/storage_dnvz4z.png", title: 'Storages' },
+        { id: 12, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985120/locker_ysfhsu.png", title: 'Lockers' },
+        { id: 6, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985142/two_fnyxka.png", title: 'Transfer , ward & OT ' },
+        { id: 7, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985105/hos-room_pbhkod.png", title: 'Hospital room' },
+        { id: 8, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985086/compact_vw81uf.png", title: 'Compactors' },
 
         // Add more furniture data here
     ];
@@ -204,8 +204,8 @@ const Healthcare = () => {
     return (
         <div className='space-wrap'>
             <div className="space-hero">
-                <img src={HealthcareHeroMobile} className='mobile' alt="" />
-                <img src={HealthcareHero} className='desktop' alt="" />
+                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985126/mobile-healthcare-hero_an7lnb.png" className='mobile' alt="" />
+                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985104/Health-hero_yhp9nq.png" className='desktop' alt="" />
                 <div className="space-hero-left">
                     <h1>Healthcare Spaces</h1>
                     <p onClick={toggleFormVisibility} className='space-para'><u>Enquire Now</u></p>
@@ -213,12 +213,12 @@ const Healthcare = () => {
                     
                 </div>
                 <div className="space-hero-right health">
-                    <img src={HealthcareHeroRight} alt="" />
+                    <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985103/Health-right-hero_e9afcs.png" alt="" />
                 </div>
             </div>
 
             <div className="space2">
-                <img src={heroMain} alt="" />
+                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png" alt="" />
                 <div className="space2-heading">
                     <h1>Products in Healthcare Spaces</h1>
                     <p>Our Solutions for  Healthcare Spaces include, but are not limited to</p>
