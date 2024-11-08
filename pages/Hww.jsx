@@ -1,13 +1,13 @@
 import React, { useState, useRef,useEffect } from 'react';
 import '../pages/Hww.css';
-import hww1 from "../assets/hww1.png";
-import hww2 from "../assets/hww2.png";
-import hww3 from "../assets/hww3.png";
-import hww4 from "../assets/hww4.png";
-import hww5 from "../assets/hww5.png";
-import heroMain from "../assets/hero-main.png";
-import hwwHero from "../assets/hww-hero.png";
-import hwwFoot from "../assets/hww-footer.png";
+// import hww1 from "../assets/hww1.png";
+// import hww2 from "../assets/hww2.png";
+// import hww3 from "../assets/hww3.png";
+// import hww4 from "../assets/hww4.png";
+// import hww5 from "../assets/hww5.png";
+// import heroMain from "../assets/hero-main.png";
+// import hwwHero from "../assets/hww-hero.png";
+// import hwwFoot from "../assets/hww-footer.png";
 import { Thanks } from '../components/Thanks'; // Import the Thanks component
 import ReCAPTCHA from 'react-google-recaptcha';
 

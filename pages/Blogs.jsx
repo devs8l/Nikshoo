@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import "../pages/Blogs.css";
 // import heroMain from "../assets/hero-main.png";
 // import heroright from "../assets/blogs-hero.png";
-import submit from "../assets/submit.png";
+// import submit from "../assets/submit.png";
 // import bimg from "../assets/blog-img.png";
 
 

@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import '../components/Rotate.css';
-import coencircles from "../assets/circles.png";
+// import coencircles from "../assets/circles.png";
 import centerpiece from "../assets/center-left.png";
-import eduImg from "../assets/mg4.png";
-import med from "../assets/mg2.png";
-import Kitchen from "../assets/mg5-2.png";
-import rec from "../assets/rec.png";
-import lab from "../assets/mg3-2.png";
-import officetop from "../assets/office-top.png";
-import officeleft from "../assets/office-b-l.png";
-import officeright from "../assets/office-workstation.png";
-import edutop from "../assets/edu-top.png";
-import eduHeroRight from "../assets/edu-hero-right.png"
+// import eduImg from "../assets/mg4.png";
+// import med from "../assets/mg2.png";
+// import Kitchen from "../assets/mg5-2.png";
+// import rec from "../assets/rec.png";
+// import lab from "../assets/mg3-2.png";
+// import officetop from "../assets/office-top.png";
+// import officeleft from "../assets/office-b-l.png";
+// import officeright from "../assets/office-workstation.png";
+// import edutop from "../assets/edu-top.png";
+// import eduHeroRight from "../assets/edu-hero-right.png"
 
-import hbed from "../assets/bed-health.png"
-import CafeEdu from "../assets/Cafe-edu.png"
-import Library from "../assets/library.png"
-import metalBed from "../assets/metalbed.png"
+// import hbed from "../assets/bed-health.png"
+// import CafeEdu from "../assets/Cafe-edu.png"
+// import Library from "../assets/library.png"
+// import metalBed from "../assets/metalbed.png"
 
 import { MdOutlineArrowOutward } from "react-icons/md";
 
@@ -27,8 +27,8 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 
 
 
-import kitchenRotate from "../assets/com-kitchen.png"
-import labRotate from "../assets/lab2.png"
+// import kitchenRotate from "../assets/com-kitchen.png"
+// import labRotate from "../assets/lab2.png"
 
 export const Rotate = () => {
     const [activeContent, setActiveContent] = useState('Click on a circle to display content');
@@ -91,11 +91,11 @@ export const Rotate = () => {
             },
             bottomLeft: {
                 h1: 'Rotational Chairs',
-                image: officeleft
+                
             },
             bottomRight: {
                 h1: 'Modern Chairs',
-                image: officeright
+
             }
         },
         {
@@ -111,11 +111,9 @@ export const Rotate = () => {
             },
             bottomLeft: {
                 h1: 'Rotational Chairs',
-                image: officeleft
             },
             bottomRight: {
                 h1: 'Modern Chairs',
-                image: hbed
             }
         },
         {
@@ -131,11 +129,9 @@ export const Rotate = () => {
             },
             bottomLeft: {
                 h1: 'Rotational Chairs',
-                image: officeleft
             },
             bottomRight: {
                 h1: 'Modern Chairs',
-                image: officeright
             }
         }
     ];

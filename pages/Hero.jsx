@@ -7,40 +7,40 @@ import { Gallery } from '../components/Gallery';
 import "../pages/Hero.css"
 import Carousel from "../components/Carousel"
 import Navbar from '../components/Navbar'
-import lefty from "../assets/lefty.png"
-import righty from "../assets/righty.png"
-import border from "../assets/hero2.png"
-import avizva from "../assets/AVIZVA.mp4"
+// import lefty from "../assets/lefty.png"
+// import righty from "../assets/righty.png"
+// import border from "../assets/hero2.png"
+// import avizva from "../assets/AVIZVA.mp4"
 
-import office from "../assets/office.png"
-import edu from "../assets/edu.png"
-import health from "../assets/hww-lefty.png"
-import kitchenImg from "../assets/hww-righty.png"
-import lab from "../assets/hww-mid.png"
+// import office from "../assets/office.png"
+// import edu from "../assets/edu.png"
+// import health from "../assets/hww-lefty.png"
+// import kitchenImg from "../assets/hww-righty.png"
+// import lab from "../assets/hww-mid.png"
 
-import v1 from "../assets/icon1.png"
-import v2 from "../assets/icon2.png"
-import v3 from "../assets/icon3.png"
+// import v1 from "../assets/icon1.png"
+// import v2 from "../assets/icon2.png"
+// import v3 from "../assets/icon3.png"
 
-import page4ilus from "../assets/bento.mp4"
+// import page4ilus from "../assets/bento.mp4"
 
 
 
-import filus from "../assets/footer-ilus.png"
+// import filus from "../assets/footer-ilus.png"
 
 import { Rotate } from '../components/Rotate'
 import GetInTouch from '../components/GetInTouch'
 
 import Clients from '../components/Clients'
 
-import heroVid from "../assets/hero-vid.mp4"
+// import heroVid from "../assets/hero-vid.mp4"
 import { Helmet } from 'react-helmet';
-import mobileBento from "../assets/mobile-bento.mp4"
+// import mobileBento from "../assets/mobile-bento.mp4"
 
 
 const Hero = () => {
   const getInTouchRef = useRef(null); // Create a ref for GetInTouch component
-  const [page4VideoSrc, setPage4VideoSrc] = useState(page4ilus);
+  const [page4VideoSrc, setPage4VideoSrc] = useState();
   const scrollToGetInTouch = () => {
     // Function to scroll to the GetInTouch section
     getInTouchRef.current?.scrollIntoView({ behavior: 'smooth' });

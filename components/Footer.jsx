@@ -2,22 +2,22 @@ import React from 'react'
 import { useState, useEffect,useRef} from 'react';
 
 import "../components/Footer.css"
-import link1 from "../assets/Link.png"
-import link2 from "../assets/link2.png"
+// import link1 from "../assets/Link.png"
+// import link2 from "../assets/link2.png"
 
-import link3 from "../assets/link3.png"
+// import link3 from "../assets/link3.png"
 
-import c1 from "../assets/Container.png"
-import c2 from "../assets/Container2.png"
-import c3 from "../assets/Container3.png"
-import flast from "../assets/footer-last.png"
-import flast2 from "../assets/startup.png"
+// import c1 from "../assets/Container.png"
+// import c2 from "../assets/Container2.png"
+// import c3 from "../assets/Container3.png"
+// import flast from "../assets/footer-last.png"
+// import flast2 from "../assets/startup.png"
 
 import { IoIosArrowDropdown } from "react-icons/io";
 
 
 
-import navimgfooter from "../assets/footerlogo.png"
+// import navimgfooter from "../assets/footerlogo.png"
 import { FootCon } from './FootCon';
 const Footer = () => {
     const [contactData, setContactData] = useState({
