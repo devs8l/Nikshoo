@@ -1,4 +1,4 @@
-import React, { useRef,useState,useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { NavLink, useLocation } from "react-router-dom"
 import { MdOutlineArrowOutward } from "react-icons/md";
 
@@ -49,9 +49,9 @@ const Hero = () => {
     const updateVideoSrc = () => {
       // Check if the screen width is mobile-size and update video src
       if (window.innerWidth <= 768) {
-        setPage4VideoSrc(mobileBento); // Mobile video
+        setPage4VideoSrc("https://res.cloudinary.com/dicusurfx/video/upload/v1730985127/mobile-bento_gdoslo.mp4"); // Mobile video
       } else {
-        setPage4VideoSrc(page4ilus); // Desktop video
+        setPage4VideoSrc("https://res.cloudinary.com/dicusurfx/video/upload/v1730985153/bento_f8vgds.mp4"); // Desktop video
       }
     };
 
@@ -69,8 +69,8 @@ const Hero = () => {
       <Helmet>
         <title>Nikshoo Furniture Solutions</title>
         <meta name="description" content="Explore a wide range of furniture solutions including sofas, tables, and more." />
-        <meta 
-          name="keywords" 
+        <meta
+          name="keywords"
           content="
             furniture, 
             sofa, 
@@ -97,7 +97,7 @@ const Hero = () => {
             godrej almirah, 
             chests, 
             bed room,
-          " 
+          "
         />
       </Helmet>
       <div className="page1">
@@ -204,13 +204,13 @@ const Hero = () => {
         </div>
         <div className="page3-b">
           <div className="left-ilus">
-            <img src={lefty} alt="Lefty Illustration" loading="lazy" />
+            <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985117/lefty_bvf6e7.png" alt="Lefty Illustration" loading="lazy" />
           </div>
           <div className="center-ilus">
-            <video src={avizva} alt="AVIZVA Video" autoPlay muted playsInline loop />
+            <video src="https://res.cloudinary.com/dicusurfx/video/upload/v1730985154/AVIZVA_s9sy6v.mp4" alt="AVIZVA Video" autoPlay muted playsInline loop />
           </div>
           <div className="right-ilus">
-            <img src={righty} alt="Righty Illustration" loading="lazy" />
+            <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985138/righty_el1zci.png" alt="Righty Illustration" loading="lazy" />
           </div>
           <button className='btn' onClick={scrollToGetInTouch}>
             Enquire Now
@@ -221,7 +221,7 @@ const Hero = () => {
       <div className="info">
         <div className="info-sub">
           <div className="info-img-div">
-            <img src={v1} alt="Innovative Design Icon" loading="lazy" />
+          <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985110/icon1_ydge9o.png" alt="Innovative Design Icon" loading="lazy" />
           </div>
           <div className="info-sub-con">
             <h2>Innovative Design</h2>
@@ -230,7 +230,7 @@ const Hero = () => {
         </div>
         <div className="info-sub">
           <div className="info-img-div">
-            <img src={v2} alt="Durability & Quality Icon" loading="lazy" />
+          <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985111/icon2_gppets.png" alt="Durability & Quality Icon" loading="lazy" />
           </div>
           <div className="info-sub-con">
             <h2>Durability & Quality</h2>
@@ -239,7 +239,7 @@ const Hero = () => {
         </div>
         <div className="info-sub">
           <div className="info-img-div">
-            <img src={v3} alt="Broad Choice Icon" loading="lazy" />
+          <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985111/icon3_cpe7vs.png" alt="Broad Choice Icon" loading="lazy" />
           </div>
           <div className="info-sub-con">
             <h2>Broad Choice</h2>
@@ -254,7 +254,7 @@ const Hero = () => {
           <p>Enhance your spaces with the comfortable furniture crafted by us</p>
         </div>
         <div className="page4-img-div">
-          <video src={page4VideoSrc} alt="Bento Video" autoPlay muted playsInline loop loading="lazy"/>
+          <video src={page4VideoSrc} alt="Bento Video" autoPlay muted playsInline loop loading="lazy" />
         </div>
 
         <div className="our-clients">
@@ -273,7 +273,7 @@ const Hero = () => {
         <GetInTouch />
       </div>
       <div className="footer-ilus">
-        <img src={filus} loading="lazy" alt="Sofa table Sofa set Furniture" />
+      <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985099/footer-ilus_ffxt4i.png" loading="lazy" alt="Sofa table Sofa set Furniture" />
       </div>
 
     </div>

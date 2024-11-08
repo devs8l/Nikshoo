@@ -221,12 +221,18 @@ html {
 }
 
 .image-part.part-5 .hww-con {
-  top: -100%;
+  top: -104%;
   /* Same top as part-1 */
   right: 5%;
   /* Same left as part-3 */
   z-index: 5;
 }
+
+.hww-half{
+  width: 45%;
+  
+}
+
 
 /* New content section */
 .content-section {
