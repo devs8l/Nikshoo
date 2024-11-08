@@ -1,35 +1,35 @@
 import React, { useEffect, useState,useRef } from 'react';
 import "../pages/Space.css"
-// import officeHero from "../assets/office-hero.png"
-// import officeHeroRight from "../assets/office-hero-right.png"
+import officeHero from "../assets/office-hero.png"
+import officeHeroRight from "../assets/office-hero-right.png"
 
-// import officechair from "../assets/officechair.png"
-// import exeDesk from "../assets/exeDesk.png"
-// import Workstation from "../assets/Workstation.png"
-// import Cube from "../assets/cubicles.png"
-// import Conf from "../assets/con-room.png"
-// import Sofas from "../assets/sofas.png"
-// import Lounge from "../assets/lounge.png"
-// import Compact from "../assets/compact.png"
-// import Pods from "../assets/pods.png"
-// import Cafe from "../assets/Cafeteria.png"
-// import Storage from "../assets/storage.png"
-// import Locker from "../assets/locker.png"
-// import edudesk from "../assets/edudesk.png"
+import officechair from "../assets/officechair.png"
+import exeDesk from "../assets/exeDesk.png"
+import Workstation from "../assets/Workstation.png"
+import Cube from "../assets/cubicles.png"
+import Conf from "../assets/con-room.png"
+import Sofas from "../assets/sofas.png"
+import Lounge from "../assets/lounge.png"
+import Compact from "../assets/compact.png"
+import Pods from "../assets/pods.png"
+import Cafe from "../assets/Cafeteria.png"
+import Storage from "../assets/storage.png"
+import Locker from "../assets/locker.png"
+import edudesk from "../assets/edudesk.png"
 
 
-// import heroMain from "../assets/hero-main.png"
-// import admin from "../assets/furn.png"
-// import eduHero from "../assets/edu-hero.png"
-// import eduHeroMobile from "../assets/mobile-education-hero.png"
-// import eduHeroRight from "../assets/edu-hero-right.png"
-// import waiting from "../assets/wait.png"
-// import Principal from "../assets/Principal.png"
-// import soft from "../assets/soft-seat.png"
-// import Library from "../assets/library.png"
-// import Dining from "../assets/dining.png"
-// import Hostel from "../assets/Hostel.png"
-// import Lab from "../assets/lab.png"
+import heroMain from "../assets/hero-main.png"
+import admin from "../assets/furn.png"
+import eduHero from "../assets/edu-hero.png"
+import eduHeroMobile from "../assets/mobile-education-hero.png"
+import eduHeroRight from "../assets/edu-hero-right.png"
+import waiting from "../assets/wait.png"
+import Principal from "../assets/Principal.png"
+import soft from "../assets/soft-seat.png"
+import Library from "../assets/library.png"
+import Dining from "../assets/dining.png"
+import Hostel from "../assets/Hostel.png"
+import Lab from "../assets/lab.png"
 
 import { Thanks } from '../components/Thanks'; // Import the Thanks component
 import ReCAPTCHA from 'react-google-recaptcha';
@@ -39,22 +39,22 @@ import ReCAPTCHA from 'react-google-recaptcha';
 const Education = () => {
 
     const furnitureData = [
-        { id: 1, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985092/edudesk_f2pvp1.png", title: 'Classroom Desking' },
-        { id: 2, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985092/exeDesk_rjt7ia.png", title: 'Executive Desk' },
-        { id: 3, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985100/furn_y17eql.png", title: 'Administration Office Furniture' },
-        { id: 4, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985139/sofas_xqc3tf.png", title: 'Sofas' },
-        { id: 5, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985142/wait_ht3p7n.png", title: 'Waiting Area Furniture' },
-        { id: 6, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985139/soft-seat_za8thc.png", title: 'Soft Seating' },
-        { id: 8, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985086/compact_vw81uf.png", title: 'Compactors' },
-        { id: 9, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985137/pods_xpi29z.png", title: 'Pods' },
-        { id: 10, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985083/Cafeteria_jw4bow.png", title: 'Cafeteria/Recreation' },
-        { id: 11, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985141/storage_dnvz4z.png", title: 'Storages' },
-        { id: 12, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985120/locker_ysfhsu.png", title: 'Lockers' },
-        { id: 12, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985117/library_oortad.png", title: 'Library' },
-        { id: 12, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985089/dining_xwbjv0.png", title: 'Dining' },
-        { id: 12, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985106/Hostel_kxabmn.png", title: 'Hostel' },
-        { id: 12, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985117/lab_gzcxpm.png", title: 'Lab' },
-        { id: 7, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985136/Principal_mhgqgl.png", title: 'Cabins' },
+        { id: 1, img: edudesk, title: 'Classroom Desking' },
+        { id: 2, img: exeDesk, title: 'Executive Desk' },
+        { id: 3, img: admin, title: 'Administration Office Furniture' },
+        { id: 4, img: Sofas, title: 'Sofas' },
+        { id: 5, img: waiting, title: 'Waiting Area Furniture' },
+        { id: 6, img: soft, title: 'Soft Seating' },
+        { id: 8, img: Compact, title: 'Compactors' },
+        { id: 9, img: Pods, title: 'Pods' },
+        { id: 10, img: Cafe, title: 'Cafeteria/Recreation' },
+        { id: 11, img: Storage, title: 'Storages' },
+        { id: 12, img: Locker, title: 'Lockers' },
+        { id: 12, img: Library, title: 'Library' },
+        { id: 12, img: Dining, title: 'Dining' },
+        { id: 12, img: Hostel, title: 'Hostel' },
+        { id: 12, img: Lab, title: 'Lab' },
+        { id: 7, img: Principal, title: 'Principal /Dean Cabin' },
 
         // Add more furniture data here
     ];

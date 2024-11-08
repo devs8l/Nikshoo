@@ -1,43 +1,43 @@
 import { React, useState, useEffect,useRef } from 'react'
 import "../pages/Space.css"
-// import officeHero from "../assets/office-hero.png"
-// import officeHeroRight from "../assets/office-hero-right.png"
+import officeHero from "../assets/office-hero.png"
+import officeHeroRight from "../assets/office-hero-right.png"
 
-// import officechair from "../assets/officechair.png"
-// import exeDesk from "../assets/exeDesk.png"
-// import Workstation from "../assets/Workstation.png"
-// import Cube from "../assets/cubicles.png"
-// import Conf from "../assets/con-room.png"
-// import Sofas from "../assets/sofas.png"
-// import Lounge from "../assets/lounge.png"
-// import Compact from "../assets/compact.png"
-// import Pods from "../assets/pods.png"
-// import Cafe from "../assets/Cafeteria.png"
-// import Storage from "../assets/storage.png"
-// import Locker from "../assets/locker.png"
+import officechair from "../assets/officechair.png"
+import exeDesk from "../assets/exeDesk.png"
+import Workstation from "../assets/Workstation.png"
+import Cube from "../assets/cubicles.png"
+import Conf from "../assets/con-room.png"
+import Sofas from "../assets/sofas.png"
+import Lounge from "../assets/lounge.png"
+import Compact from "../assets/compact.png"
+import Pods from "../assets/pods.png"
+import Cafe from "../assets/Cafeteria.png"
+import Storage from "../assets/storage.png"
+import Locker from "../assets/locker.png"
 
 import { Thanks } from '../components/Thanks'; // Import the Thanks component
 import ReCAPTCHA from 'react-google-recaptcha';
 
-// import heroMain from "../assets/hero-main.png"
-// import officeHeroMobile from "../assets/mobile-office-hero.png"
+import heroMain from "../assets/hero-main.png"
+import officeHeroMobile from "../assets/mobile-office-hero.png"
 
 
 
 const Office = () => {
     const furnitureData = [
-        { id: 1, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985131/officechair_jtavgm.png", title: 'Office Chair' },
-        { id: 2, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985092/exeDesk_rjt7ia.png", title: 'Executive Desk' },
-        { id: 3, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985144/Workstation_tokxlu.png", title: 'Workstations' },
-        { id: 4, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985088/cubicles_yiaypg.png", title: 'Cubicles' },
-        { id: 5, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985086/con-room_d3tvmo.png", title: 'Meeting and Conference room Furniture' },
-        { id: 6, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985139/sofas_xqc3tf.png", title: 'Sofas/Soft Seating' },
-        { id: 7, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985120/lounge_aicgne.png", title: 'Lounge Furniture' },
-        { id: 8, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985086/compact_vw81uf.png", title: 'Compactors' },
-        { id: 9, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985137/pods_xpi29z.png", title: 'Pods' },
-        { id: 10, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985083/Cafeteria_jw4bow.png", title: 'Cafeteria/Recreation' },
-        { id: 11, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985141/storage_dnvz4z.png", title: 'Storages' },
-        { id: 12, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985120/locker_ysfhsu.png", title: 'Lockers' },
+        { id: 1, img: officechair, title: 'Office Chair' },
+        { id: 2, img: exeDesk, title: 'Executive Desk' },
+        { id: 3, img: Workstation, title: 'Workstations' },
+        { id: 4, img: Cube, title: 'Cubicles' },
+        { id: 5, img: Conf, title: 'Meeting and Conference room Furniture' },
+        { id: 6, img: Sofas, title: 'Sofas/Soft Seating' },
+        { id: 7, img: Lounge, title: 'Lounge Furniture' },
+        { id: 8, img: Compact, title: 'Compactors' },
+        { id: 9, img: Pods, title: 'Pods' },
+        { id: 10, img: Cafe, title: 'Cafeteria/Recreation' },
+        { id: 11, img: Storage, title: 'Storages' },
+        { id: 12, img: Locker, title: 'Lockers' },
 
         // Add more furniture data here
     ];

@@ -1,25 +1,25 @@
 import { React, useState, useEffect,useRef } from 'react'
 import "../pages/Space.css"
-// import KitchenHero from "../assets/kitchen-hero.png"
-// import KitchenHeroMobile from "../assets/mobile-kitchen-hero.png"
-// import KitchenHeroRight from "../assets/kitchen-hero-right.png"
-// import heroMain from "../assets/hero-main.png"
-// import Bakery from "../assets/Bakery.png"
-// import Fridge from "../assets/fridge.png"
-// import restraunt from "../assets/Restraunt.png"
-// import kitchenStorage from "../assets/kitchen-storage.png"
-// import cloud from "../assets/cloud.png"
+import KitchenHero from "../assets/kitchen-hero.png"
+import KitchenHeroMobile from "../assets/mobile-kitchen-hero.png"
+import KitchenHeroRight from "../assets/kitchen-hero-right.png"
+import heroMain from "../assets/hero-main.png"
+import Bakery from "../assets/Bakery.png"
+import Fridge from "../assets/fridge.png"
+import restraunt from "../assets/Restraunt.png"
+import kitchenStorage from "../assets/kitchen-storage.png"
+import cloud from "../assets/cloud.png"
 import { Thanks } from '../components/Thanks'; // Import the Thanks component
 import ReCAPTCHA from 'react-google-recaptcha';
 
 
 const Kitchen = () => {
     const furnitureData = [
-        { id: 1, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985079/Bakery_syezcs.png", title: 'Bakery Equipment' },
-        { id: 2, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985100/fridge_kanfzy.png", title: 'Refridgerator Equipment' },
-        { id: 3, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985137/Restraunt_yizgu2.png", title: 'Restraunt Equipment' },
-        { id: 4, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985114/kitchen-storage_dpkllm.png", title: 'Storage Equipment' },
-        { id: 5, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985084/cloud_cqaiqb.png", title: 'Cloud Equipment' },
+        { id: 1, img: Bakery, title: 'Bakery Equipment' },
+        { id: 2, img: Fridge, title: 'Refridgerator Equipment' },
+        { id: 3, img: restraunt, title: 'Restraunt Equipment' },
+        { id: 4, img: kitchenStorage, title: 'Storage Equipment' },
+        { id: 5, img: cloud, title: 'Cloud Equipment' },
 
 
         // Add more furniture data here
