@@ -38,8 +38,8 @@
 .space-hero-left {
   width: 50%;
   position: relative;
-
 }
+
 
 
 .space-hero-left h1 {
@@ -153,13 +153,13 @@
   display: none;
 }
 
+.lab {
+  margin-top: -9vh;
+}
+
 
 #hero-space-para{
   display: none;
-}
-
-.lab {
-  margin-top: -9vh;
 }
 
 @media (max-width: 768px) {
@@ -218,7 +218,13 @@
   .cards-container {
     width: 90%;
   }
-
+  #hero-space-para{
+    display: block;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+  }
+  
 
   .space2-heading h1 {
     display: none;
@@ -228,7 +234,8 @@
     width: 70%;
     margin-left: 15%;
     text-align: center;
-    margin-top: -100%;
+    display: none;
+    /* margin-top: -80%; */
   }
 
   .cards-container {
@@ -253,15 +260,8 @@
     width: 100%;
     text-align: center;
   }
-
-
-  #hero-space-para{
-    display: block;
-    width: 80%;
-    text-align: center;
-    margin: auto;
-  }
 }
+
 
 
 .dropdown {
