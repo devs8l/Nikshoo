@@ -42,52 +42,52 @@ export const Rotate = () => {
             id: 1,
             heading: 'Office Space',
             content: 'Content for Office Space',
-            image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985084/center-left_qmfdfg.png",
+            image: centerpiece,
             rightTop: {
                 link: '/office',
                 h1: 'Office Desk',
                 para: 'Beautiful Color Collection',
-                image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985130/office-top_oa6fmy.png"
+                image: officetop
             },
             bottomLeft: {
                 h1: 'Rotational Chairs',
-                image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985127/office-b-l_ae7did.png"
+                image: officeleft
             },
             bottomRight: {
                 h1: 'Workstations',
-                image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985131/office-workstation_tq2lwj.png"
+                image: officeright
             }
         },
         {
             id: 2,
             heading: 'Education Space',
             content: 'Content for Education Space',
-            image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985125/mg4_tokh6q.png",
+            image: eduImg,
             rightTop: {
                 link: '/education',
                 h1: 'Education Space',
                 para: 'Beautiful Color Collection',
-                image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985091/edu-hero-right_hos1ws.png"
+                image: eduHeroRight
             },
             bottomLeft: {
                 h1: 'Library',
-                image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985117/library_oortad.png"
+                image: Library
             },
             bottomRight: {
                 h1: 'Acommodation',
-                image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985122/metalbed_oux3pj.png"
+                image: metalBed
             }
         },
         {
             id: 3,
             heading: 'Commercial Kitchen',
             content: 'Content for Commercial Kitchen',
-            image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985126/mg5-2_rruuqa.jpg",
+            image: Kitchen,
             rightTop: {
                 link: '/kitchen',
                 h1: 'Commercial Kitchen',
                 para: '',
-                image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985085/com-kitchen_ovonx8.png"
+                image: kitchenRotate
             },
             bottomLeft: {
                 h1: 'Rotational Chairs',
@@ -102,12 +102,12 @@ export const Rotate = () => {
             id: 4,
             heading: 'Healthcare Space',
             content: 'Content for Healthcare Space',
-            image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985124/mg2_fjrwfj.png",
+            image: med,
             rightTop: {
                 link: '/healthcare',
                 h1: 'Healthcare Space',
                 para: '',
-                image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985081/bed-health_epc9bu.png"
+                image: hbed
             },
             bottomLeft: {
                 h1: 'Rotational Chairs',
@@ -122,12 +122,12 @@ export const Rotate = () => {
             id: 5,
             heading: 'Laboratory Space',
             content: 'Content for Laboratory Space',
-            image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985123/mg3-2_qa5nie.webp",
+            image: lab,
             rightTop: {
                 link: '/lab',
                 h1: 'Laboratory Space',
                 para: '',
-                image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985117/lab2_tjw2zi.png"
+                image: labRotate
             },
             bottomLeft: {
                 h1: 'Rotational Chairs',
@@ -176,10 +176,10 @@ export const Rotate = () => {
             <div className="atomic-model">
                 <div className="left-div">
                     <div className="circle-div">
-                        <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985084/circles_popvhc.png" alt="" />
+                        <img src={coencircles} alt="" />
                     </div>
                     <div className="nucleus">
-                        <img src={activeImage}className="central-image" alt="Central" />
+                        <img src={activeImage} className="central-image" alt="Central" />
                         {circles.map((circle, index) => (
                             <div
                                 key={circle.id}

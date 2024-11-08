@@ -239,7 +239,7 @@
     border-radius: 4px;
     width: 25%; /* Makes the select box take full width of the parent */
     display: inline-block;
-    background-color: #23AA9B;
+    background-color: #148779;
     color: white; /* Text color */
     text-align: center;
     appearance: none; /* Hides the default dropdown arrow */
@@ -383,17 +383,4 @@ input[type="file"]{
     }
 
 
-    .partner-form{
-      margin-top: -10vh;
-    }
-
-    .upload{
-      font-size: 5vw;
-    }
-
-    .partner-section select{
-      font-size: 3vw;
-      width: 50%;
-    }
-    
   }

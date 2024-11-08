@@ -1,20 +1,13 @@
-html,
-body {
+html, body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    /* Prevent horizontal scrolling globally */
+    overflow-x: hidden; /* Prevent horizontal scrolling globally */
     width: 100%;
     /* height: -webkit-fill-available; */
     position: relative;
 }
 
-@font-face {
-    font-family: Jakarta;
-    src: url(https://res.cloudinary.com/dicusurfx/raw/upload/v1730985097/PlusJakartaSans-Medium_lqgfio.ttf);
-}
-
-.whatsapp-ct {
+.whatsapp-ct{
     position: fixed;
     /* background: #a00e0e; */
     top: 85%;
@@ -25,22 +18,13 @@ body {
     padding: 2vw;
 }
 
-.whatsapp-ct img {
+.whatsapp-ct img{
     width: 70%;
-}
-
-::placeholder {
-    font-size: 1vw;
-}
-
-textarea::placeholder {
-    font-family: Jakarta;
-    font-size: 1vw;
 }
 
 
 @media (max-width:500px) {
-    .whatsapp-ct {
+    .whatsapp-ct{
         width: 15%;
         height: 7%;
         top: 86.5%;
@@ -49,19 +33,8 @@ textarea::placeholder {
         border-radius: 40px 0px 0px 40px;
         align-items: center;
     }
-
-    ::placeholder {
-        font-size: 3vw;
-    }
-
-
-    textarea::placeholder {
-        font-family: Jakarta;
-        font-size: 3vw;
-    }
-
-    .whatsapp-ct img {
+    .whatsapp-ct img{
         width: 60%;
-        margin-left: 4vw;
+        margin-left:4vw;
     }
 }

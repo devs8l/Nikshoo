@@ -206,25 +206,24 @@ const Education = () => {
     return (
         <div className='space-wrap'>
             <div className="space-hero">
-                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985093/edu-hero_fwlzig.png" className='desktop' alt="" />
-                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985126/mobile-education-hero_qbqznr.png" className='mobile' alt="" />
+                <img src={eduHero} className='desktop' alt="" />
+                <img src={eduHeroMobile} className='mobile' alt="" />
                 <div className="space-hero-left">
                     <h1>Education Spaces</h1>
                     <p onClick={toggleFormVisibility} className='space-para'><u>Enquire Now</u></p>
-                    <p id='hero-space-para'>Our Solutions for  Education Spaces include, but are not limited to</p>
 
                 </div>
                 <div className="space-hero-right edu">
-                    <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985091/edu-hero-right_hos1ws.png" alt="" />
+                    <img src={eduHeroRight} alt="" />
                 </div>
             </div>
 
             <div className="space2">
-                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png" alt="" />
+                <img src={heroMain} alt="" />
                 <div className="space2-heading">
 
                     <h1>Products in Education Spaces</h1>
-                    <p>Our Solutions for  Education Spaces include, but are not limited to</p>
+                    <p>Our Solutions for  Education Spaces include, but are not limited to:</p>
                 </div>
 
                 <div className="cards-container">

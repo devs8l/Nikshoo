@@ -174,21 +174,19 @@ const Kitchen = () => {
     return (
         <div className='space-wrap'>
             <div className="space-hero">
-                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985115/kitchen-hero_hiwmyk.png" className='desktop' alt="" />
-                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985126/mobile-kitchen-hero_wnni0y.png" className='mobile' alt="" />
+                <img src={KitchenHero} className='desktop' alt="" />
+                <img src={KitchenHeroMobile} className='mobile' alt="" />
                 <div className="space-hero-left">
                     <h1>Commercial Kitchen</h1>
                     <p onClick={toggleFormVisibility} className='space-para'><u>Enquire Now</u></p>
-                    <p id='hero-space-para'> Our Solutions for  Commercial Kitchen include, but are not limited to</p>
-
                 </div>
                 <div className="space-hero-right kitchen">
-                    <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985112/kitchen-hero-right_dqrxox.png" alt="" />
+                    <img src={KitchenHeroRight} alt="" />
                 </div>
             </div>
 
             <div className="space2 kit">
-                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png" alt="" />
+                <img src={heroMain} alt="" />
                 <div className="space2-heading">
                     <h1>Products in Commercial Kitchen</h1>
                     <p>Our Solutions for  Commercial Kitchen include, but are not limited to:</p>

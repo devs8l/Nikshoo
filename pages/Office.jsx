@@ -189,24 +189,22 @@ const Office = () => {
     return (
         <div className='space-wrap'>
             <div className="space-hero">
-                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985127/mobile-office-hero_phfgvu.png" className="mobile" alt="" loading='lazy' />
-                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985132/office-hero_byf2pd.png" className="desktop" alt="" loading='lazy' />
+                <img src={officeHeroMobile} className="mobile" alt="" loading='lazy' />
+                <img src={officeHero} className="desktop" alt="" loading='lazy' />
                 <div className="space-hero-left">
                     <h1>Office Spaces</h1>
                     <p onClick={toggleFormVisibility} className='space-para'><u>Enquire Now</u></p>
-                    <p id='hero-space-para'>Our Solutions for  Office Spaces include, but are not limited to</p>
-                    
                 </div>
                 <div className="space-hero-right">
-                    <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985128/office-hero-right_m1ubvq.png" alt="" loading='lazy' />
+                    <img src={officeHeroRight} alt="" loading='lazy' />
                 </div>
             </div>
 
             <div className="space2">
-                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png" alt="" />
+                <img src={heroMain} alt="" />
                 <div className="space2-heading">
                     <h1>Products in Office Spaces</h1>
-                    <p>Our Solutions for  Office Spaces include, but are not limited to</p>
+                    <p>Our Solutions for  Office Spaces include, but are not limited to:</p>
                 </div>
 
                 <div className="cards-container">

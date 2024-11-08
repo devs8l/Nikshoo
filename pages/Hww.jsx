@@ -1,13 +1,13 @@
 import React, { useState, useRef,useEffect } from 'react';
 import '../pages/Hww.css';
-// import hww1 from "../assets/hww1.png";
-// import hww2 from "../assets/hww2.png";
-// import hww3 from "../assets/hww3.png";
-// import hww4 from "../assets/hww4.png";
-// import hww5 from "../assets/hww5.png";
-// import heroMain from "../assets/hero-main.png";
-// import hwwHero from "../assets/hww-hero.png";
-// import hwwFoot from "../assets/hww-footer.png";
+import hww1 from "../assets/hww1.png";
+import hww2 from "../assets/hww2.png";
+import hww3 from "../assets/hww3.png";
+import hww4 from "../assets/hww4.png";
+import hww5 from "../assets/hww5.png";
+import heroMain from "../assets/hero-main.png";
+import hwwHero from "../assets/hww-hero.png";
+import hwwFoot from "../assets/hww-footer.png";
 import { Thanks } from '../components/Thanks'; // Import the Thanks component
 import ReCAPTCHA from 'react-google-recaptcha';
 
@@ -187,20 +187,20 @@ const Hww = () => {
         <meta name="keywords" content="furniture, consultation, space planning, installation, product selection, after-sales support" />
       </Helmet>
       <div className="hero-hww">
-        <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png" alt="Hero main" loading="lazy" />
+        <img src={heroMain} alt="Hero main" loading="lazy" />
 
         <div className="hww-hero-con">
           <h1>How We Work</h1>
           <p className='hww-para'>At Nikshoo,  we're dedicated to providing exceptional  furniture solutions that enhance your work environment. Here's an overview of our collaborative and tailored approach:</p>
         </div>
         <div className="hww-img-div">
-          <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985106/hww-hero_u9znwi.png" alt="How we work hero" loading="lazy" />
+          <img src={hwwHero} alt="How we work hero" loading="lazy" />
 
         </div>
       </div>
       <div className="image-container">
         <div className="image-part part-1">
-          <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985108/hww1_ot7qsu.png" alt="Consultation process" loading="lazy" />
+          <img src={hww1} alt="Consultation process" loading="lazy" />
 
           <div className="hww-con">
             <div className="num">
@@ -217,7 +217,7 @@ const Hww = () => {
           </div>
         </div>
         <div className="image-part part-2">
-          <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985110/hww2_pn1bgn.png" alt="Space planning process" loading="lazy" />
+          <img src={hww2} alt="Space planning process" loading="lazy" />
 
           <div className="hww-con">
             <div className="num">
@@ -233,7 +233,7 @@ const Hww = () => {
           </div>
         </div>
         <div className="image-part part-3">
-          <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985110/hww3_ip7lfd.png" alt="Product selection process" loading="lazy" />
+          <img src={hww3} alt="Product selection process" loading="lazy" />
 
           <div className="hww-con">
             <div className="num">
@@ -248,7 +248,7 @@ const Hww = () => {
           </div>
         </div>
         <div className="image-part part-4">
-          <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985110/hww4_finfqp.png" alt="Installation process" loading="lazy" />
+          <img src={hww4} alt="Installation process" loading="lazy" />
 
           <div className="hww-con">
             <div className="num">
@@ -264,7 +264,7 @@ const Hww = () => {
           </div>
         </div>
         <div className="image-part part-5">
-          <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985111/hww5_crajpa.png" alt="After sales support process" loading="lazy" />
+          <img src={hww5} alt="After sales support process" loading="lazy" />
 
           <div className="hww-con">
             <div className="num">
@@ -289,7 +289,7 @@ const Hww = () => {
             </button>
           </div>
           <div className="hww-img-div">
-            <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985106/hww-footer_qpsb8f.png" alt="How we work footer" loading="lazy" />
+            <img src={hwwFoot} alt="How we work footer" loading="lazy" />
           </div>
         </div>
       </div>
@@ -311,8 +311,8 @@ const Hww = () => {
                   required
                 />
               </div>
-              <div className="half-row ">
-                <div className='hww-half'>
+              <div className="half-row">
+                <div>
                   <label>Phone Number</label>
                   <input
                     type="tel"

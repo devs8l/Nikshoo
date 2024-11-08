@@ -175,25 +175,24 @@ const Lab = () => {
     return (
         <div className='space-wrap'>
             <div className="space-hero">
-                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985117/lab-hero_lpmoig.png" className='desktop' alt="" />
-                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985127/mobile-laboratory-hero_di728q.png" className='mobile' alt="" />
+                <img src={LabHero} className='desktop' alt="" />
+                <img src={LabHeroMobile} className='mobile' alt="" />
                 <div className="space-hero-left">
                     <h1>Laboratory Spaces</h1>
                     <p onClick={toggleFormVisibility} className='space-para'><u>Enquire Now</u></p>
-                    <p id='hero-space-para'>Our Solutions for Laboratory Spaces
-                        include, but are not limited to</p>
+                    
                 </div>
                 <div className="space-hero-right kitchen">
-                    <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985115/lab-hero-right_vzucee.png" alt="" />
+                    <img src={LabHeroRight} alt="" />
                 </div>
             </div>
 
             <div className="space2 lab">
-                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png" alt="" />
+                <img src={heroMain} alt="" />
                 <div className="space2-heading">
                     <h1>Products in Laboratory Spaces</h1>
                     <p>Our Solutions for Laboratory Spaces
-                        include, but are not limited to</p>
+                        include, but are not limited to:</p>
                 </div>
 
                 <div className="cards-container">

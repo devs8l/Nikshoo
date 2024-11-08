@@ -307,8 +307,8 @@ a {
 }
 
 .electron h4 {
-  font-size: 0.8vw;
-  width: 60%;
+  font-size: 0.7vw;
+  width: 90%;
   text-align: center;
   color: rgba(0, 128, 128, 0.471);
   font-weight: 600;
@@ -377,15 +377,6 @@ a {
 .call{
   display: none;
 }
-
-.special-align{
-  left: -45%;
-  top:40%;
-  scale: 2.4;
-  
-  
-}
-
 @media (max-width:768px) {
   .call{
     display: block;
@@ -651,6 +642,7 @@ a {
 
 
 
+
 }
 
 .carousel-indicator {
@@ -661,7 +653,6 @@ a {
   left: -2%;
   top: 25%;
   z-index: 100;
-  display: none;
 }
 
 .carousel-dot {
@@ -676,11 +667,4 @@ a {
 
 .carousel-dot.active-dot {
   background-color: #23AA9B; /* Active color to highlight the current index */
-}
-
-@media (max-width:500px) {
-  
-  .carousel-indicator{
-    display: flex;
-  }
 }
