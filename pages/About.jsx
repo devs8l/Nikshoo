@@ -1,20 +1,20 @@
 import React from 'react'
 import "../pages/About.css"
-import heroMain from "../assets/hero-main.png"
-import aboutright from "../assets/about-hero.png"
-import neha from "../assets/neha.png"
-import anirudh from "../assets/anirudh.png"
-import Carousel from '../components/Carousel'
-import ab1 from "../assets/ab1.png"
-import ab2 from "../assets/ab2.png"
-import ab3 from "../assets/ab3.png"
-import ab4 from "../assets/ab4.png"
-import filus from "../assets/footer-ilus.png"
+// import heroMain from "../assets/hero-main.png"
+// import aboutright from "../assets/about-hero.png"
+// import neha from "../assets/neha.png"
+// import anirudh from "../assets/anirudh.png"
+// import Carousel from '../components/Carousel'
+// import ab1 from "../assets/ab1.png"
+// import ab2 from "../assets/ab2.png"
+// import ab3 from "../assets/ab3.png"
+// import ab4 from "../assets/ab4.png"
+// import filus from "../assets/footer-ilus.png"
 
 const About = () => {
     return (
         <div className='about-wrap'>
-            <img src={heroMain} alt="" />
+            <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png" alt="" />
             <div className="about-hero">
                 <div className="about-hero-left">
                     <h1>About Us</h1>
@@ -22,7 +22,7 @@ const About = () => {
                     </p>
                 </div>
                 <div className="about-hero-right">
-                    <img src={aboutright} alt="" />
+                    <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985079/about-hero_t5d9bs.png" alt="" />
                 </div>
             </div>
             <div className="about-offer">
@@ -41,7 +41,7 @@ const About = () => {
                 <div className="founders">
                     <div className="founder-sub">
                         <div className="founder-img">
-                            <img src={neha} alt="" />
+                            <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985127/neha_pttyyv.png" alt="" />
                         </div>
                         <h2>Neha Halen</h2>
                         <p>Co-Founder at Greenshoots Retail Pvt Ltd.</p>
@@ -50,7 +50,7 @@ const About = () => {
                     </div>
                     <div className="founder-sub">
                         <div className="founder-img">
-                            <img src={anirudh} alt="" />
+                            <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985080/anirudh_uxcgbw.png" alt="" />
                         </div>
                         <h2>Anirudh Halen</h2>
                         <p>Co-Founder at Greenshoots Retail Pvt Ltd.</p>
@@ -65,20 +65,20 @@ const About = () => {
             <div className="about4">
                 <h1>Our Values</h1>
                 <div className="about4-img-div">
-                    <img src={ab1} alt="" />
-                    <img src={ab2} alt="" />
+                    <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985079/ab1_cw8uv9.png" alt="" />
+                    <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985079/ab2_lkyrxw.png" alt="" />
                     {/* <img src={ab3} alt="" />
                     <img src={ab4} alt="" /> */}
                 </div>
                 <div className="about4-img-div">
                     {/* <img src={ab1} alt="" />
                     <img src={ab2} alt="" /> */}
-                    <img src={ab3} alt="" />
-                    <img src={ab4} alt="" />
+                    <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985079/ab3_lymfs2.png" alt="" />
+                    <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985079/ab4_mrxhxi.png" alt="" />
                 </div>
             </div>
             <div className="footer-ilus">
-                <img src={filus} alt="" />
+                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985099/footer-ilus_ffxt4i.png" alt="" />
             </div>
         </div>
     )

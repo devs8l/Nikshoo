@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import './App.css';
-import Loader from '../components/Loader'; // Import the Loader component
+import Loader from '../components/Loader';
 import Hero from '../pages/Hero';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -26,26 +26,34 @@ function App() {
 
   // State to manage loading
   const [isLoading, setIsLoading] = useState(true);
+  const [showLoader, setShowLoader] = useState(true); // State to control loader visibility
 
-  // Effect to handle loading state on route change
   useEffect(() => {
-    // Show loader at the beginning of each route change
-    setIsLoading(true);
+    const hasVisited = sessionStorage.getItem(location.pathname);
 
-    // Hide loader after a delay (simulate loading time)
-    const timer = setTimeout(() => {
+    if (hasVisited) {
       setIsLoading(false);
-    }, 3000); // Adjust delay as needed
+      setShowLoader(false);
+    } else {
+      setIsLoading(true);
+      setShowLoader(true);
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+        setTimeout(() => setShowLoader(false), 500); // Additional delay to allow fade-out
+        sessionStorage.setItem(location.pathname, "true");
+      }, 3000);
 
-    return () => clearTimeout(timer); // Clean up timer on unmount
-  }, [location.pathname]); // Trigger on route change
+      return () => clearTimeout(timer);
+    }
+  }, [location.pathname]);
 
   return (
     <>
-      {isLoading && <Loader />} {/* Render loader if isLoading is true */}
-      
-      {!isAdminRoute && !isLoading && <Navbar />} {/* Conditionally render Navbar */}
-      
+      {/* Show loader if showLoader is true */}
+      {showLoader && <Loader isVisible={isLoading} />}
+
+      {!isAdminRoute && !isLoading && <Navbar />}
+
       <div className="whatsapp-ct">
         <a href="https://wa.me/+918103702839" target='_blank' rel="noopener noreferrer">
           <img src={navimg} alt="WhatsApp Icon" />
@@ -53,7 +61,6 @@ function App() {
         <Cookie />
       </div>
 
-      {/* Conditionally render routes when not loading */}
       {!isLoading && (
         <Routes>
           <Route path="/" element={<Hero />} />
@@ -72,7 +79,7 @@ function App() {
         </Routes>
       )}
 
-      {!isAdminRoute && !isLoading && <Footer />} {/* Conditionally render Footer */}
+      {!isAdminRoute && !isLoading && <Footer />}
     </>
   );
 }

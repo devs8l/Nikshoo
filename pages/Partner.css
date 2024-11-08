@@ -1,386 +1,399 @@
 .partner-wrap{
-    width: 100vw;
-    min-height: 100svh;
-    background: white;
-    position: relative;
+  width: 100vw;
+  min-height: 100svh;
+  background: white;
+  position: relative;
 }
 
 .partner-wrap>img{
-    width: 100%;
-    height: 20%;
-    object-fit: cover;
-    position: absolute;
+  width: 100%;
+  height: 20%;
+  object-fit: cover;
+  position: absolute;
 }
 .partner{
-  margin-top: -0vh;
+margin-top: -0vh;
 }
 
 .partner1{
-    width: 100%;
-    height: 100svh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3vw;
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;
 }
 @keyframes scaleAnimation {
-    0% {
-      transform: scale(1); /* Start at original size */
-    }
-    50% {
-      transform: scale(0.9); /* Scale down to 80% of the original size */
-    }
-    100% {
-      transform: scale(1); /* Return to original size */
-    }
+  0% {
+    transform: scale(1); /* Start at original size */
   }
+  50% {
+    transform: scale(0.9); /* Scale down to 80% of the original size */
+  }
+  100% {
+    transform: scale(1); /* Return to original size */
+  }
+}
 .partner1-right img{
 
-    animation: scaleAnimation 4s infinite;
+  animation: scaleAnimation 4s infinite;
 }
 .partner1-left{
-    width: 30%;
-    position: relative;
-    /* height: 40%; */
+  width: 30%;
+  position: relative;
+  /* height: 40%; */
 
 }
 .partner1-left p{
-    width: 80%;
-    font-size: 1.1vw;
-    color: rgba(126, 122, 122, 0.866);
+  width: 80%;
+  font-size: 1.1vw;
+  color: rgba(126, 122, 122, 0.866);
 }
 .partner1-left h1{
-    font-size: 3vw;
-    font-weight: bold;
-    font-family: 'Jakarta';
+  font-size: 3vw;
+  font-weight: bold;
+  font-family: 'Jakarta';
 }
 
 .partner2{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 4vw;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4vw;
 }
 .partner-2-sub{
-    width: 60%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .partner2-colab{
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 2vw;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2vw;
 }
 .partner2-colab img{
-    width: 20%;
+  width: 20%;
 }
 .partner2-colab p{
-    width: 55%;
-    text-align: center;
-    color: #585C5B;
-    font-size: 1.1vw;
+  width: 55%;
+  text-align: center;
+  color: #585C5B;
+  font-size: 1.1vw;
 }
 .partner2 h1{
-    font-size: 2.3vw;
+  font-size: 2.3vw;
 }
 
 
 .partner3{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 12vh;
-    /* padding: 4vw; */
-    
-    /* height: 170vh; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 12vh;
+  /* padding: 4vw; */
+  
+  /* height: 170vh; */
 }
 .partner3 h1{
-  font-size: 2vw;
-  text-align: center;
+font-size: 2vw;
+text-align: center;
 }
 
 .partner3-sub{
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10vw;
-    margin-top: 2vw;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10vw;
+  margin-top: 2vw;
 }
 .partner3-sub img{
-    width: 45%;
-    object-fit: contain;
+  width: 45%;
+  object-fit: contain;
 }
 .partner3 p{
-  color: #A7A3A2;
-  font-size: 1.1vw;
+color: #A7A3A2;
+font-size: 1.1vw;
 }
 
 .reverse{
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 .partner-form{
-    width: 100%;
-    /* background: white; */
-    min-height:170vh;
-    display: flex;
-    margin-top: 15vh;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  width: 100%;
+  /* background: white; */
+  min-height:170vh;
+  display: flex;
+  margin-top: 15vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-    position: relative;
+  position: relative;
 }
 .upload{
-  margin-bottom: -0.6vh;
-  font-size: 1.5vw;
+margin-bottom: -0.6vh;
+font-size: 1.5vw;
 }
 
 
 .custom-form {
-    width: 45%;
-    margin: 0 auto;
-    padding: 4vw;
-    background-color: white;
-    border: 2px dashed #23AA9B;
-    border-radius: 8px;
-    margin-bottom: 3vh;
-  }
-  
-  .custom-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-  }
-  
-  .custom-form .form-row {
-    margin-bottom: 16px;
-  }
-  
-  .custom-form .two-columns {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .custom-form .form-column {
-    width: 48%;
-  }
-  
-  .custom-form input, 
-  .custom-form select, 
-  .custom-form textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  textarea{
-    font-family: "Sans-Serif";
-  }
-  
-  .custom-form .file-label {
-    display: inline-block;
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .custom-form .file-label:hover {
-    background-color: white;
-  }
-  
-  .custom-form .submit-row {
-    text-align: center;
-  }
-  
-  .custom-form button {
-    padding: 10px 50px;
-    background-color: #23AA9B;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 4vh;
-  }
-  
-  .custom-form button:hover {
-    background-color: #0c4942;
-  }
-  
-  .partner-section {
-    text-align: center;
-    margin-bottom: 16px;
-  }
-  
-  .partner-section label, 
-  .partner-section select {
-    color: white;
-  }
-  
-  
-  .partner-section select {
-    padding: 13px;
-    font-size: 16px;
-    padding-left: 0;
-    padding-right: 30px; /* Space for the dropdown arrow */
-    border-radius: 4px;
-    width: 25%; /* Makes the select box take full width of the parent */
-    display: inline-block;
-    background-color: #148779;
-    color: white; /* Text color */
-    text-align: center;
-    appearance: none; /* Hides the default dropdown arrow */
-    background-image: url('../assets/dropdown-icon.png'); /* Add a custom dropdown icon */
-    background-repeat: no-repeat;
-    background-position: right 20px center; /* Align the dropdown icon */
-    background-size: 12px;
+  width: 45%;
+  margin: 0 auto;
+  padding: 4vw;
+  background-color: white;
+  border: 2px dashed #23AA9B;
+  border-radius: 8px;
+  margin-bottom: 3vh;
+}
+
+.custom-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.custom-form .form-row {
+  margin-bottom: 16px;
+}
+
+.custom-form .two-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom-form .form-column {
+  width: 48%;
+}
+
+.custom-form input, 
+.custom-form select, 
+.custom-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea{
+  font-family: "Sans-Serif";
+}
+
+.custom-form .file-label {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-form .file-label:hover {
+  background-color: white;
+}
+
+.custom-form .submit-row {
+  text-align: center;
+}
+
+.custom-form button {
+  padding: 10px 50px;
+  background-color: #23AA9B;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 4vh;
+}
+
+.custom-form button:hover {
+  background-color: #0c4942;
+}
+
+.partner-section {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.partner-section label, 
+.partner-section select {
+  color: white;
+}
+
+
+.partner-section select {
+  padding: 13px;
+  font-size: 16px;
+  padding-left: 0;
+  padding-right: 30px; /* Space for the dropdown arrow */
+  border-radius: 4px;
+  width: 25%; /* Makes the select box take full width of the parent */
+  display: inline-block;
+  background-color: #23AA9B;
+  color: white; /* Text color */
+  text-align: center;
+  appearance: none; /* Hides the default dropdown arrow */
+  background-image: url('../assets/dropdown-icon.png'); /* Add a custom dropdown icon */
+  background-repeat: no-repeat;
+  background-position: right 20px center; /* Align the dropdown icon */
+  background-size: 12px;
 }
 
 
 
-  /* Style for the file input button */
+/* Style for the file input button */
 input[type="file"]{
-    display: none;
+  display: none;
 }
 
 #doc{
-    color: white;
-    background: #23AA9B;
-    padding: 1vw;
-    text-align: center;
-    border-radius: 10px;
+  color: white;
+  background: #23AA9B;
+  padding: 1vw;
+  text-align: center;
+  border-radius: 10px;
 }
 
 
 #leftyy-part{
-    position: absolute;
-    width: 60%;
-    top: 70%;
-    left: -20%;
-    width: 60%;
-    height: 40%;
-    object-fit: contain;
+  position: absolute;
+  width: 60%;
+  top: 70%;
+  left: -20%;
+  width: 60%;
+  height: 40%;
+  object-fit: contain;
+  
+}
+
+#rightyy-part{
+  position: absolute;
+  width: 40%;
+  top: 65%;
+  right: -20%;
+  width: 70%;
+  height: 40%;
+  object-fit: contain;
+}
+
+.git-partner{
+  margin-top: 1vh !important;
+  width: 30% !important;
+}
+
+@media (max-width:768px) {
+  .partner1{
+    flex-direction: column-reverse;
+    gap: 5vh;
+  }
+  .partner1-left{
+    width: 100%;
     
+
+  }
+  .partner1-left h1{
+    font-size: 6vw;
+    text-align: center;
+  }
+  .partner1-left p{
+    font-size: 3vw;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 3vh;
+  }
+  .partner1-left a{
+    
+    text-align: center;
+    font-size: 4vw;
+    margin-left: 43%;
   }
   
-  #rightyy-part{
-    position: absolute;
-    width: 40%;
-    top: 65%;
-    right: -20%;
+  .partner1-right img{
+    width: 90%;
+    margin-left: 6vw;
+  }
+
+
+  .partner-2-sub{
+    flex-direction: column;
+  }
+
+  .partner2-colab{
+    width: 100%;
+  }
+  .partner2-colab p{
+    width: 100%;
+    font-size: 3vw;
+  }
+  .partner2{
+    gap: 8vh;
+    background: #E9F7F5;
+    padding: 6vh 0vh;
+  }
+  .partner2 h1{
+    font-size: 6vw;
+    width: 50%;
+    margin: auto;
+    /* background: #eb0505; */
+    text-align: center;
+  }
+  .partner3-con p{
+    font-size: 3vw;
+  }
+
+
+  .partner3 h1{
+    font-size: 6vw;
+  }
+  .partner3-sub{
+    flex-direction: column-reverse;
+  }
+  .partner3-sub img{
     width: 70%;
-    height: 40%;
-    object-fit: contain;
+  }
+  .partner3-sub h2{
+    text-align: center;
+  }
+  .custom-form{
+    width: 80%;
+  }
+  .partner-section select{
+    width: 45%;
+    padding: 3vw;
+
+  }
+  .form-row input {
+    width: 90%;
+  }
+  .form-row textarea{
+    width: 90%;
+  }
+  .form-column input{
+    width: 80%;
   }
 
-  .git-partner{
-    margin-top: 1vh !important;
-    width: 30% !important;
+
+  .partner-form{
+    margin-top: -10vh;
+  }
+
+  .upload{
+    font-size: 5vw;
+  }
+
+  .partner-section select{
+    font-size: 3vw;
+    width: 50%;
   }
   
-  @media (max-width:768px) {
-    .partner1{
-      flex-direction: column-reverse;
-      gap: 5vh;
-    }
-    .partner1-left{
-      width: 100%;
-      
-
-    }
-    .partner1-left h1{
-      font-size: 6vw;
-      text-align: center;
-    }
-    .partner1-left p{
-      font-size: 3vw;
-      text-align: center;
-      margin: auto;
-      margin-bottom: 3vh;
-    }
-    .partner1-left a{
-      
-      text-align: center;
-      font-size: 4vw;
-      margin-left: 43%;
-    }
-    
-    .partner1-right img{
-      width: 90%;
-      margin-left: 6vw;
-    }
-
-
-    .partner-2-sub{
-      flex-direction: column;
-    }
-
-    .partner2-colab{
-      width: 100%;
-    }
-    .partner2-colab p{
-      width: 100%;
-      font-size: 3vw;
-    }
-    .partner2{
-      gap: 8vh;
-      background: #E9F7F5;
-      padding: 6vh 0vh;
-    }
-    .partner2 h1{
-      font-size: 6vw;
-      width: 50%;
-      margin: auto;
-      /* background: #eb0505; */
-      text-align: center;
-    }
-    .partner3-con p{
-      font-size: 3vw;
-    }
-
-
-    .partner3 h1{
-      font-size: 6vw;
-    }
-    .partner3-sub{
-      flex-direction: column-reverse;
-    }
-    .partner3-sub img{
-      width: 70%;
-    }
-    .partner3-sub h2{
-      text-align: center;
-    }
-    .custom-form{
-      width: 80%;
-    }
-    .partner-section select{
-      width: 45%;
-      padding: 3vw;
-
-    }
-    .form-row input {
-      width: 90%;
-    }
-    .form-row textarea{
-      width: 90%;
-    }
-    .form-column input{
-      width: 80%;
-    }
-
-
-  }
+}

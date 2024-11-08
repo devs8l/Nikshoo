@@ -137,7 +137,7 @@
     flex-direction: column;
     height: 80vh;
     gap: 4vw;
-    margin-top: 40vh;
+    margin-top: 60vh;
 }
 .about4-img-div{
     width: 80%;
@@ -149,6 +149,7 @@
 .about4-img-div img{
     object-fit: contain;
     aspect-ratio: 4/3;
+    width: 30%;
     
 }
 

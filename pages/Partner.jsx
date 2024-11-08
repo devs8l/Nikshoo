@@ -1,16 +1,16 @@
 import React, { useState, useRef,useEffect } from 'react';
 import "../pages/Partner.css";
-import heroMain from "../assets/hero-main.png";
-import bp from "../assets/become-partner.png";
+// import heroMain from "../assets/hero-main.png";
+// import bp from "../assets/become-partner.png";
 
-import iconPartnerleft from "../assets/partner-2-r.png";
-import iconPartnerRight from "../assets/partner-2-l.png";
+// import iconPartnerleft from "../assets/partner-2-r.png";
+// import iconPartnerRight from "../assets/partner-2-l.png";
 
-import partnerone from "../assets/partner3-1.png";
-import partnertwo from "../assets/partner3-2.png";
-import partnerthree from "../assets/partner3-3.png";
-import lefty from "../assets/lefty.png";
-import righty from "../assets/righty.png";
+// import partnerone from "../assets/partner3-1.png";
+// import partnertwo from "../assets/partner3-2.png";
+// import partnerthree from "../assets/partner3-3.png";
+// import lefty from "../assets/lefty.png";
+// import righty from "../assets/righty.png";
 import { Thanks } from '../components/Thanks';
 import { MdOutlineFileUpload } from "react-icons/md";
 
@@ -245,9 +245,9 @@ const Partner = () => {
           "
                     />
                 </Helmet>
-                <img src={heroMain} alt="" />
-                <img src={lefty} alt="" id='leftyy-part' />
-                <img src={righty} alt="" id='rightyy-part' />
+                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png" alt="" />
+                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985117/lefty_bvf6e7.png" alt="" id='leftyy-part' />
+                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985138/righty_el1zci.png" alt="" id='rightyy-part' />
 
                 <div className="partner1">
                     <div className="partner1-left">
@@ -256,20 +256,20 @@ const Partner = () => {
                         <p href="" className='paragreen' onClick={scrollToGetInTouch}><u>Join Us!</u></p>
                     </div>
                     <div className="partner1-right">
-                        <img src={bp} alt="" />
+                        <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985080/become-partner_jllz8f.png" alt="" />
                     </div>
                 </div>
 
                 <div className="partner2">
-                    <h1>We Believe, Collaboration:</h1>
+                    <h1>We Believe, Collaboration</h1>
                     <div className="partner-2-sub">
                         <div className="partner2-colab">
-                            <img src={iconPartnerleft} alt="" />
+                            <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985134/partner-2-r_cypxjd.png" alt="" />
                             <p>Fosters a dynamic exchange of ideas, stimulating creativity and innovation.
                             </p>
                         </div>
                         <div className="partner2-colab">
-                            <img src={iconPartnerRight} alt="" />
+                            <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985133/partner-2-l_rk1foh.png" alt="" />
                             <p>Builds trust, strengthens communication, and develops stronger relationships.
                             </p>
 
@@ -286,7 +286,7 @@ const Partner = () => {
                             <p>2. Access to new technologies and tools</p>
                             <p>3. Exposure to new markets or clients</p>
                         </div>
-                        <img src={partnerone} alt="" />
+                        <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985135/partner3-1_qltxuq.png" alt="" />
                     </div>
                     <div className="partner3-sub reverse">
                         <div className="partner3-con">
@@ -296,7 +296,7 @@ const Partner = () => {
                             <p>2. Joint marketing efforts</p>
                             <p>3. Greater reach and brand exposure</p>
                         </div>
-                        <img src={partnertwo} alt="" />
+                        <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985135/partner3-2_capdd2.png" alt="" />
                     </div>
                     <div className="partner3-sub">
                         <div className="partner3-con">
@@ -306,7 +306,7 @@ const Partner = () => {
                             <p>2. Steady stream of projects</p>
                             <p>3. Priority access to new projects</p>
                         </div>
-                        <img src={partnerthree} alt="" />
+                        <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985135/partner3-3_dcacgm.png" alt="" />
                     </div>
                 </div>
 
@@ -321,6 +321,7 @@ const Partner = () => {
                                 name="partnerRole"
                                 value={formData.partnerRole}
                                 onChange={handleChange}
+                                required
                             >
                                 <option value="" disabled hidden>Partner as a</option>
                                 <option value="Designer">Designer</option>

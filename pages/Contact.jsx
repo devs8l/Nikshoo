@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import "../pages/Contact.css"
-import heroMain from "../assets/hero-main.png"
-import contactImg from "../assets/contact-img.png"
-import navimg from "../assets/Frame.png"
-import location from "../assets/location.png"
-import lefty from "../assets/lefty.png"
-import righty from "../assets/righty.png"
+// import heroMain from "../assets/hero-main.png"
+// import contactImg from "../assets/contact-img.png"
+// import navimg from "../assets/Frame.png"
+// import location from "../assets/location.png"
+// import lefty from "../assets/lefty.png"
+// import righty from "../assets/righty.png"
 
-import call from "../assets/call.png"
-import wsp from "../assets/wsp.png"
-import email from "../assets/email.png"
+// import call from "../assets/call.png" 
+// import wsp from "../assets/wsp.png"
+// import email from "../assets/email.png"
 
 
 import { Helmet } from 'react-helmet';
@@ -244,9 +244,9 @@ const Contact = () => {
           "
         />
       </Helmet>
-      <img src={heroMain} alt="Main Hero Image" loading="lazy" />
-      <img src={lefty} alt="Left Decoration" loading="lazy" id='leftyy' />
-      <img src={righty} alt="Right Decoration" loading="lazy" id='rightyy' />
+      <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png" alt="Main Hero Image" loading="lazy" />
+      <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985117/lefty_bvf6e7.png" alt="Left Decoration" loading="lazy" id='leftyy' />
+      <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985138/righty_el1zci.png" alt="Right Decoration" loading="lazy" id='rightyy' />
 
       <div className="contact-hero">
         <div className="contact-hero-left">
@@ -255,7 +255,7 @@ const Contact = () => {
           <p onClick={scrollToGetInTouch} className='paragreen'><u>Write To Us</u></p>
         </div>
         <div className="contact-hero-right">
-          <img src={contactImg} alt="Contact Hero Image" loading="lazy" />
+          <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985086/contact-img_jjxqm2.png" alt="Contact Hero Image" loading="lazy" />
         </div>
       </div>
 
@@ -263,29 +263,29 @@ const Contact = () => {
         {/* Contact Info Section */}
         <div className="contact-top">
           <div className="contact-ways">
-            <img src={call} alt="" />
+            <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985083/call_aj4ufu.png" alt="" />
             <h3>Call Us</h3>
             <p>+91{contactData.phone}</p>
           </div>
           <div className="contact-ways email">
-            <img src={email} alt="" />
+            <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985092/email_n38q4y.png" alt="" />
             <h3>Email Us</h3>
             <p>{contactData.email}</p>
           </div>
           <div className="contact-ways">
-            <img src={wsp} alt="" />
+            <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985144/wsp_ilkang.png" alt="" />
             <h3>WhatsApp Us</h3>
             <p>{contactData.whatsapp}</p>
           </div>
         </div>
         <div className="contact-bottom">
           <div className="contact-b-l">
-            <img src={navimg} alt="Visit Icon" loading="lazy" />
+            <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985100/Frame_dbegmd.png" alt="Visit Icon" loading="lazy" />
             <h3>Visit Us</h3>
           </div>
           <div className="contact-b-r">
             <div className="location">
-              <img src={location} alt="Location Icon" loading="lazy" />
+              <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985120/location_nfbgw9.png" alt="Location Icon" loading="lazy" />
               <h3>Indore:</h3>
               <p>{contactData.addresses}</p>
             </div>

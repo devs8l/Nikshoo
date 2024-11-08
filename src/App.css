@@ -23,6 +23,18 @@ html, body {
 }
 
 
+@font-face {
+    font-family: Jakarta;
+    src: url(https://res.cloudinary.com/dicusurfx/raw/upload/v1730985097/PlusJakartaSans-Medium_lqgfio.ttf);
+}
+
+::placeholder {
+    font-size: 1vw;
+}
+textarea::placeholder {
+    font-family: Jakarta;
+    font-size: 1vw;
+}
 @media (max-width:500px) {
     .whatsapp-ct{
         width: 15%;
@@ -36,5 +48,13 @@ html, body {
     .whatsapp-ct img{
         width: 60%;
         margin-left:4vw;
+    }
+
+    ::placeholder {
+        font-size: 3vw;
+    }
+    textarea::placeholder {
+        font-family: Jakarta;
+        font-size: 3vw;
     }
 }

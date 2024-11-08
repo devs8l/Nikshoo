@@ -65,7 +65,7 @@ const Footer = () => {
                 <div className="left-foot">
                     <div className="footer-logo">
                         <div className="footer-img-div">
-                            <img src={navimgfooter} alt="" />
+                            <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985099/footerlogo_xam8mm.png" alt="" />
                         </div>
                         <div className="footer-left-content">
                             <h2>Nikshoo</h2>
@@ -75,18 +75,18 @@ const Footer = () => {
                     <p>We are a commercial furniture solutions provider whose aim is to help people do their best work in the many places where work is done, by creating spaces that work better.</p>
 
                     <div className="icon-div-footer">
-                        <img src={link1} alt="" />
-                        <img src={link2} alt="" />
-                        <img src={link3} alt="" />
+                        <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985118/Link_vfe68e.png" alt="" />
+                        <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985118/link2_ec2mcx.png" alt="" />
+                        <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985118/link3_oyhlwx.png" alt="" />
                     </div>
 
                     <div className="gem">
                         <div className="gem1">
-                            <img src={flast} alt="" />
+                            <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985098/footer-last_v9d4j1.png" alt="" />
                             <p>We’re a GeM Registered Seller</p>
                         </div>
                         <div className="gem2">
-                            <img src={flast2} alt="" />
+                            <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985140/startup_fvbqec.png" alt="" />
                             <p>We're a DPIIT
                                 Registered Startup</p>
                         </div>
@@ -100,6 +100,7 @@ const Footer = () => {
                         <h3><a href="/partner">Become A Partner</a></h3>
                         <h3><a href="/about">About Us</a></h3>
                         <h3><a href="/contact">Contact Us</a></h3>
+                        <h3><a href="/blog">Blogs</a></h3>
                         <h3><a href="/privacy">Privacy Policy</a></h3>
                     </div>
                 </div>
