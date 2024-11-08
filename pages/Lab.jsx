@@ -1,14 +1,14 @@
 import { React, useState, useEffect ,useRef} from 'react'
 
 import "../pages/Space.css"
-import LabHero from "../assets/lab-hero.png"
-import LabHeroMobile from "../assets/mobile-laboratory-hero.png"
-import LabHeroRight from "../assets/lab-hero-right.png"
-import heroMain from "../assets/hero-main.png"
-import LabWork from "../assets/lab-work.png"
-import Fume from "../assets/lab-fume.png"
-import animal from "../assets/lab-animal.png"
-import LabSafe from "../assets/lab-safe.png"
+// import LabHero from "../assets/lab-hero.png"
+// import LabHeroMobile from "../assets/mobile-laboratory-hero.png"
+// import LabHeroRight from "../assets/lab-hero-right.png"
+// import heroMain from "../assets/hero-main.png"
+// import LabWork from "../assets/lab-work.png"
+// import Fume from "../assets/lab-fume.png"
+// import animal from "../assets/lab-animal.png"
+// import LabSafe from "../assets/lab-safe.png"
 import { Thanks } from '../components/Thanks'; // Import the Thanks component
 import ReCAPTCHA from 'react-google-recaptcha';
 
@@ -17,10 +17,10 @@ import ReCAPTCHA from 'react-google-recaptcha';
 
 const Lab = () => {
     const furnitureData = [
-        { id: 1, img: LabWork, title: 'Laboratory Workstations' },
-        { id: 2, img: Fume, title: 'Laboratory Fume Heads' },
-        { id: 3, img: animal, title: 'Animal House Furniture' },
-        { id: 4, img: LabSafe, title: 'Safety Cabinets' },
+        { id: 1, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985115/lab-work_rlwo4q.png", title: 'Laboratory Workstations' },
+        { id: 2, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1731005051/lab-fume_igjbfs.png", title: 'Laboratory Fume Heads' },
+        { id: 3, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1731005064/lab-animal_hrx1i6.png", title: 'Animal House Furniture' },
+        { id: 4, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985115/lab-safe_n7naws.png", title: 'Safety Cabinets' },
 
 
         // Add more furniture data here
@@ -175,24 +175,25 @@ const Lab = () => {
     return (
         <div className='space-wrap'>
             <div className="space-hero">
-                <img src={LabHero} className='desktop' alt="" />
-                <img src={LabHeroMobile} className='mobile' alt="" />
+                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985117/lab-hero_lpmoig.png" className='desktop' alt="" />
+                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985127/mobile-laboratory-hero_di728q.png" className='mobile' alt="" />
                 <div className="space-hero-left">
                     <h1>Laboratory Spaces</h1>
                     <p onClick={toggleFormVisibility} className='space-para'><u>Enquire Now</u></p>
-                    
+                    <p id='hero-space-para'>Our Solutions for Laboratory Spaces
+                        include, but are not limited to</p>
                 </div>
                 <div className="space-hero-right kitchen">
-                    <img src={LabHeroRight} alt="" />
+                    <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985115/lab-hero-right_vzucee.png" alt="" />
                 </div>
             </div>
 
             <div className="space2 lab">
-                <img src={heroMain} alt="" />
+                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png" alt="" />
                 <div className="space2-heading">
                     <h1>Products in Laboratory Spaces</h1>
                     <p>Our Solutions for Laboratory Spaces
-                        include, but are not limited to:</p>
+                        include, but are not limited to</p>
                 </div>
 
                 <div className="cards-container">

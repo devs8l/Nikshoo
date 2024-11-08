@@ -75,9 +75,15 @@ const Footer = () => {
                     <p>We are a commercial furniture solutions provider whose aim is to help people do their best work in the many places where work is done, by creating spaces that work better.</p>
 
                     <div className="icon-div-footer">
-                        <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985118/Link_vfe68e.png" alt="" />
-                        <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985118/link2_ec2mcx.png" alt="" />
-                        <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985118/link3_oyhlwx.png" alt="" />
+                        <a href="https://www.facebook.com/Officialnikshoo/">
+                            <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985118/Link_vfe68e.png" alt="" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/neha-halen-216b82200/">
+                            <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985118/link2_ec2mcx.png" alt="" />
+                        </a>
+                        <a href="https://www.instagram.com/officialnikshoo?igsh=MWMzbmcxb2liaWcybw==">
+                            <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985118/link3_oyhlwx.png" alt="" />
+                        </a>
                     </div>
 
                     <div className="gem">
@@ -110,17 +116,17 @@ const Footer = () => {
                     <div className="c-info">
                         <div className="c-top">
                             <div className="c-top-heading">
-                                <img src={c1} alt="" />
+                                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985086/Container_tdzwx6.png" alt="" />
                                 <h3>Address:</h3>
                             </div>
                             <p><u>{contactData.addresses}</u></p>
                             <div className="c-top-heading">
-                                <img src={c2} alt="" />
+                                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985087/Container2_moobo2.png" alt="" />
                                 <h3>Reach us by phone:</h3>
                             </div>
                             <p><u>+91{contactData.phone}</u></p>
                             <div className="c-top-heading">
-                                <img src={c3} alt="" />
+                                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985087/Container3_vsvg4m.png" alt="" />
                                 <h3>Email us:</h3>
                             </div>
                             <p><u>{contactData.email}</u></p>
