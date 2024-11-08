@@ -479,7 +479,7 @@ video{
 @media (max-width: 768px){
     .page3{
         /* background: #00000052; */
-        background: url(../assets/mg4.png);
+        background: url(https://res.cloudinary.com/dicusurfx/image/upload/v1730985125/mg4_tokh6q.png);
         min-height: 40vh;
         margin-top: -4vh;
         position: relative;
