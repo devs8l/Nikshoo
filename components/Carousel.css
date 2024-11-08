@@ -23,20 +23,19 @@
     padding: 4vw;
   }
   .mySwiper{
-    width: 70vw;
+    width: 100vw;
   }
-  
-  .swiper-slide {
+/*   
+  .swiper-slide{
     text-align: center;
     font-size: 18px;
     background: #23AA9B;
     width: 3vw;
-    /* Center slide text vertically */
     display: flex;
     justify-content: center;
     align-items: center;
     
-  }
+  } */
   
   .swiper-slide img {
     display: block;
@@ -55,3 +54,21 @@
     background-color: #23AA9B; /* Change the background color to green */
   }
   
+
+  @media (max-width:500px) {
+    .swiper{
+      padding: 1vw;
+    }
+    .small{
+      width: 70% !important;
+      height: 50vh !important;
+    } 
+
+    .mySwiper .swiper-pagination-bullet {
+      background-color: #23AA9B; /* Change the background color to green */
+      /* margin-left: -6vw !important; */
+    }
+    .swiper-pagination{
+      margin-left: -4vw;
+    }
+  }

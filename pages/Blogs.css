@@ -88,7 +88,7 @@
     height: 55vh;
 }
 .smallimg{
-    height: 60%;
+    height: 45%;
 }
 
 .smallcon{
@@ -163,9 +163,28 @@
     display: flex;
 }
 
+
+
 @media (max-width:768px) {
     .blogs-hero{
         flex-direction: column-reverse;
+    }
+
+    .latest-blogs h1{
+        font-size: 5vw;
+    }
+
+    .latest-blogs p:nth-child(2){
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        font-size: 3.5vw;
+    }
+    .smallcon h2{
+        font-size: 3vw;
+    }
+    .smallcon p{
+        font-size: 3vw;
     }
 
     .hero-right{
@@ -202,11 +221,31 @@
         flex-direction: column;
         
     }
+
+    .sub-right{
+        /* background: #000; */
+        width: 100%;
+        height: 30vh;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+  
     .sub-right form input{
-        border-radius: 10px 10px 10px 10px;
+        border-radius: 5px 5px 5px 5px;
+        margin: auto;
+        width: 60vw;
+        height: 5vh;
     }
     .sub-right form button{
-        border-radius: 10px 10px 10px 10px;
+        border-radius: 5px 5px 5px 5px;
+        margin: auto;
+        width: 63vw;
+        height: 6vh;
+    }
+
+    .sub-right button img{
+        width: 10%;
     }
 
     
@@ -218,6 +257,32 @@
         height: 15vh;
         gap: 2vh;
     }
+
+    .sub-left{
+        width: 100%;
+        text-align: center;
+        
+
+    }
+
+    .subscribe h1::after{
+        content: '';
+        width: 40%;
+        background: #000;
+        height: 1.4px;
+        position: absolute;
+        top: 100%;
+        left: 20%;
+        margin: 0.4vw;
+    }
+
+    .sub-left p{
+        width: 60%;
+        margin: auto;
+        margin-top: 3vh;
+    }
+
+    
     
     
 
