@@ -32,7 +32,7 @@ const About = () => {
 
             <div className="about2">
                 <h1>Our Story</h1>
-                <p>With about a decade of experience in the industry, our founder, <span>Neha Halen</span>, saw an opportunity to make a difference in the way people work. She brought together a team of experts dedicated to delivering exceptional service, tailored solutions, and sustainable products that enhance the work environment.</p>
+                <p>With about a decade of experience in the industry, our founders <span>Neha and Anirudh</span>, saw an opportunity to make a difference in the way people work. She brought together a team of experts dedicated to delivering exceptional service, tailored solutions, and sustainable products that enhance the work environment.</p>
             </div>
             <div className="about3">
                 <h1>About the Founders</h1>

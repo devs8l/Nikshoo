@@ -93,7 +93,7 @@ export default function Navbar() {
                                     <li><NavLink to="/education" onClick={handleNavLinkClick}>Education Spaces</NavLink></li>
                                     <li><NavLink to="/lab" onClick={handleNavLinkClick}>Laboratory Spaces</NavLink></li>
                                     <li><NavLink to="/healthcare" onClick={handleNavLinkClick}>Healthcare Spaces</NavLink></li>
-                                    <li><NavLink to="/kitchen" onClick={handleNavLinkClick}>Kitchen Spaces</NavLink></li>
+                                    <li><NavLink to="/kitchen" onClick={handleNavLinkClick}>Commercial Kitchen</NavLink></li>
                                 </ul>
                             )}
                         </div>
@@ -130,7 +130,7 @@ export default function Navbar() {
                                         <li><NavLink to="/education" onClick={handleNavLinkClickMob}><h1>Education Spaces</h1></NavLink></li>
                                         <li><NavLink to="/lab" onClick={handleNavLinkClickMob}><h1>Laboratory Spaces</h1></NavLink></li>
                                         <li><NavLink to="/healthcare" onClick={handleNavLinkClickMob}><h1>Healthcare Spaces</h1></NavLink></li>
-                                        <li><NavLink to="/kitchen" onClick={handleNavLinkClickMob}><h1>Kitchen Spaces</h1></NavLink></li>
+                                        <li><NavLink to="/kitchen" onClick={handleNavLinkClickMob}><h1>Commercial Kitchen</h1></NavLink></li>
                                     </ul>
                                 )}
                             </div>

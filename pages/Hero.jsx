@@ -109,7 +109,7 @@ const Hero = () => {
           <p>Elevate your spaces with innovative style, functionality and aesthetics</p>
           <div className="hero-button">
             <button onClick={scrollToGetInTouch}>Get Started</button>
-            <a href=""><p>Get a Free Consultation</p></a>
+            <a href="https://calendly.com/nikshoobackup/30min"><p>Get a Free Consultation</p></a>
           </div>
         </div>
       </div>
@@ -127,7 +127,7 @@ const Hero = () => {
               </a>
             </div>
             <div className="l-con">
-              <h2><a href="/office" className="spaces">Office Space <MdOutlineArrowOutward className='green' /></a></h2>
+              <h2><a href="/office" className="spaces">Office Spaces <MdOutlineArrowOutward className='green' /></a></h2>
             </div>
           </div>
 
@@ -138,7 +138,7 @@ const Hero = () => {
               </a>
             </div>
             <div className="r-con">
-              <h2><a href="/education" className="spaces">Education Space <MdOutlineArrowOutward className='green' /></a></h2>
+              <h2><a href="/education" className="spaces">Education Spaces <MdOutlineArrowOutward className='green' /></a></h2>
             </div>
           </div>
         </div>
@@ -152,7 +152,7 @@ const Hero = () => {
               </a>
             </div>
             <div className="r-con">
-              <h2><a href="/education" className="spaces">Education Space <MdOutlineArrowOutward className='green' /></a></h2>
+              <h2><a href="/education" className="spaces">Education Spaces <MdOutlineArrowOutward className='green' /></a></h2>
             </div>
           </div>
 
@@ -163,7 +163,7 @@ const Hero = () => {
               </a>
             </div>
             <div className="part3-con">
-              <h2><a href="/healthcare" className="spaces">Healthcare Space <MdOutlineArrowOutward className='green' /></a></h2>
+              <h2><a href="/healthcare" className="spaces">Healthcare Spaces <MdOutlineArrowOutward className='green' /></a></h2>
             </div>
           </div>
           <div className="part3-sub">

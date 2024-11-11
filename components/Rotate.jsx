@@ -50,7 +50,7 @@ export const Rotate = () => {
                 image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985130/office-top_oa6fmy.png"
             },
             bottomLeft: {
-                h1: 'Rotational Chairs',
+                h1: 'Revolving Chairs',
                 image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985127/office-b-l_ae7did.png"
             },
             bottomRight: {
@@ -90,7 +90,7 @@ export const Rotate = () => {
                 image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985085/com-kitchen_ovonx8.png"
             },
             bottomLeft: {
-                h1: 'Rotational Chairs',
+                h1: 'Revolving Chairs',
                 
             },
             bottomRight: {

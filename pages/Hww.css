@@ -174,13 +174,13 @@ html {
 .hww-hero-con button {
   border: none;
   background: #23AA9B;
-  height: 6vh;
+  height: 6.4vh;
   /* padding: 1vw; */
   padding: 10px 15px;
   border-radius: 10px;
   color: white;
   margin-top: 2vw;
-  width: 40%;
+  width: 35%;
 }
 
 .hww-hero-con button:hover {
