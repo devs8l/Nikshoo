@@ -40,7 +40,7 @@ export const Rotate = () => {
     const circles = [
         {
             id: 1,
-            heading: 'Office Space',
+            heading: 'Office Spaces',
             content: 'Content for Office Space',
             image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985084/center-left_qmfdfg.png",
                 rightTop: {
@@ -60,12 +60,12 @@ export const Rotate = () => {
         },
         {
             id: 2,
-            heading: 'Education Space',
+            heading: 'Education Spaces',
             content: 'Content for Education Space',
             image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985125/mg4_tokh6q.png",
             rightTop: {
                 link: '/education',
-                h1: 'Education Space',
+                h1: 'Education Spaces',
                 para: 'Beautiful Color Collection',
                 image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985091/edu-hero-right_hos1ws.png"
             },
@@ -100,12 +100,12 @@ export const Rotate = () => {
         },
         {
             id: 4,
-            heading: 'Healthcare Space',
+            heading: 'Healthcare Spaces',
             content: 'Content for Healthcare Space',
             image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985124/mg2_fjrwfj.png",
             rightTop: {
                 link: '/healthcare',
-                h1: 'Healthcare Space',
+                h1: 'Healthcare Spaces',
                 para: '',
                 image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985081/bed-health_epc9bu.png"
             },
@@ -118,12 +118,12 @@ export const Rotate = () => {
         },
         {
             id: 5,
-            heading: 'Laboratory Space',
+            heading: 'Laboratory Spaces',
             content: 'Content for Laboratory Space',
             image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985123/mg3-2_qa5nie.webp",
             rightTop: {
                 link: '/lab',
-                h1: 'Laboratory Space',
+                h1: 'Laboratory Spaces',
                 para: '',
                 image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985117/lab2_tjw2zi.png"
             },

@@ -26,7 +26,7 @@
 .about-hero p{
     width: 100%;
   color: #585C5B;
-  font-size: 1.2vw;
+  font-size: 1.1vw;
 
 
 
@@ -58,24 +58,39 @@
 
 .about-offer p{
   color: #585C5B;
-  font-size: 1.2vw;
+  font-size: 1.1vw;
   
 }
 
 .about2{
-    width: 25vw;
+    width: 100vw;
     text-align: center;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
     /* margin: auto; */
-    height: 60vh;
-    margin-left: 18vw;
+    height: 80vh;
+    margin-left: 13vw;
+    gap: 3vw;
     
+}
+.about2-left{
+    width: 30%;
+    /* background: red; */
+}
+.about2-right{
+    width: 50%;
+    height: 70%;
+    /* background: #000; */
+}
+.about2-right img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 .about2 p{
     color: #7A8584;
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     text-align: left;
 }
 
@@ -137,8 +152,8 @@
     flex-direction: column;
     height: 80vh;
     gap: 4vw;
-    margin-top: 60vh;
-    margin-bottom: 10vh;
+    margin-top: 40vh;
+    margin-bottom: 20vh;
 }
 .about4-img-div{
     width: 80%;
@@ -153,6 +168,7 @@
     width: 30%;
     
 }
+
 
 @media (max-width:768px) {
     .about-hero{

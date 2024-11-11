@@ -191,7 +191,7 @@ const Kitchen = () => {
                 <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png" alt="" />
                 <div className="space2-heading">
                     <h1>Products in Commercial Kitchen</h1>
-                    <p>Our Solutions for  Commercial Kitchen include, but are not limited to:</p>
+                    <p>Our Solutions for  Commercial Kitchen include, but are not limited to</p>
                 </div>
 
                 <div className="cards-container">

@@ -31,12 +31,17 @@ const About = () => {
             </div>
 
             <div className="about2">
-                <h1>Our Story</h1>
-                <p>With about a decade of experience in the industry, our founders <span>Neha and Anirudh</span>, saw an opportunity to make a difference in the way people work. She brought together a team of experts dedicated to delivering exceptional service, tailored solutions, and sustainable products that enhance the work environment.</p>
+                <div className="about2-left">
+                    <h1>Our Story</h1>
+                    <p>With about a decade of experience in the industry, our founders <span>Neha and Anirudh</span>, saw an opportunity to make a difference in the way people work. She brought together a team of experts dedicated to delivering exceptional service, tailored solutions, and sustainable products that enhance the work environment.</p>
+                </div>
+                <div className="about2-right">
+                    <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1731350782/temp_hucxog.avif" alt="" />
+                </div>
             </div>
             <div className="about3">
                 <h1>About the Founders</h1>
-              
+
 
                 <div className="founders">
                     <div className="founder-sub">

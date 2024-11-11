@@ -251,7 +251,7 @@ const Hero = () => {
       <div className="page4">
         <div className="page4-heading">
           <h1>How Are We Different?</h1>
-          <p>Enhance your spaces with the comfortable furniture crafted by us</p>
+          <p>Crafting unique furniture to enhance your spaces with comfort</p>
         </div>
         <div className="page4-img-div">
           <video src={page4VideoSrc} alt="Bento Video" autoPlay muted playsInline loop loading="lazy" />

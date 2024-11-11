@@ -138,6 +138,14 @@ video{
 
 }
 
+.page2 img{
+    transition: all 0.3s ease-in;
+}
+
+.page2 img:hover{
+    scale: 1.07;
+}
+
 .part2{
     display: flex;
     align-items: center;
@@ -149,15 +157,23 @@ video{
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 .l-img{
     width: 90%;
     height: 80%;
+    overflow: hidden;
+    border-radius: 20px;
+    /* background: #000; */
+
 }
 .l-img img{
     width: 100%;
     object-fit: cover;
+}
+.l-img img:hover{
+    scale: 1.07;
 }
 
 .part2-r{
@@ -165,12 +181,14 @@ video{
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 
 }
 
 .r-img{
     width: 90%;
     height: 70%;
+    border-radius: 20px;
     overflow: hidden;
 
 }
@@ -598,7 +616,7 @@ video{
     font-size: 2.4vw;
 }
 .page4-heading p{
-    font-size: 1.3vw;
+    font-size: 1vw;
     color: #545353b9;
 }
 
