@@ -102,7 +102,7 @@ const Hero = () => {
       </Helmet>
       <div className="page1">
         <div className="container">
-          <video src="https://res.cloudinary.com/dx0eyuux2/video/upload/v1730900831/hero-vid_fenuaw.mp4" autoPlay muted playsInline loop loading="lazy"></video>
+          <video src="https://res.cloudinary.com/dicusurfx/video/upload/v1731951027/Seating_Difference_18-0101483_3_1_1_kzmln1.mp4" autoPlay muted playsInline loop loading="lazy"></video>
         </div>
         <div className="hero-content">
           <h1>Furniture For The <span>Future</span></h1>
@@ -123,7 +123,7 @@ const Hero = () => {
           <div className="part2-l">
             <div className="l-img">
               <a href="/office">
-                <img src="https://res.cloudinary.com/dx0eyuux2/image/upload/v1730900815/office_c7jkzu.png" alt="Office Space" loading="lazy" />
+                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985133/office_gohucx.png" alt="Office Space" loading="lazy" />
               </a>
             </div>
             <div className="l-con">
@@ -159,7 +159,7 @@ const Hero = () => {
           <div className="part3-sub">
             <div className="part3-img-div">
               <a href="/healthcare">
-                <img src="https://res.cloudinary.com/dx0eyuux2/image/upload/v1730900803/hww-lefty_gxccle.png" alt="Healthcare Space" loading="lazy" />
+                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985108/hww-lefty_fpguk9.png" alt="Healthcare Space" loading="lazy" />
               </a>
             </div>
             <div className="part3-con">
@@ -169,7 +169,7 @@ const Hero = () => {
           <div className="part3-sub">
             <div className="part3-img-div">
               <a href="/lab">
-                <img src="https://res.cloudinary.com/dx0eyuux2/image/upload/v1730900804/hww-mid_vogg9n.png" alt="Laboratory Space" loading="lazy" />
+                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985108/hww-mid_srltbk.png" alt="Laboratory Space" loading="lazy" />
               </a>
             </div>
             <div className="part3-con">
@@ -179,7 +179,7 @@ const Hero = () => {
           <div className="part3-sub">
             <div className="part3-img-div">
               <a href="/kitchen">
-                <img src="https://res.cloudinary.com/dx0eyuux2/image/upload/v1730900804/hww-righty_ke83mt.png" alt="Commercial Kitchen" loading="lazy" />
+                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985108/hww-righty_wpfkt1.png" alt="Commercial Kitchen" loading="lazy" />
               </a>
             </div>
             <div className="part3-con">
