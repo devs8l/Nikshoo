@@ -102,7 +102,7 @@ const Hero = () => {
       </Helmet>
       <div className="page1">
         <div className="container">
-          <video src="https://res.cloudinary.com/dicusurfx/video/upload/v1731951027/Seating_Difference_18-0101483_3_1_1_kzmln1.mp4" autoPlay muted playsInline loop loading="lazy"></video>
+          <video src="https://res.cloudinary.com/dicusurfx/video/upload/v1732119087/Video.Guru_20241120_135422502_1_pmsnhy.mp4" autoPlay muted playsInline loop loading="lazy"></video>
         </div>
         <div className="hero-content">
           <h1>Furniture For The <span>Future</span></h1>
