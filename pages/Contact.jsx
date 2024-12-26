@@ -265,17 +265,28 @@ const Contact = () => {
           <div className="contact-ways">
             <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985083/call_aj4ufu.png" alt="" />
             <h3>Call Us</h3>
-            <p>+91{contactData.phone}</p>
+            <p onClick={() => window.location.href = 'tel:+91 7415775000'}>+91{contactData.phone}</p>
           </div>
           <div className="contact-ways email">
             <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985092/email_n38q4y.png" alt="" />
             <h3>Email Us</h3>
-            <p>{contactData.email}</p>
+            <p
+              onClick={() => window.location.href = `mailto:${contactData.email}`}
+
+            >
+              {contactData.email}
+            </p>
+
           </div>
           <div className="contact-ways">
             <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985144/wsp_ilkang.png" alt="" />
             <h3>WhatsApp Us</h3>
-            <p>{contactData.whatsapp}</p>
+            <p
+              onClick={() => window.open(`https://wa.me/${contactData.whatsapp}`, '_blank', 'noopener,noreferrer')}
+            >
+              {contactData.whatsapp}
+            </p>
+
           </div>
         </div>
         <div className="contact-bottom">

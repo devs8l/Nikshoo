@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useEffect,useRef} from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import "../components/Footer.css"
 // import link1 from "../assets/Link.png"
@@ -53,10 +53,10 @@ const Footer = () => {
         // Scroll into view only after the footer becomes visible
         setTimeout(() => {
             footerRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100); 
+        }, 100);
     };
 
-   
+
 
 
     return (
@@ -119,24 +119,30 @@ const Footer = () => {
                                 <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985086/Container_tdzwx6.png" alt="" />
                                 <h3>Address:</h3>
                             </div>
-                            <p><u>{contactData.addresses}</u></p>
+                            <a href="https://maps.app.goo.gl/GvRc9CZDmc3LHceAA">
+                                <p><u>{contactData.addresses}</u></p></a>
+
                             <div className="c-top-heading">
                                 <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985087/Container2_moobo2.png" alt="" />
                                 <h3>Reach us by phone:</h3>
                             </div>
-                            <p><u>+91{contactData.phone}</u></p>
+                            <p><u onClick={() => window.location.href = 'tel:+91 7415775000'} style={{ cursor: 'pointer' }}>+91{contactData.phone}</u></p>
                             <div className="c-top-heading">
                                 <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985087/Container3_vsvg4m.png" alt="" />
                                 <h3>Email us:</h3>
                             </div>
-                            <p><u>{contactData.email}</u></p>
+                            <p>
+                                <a href={`mailto:${contactData.email}`} style={{ textDecoration: 'underline', color: 'inherit' }}>
+                                    {contactData.email}
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="copyright">
                 <h3>Copyright © 2024</h3>
-                <p onClick={toggleFooter} style={{ cursor: 'pointer'}}><IoIosArrowDropdown className='drop-read' />Read more</p>
+                <p onClick={toggleFooter} style={{ cursor: 'pointer' }}><IoIosArrowDropdown className='drop-read' />Read more</p>
             </div>
             {isFooterVisible && (
                 <div ref={footerRef} className="footer-foot ">

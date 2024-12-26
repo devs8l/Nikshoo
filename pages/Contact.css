@@ -109,6 +109,8 @@ aspect-ratio: 3/4;
 .contact-ways p{
   color: #23AA9B;
   font-size: 1vw;
+  position: relative;
+  cursor: pointer;
 }
 
 
