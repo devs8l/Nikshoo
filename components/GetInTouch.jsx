@@ -1,10 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import "../components/GetInTouch.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import { Thanks } from '../components/Thanks'; // Import the Thanks component
 
 const GetInTouch = () => {
     const recaptchaKey = import.meta.env.VITE_RECAPTCHA_KEY;
+    const form = useRef();
     const [verified, setVerified] = useState(false)
     const [formData, setFormData] = useState({
         name: '',
@@ -96,6 +98,7 @@ const GetInTouch = () => {
         setCaptchaVerified(!!value); // Sets to true if CAPTCHA is verified, false otherwise
     };
 
+    
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -108,6 +111,17 @@ const GetInTouch = () => {
         if (phoneError) {
             return; // Prevent submission if there's a phone error
         }
+        const emailParams = {
+            from_name: formData.name, // Sender (user's name)
+            message: `
+                Email: ${formData.email}
+                Contact No: ${formData.contactNo}
+                Location: ${formData.location}
+                Budget: ${formData.budget}
+                Organisation: ${formData.organisation}
+                Area (sq.ft): ${formData.areaSqFt}
+            `
+        };
 
         try {
             const response = await fetch(`https://nikshoo-backend.vercel.app/enquiry/submit`, {
@@ -126,6 +140,14 @@ const GetInTouch = () => {
             // });
 
             if (response.ok) {
+                emailjs.send('service_gbhr1de', 'template_2e1dxq8', emailParams, 'R2Gl4qKFqy2yMwWaS')
+                .then(() => {
+                    console.log('Email sent successfully!');
+                })
+                .catch(error => {
+                    console.error('Email sending failed:', error);
+                });
+
                 // Success case - show thank you popup
                 setPopupMessage({
                     title: 'Thank you for taking out your time!',
@@ -142,6 +164,7 @@ const GetInTouch = () => {
                 setShowPopup(true); // Show popup
                 setHasError(true); // Error state
             }
+
 
             // Reset form data
             setFormData({
@@ -179,7 +202,7 @@ const GetInTouch = () => {
                     <h1>Space <br /> Transformation <br />Starts Here</h1>
                 </div>
                 <div className="gi-right">
-                    <form onSubmit={handleSubmit} className="project-form">
+                    <form onSubmit={handleSubmit} ref={form} className="project-form">
                         <div className="form-con">
                             <div className="left-form">
                                 <div className="form-group">

@@ -134,7 +134,7 @@ const Hero = () => {
           <div className="part2-r mobileabs">
             <div className="r-img">
               <a href="/education">
-                <img src="https://res.cloudinary.com/dx0eyuux2/image/upload/v1730900793/edu_fvt7of.png" alt="Education Space" loading="lazy" />
+                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985094/edu_fuf0it.png" alt="Education Space" loading="lazy" />
               </a>
             </div>
             <div className="r-con">
@@ -148,7 +148,7 @@ const Hero = () => {
           <div className="part2-r abs">
             <div className="r-img">
               <a href="/education">
-                <img src="https://res.cloudinary.com/dx0eyuux2/image/upload/v1730900793/edu_fvt7of.png" alt="Education Space" loading="lazy" />
+                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985094/edu_fuf0it.png" alt="Education Space" loading="lazy" />
               </a>
             </div>
             <div className="r-con">

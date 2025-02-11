@@ -1,5 +1,7 @@
-import React, { useState, useRef,useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import '../pages/Hww.css';
+import emailjs from '@emailjs/browser';
+
 // import hww1 from "../assets/hww1.png";
 // import hww2 from "../assets/hww2.png";
 // import hww3 from "../assets/hww3.png";
@@ -130,6 +132,15 @@ const Hww = () => {
     if (phoneError) {
       return; // Prevent submission if there's a phone error
     }
+    const emailParams = {
+      from_name: formData.fullName, // Sender (user's name)
+      message: `
+          Email: ${formData.email}
+          Contact No: ${formData.phoneNumber}
+          Location: ${formData.location}
+          message:${formData.message}
+      `
+    };
     try {
       const response = await fetch(`https://nikshoo-backend.vercel.app/contact/submit`, {
         method: "POST",
@@ -140,6 +151,13 @@ const Hww = () => {
       });
 
       if (response.ok) {
+        emailjs.send('service_gbhr1de', 'template_2e1dxq8', emailParams, 'R2Gl4qKFqy2yMwWaS')
+        .then(() => {
+            console.log('Email sent successfully!');
+        })
+        .catch(error => {
+            console.error('Email sending failed:', error);
+        });
         setPopupMessage({
           title: 'Thank you for your enquiry!',
           body: 'We will get back to you shortly.'
@@ -165,6 +183,8 @@ const Hww = () => {
       recaptchaRef.current.reset();
 
     } catch (error) {
+      console.log(error);
+      
       setPopupMessage({
         title: 'Something went wrong',
         body: 'Please try again later.'

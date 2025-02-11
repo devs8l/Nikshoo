@@ -1,4 +1,4 @@
-import React, { useState, useRef,useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import "../pages/Partner.css";
 // import heroMain from "../assets/hero-main.png";
 // import bp from "../assets/become-partner.png";
@@ -12,6 +12,7 @@ import "../pages/Partner.css";
 // import lefty from "../assets/lefty.png";
 // import righty from "../assets/righty.png";
 import { Thanks } from '../components/Thanks';
+import emailjs from '@emailjs/browser';
 import { MdOutlineFileUpload } from "react-icons/md";
 
 import ReCAPTCHA from 'react-google-recaptcha';
@@ -149,7 +150,17 @@ const Partner = () => {
         data.append('comments', formData.comments);
         data.append('document', formData.document); // Add the document file
 
-
+        const emailParams = {
+            from_name: formData.partnerName, // Sender (Partner's name)
+            message: `
+                Email: ${formData.email}
+                Contact No: ${formData.phoneNumber}
+                City: ${formData.city}
+                Partner Role: ${formData.partnerRole}
+                Company Name: ${formData.companyName}
+                Comments/Queries: ${formData.comments}
+            `
+        };
 
         try {
             setLoading(true);
@@ -178,6 +189,13 @@ const Partner = () => {
             setLoading(false);
 
             if (response.ok) {
+                emailjs.send('service_gbhr1de', 'template_2e1dxq8', emailParams, 'R2Gl4qKFqy2yMwWaS')
+                .then(() => {
+                  console.log('Email sent successfully!');
+                })
+                .catch(error => {
+                  console.error('Email sending failed:', error);
+                });
                 setPopupMessage({
                     title: 'Thank you for your submission!',
                     body: 'Our team shall get back to you shortly.'

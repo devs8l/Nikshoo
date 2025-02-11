@@ -13,6 +13,8 @@ import "../pages/Contact.css"
 
 
 import { Helmet } from 'react-helmet';
+import emailjs from '@emailjs/browser';
+
 
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -159,6 +161,15 @@ const Contact = () => {
     if (phoneError) {
       return;
     }
+    const emailParams = {
+      from_name: formData.fullName, // Sender (user's name)
+      message: `
+          Email: ${formData.email}
+          Contact No: ${formData.phoneNumber}
+          Location: ${formData.location}
+          message:${formData.message}
+      `
+    };
 
     try {
       const response = await fetch(`https://nikshoo-backend.vercel.app/contact/submit`, {
@@ -170,6 +181,14 @@ const Contact = () => {
       });
 
       if (response.ok) {
+        emailjs.send('service_gbhr1de', 'template_2e1dxq8', emailParams, 'R2Gl4qKFqy2yMwWaS')
+        .then(() => {
+            console.log('Email sent successfully!');
+        })
+        .catch(error => {
+            console.error('Email sending failed:', error);
+        });
+
         // If successful, show the thank you popup
         setPopupMessage({
           title: 'Thank you for taking out your time!',
