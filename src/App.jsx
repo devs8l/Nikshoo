@@ -19,6 +19,7 @@ import Privacy from '../pages/Privacy';
 import Admin from '../pages/Admin';
 import navimg from "../assets/whatsapp-icon.png";
 import Cookie from '../components/Cookie';
+import BlogDetail from '../pages/BlogDetail';
 
 function App() {
   const location = useLocation();
@@ -70,6 +71,7 @@ function App() {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/blog" element={<Blogs />} />
+          <Route path="/blog/:blogId" element={<BlogDetail />} /> 
           <Route path="/office" element={<Office />} />
           <Route path="/education" element={<Education />} />
           <Route path="/healthcare" element={<Healthcare />} />

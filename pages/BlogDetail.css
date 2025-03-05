@@ -1,0 +1,66 @@
+/* Add these to your existing Blogs.css */
+
+.blog-link {
+    text-decoration: none !important; 
+}
+
+
+.blog-detail-container {
+    width: 100vw;
+    padding-bottom: 10vh;
+    min-height: 110vh;
+    padding:5vw 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.blog-detail-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.blog-detail-image-con{
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 8vh;
+
+} 
+
+
+.blog-detail-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.blog-detail-title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.blog-detail-title h4 {
+    color: #666;
+    font-size: 1rem;
+}
+
+.blog-detail-content p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    width: 90%;
+    margin: auto;
+    text-align: justify;
+}
+
+.highlighted-paragraph {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-left: 4px solid teal;
+    font-weight: 500;
+    color: #333;
+}

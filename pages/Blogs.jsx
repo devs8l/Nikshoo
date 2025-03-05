@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import "../pages/Blogs.css";
-// import heroMain from "../assets/hero-main.png";
-// import heroright from "../assets/blogs-hero.png";
-// import submit from "../assets/submit.png";
-// import bimg from "../assets/blog-img.png";
-
-
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -16,6 +11,14 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { FreeMode, Pagination } from 'swiper/modules';
+
+// Utility function to create text snippet
+const createTextSnippet = (text, wordLimit = 40) => {
+    const words = text.split(' ');
+    if (words.length <= wordLimit) return text;
+    
+    return words.slice(0, wordLimit).join(' ') + '...';
+};
 
 const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
@@ -50,7 +53,6 @@ const Blogs = () => {
             }
         };
 
-
         fetchBlogs();
         updateNum();
 
@@ -65,8 +67,6 @@ const Blogs = () => {
     const handleChange = (event) => {
         setFormData({ ...formData, [event.target.name]: event.target.value });
     };
-
- 
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -89,16 +89,18 @@ const Blogs = () => {
 
                 {/* Render the first blog item without the 'small' class */}
                 {blogs.length > 0 && (
-                    <div className="blogs-middle">
-                        <div className="bimg-div">
-                            <img src={blogs[0].image} alt="" />
+                    <Link to={`/blog/${blogs[0].id}`} className="blog-link">
+                        <div className="blogs-middle">
+                            <div className="bimg-div">
+                                <img src={blogs[0].image} alt="" />
+                            </div>
+                            <div className="blog-middle-con">
+                                <h1>{blogs[0].title}</h1>
+                                <h4>{blogs[0].date}</h4>
+                                <p>{createTextSnippet(blogs[0].text)}</p>
+                            </div>
                         </div>
-                        <div className="blog-middle-con">
-                            <h1>{blogs[0].title}</h1>
-                            <h4>{blogs[0].date}</h4>
-                            <p>{blogs[0].text}</p>
-                        </div>
-                    </div>
+                    </Link>
                 )}
 
                 {/* Render the rest of the blog items with the 'small' class */}
@@ -115,18 +117,19 @@ const Blogs = () => {
                             }}
                             modules={[FreeMode, Pagination]}
                             className="mySwiper"
-                            
                         >
                             {blogs.slice(1).map((blog) => (
                                 <SwiperSlide key={blog.id} className="blogs-middle small">
-                                    <div className="bimg-div smallimg">
-                                        <img src={blog.image} alt="" />
-                                    </div>
-                                    <div className="blog-middle-con smallcon">
-                                        <h2>{blog.title}</h2>
-                                        <h4>{blog.date}</h4>
-                                        <p>{blog.text}</p>
-                                    </div>
+                                    <Link to={`/blog/${blog.id}`} className="blog-link">
+                                        <div className="bimg-div smallimg">
+                                            <img src={blog.image} alt="" />
+                                        </div>
+                                        <div className="blog-middle-con smallcon">
+                                            <h2>{blog.title}</h2>
+                                            <h4>{blog.date}</h4>
+                                            <p>{createTextSnippet(blog.text)}</p>
+                                        </div>
+                                    </Link>
                                 </SwiperSlide>
                             ))}
                         </Swiper>

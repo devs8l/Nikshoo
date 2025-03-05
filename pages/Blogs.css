@@ -3,6 +3,7 @@
     background: white;
     position: relative;
     min-height: 100vh;
+    
 }
 
 .blogs-wrap>img{
@@ -47,7 +48,6 @@
     border-radius: 10px;
     overflow: hidden;
     border: 0.1px solid rgba(0, 0, 0, 0.301);
-
 }
 .bimg-div{
     width: 100%;
@@ -61,6 +61,14 @@
 }
 .blog-middle-con{
     padding: 2vw;
+    text-decoration: none !important;
+    color: black;
+}
+.blog-middle-con h1{
+    text-decoration: none !important;
+}
+.blogs-wrap a{
+    text-decoration: none;
 }
 
 .latest-blogs{
