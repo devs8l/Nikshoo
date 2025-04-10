@@ -1,43 +1,10 @@
-import React, { useEffect, useState,useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import "../pages/Space.css"
-// import officeHero from "../assets/office-hero.png"
-// import officeHeroRight from "../assets/office-hero-right.png"
-
-// import officechair from "../assets/officechair.png"
-// import exeDesk from "../assets/exeDesk.png"
-// import Workstation from "../assets/Workstation.png"
-// import Cube from "../assets/cubicles.png"
-// import Conf from "../assets/con-room.png"
-// import Sofas from "../assets/sofas.png"
-// import Lounge from "../assets/lounge.png"
-// import Compact from "../assets/compact.png"
-// import Pods from "../assets/pods.png"
-// import Cafe from "../assets/Cafeteria.png"
-// import Storage from "../assets/storage.png"
-// import Locker from "../assets/locker.png"
-// import edudesk from "../assets/edudesk.png"
-
-
-// import heroMain from "../assets/hero-main.png"
-// import admin from "../assets/furn.png"
-// import eduHero from "../assets/edu-hero.png"
-// import eduHeroMobile from "../assets/mobile-education-hero.png"
-// import eduHeroRight from "../assets/edu-hero-right.png"
-// import waiting from "../assets/wait.png"
-// import Principal from "../assets/Principal.png"
-// import soft from "../assets/soft-seat.png"
-// import Library from "../assets/library.png"
-// import Dining from "../assets/dining.png"
-// import Hostel from "../assets/Hostel.png"
-// import Lab from "../assets/lab.png"
-
-import { Thanks } from '../components/Thanks'; // Import the Thanks component
+import { Thanks } from '../components/Thanks';
 import ReCAPTCHA from 'react-google-recaptcha';
-
-
+import { Helmet } from 'react-helmet';
 
 const Education = () => {
-
     const furnitureData = [
         { id: 1, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985092/edudesk_f2pvp1.png", title: 'Classroom Desking' },
         { id: 2, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985092/exeDesk_rjt7ia.png", title: 'Executive Desk' },
@@ -55,11 +22,7 @@ const Education = () => {
         { id: 12, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985106/Hostel_kxabmn.png", title: 'Hostel' },
         { id: 12, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985117/lab_gzcxpm.png", title: 'Lab' },
         { id: 7, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985136/Principal_mhgqgl.png", title: 'Cabins' },
-
-        // Add more furniture data here
     ];
-
-
 
     const [isFormVisible, setFormVisible] = useState(false);
     const toggleFormVisibility = () => {
@@ -83,7 +46,7 @@ const Education = () => {
 
     const recaptchaKey = import.meta.env.VITE_RECAPTCHA_KEY;
 
-    const [cities, setCities] = useState([]); // State to hold the list of cities
+    const [cities, setCities] = useState([]);
     const [showDropdown, setShowDropdown] = useState(false);
 
     const fetchCities = async (query) => {
@@ -95,7 +58,7 @@ const Education = () => {
 
             const response = await fetch(`https://api.countrystatecity.in/v1/countries/IN/cities`, {
                 headers: {
-                    "X-CSCAPI-KEY": "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA==" // Replace with your API key
+                    "X-CSCAPI-KEY": "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA=="
                 }
             });
 
@@ -103,8 +66,8 @@ const Education = () => {
                 const data = await response.json();
                 const filteredCities = data
                     .filter(city => city.name.toLowerCase().startsWith(query.toLowerCase()))
-                    .slice(0, 10); // Limit to 10 cities for display
-                setCities(filteredCities); // Update state with filtered city names
+                    .slice(0, 10);
+                setCities(filteredCities);
             }
         } catch (error) {
             console.error("Error fetching cities:", error);
@@ -113,13 +76,13 @@ const Education = () => {
 
     const selectCity = (city) => {
         setFormData({ ...formData, location: city });
-        setShowDropdown(false); // Hide dropdown after selection
+        setShowDropdown(false);
     };
 
     const dropdownRef = useRef(null);
     const handleClickOutside = (event) => {
         if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-            setShowDropdown(false); // Hide dropdown if clicked outside
+            setShowDropdown(false);
         }
     };
 
@@ -130,7 +93,6 @@ const Education = () => {
         };
     }, []);
     
-
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -138,16 +100,15 @@ const Education = () => {
             [name]: value
         });
         if (name === "location") {
-            setShowDropdown(true); // Show dropdown when typing in location
-            fetchCities(value); // Fetch cities as the user types
+            setShowDropdown(true);
+            fetchCities(value);
         }
     };
 
     const [isCaptchaVerified, setCaptchaVerified] = useState(false);
     const handleCaptchaChange = (value) => {
-        setCaptchaVerified(!!value); // Sets to true if CAPTCHA is verified, false otherwise
+        setCaptchaVerified(!!value);
     };
-
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -181,7 +142,6 @@ const Education = () => {
             }
             setPopupVisible(true);
 
-            // Clear form
             setFormData({
                 fullName: '',
                 phoneNumber: '',
@@ -201,18 +161,31 @@ const Education = () => {
 
     const handleClosePopup = () => {
         setPopupVisible(false);
-        toggleFormVisibility(); // Optionally close the form when the popup is closed
+        toggleFormVisibility();
     };
+
     return (
         <div className='space-wrap'>
+            {/* SEO Meta Tags */}
+            <Helmet>
+                <title>Buy Furniture for Education at Best Price</title>
+                <meta 
+                    name="description" 
+                    content="Explore Nikshoo Furniture Solutions for premium Furniture for Education, including Classroom Desking, Administration Office Furniture, Waiting Area Furniture, Compactors, Cafeteria/Recreation, Storages, Lockers, Library, and Lab setups. Elevate learning spaces with functional and stylish designs. Buy Classroom Furniture CAD blocks and desks crafted for durability and efficiency" 
+                />
+                <meta 
+                    name="keywords" 
+                    content="education furniture, classroom furniture, school furniture, lab furniture, library furniture, cafeteria furniture, Nikshoo" 
+                />
+            </Helmet>
+
             <div className="space-hero">
                 <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985093/edu-hero_fwlzig.png" className='desktop' alt="" />
                 <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985126/mobile-education-hero_qbqznr.png" className='mobile' alt="" />
                 <div className="space-hero-left">
-                    <h1>Education Spaces</h1>
+                    <h1>Furniture for <br />Education</h1>
                     <p onClick={toggleFormVisibility} className='space-para'><u>Enquire Now</u></p>
                     <p id='hero-space-para'>Our Solutions for  Education Spaces include, but are not limited to</p>
-
                 </div>
                 <div className="space-hero-right edu">
                     <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985091/edu-hero-right_hos1ws.png" alt="" />
@@ -222,7 +195,6 @@ const Education = () => {
             <div className="space2">
                 <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png" alt="" />
                 <div className="space2-heading">
-
                     <h1>Products in Education Spaces</h1>
                     <p>Our Solutions for  Education Spaces include, but are not limited to</p>
                 </div>
@@ -236,7 +208,6 @@ const Education = () => {
                     ))}
                 </div>
             </div>
-
 
             {isFormVisible && (
                 <div className="popup-form">
@@ -267,8 +238,6 @@ const Education = () => {
                                         placeholder="Enter Phone Number"
                                         required
                                     />
-
-
                                 </div>
                                 <div>
                                     <label>Email</label>
@@ -311,7 +280,6 @@ const Education = () => {
                                         ))}
                                     </ul>
                                 )}
-
                             </div>
                             <div>
                                 <label>Message</label>
@@ -333,7 +301,6 @@ const Education = () => {
                 </div>
             )}
 
-            {/* Popup Component */}
             {popupVisible && (
                 <Thanks
                     message={popupMessage}
@@ -341,7 +308,6 @@ const Education = () => {
                     buttonText="Explore More"
                 />
             )}
-
         </div>
     )
 }

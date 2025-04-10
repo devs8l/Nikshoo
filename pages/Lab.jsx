@@ -1,19 +1,8 @@
-import { React, useState, useEffect ,useRef} from 'react'
-
+import { React, useState, useEffect, useRef } from 'react'
 import "../pages/Space.css"
-// import LabHero from "../assets/lab-hero.png"
-// import LabHeroMobile from "../assets/mobile-laboratory-hero.png"
-// import LabHeroRight from "../assets/lab-hero-right.png"
-// import heroMain from "../assets/hero-main.png"
-// import LabWork from "../assets/lab-work.png"
-// import Fume from "../assets/lab-fume.png"
-// import animal from "../assets/lab-animal.png"
-// import LabSafe from "../assets/lab-safe.png"
-import { Thanks } from '../components/Thanks'; // Import the Thanks component
+import { Thanks } from '../components/Thanks';
 import ReCAPTCHA from 'react-google-recaptcha';
-
-
-
+import { Helmet } from 'react-helmet';
 
 const Lab = () => {
     const furnitureData = [
@@ -21,11 +10,7 @@ const Lab = () => {
         { id: 2, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1731005051/lab-fume_igjbfs.png", title: 'Laboratory Fume Heads' },
         { id: 3, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1731005064/lab-animal_hrx1i6.png", title: 'Animal House Furniture' },
         { id: 4, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985115/lab-safe_n7naws.png", title: 'Safety Cabinets' },
-
-
-        // Add more furniture data here
     ];
-
 
     const [isFormVisible, setFormVisible] = useState(false);
     const toggleFormVisibility = () => {
@@ -47,11 +32,10 @@ const Lab = () => {
         space: 'Laboratory Space'
     });
 
-
     const dropdownRef = useRef(null);
     const handleClickOutside = (event) => {
         if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-            setShowDropdown(false); // Hide dropdown if clicked outside
+            setShowDropdown(false);
         }
     };
 
@@ -62,8 +46,7 @@ const Lab = () => {
         };
     }, []);
 
-
-    const [cities, setCities] = useState([]); // State to hold the list of cities
+    const [cities, setCities] = useState([]);
     const [showDropdown, setShowDropdown] = useState(false);
 
     const fetchCities = async (query) => {
@@ -75,7 +58,7 @@ const Lab = () => {
 
             const response = await fetch(`https://api.countrystatecity.in/v1/countries/IN/cities`, {
                 headers: {
-                    "X-CSCAPI-KEY": "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA==" // Replace with your API key
+                    "X-CSCAPI-KEY": "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA=="
                 }
             });
 
@@ -83,8 +66,8 @@ const Lab = () => {
                 const data = await response.json();
                 const filteredCities = data
                     .filter(city => city.name.toLowerCase().startsWith(query.toLowerCase()))
-                    .slice(0, 10); // Limit to 10 cities for display
-                setCities(filteredCities); // Update state with filtered city names
+                    .slice(0, 10);
+                setCities(filteredCities);
             }
         } catch (error) {
             console.error("Error fetching cities:", error);
@@ -93,10 +76,9 @@ const Lab = () => {
 
     const selectCity = (city) => {
         setFormData({ ...formData, location: city });
-        setShowDropdown(false); // Hide dropdown after selection
+        setShowDropdown(false);
     };
     
-
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -104,13 +86,14 @@ const Lab = () => {
             [name]: value
         });
         if (name === "location") {
-            setShowDropdown(true); // Show dropdown when typing in location
-            fetchCities(value); // Fetch cities as the user types
+            setShowDropdown(true);
+            fetchCities(value);
         }
     };
+
     const [isCaptchaVerified, setCaptchaVerified] = useState(false);
     const handleCaptchaChange = (value) => {
-        setCaptchaVerified(!!value); // Sets to true if CAPTCHA is verified, false otherwise
+        setCaptchaVerified(!!value);
     };
 
     const recaptchaKey = import.meta.env.VITE_RECAPTCHA_KEY;
@@ -147,7 +130,6 @@ const Lab = () => {
             }
             setPopupVisible(true);
 
-            // Clear form
             setFormData({
                 fullName: '',
                 phoneNumber: '',
@@ -167,33 +149,42 @@ const Lab = () => {
 
     const handleClosePopup = () => {
         setPopupVisible(false);
-        toggleFormVisibility(); // Optionally close the form when the popup is closed
+        toggleFormVisibility();
     };
-
-
 
     return (
         <div className='space-wrap'>
+            {/* SEO Meta Tags */}
+            <Helmet>
+                <title>Buy High-quality Modular Laboratory Furniture by Nikshoo Furniture</title>
+                <meta 
+                    name="description" 
+                    content="Discover Nikshoo's modular Laboratory furniture, designed for adaptability and efficiency in modern laboratory settings. Our furniture solutions offer flexible configurations to fit any space, supporting diverse research needs with ergonomic design and durable materials. Explore our range to optimize your lab environment." 
+                />
+                <meta 
+                    name="keywords" 
+                    content="laboratory furniture, lab workstations, fume hoods, safety cabinets, animal house furniture, modular lab furniture, Nikshoo" 
+                />
+            </Helmet>
+
             <div className="space-hero">
-                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985117/lab-hero_lpmoig.png" className='desktop' alt="" />
-                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985127/mobile-laboratory-hero_di728q.png" className='mobile' alt="" />
+                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985117/lab-hero_lpmoig.png" className='desktop' alt="Laboratory Furniture" />
+                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985127/mobile-laboratory-hero_di728q.png" className='mobile' alt="Laboratory Furniture" />
                 <div className="space-hero-left">
-                    <h1>Laboratory Spaces</h1>
+                    <h1>Laboratory Furniture</h1>
                     <p onClick={toggleFormVisibility} className='space-para'><u>Enquire Now</u></p>
-                    <p id='hero-space-para'>Our Solutions for Laboratory Spaces
-                        include, but are not limited to</p>
+                    <p id='hero-space-para'>Our Solutions for Laboratory Spaces include, but are not limited to</p>
                 </div>
                 <div className="space-hero-right kitchen">
-                    <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985115/lab-hero-right_vzucee.png" alt="" />
+                    <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985115/lab-hero-right_vzucee.png" alt="Laboratory Equipment" />
                 </div>
             </div>
 
             <div className="space2 lab">
-                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png" alt="" />
+                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png" alt="Laboratory Solutions" />
                 <div className="space2-heading">
                     <h1>Products in Laboratory Spaces</h1>
-                    <p>Our Solutions for Laboratory Spaces
-                        include, but are not limited to</p>
+                    <p>Our Solutions for Laboratory Spaces include, but are not limited to</p>
                 </div>
 
                 <div className="cards-container">
@@ -235,8 +226,6 @@ const Lab = () => {
                                         placeholder="Enter Phone Number"
                                         required
                                     />
-
-
                                 </div>
                                 <div>
                                     <label>Email</label>
@@ -300,7 +289,6 @@ const Lab = () => {
                 </div>
             )}
 
-            {/* Popup Component */}
             {popupVisible && (
                 <Thanks
                     message={popupMessage}

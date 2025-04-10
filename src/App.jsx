@@ -72,11 +72,11 @@ function App() {
           <Route path="/about-us" element={<About />} />
           <Route path="/blog" element={<Blogs />} />
           <Route path="/blog/:blogId" element={<BlogDetail />} /> 
-          <Route path="/office" element={<Office />} />
-          <Route path="/education" element={<Education />} />
-          <Route path="/healthcare" element={<Healthcare />} />
-          <Route path="/kitchen" element={<Kitchen />} />
-          <Route path="/lab" element={<Lab />} />
+          <Route path="/office-furniture" element={<Office />} />
+          <Route path="/furniture-for-education" element={<Education />} />
+          <Route path="/hospital-furniture" element={<Healthcare />} />
+          <Route path="/commercial-kitchen-equipment" element={<Kitchen />} />
+          <Route path="/laboratory-furniture" element={<Lab />} />
           <Route path="/123nikshoo/admin" element={<Admin />} />
         </Routes>
       )}

@@ -1,42 +1,21 @@
-import { React, useState, useEffect,useRef } from 'react'
-import "../pages/Space.css"
-// import KitchenHero from "../assets/kitchen-hero.png"
-// import KitchenHeroMobile from "../assets/mobile-kitchen-hero.png"
-// import KitchenHeroRight from "../assets/kitchen-hero-right.png"
-// import heroMain from "../assets/hero-main.png"
-// import Bakery from "../assets/Bakery.png"
-// import Fridge from "../assets/fridge.png"
-// import restraunt from "../assets/Restraunt.png"
-// import kitchenStorage from "../assets/kitchen-storage.png"
-// import cloud from "../assets/cloud.png"
-import { Thanks } from '../components/Thanks'; // Import the Thanks component
+import { React, useState, useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet';
+import "../pages/Space.css";
+import { Thanks } from '../components/Thanks';
 import ReCAPTCHA from 'react-google-recaptcha';
-
 
 const Kitchen = () => {
     const furnitureData = [
         { id: 1, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985079/Bakery_syezcs.png", title: 'Bakery Equipment' },
-        { id: 2, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985100/fridge_kanfzy.png", title: 'Refridgerator Equipment' },
-        { id: 3, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985137/Restraunt_yizgu2.png", title: 'Restraunt Equipment' },
+        { id: 2, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985100/fridge_kanfzy.png", title: 'Refrigerator Equipment' },
+        { id: 3, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985137/Restraunt_yizgu2.png", title: 'Restaurant Equipment' },
         { id: 4, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985114/kitchen-storage_dpkllm.png", title: 'Storage Equipment' },
         { id: 5, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985084/cloud_cqaiqb.png", title: 'Cloud Equipment' },
-
-
-        // Add more furniture data here
     ];
 
-
     const [isFormVisible, setFormVisible] = useState(false);
-    const toggleFormVisibility = () => {
-        setFormVisible(!isFormVisible);
-    };
-
     const [popupVisible, setPopupVisible] = useState(false);
-    const [popupMessage, setPopupMessage] = useState({
-        title: '',
-        body: ''
-    });
-
+    const [popupMessage, setPopupMessage] = useState({ title: '', body: '' });
     const [formData, setFormData] = useState({
         fullName: '',
         phoneNumber: '',
@@ -45,12 +24,19 @@ const Kitchen = () => {
         email: '',
         space: 'Kitchen Space'
     });
-
-
+    const [cities, setCities] = useState([]);
+    const [showDropdown, setShowDropdown] = useState(false);
+    const [isCaptchaVerified, setCaptchaVerified] = useState(false);
     const dropdownRef = useRef(null);
+    const recaptchaKey = import.meta.env.VITE_RECAPTCHA_KEY;
+
+    const toggleFormVisibility = () => {
+        setFormVisible(!isFormVisible);
+    };
+
     const handleClickOutside = (event) => {
         if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-            setShowDropdown(false); // Hide dropdown if clicked outside
+            setShowDropdown(false);
         }
     };
 
@@ -61,10 +47,6 @@ const Kitchen = () => {
         };
     }, []);
 
-
-    const [cities, setCities] = useState([]); // State to hold the list of cities
-    const [showDropdown, setShowDropdown] = useState(false);
-
     const fetchCities = async (query) => {
         try {
             if (!query) {
@@ -74,7 +56,7 @@ const Kitchen = () => {
 
             const response = await fetch(`https://api.countrystatecity.in/v1/countries/IN/cities`, {
                 headers: {
-                    "X-CSCAPI-KEY": "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA==" // Replace with your API key
+                    "X-CSCAPI-KEY": "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA=="
                 }
             });
 
@@ -82,8 +64,8 @@ const Kitchen = () => {
                 const data = await response.json();
                 const filteredCities = data
                     .filter(city => city.name.toLowerCase().startsWith(query.toLowerCase()))
-                    .slice(0, 10); // Limit to 10 cities for display
-                setCities(filteredCities); // Update state with filtered city names
+                    .slice(0, 10);
+                setCities(filteredCities);
             }
         } catch (error) {
             console.error("Error fetching cities:", error);
@@ -92,9 +74,8 @@ const Kitchen = () => {
 
     const selectCity = (city) => {
         setFormData({ ...formData, location: city });
-        setShowDropdown(false); // Hide dropdown after selection
+        setShowDropdown(false);
     };
-
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -103,20 +84,17 @@ const Kitchen = () => {
             [name]: value
         });
         if (name === "location") {
-            setShowDropdown(true); // Show dropdown when typing in location
-            fetchCities(value); // Fetch cities as the user types
+            setShowDropdown(true);
+            fetchCities(value);
         }
     };
 
-    const recaptchaKey = import.meta.env.VITE_RECAPTCHA_KEY;
-    const [isCaptchaVerified, setCaptchaVerified] = useState(false);
     const handleCaptchaChange = (value) => {
-        setCaptchaVerified(!!value); // Sets to true if CAPTCHA is verified, false otherwise
+        setCaptchaVerified(!!value);
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         if (!isCaptchaVerified) {
             alert("Please complete the CAPTCHA before submitting the form.");
             return;
@@ -147,7 +125,6 @@ const Kitchen = () => {
             }
             setPopupVisible(true);
 
-            // Clear form
             setFormData({
                 fullName: '',
                 phoneNumber: '',
@@ -167,37 +144,74 @@ const Kitchen = () => {
 
     const handleClosePopup = () => {
         setPopupVisible(false);
-        toggleFormVisibility(); // Optionally close the form when the popup is closed
+        toggleFormVisibility();
     };
-
 
     return (
         <div className='space-wrap'>
-            <div className="space-hero">
-                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985115/kitchen-hero_hiwmyk.png" className='desktop' alt="" />
-                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985126/mobile-kitchen-hero_wnni0y.png" className='mobile' alt="" />
-                <div className="space-hero-left">
-                    <h1>Commercial Kitchen</h1>
-                    <p onClick={toggleFormVisibility} className='space-para'><u>Enquire Now</u></p>
-                    <p id='hero-space-para'> Our Solutions for  Commercial Kitchen include, but are not limited to</p>
+            <Helmet>
+                <title>Buy High-quality Commercial Kitchen Equipment by Nikshoo Furniture Solution</title>
+                <meta 
+                    name="description" 
+                    content="From gas ranges to tandoors, we have your restaurant needs covered with top-notch Commercial Kitchen Equipment that gets the job done efficiently and beautifully!" 
+                />
+                <meta 
+                    name="keywords" 
+                    content="commercial kitchen equipment, restaurant furniture, bakery equipment, kitchen storage, refrigerator equipment, professional kitchen tools" 
+                />
+                <meta property="og:title" content="Premium Commercial Kitchen Equipment | Nikshoo Furniture Solutions" />
+                <meta property="og:description" content="High-quality commercial kitchen equipment for restaurants, bakeries and food service businesses." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://nikshoo.com/kitchen" />
+            </Helmet>
 
+            <div className="space-hero">
+                <img 
+                    src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985115/kitchen-hero_hiwmyk.png" 
+                    className='desktop' 
+                    alt="Commercial kitchen equipment solutions" 
+                    loading="lazy"
+                />
+                <img 
+                    src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985126/mobile-kitchen-hero_wnni0y.png" 
+                    className='mobile' 
+                    alt="Mobile view of commercial kitchen products" 
+                    loading="lazy"
+                />
+                <div className="space-hero-left">
+                    <h1>Commercial Kitchen <br />Equipment</h1>
+                    <p onClick={toggleFormVisibility} className='space-para'><u>Enquire Now</u></p>
+                    <p id='hero-space-para'>Our Solutions for Commercial Kitchen include, but are not limited to</p>
                 </div>
                 <div className="space-hero-right kitchen">
-                    <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985112/kitchen-hero-right_dqrxox.png" alt="" />
+                    <img 
+                        src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985112/kitchen-hero-right_dqrxox.png" 
+                        alt="Commercial kitchen equipment showcase" 
+                        loading="lazy"
+                    />
                 </div>
             </div>
 
             <div className="space2 kit">
-                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png" alt="" />
+                <img 
+                    src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png" 
+                    alt="Commercial kitchen products overview" 
+                    loading="lazy"
+                />
                 <div className="space2-heading">
                     <h1>Products in Commercial Kitchen</h1>
-                    <p>Our Solutions for  Commercial Kitchen include, but are not limited to</p>
+                    <p>Our Solutions for Commercial Kitchen include, but are not limited to</p>
                 </div>
 
                 <div className="cards-container">
                     {furnitureData.map((item) => (
                         <div key={item.id} className="card">
-                            <img src={item.img} alt={item.title} className="card-image" />
+                            <img 
+                                src={item.img} 
+                                alt={`${item.title} for commercial kitchens`} 
+                                className="card-image" 
+                                loading="lazy"
+                            />
                             <h3 className="card-title">{item.title}</h3>
                         </div>
                     ))}
@@ -233,8 +247,6 @@ const Kitchen = () => {
                                         placeholder="Enter Phone Number"
                                         required
                                     />
-
-
                                 </div>
                                 <div>
                                     <label>Email</label>
@@ -298,7 +310,6 @@ const Kitchen = () => {
                 </div>
             )}
 
-            {/* Popup Component */}
             {popupVisible && (
                 <Thanks
                     message={popupMessage}
@@ -307,7 +318,7 @@ const Kitchen = () => {
                 />
             )}
         </div>
-    )
-}
+    );
+};
 
-export default Kitchen
+export default Kitchen;

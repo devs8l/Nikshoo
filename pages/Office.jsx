@@ -1,28 +1,8 @@
-import { React, useState, useEffect,useRef } from 'react'
-import "../pages/Space.css"
-// import officeHero from "../assets/office-hero.png"
-// import officeHeroRight from "../assets/office-hero-right.png"
-
-// import officechair from "../assets/officechair.png"
-// import exeDesk from "../assets/exeDesk.png"
-// import Workstation from "../assets/Workstation.png"
-// import Cube from "../assets/cubicles.png"
-// import Conf from "../assets/con-room.png"
-// import Sofas from "../assets/sofas.png"
-// import Lounge from "../assets/lounge.png"
-// import Compact from "../assets/compact.png"
-// import Pods from "../assets/pods.png"
-// import Cafe from "../assets/Cafeteria.png"
-// import Storage from "../assets/storage.png"
-// import Locker from "../assets/locker.png"
-
-import { Thanks } from '../components/Thanks'; // Import the Thanks component
+import { React, useState, useEffect, useRef } from 'react';
+import "../pages/Space.css";
+import { Thanks } from '../components/Thanks';
 import ReCAPTCHA from 'react-google-recaptcha';
-
-// import heroMain from "../assets/hero-main.png"
-// import officeHeroMobile from "../assets/mobile-office-hero.png"
-
-
+import { Helmet } from 'react-helmet';
 
 const Office = () => {
     const furnitureData = [
@@ -38,53 +18,13 @@ const Office = () => {
         { id: 10, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985083/Cafeteria_jw4bow.png", title: 'Cafeteria/Recreation' },
         { id: 11, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985141/storage_dnvz4z.png", title: 'Storages' },
         { id: 12, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985120/locker_ysfhsu.png", title: 'Lockers' },
-
-        // Add more furniture data here
     ];
 
-    const [cities, setCities] = useState([]); // State to hold the list of cities
+    const [cities, setCities] = useState([]);
     const [showDropdown, setShowDropdown] = useState(false);
-
-    const fetchCities = async (query) => {
-        try {
-            if (!query) {
-                setCities([]);
-                return;
-            }
-
-            const response = await fetch(`https://api.countrystatecity.in/v1/countries/IN/cities`, {
-                headers: {
-                    "X-CSCAPI-KEY": "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA==" // Replace with your API key
-                }
-            });
-
-            if (response.ok) {
-                const data = await response.json();
-                const filteredCities = data
-                    .filter(city => city.name.toLowerCase().startsWith(query.toLowerCase()))
-                    .slice(0, 10); // Limit to 10 cities for display
-                setCities(filteredCities); // Update state with filtered city names
-            }
-        } catch (error) {
-            console.error("Error fetching cities:", error);
-        }
-    };
-
-
-
-
-
     const [isFormVisible, setFormVisible] = useState(false);
-    const toggleFormVisibility = () => {
-        setFormVisible(!isFormVisible);
-    };
-
     const [popupVisible, setPopupVisible] = useState(false);
-    const [popupMessage, setPopupMessage] = useState({
-        title: '',
-        body: ''
-    });
-
+    const [popupMessage, setPopupMessage] = useState({ title: '', body: '' });
     const [formData, setFormData] = useState({
         fullName: '',
         phoneNumber: '',
@@ -93,11 +33,38 @@ const Office = () => {
         email: '',
         space: 'Office Space'
     });
-
     const dropdownRef = useRef(null);
+    const recaptchaKey = import.meta.env.VITE_RECAPTCHA_KEY;
+    const [isCaptchaVerified, setCaptchaVerified] = useState(false);
+
+    const fetchCities = async (query) => {
+        try {
+            if (!query) {
+                setCities([]);
+                return;
+            }
+            const response = await fetch(`https://api.countrystatecity.in/v1/countries/IN/cities`, {
+                headers: { "X-CSCAPI-KEY": "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA==" }
+            });
+            if (response.ok) {
+                const data = await response.json();
+                const filteredCities = data
+                    .filter(city => city.name.toLowerCase().startsWith(query.toLowerCase()))
+                    .slice(0, 10);
+                setCities(filteredCities);
+            }
+        } catch (error) {
+            console.error("Error fetching cities:", error);
+        }
+    };
+
+    const toggleFormVisibility = () => {
+        setFormVisible(!isFormVisible);
+    };
+
     const handleClickOutside = (event) => {
         if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-            setShowDropdown(false); // Hide dropdown if clicked outside
+            setShowDropdown(false);
         }
     };
 
@@ -107,27 +74,23 @@ const Office = () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
+
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value
-        });
+        setFormData({ ...formData, [name]: value });
         if (name === "location") {
-            setShowDropdown(true); // Show dropdown when typing in location
-            fetchCities(value); // Fetch cities as the user types
+            setShowDropdown(true);
+            fetchCities(value);
         }
     };
 
-    const recaptchaKey = import.meta.env.VITE_RECAPTCHA_KEY;
-    const [isCaptchaVerified, setCaptchaVerified] = useState(false);
     const handleCaptchaChange = (value) => {
-        setCaptchaVerified(!!value); // Sets to true if CAPTCHA is verified, false otherwise
+        setCaptchaVerified(!!value);
     };
 
     const selectCity = (city) => {
         setFormData({ ...formData, location: city });
-        setShowDropdown(false); // Hide dropdown after selection
+        setShowDropdown(false);
     };
 
     const handleSubmit = async (e) => {
@@ -136,20 +99,13 @@ const Office = () => {
             alert("Please complete the CAPTCHA before submitting the form.");
             return;
         }
-
-        const dataToSend = {
-            ...formData,
-            space: 'Office Space'
-        };
+        const dataToSend = { ...formData, space: 'Office Space' };
         try {
             const response = await fetch(`https://nikshoo-backend.vercel.app/api/form-submission`, {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(dataToSend),
             });
-
             if (response.ok) {
                 setPopupMessage({
                     title: 'Thank you for your enquiry!',
@@ -162,8 +118,6 @@ const Office = () => {
                 });
             }
             setPopupVisible(true);
-
-            // Clear form
             setFormData({
                 fullName: '',
                 phoneNumber: '',
@@ -171,7 +125,6 @@ const Office = () => {
                 message: '',
                 email: ''
             });
-
         } catch (error) {
             setPopupMessage({
                 title: 'Something went wrong',
@@ -183,19 +136,31 @@ const Office = () => {
 
     const handleClosePopup = () => {
         setPopupVisible(false);
-        toggleFormVisibility(); // Optionally close the form when the popup is closed
+        toggleFormVisibility();
     };
 
     return (
         <div className='space-wrap'>
+            {/* SEO Meta Tags */}
+            <Helmet>
+                <title>Office Furniture at Best Price | Nikshoo</title>
+                <meta 
+                    name="description" 
+                    content="Buy office furniture with Nikshoo, which has a wide range of furniture available. Shop director chairs, executive chairs, visitor chairs, reception chairs, desks, computer tables, meeting tables, office sofas, etc." 
+                />
+                <meta 
+                    name="keywords" 
+                    content="office furniture, chairs, desks, tables, Nikshoo, executive chairs, meeting tables, office sofas" 
+                />
+            </Helmet>
+
             <div className="space-hero">
                 <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985127/mobile-office-hero_phfgvu.png" className="mobile" alt="" loading='lazy' />
                 <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985132/office-hero_byf2pd.png" className="desktop" alt="" loading='lazy' />
                 <div className="space-hero-left">
-                    <h1>Office Spaces</h1>
+                    <h1>Office Furniture</h1>
                     <p onClick={toggleFormVisibility} className='space-para'><u>Enquire Now</u></p>
-                    <p id='hero-space-para'>Our Solutions for  Office Spaces include, but are not limited to</p>
-                    
+                    <p id='hero-space-para'>Our Solutions for Office Spaces include, but are not limited to</p>
                 </div>
                 <div className="space-hero-right">
                     <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985128/office-hero-right_m1ubvq.png" alt="" loading='lazy' />
@@ -206,7 +171,7 @@ const Office = () => {
                 <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png" alt="" />
                 <div className="space2-heading">
                     <h1>Products in Office Spaces</h1>
-                    <p>Our Solutions for  Office Spaces include, but are not limited to</p>
+                    <p>Our Solutions for Office Spaces include, but are not limited to</p>
                 </div>
 
                 <div className="cards-container">
@@ -248,8 +213,6 @@ const Office = () => {
                                         placeholder="Enter Phone Number"
                                         required
                                     />
-
-
                                 </div>
                                 <div>
                                     <label>Email</label>
@@ -272,7 +235,7 @@ const Office = () => {
                                     readOnly
                                 />
                             </div>
-                            <div  ref={dropdownRef}>
+                            <div ref={dropdownRef}>
                                 <label>Location</label>
                                 <input
                                     type="text"
@@ -292,7 +255,6 @@ const Office = () => {
                                         ))}
                                     </ul>
                                 )}
-
                             </div>
                             <div>
                                 <label>Message</label>
@@ -314,7 +276,6 @@ const Office = () => {
                 </div>
             )}
 
-            {/* Popup Component */}
             {popupVisible && (
                 <Thanks
                     message={popupMessage}
@@ -323,7 +284,7 @@ const Office = () => {
                 />
             )}
         </div>
-    )
-}
+    );
+};
 
-export default Office
+export default Office;

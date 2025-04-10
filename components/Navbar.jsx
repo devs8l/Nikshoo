@@ -89,11 +89,11 @@ export default function Navbar() {
                             Spaces <RiArrowDropDownLine className='dropdown-icon' />
                             {dropdownOpen && (
                                 <ul className="spaces-dropdown-menu">
-                                    <li><NavLink to="/office" onClick={handleNavLinkClick}>Office Spaces</NavLink></li>
-                                    <li><NavLink to="/education" onClick={handleNavLinkClick}>Education Spaces</NavLink></li>
-                                    <li><NavLink to="/lab" onClick={handleNavLinkClick}>Laboratory Spaces</NavLink></li>
-                                    <li><NavLink to="/healthcare" onClick={handleNavLinkClick}>Healthcare Spaces</NavLink></li>
-                                    <li><NavLink to="/kitchen" onClick={handleNavLinkClick}>Commercial Kitchen</NavLink></li>
+                                    <li><NavLink to="/office-furniture" onClick={handleNavLinkClick}>Office Furniture</NavLink></li>
+                                    <li><NavLink to="/furniture-for-education" onClick={handleNavLinkClick}>Furniture for Education</NavLink></li>
+                                    <li><NavLink to="/laboratory-furniture" onClick={handleNavLinkClick}>Laboratory Spaces</NavLink></li>
+                                    <li><NavLink to="/hospital-furniture" onClick={handleNavLinkClick}>Healthcare Spaces</NavLink></li>
+                                    <li><NavLink to="/commercial-kitchen-equipment" onClick={handleNavLinkClick}>Commercial Kitchen</NavLink></li>
                                 </ul>
                             )}
                         </div>
@@ -126,11 +126,11 @@ export default function Navbar() {
                                 Spaces <RiArrowDropDownLine className='dropdown-icon' />
                                 {dropdownOpenMob && (
                                     <ul className="spaces-dropdown-menu mobile">
-                                        <li><NavLink to="/office" className="navlink" onClick={handleNavLinkClickMob}><h1>Office Spaces</h1></NavLink></li>
-                                        <li><NavLink to="/education" onClick={handleNavLinkClickMob}><h1>Education Spaces</h1></NavLink></li>
-                                        <li><NavLink to="/lab" onClick={handleNavLinkClickMob}><h1>Laboratory Spaces</h1></NavLink></li>
-                                        <li><NavLink to="/healthcare" onClick={handleNavLinkClickMob}><h1>Healthcare Spaces</h1></NavLink></li>
-                                        <li><NavLink to="/kitchen" onClick={handleNavLinkClickMob}><h1>Commercial Kitchen</h1></NavLink></li>
+                                        <li><NavLink to="/office-furniture" className="navlink" onClick={handleNavLinkClickMob}><h1>Office Furniture</h1></NavLink></li>
+                                        <li><NavLink to="/furniture-for-education" onClick={handleNavLinkClickMob}><h1>Furniture for Education</h1></NavLink></li>
+                                        <li><NavLink to="/laboratory-furniture" onClick={handleNavLinkClickMob}><h1>Laboratory Spaces</h1></NavLink></li>
+                                        <li><NavLink to="/hospital-furniture" onClick={handleNavLinkClickMob}><h1>Healthcare Spaces</h1></NavLink></li>
+                                        <li><NavLink to="/commercial-kitchen-equipment" onClick={handleNavLinkClickMob}><h1>Commercial Kitchen</h1></NavLink></li>
                                     </ul>
                                 )}
                             </div>

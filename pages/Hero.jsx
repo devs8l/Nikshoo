@@ -122,23 +122,23 @@ const Hero = () => {
         <div className="part2">
           <div className="part2-l">
             <div className="l-img">
-              <a href="/office">
+              <a href="/office-furniture">
                 <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985133/office_gohucx.png" alt="Office Space" loading="lazy" />
               </a>
             </div>
             <div className="l-con">
-              <h2><a href="/office" className="spaces">Office Spaces <MdOutlineArrowOutward className='green' /></a></h2>
+              <h2><a href="/office-furniture" className="spaces">Office Furniture <MdOutlineArrowOutward className='green' /></a></h2>
             </div>
           </div>
 
           <div className="part2-r mobileabs">
             <div className="r-img">
-              <a href="/education">
+              <a href="/furniture-for-education">
                 <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985094/edu_fuf0it.png" alt="Education Space" loading="lazy" />
               </a>
             </div>
             <div className="r-con">
-              <h2><a href="/education" className="spaces">Education Spaces <MdOutlineArrowOutward className='green' /></a></h2>
+              <h2><a href="/furniture-for-education" className="spaces">Furniture for Education <MdOutlineArrowOutward className='green' /></a></h2>
             </div>
           </div>
         </div>
@@ -147,43 +147,43 @@ const Hero = () => {
 
           <div className="part2-r abs">
             <div className="r-img">
-              <a href="/education">
+              <a href="/furniture-for-education">
                 <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985094/edu_fuf0it.png" alt="Education Space" loading="lazy" />
               </a>
             </div>
             <div className="r-con">
-              <h2><a href="/education" className="spaces">Education Spaces <MdOutlineArrowOutward className='green' /></a></h2>
+              <h2><a href="/furniture-for-education" className="spaces">Education Spaces <MdOutlineArrowOutward className='green' /></a></h2>
             </div>
           </div>
 
           <div className="part3-sub">
             <div className="part3-img-div">
-              <a href="/healthcare">
+              <a href="/hospital-furniture">
                 <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985108/hww-lefty_fpguk9.png" alt="Healthcare Space" loading="lazy" />
               </a>
             </div>
             <div className="part3-con">
-              <h2><a href="/healthcare" className="spaces">Healthcare Spaces <MdOutlineArrowOutward className='green' /></a></h2>
+              <h2><a href="/hospital-furniture" className="spaces">Healthcare Spaces <MdOutlineArrowOutward className='green' /></a></h2>
             </div>
           </div>
           <div className="part3-sub">
             <div className="part3-img-div">
-              <a href="/lab">
+              <a href="/laboratory-furniture">
                 <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985108/hww-mid_srltbk.png" alt="Laboratory Space" loading="lazy" />
               </a>
             </div>
             <div className="part3-con">
-              <h2><a href="/lab" className="spaces">Laboratory Spaces <MdOutlineArrowOutward className='green' /></a></h2>
+              <h2><a href="/laboratory-furniture" className="spaces">Laboratory Spaces <MdOutlineArrowOutward className='green' /></a></h2>
             </div>
           </div>
           <div className="part3-sub">
             <div className="part3-img-div">
-              <a href="/kitchen">
+              <a href="/commercial-kitchen-equipment">
                 <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985108/hww-righty_wpfkt1.png" alt="Commercial Kitchen" loading="lazy" />
               </a>
             </div>
             <div className="part3-con">
-              <h2><a href="/kitchen" className="spaces">Commercial Kitchen <MdOutlineArrowOutward className='green' /></a></h2>
+              <h2><a href="/commercial-kitchen-equipment" className="spaces">Commercial Kitchen <MdOutlineArrowOutward className='green' /></a></h2>
             </div>
           </div>
         </div>

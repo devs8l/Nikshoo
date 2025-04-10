@@ -1,41 +1,8 @@
-import { React, useState, useEffect,useRef } from 'react'
-
-import "../pages/Space.css"
-// import officeHero from "../assets/office-hero.png"
-// import officeHeroRight from "../assets/office-hero-right.png"
-
-// import DoctorExam from "../assets/Doctor-table.png"
-// import exeDesk from "../assets/exeDesk.png"
-// import Workstation from "../assets/Workstation.png"
-// import Cube from "../assets/cubicles.png"
-// import Conf from "../assets/con-room.png"
-// import Sofas from "../assets/sofas.png"
-// import Lounge from "../assets/lounge.png"
-// import Compact from "../assets/compact.png"
-// import Pods from "../assets/pods.png"
-// import Cafe from "../assets/Cafeteria.png"
-// import Storage from "../assets/storage.png"
-// import Locker from "../assets/locker.png"
-
-// import heroMain from "../assets/hero-main.png"
-
-// import HealthcareHero from "../assets/Health-hero.png"
-// import HealthcareHeroMobile from "../assets/mobile-healthcare-hero.png"
-// import HealthcareHeroRight from "../assets/Health-right-hero.png"
-// import Principal from "../assets/Principal.png"
-// import GreySofa from "../assets/grey-sofa.png"
-
-// import waiting from "../assets/wait.png"
-// import soft from "../assets/soft-seat.png"
-// import tward from "../assets/two.png"
-// import HospitalRoom from "../assets/hos-room.png"
-
-import { Thanks } from '../components/Thanks'; // Import the Thanks component
+import { React, useState, useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet';
+import "../pages/Space.css";
+import { Thanks } from '../components/Thanks';
 import ReCAPTCHA from 'react-google-recaptcha';
-
-
-
-
 
 const Healthcare = () => {
     const furnitureData = [
@@ -48,13 +15,10 @@ const Healthcare = () => {
         { id: 10, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985083/Cafeteria_jw4bow.png", title: 'Cafeteria/Recreation' },
         { id: 11, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985141/storage_dnvz4z.png", title: 'Storages' },
         { id: 12, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985120/locker_ysfhsu.png", title: 'Lockers' },
-        { id: 6, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985142/two_fnyxka.png", title: 'Transfer , ward & OT ' },
-        { id: 7, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985105/hos-room_pbhkod.png", title: 'Hospital room' },
+        { id: 6, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985142/two_fnyxka.png", title: 'Transfer, Ward & OT' },
+        { id: 7, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985105/hos-room_pbhkod.png", title: 'Hospital Room' },
         { id: 8, img: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985086/compact_vw81uf.png", title: 'Compactors' },
-
-        // Add more furniture data here
     ];
-
 
     const [isFormVisible, setFormVisible] = useState(false);
     const toggleFormVisibility = () => {
@@ -63,7 +27,7 @@ const Healthcare = () => {
 
     const [isCaptchaVerified, setCaptchaVerified] = useState(false);
     const handleCaptchaChange = (value) => {
-        setCaptchaVerified(!!value); // Sets to true if CAPTCHA is verified, false otherwise
+        setCaptchaVerified(!!value);
     };
 
     const [popupVisible, setPopupVisible] = useState(false);
@@ -81,11 +45,10 @@ const Healthcare = () => {
         space: 'Healthcare Space'
     });
 
-
     const dropdownRef = useRef(null);
     const handleClickOutside = (event) => {
         if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-            setShowDropdown(false); // Hide dropdown if clicked outside
+            setShowDropdown(false);
         }
     };
 
@@ -96,8 +59,7 @@ const Healthcare = () => {
         };
     }, []);
 
-
-    const [cities, setCities] = useState([]); // State to hold the list of cities
+    const [cities, setCities] = useState([]);
     const [showDropdown, setShowDropdown] = useState(false);
 
     const fetchCities = async (query) => {
@@ -109,7 +71,7 @@ const Healthcare = () => {
 
             const response = await fetch(`https://api.countrystatecity.in/v1/countries/IN/cities`, {
                 headers: {
-                    "X-CSCAPI-KEY": "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA==" // Replace with your API key
+                    "X-CSCAPI-KEY": "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA=="
                 }
             });
 
@@ -117,8 +79,8 @@ const Healthcare = () => {
                 const data = await response.json();
                 const filteredCities = data
                     .filter(city => city.name.toLowerCase().startsWith(query.toLowerCase()))
-                    .slice(0, 10); // Limit to 10 cities for display
-                setCities(filteredCities); // Update state with filtered city names
+                    .slice(0, 10);
+                setCities(filteredCities);
             }
         } catch (error) {
             console.error("Error fetching cities:", error);
@@ -127,9 +89,8 @@ const Healthcare = () => {
 
     const selectCity = (city) => {
         setFormData({ ...formData, location: city });
-        setShowDropdown(false); // Hide dropdown after selection
+        setShowDropdown(false);
     };
-    
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -138,13 +99,12 @@ const Healthcare = () => {
             [name]: value
         });
         if (name === "location") {
-            setShowDropdown(true); // Show dropdown when typing in location
-            fetchCities(value); // Fetch cities as the user types
+            setShowDropdown(true);
+            fetchCities(value);
         }
     };
 
     const recaptchaKey = import.meta.env.VITE_RECAPTCHA_KEY;
-
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -178,7 +138,6 @@ const Healthcare = () => {
             }
             setPopupVisible(true);
 
-            // Clear form
             setFormData({
                 fullName: '',
                 phoneNumber: '',
@@ -198,27 +157,60 @@ const Healthcare = () => {
 
     const handleClosePopup = () => {
         setPopupVisible(false);
-        toggleFormVisibility(); // Optionally close the form when the popup is closed
+        toggleFormVisibility();
     };
 
     return (
         <div className='space-wrap'>
+            <Helmet>
+                <title>Buy High-quality Hospital Furniture by Nikshoo Furniture Solution</title>
+                <meta 
+                    name="description" 
+                    content="Discover Nikshoo Furniture Solution hospital furniture designed for healthcare environments. From comfortable hospital chairs to adjustable hospital beds and trolleys." 
+                />
+                <meta 
+                    name="keywords" 
+                    content="hospital furniture, medical furniture, healthcare furniture, doctor examination table, hospital beds, medical storage, hospital waiting chairs, healthcare space solutions" 
+                />
+                <meta property="og:title" content="Premium Hospital Furniture | Nikshoo Furniture Solutions" />
+                <meta property="og:description" content="High-quality hospital furniture designed for comfort, durability and hygiene in healthcare environments." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://nikshoo.com/healthcare" />
+            </Helmet>
+
             <div className="space-hero">
-                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985126/mobile-healthcare-hero_an7lnb.png" className='mobile' alt="" />
-                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985104/Health-hero_yhp9nq.png" className='desktop' alt="" />
+                <img 
+                    src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985126/mobile-healthcare-hero_an7lnb.png" 
+                    className='mobile' 
+                    alt="Hospital furniture solutions for healthcare spaces" 
+                    loading="lazy"
+                />
+                <img 
+                    src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985104/Health-hero_yhp9nq.png" 
+                    className='desktop' 
+                    alt="Premium healthcare furniture by Nikshoo" 
+                    loading="lazy"
+                />
                 <div className="space-hero-left">
-                    <h1>Healthcare Spaces</h1>
+                    <h1>Hospital Furniture</h1>
                     <p onClick={toggleFormVisibility} className='space-para'><u>Enquire Now</u></p>
-                    <p id='hero-space-para'>Our Solutions for  Healthcare Spaces include, but are not limited to</p>
-                    
+                    <p id='hero-space-para'>Our healthcare furniture solutions include doctor examination tables, hospital beds, waiting area seating and more</p>
                 </div>
                 <div className="space-hero-right health">
-                    <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985103/Health-right-hero_e9afcs.png" alt="" />
+                    <img 
+                        src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985103/Health-right-hero_e9afcs.png" 
+                        alt="Healthcare space furniture collection" 
+                        loading="lazy"
+                    />
                 </div>
             </div>
 
             <div className="space2">
-                <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png" alt="" />
+                <img 
+                    src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png" 
+                    alt="Healthcare furniture products overview" 
+                    loading="lazy"
+                />
                 <div className="space2-heading">
                     <h1>Products in Healthcare Spaces</h1>
                     <p>Our Solutions for  Healthcare Spaces include, but are not limited to</p>
@@ -227,7 +219,12 @@ const Healthcare = () => {
                 <div className="cards-container">
                     {furnitureData.map((item) => (
                         <div key={item.id} className="card">
-                            <img src={item.img} alt={item.title} className="card-image" />
+                            <img 
+                                src={item.img} 
+                                alt={`${item.title} furniture for hospitals`} 
+                                className="card-image" 
+                                loading="lazy"
+                            />
                             <h3 className="card-title">{item.title}</h3>
                         </div>
                     ))}
@@ -263,8 +260,6 @@ const Healthcare = () => {
                                         placeholder="Enter Phone Number"
                                         required
                                     />
-
-
                                 </div>
                                 <div>
                                     <label>Email</label>
@@ -321,7 +316,6 @@ const Healthcare = () => {
                             <ReCAPTCHA
                                 sitekey={recaptchaKey}
                                 onChange={handleCaptchaChange}
-
                             />
                             <button type="submit" id='submit'>Submit</button>
                         </form>
@@ -329,7 +323,6 @@ const Healthcare = () => {
                 </div>
             )}
 
-            {/* Popup Component */}
             {popupVisible && (
                 <Thanks
                     message={popupMessage}
@@ -338,7 +331,7 @@ const Healthcare = () => {
                 />
             )}
         </div>
-    )
-}
+    );
+};
 
-export default Healthcare
+export default Healthcare;

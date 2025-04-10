@@ -40,11 +40,11 @@ export const Rotate = () => {
     const circles = [
         {
             id: 1,
-            heading: 'Office Spaces',
+            heading: 'Office Furniture',
             content: 'Content for Office Space',
             image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985084/center-left_qmfdfg.png",
                 rightTop: {
-                link: '/office',
+                link: '/office-furniture',
                 h1: 'Office Desk',
                 para: 'Beautiful Color Collection',
                 image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985130/office-top_oa6fmy.png"
@@ -60,12 +60,12 @@ export const Rotate = () => {
         },
         {
             id: 2,
-            heading: 'Education Spaces',
+            heading: 'Furniture for Education',
             content: 'Content for Education Space',
             image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985125/mg4_tokh6q.png",
             rightTop: {
-                link: '/education',
-                h1: 'Education Spaces',
+                link: '/furniture-for-education',
+                h1: 'Furniture for Education',
                 para: 'Beautiful Color Collection',
                 image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985091/edu-hero-right_hos1ws.png"
             },
@@ -84,7 +84,7 @@ export const Rotate = () => {
             content: 'Content for Commercial Kitchen',
             image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985126/mg5-2_rruuqa.jpg",
             rightTop: {
-                link: '/kitchen',
+                link: '/commercial-kitchen-equipment',
                 h1: 'Commercial Kitchen',
                 para: '',
                 image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985085/com-kitchen_ovonx8.png"
@@ -104,7 +104,7 @@ export const Rotate = () => {
             content: 'Content for Healthcare Space',
             image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985124/mg2_fjrwfj.png",
             rightTop: {
-                link: '/healthcare',
+                link: '/hospital-furniture',
                 h1: 'Healthcare Spaces',
                 para: '',
                 image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985081/bed-health_epc9bu.png"
@@ -122,7 +122,7 @@ export const Rotate = () => {
             content: 'Content for Laboratory Space',
             image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985123/mg3-2_qa5nie.webp",
             rightTop: {
-                link: '/lab',
+                link: '/laboratory-furniture',
                 h1: 'Laboratory Spaces',
                 para: '',
                 image: "https://res.cloudinary.com/dicusurfx/image/upload/v1730985117/lab2_tjw2zi.png"
