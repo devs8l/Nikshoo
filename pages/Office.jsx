@@ -144,13 +144,13 @@ const Office = () => {
             {/* SEO Meta Tags */}
             <Helmet>
                 <title>Office Furniture at Best Price | Nikshoo</title>
-                <meta 
-                    name="description" 
-                    content="Buy office furniture with Nikshoo, which has a wide range of furniture available. Shop director chairs, executive chairs, visitor chairs, reception chairs, desks, computer tables, meeting tables, office sofas, etc." 
+                <meta
+                    name="description"
+                    content="Buy office furniture with Nikshoo, which has a wide range of furniture available. Shop director chairs, executive chairs, visitor chairs, reception chairs, desks, computer tables, meeting tables, office sofas, etc."
                 />
-                <meta 
-                    name="keywords" 
-                    content="office furniture, chairs, desks, tables, Nikshoo, executive chairs, meeting tables, office sofas" 
+                <meta
+                    name="keywords"
+                    content="office furniture, chairs, desks, tables, Nikshoo, executive chairs, meeting tables, office sofas"
                 />
             </Helmet>
 
@@ -169,9 +169,21 @@ const Office = () => {
 
             <div className="space2">
                 <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png" alt="" />
-                <div className="space2-heading">
-                    <h1>Products in Office Spaces</h1>
-                    <p>Our Solutions for Office Spaces include, but are not limited to</p>
+                <div className="space2-heading office">
+                    <div className="space2-heading-con">
+                        <h1>Office Furniture: The Secret to a Smart & Stylish Workspace!</h1>
+                        <p>Let’s be honest - nobody wants to work in a boring, uncomfortable office. But have you
+                            ever walked into a place that just feels productive? That’s the magic of office furniture! It’s
+                            not just about tables and chairs; it’s about creating a space where work feels effortless and
+                            creativity flows.</p>
+                    </div>
+                    <div className="space2-heading-con">
+                        <h2>Office Furniture That Makes Work Feel Less Like Work</h2>
+                        <p>You spend hours in your office, so why settle for anything less than comfort and style?
+                            The right office furniture can turn a dull workspace into a powerhouse of ideas.</p>
+                    </div>
+
+
                 </div>
 
                 <div className="cards-container">
@@ -181,6 +193,14 @@ const Office = () => {
                             <h3 className="card-title">{item.title}</h3>
                         </div>
                     ))}
+                </div>
+                <div className='space2-heading'>
+                    <div className="space2-heading-con">
+                        <h3>Office Furniture: Because of Comfort and Style Matter!</h3>
+                        <p>A well-designed office isn’t just about aesthetics - it’s about how it makes you feel. The
+                            right office furniture keeps you comfortable, focused, and ready to take on anything. So, why
+                            not upgrade your space and make work feel less like work?</p>
+                    </div>
                 </div>
             </div>
 

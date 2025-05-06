@@ -151,13 +151,13 @@ const Kitchen = () => {
         <div className='space-wrap'>
             <Helmet>
                 <title>Buy High-quality Commercial Kitchen Equipment by Nikshoo Furniture Solution</title>
-                <meta 
-                    name="description" 
-                    content="From gas ranges to tandoors, we have your restaurant needs covered with top-notch Commercial Kitchen Equipment that gets the job done efficiently and beautifully!" 
+                <meta
+                    name="description"
+                    content="From gas ranges to tandoors, we have your restaurant needs covered with top-notch Commercial Kitchen Equipment that gets the job done efficiently and beautifully!"
                 />
-                <meta 
-                    name="keywords" 
-                    content="commercial kitchen equipment, restaurant furniture, bakery equipment, kitchen storage, refrigerator equipment, professional kitchen tools" 
+                <meta
+                    name="keywords"
+                    content="commercial kitchen equipment, restaurant furniture, bakery equipment, kitchen storage, refrigerator equipment, professional kitchen tools"
                 />
                 <meta property="og:title" content="Premium Commercial Kitchen Equipment | Nikshoo Furniture Solutions" />
                 <meta property="og:description" content="High-quality commercial kitchen equipment for restaurants, bakeries and food service businesses." />
@@ -166,16 +166,16 @@ const Kitchen = () => {
             </Helmet>
 
             <div className="space-hero">
-                <img 
-                    src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985115/kitchen-hero_hiwmyk.png" 
-                    className='desktop' 
-                    alt="Commercial kitchen equipment solutions" 
+                <img
+                    src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985115/kitchen-hero_hiwmyk.png"
+                    className='desktop'
+                    alt="Commercial kitchen equipment solutions"
                     loading="lazy"
                 />
-                <img 
-                    src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985126/mobile-kitchen-hero_wnni0y.png" 
-                    className='mobile' 
-                    alt="Mobile view of commercial kitchen products" 
+                <img
+                    src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985126/mobile-kitchen-hero_wnni0y.png"
+                    className='mobile'
+                    alt="Mobile view of commercial kitchen products"
                     loading="lazy"
                 />
                 <div className="space-hero-left">
@@ -184,37 +184,54 @@ const Kitchen = () => {
                     <p id='hero-space-para'>Our Solutions for Commercial Kitchen include, but are not limited to</p>
                 </div>
                 <div className="space-hero-right kitchen">
-                    <img 
-                        src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985112/kitchen-hero-right_dqrxox.png" 
-                        alt="Commercial kitchen equipment showcase" 
+                    <img
+                        src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985112/kitchen-hero-right_dqrxox.png"
+                        alt="Commercial kitchen equipment showcase"
                         loading="lazy"
                     />
                 </div>
             </div>
 
             <div className="space2 kit">
-                <img 
-                    src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png" 
-                    alt="Commercial kitchen products overview" 
+                <img
+                    src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png"
+                    alt="Commercial kitchen products overview"
                     loading="lazy"
                 />
-                <div className="space2-heading">
-                    <h1>Products in Commercial Kitchen</h1>
-                    <p>Our Solutions for Commercial Kitchen include, but are not limited to</p>
+                <div className="space2-heading ">
+                    <div className="space2-heading-con">
+                        <h1>Hospital Furniture: Comfort That Cares!</h1>
+                        <p>A hospital isn’t just a building - it’s a place where lives are healed, comfort is key, and
+                            efficiency matters. The right hospital furniture creates a space where doctors work smoothly,
+                            patients feel at ease, and every moment counts. Whether it’s an emergency room, a patient
+                            ward, or a doctor’s office, smartly designed furniture makes all the difference.</p>
+                    </div>
+                    <div className="space2-heading-con">
+                        <h2>Hospital Furniture That Supports Every Need</h2>
+                        <p>From treatment areas to waiting lounges, every space demands furniture that blends
+                            functionality with comfort. The right setup enhances both care and convenience.</p>
+                    </div>
                 </div>
 
                 <div className="cards-container">
                     {furnitureData.map((item) => (
                         <div key={item.id} className="card">
-                            <img 
-                                src={item.img} 
-                                alt={`${item.title} for commercial kitchens`} 
-                                className="card-image" 
+                            <img
+                                src={item.img}
+                                alt={`${item.title} for commercial kitchens`}
+                                className="card-image"
                                 loading="lazy"
                             />
                             <h3 className="card-title">{item.title}</h3>
                         </div>
                     ))}
+                </div>
+                <div className="space2-heading">
+                    <div className="space2-heading-con">
+                        <h3>Hospital Furniture That Enhances Healing</h3>
+                        <p>A well-designed hospital environment isn’t just about looks - it’s about making recovery
+                            smoother. When comfort meets care, healing happens faster!</p>
+                    </div>
                 </div>
             </div>
 

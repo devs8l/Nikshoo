@@ -92,7 +92,7 @@ const Education = () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
-    
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -169,13 +169,13 @@ const Education = () => {
             {/* SEO Meta Tags */}
             <Helmet>
                 <title>Buy Furniture for Education at Best Price</title>
-                <meta 
-                    name="description" 
-                    content="Explore Nikshoo Furniture Solutions for premium Furniture for Education, including Classroom Desking, Administration Office Furniture, Waiting Area Furniture, Compactors, Cafeteria/Recreation, Storages, Lockers, Library, and Lab setups. Elevate learning spaces with functional and stylish designs. Buy Classroom Furniture CAD blocks and desks crafted for durability and efficiency" 
+                <meta
+                    name="description"
+                    content="Explore Nikshoo Furniture Solutions for premium Furniture for Education, including Classroom Desking, Administration Office Furniture, Waiting Area Furniture, Compactors, Cafeteria/Recreation, Storages, Lockers, Library, and Lab setups. Elevate learning spaces with functional and stylish designs. Buy Classroom Furniture CAD blocks and desks crafted for durability and efficiency"
                 />
-                <meta 
-                    name="keywords" 
-                    content="education furniture, classroom furniture, school furniture, lab furniture, library furniture, cafeteria furniture, Nikshoo" 
+                <meta
+                    name="keywords"
+                    content="education furniture, classroom furniture, school furniture, lab furniture, library furniture, cafeteria furniture, Nikshoo"
                 />
             </Helmet>
 
@@ -194,9 +194,23 @@ const Education = () => {
 
             <div className="space2">
                 <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png" alt="" />
-                <div className="space2-heading">
-                    <h1>Products in Education Spaces</h1>
-                    <p>Our Solutions for  Education Spaces include, but are not limited to</p>
+                <div className="space2-heading office">
+                    <div className="space2-heading-con">
+                        <h1>Furniture for Education: The Secret to Smarter Learning!</h1>
+                        <p>Ever wondered why some classrooms feel more inspiring than others? It’s all about the
+                            setup! The right furniture for education isn’t just about filling space - it’s about creating an
+                            environment where students focus better, collaborate easily, and actually enjoy learning. A
+                            well-planned classroom encourages creativity, keeps distractions away, and makes studying
+                            feel effortless.</p>
+                    </div>
+                    <div className="space2-heading-con">
+                        <h2>Furniture for Education That Fits Every Space</h2>
+                        <p>Every learning area needs the perfect setup - something comfortable, functional, and
+designed to boost productivity. Whether it’s for quiet study or interactive discussions, the
+right furniture makes a difference.</p>
+                    </div>
+
+
                 </div>
 
                 <div className="cards-container">
@@ -206,6 +220,15 @@ const Education = () => {
                             <h3 className="card-title">{item.title}</h3>
                         </div>
                     ))}
+                </div>
+                <div className="space2-heading">
+
+                    <div className="space2-heading-con">
+                        <h3>Furniture for Education That Shapes the Future</h3>
+                        <p>A great classroom isn’t just a room - it’s a space where ideas grow. Investing in the right
+                        furniture means investing in better learning, sharper minds, and brighter futures!</p>
+                    </div>
+
                 </div>
             </div>
 

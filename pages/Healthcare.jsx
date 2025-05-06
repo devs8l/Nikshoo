@@ -164,13 +164,13 @@ const Healthcare = () => {
         <div className='space-wrap'>
             <Helmet>
                 <title>Buy High-quality Hospital Furniture by Nikshoo Furniture Solution</title>
-                <meta 
-                    name="description" 
-                    content="Discover Nikshoo Furniture Solution hospital furniture designed for healthcare environments. From comfortable hospital chairs to adjustable hospital beds and trolleys." 
+                <meta
+                    name="description"
+                    content="Discover Nikshoo Furniture Solution hospital furniture designed for healthcare environments. From comfortable hospital chairs to adjustable hospital beds and trolleys."
                 />
-                <meta 
-                    name="keywords" 
-                    content="hospital furniture, medical furniture, healthcare furniture, doctor examination table, hospital beds, medical storage, hospital waiting chairs, healthcare space solutions" 
+                <meta
+                    name="keywords"
+                    content="hospital furniture, medical furniture, healthcare furniture, doctor examination table, hospital beds, medical storage, hospital waiting chairs, healthcare space solutions"
                 />
                 <meta property="og:title" content="Premium Hospital Furniture | Nikshoo Furniture Solutions" />
                 <meta property="og:description" content="High-quality hospital furniture designed for comfort, durability and hygiene in healthcare environments." />
@@ -179,16 +179,16 @@ const Healthcare = () => {
             </Helmet>
 
             <div className="space-hero">
-                <img 
-                    src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985126/mobile-healthcare-hero_an7lnb.png" 
-                    className='mobile' 
-                    alt="Hospital furniture solutions for healthcare spaces" 
+                <img
+                    src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985126/mobile-healthcare-hero_an7lnb.png"
+                    className='mobile'
+                    alt="Hospital furniture solutions for healthcare spaces"
                     loading="lazy"
                 />
-                <img 
-                    src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985104/Health-hero_yhp9nq.png" 
-                    className='desktop' 
-                    alt="Premium healthcare furniture by Nikshoo" 
+                <img
+                    src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985104/Health-hero_yhp9nq.png"
+                    className='desktop'
+                    alt="Premium healthcare furniture by Nikshoo"
                     loading="lazy"
                 />
                 <div className="space-hero-left">
@@ -197,37 +197,54 @@ const Healthcare = () => {
                     <p id='hero-space-para'>Our healthcare furniture solutions include doctor examination tables, hospital beds, waiting area seating and more</p>
                 </div>
                 <div className="space-hero-right health">
-                    <img 
-                        src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985103/Health-right-hero_e9afcs.png" 
-                        alt="Healthcare space furniture collection" 
+                    <img
+                        src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985103/Health-right-hero_e9afcs.png"
+                        alt="Healthcare space furniture collection"
                         loading="lazy"
                     />
                 </div>
             </div>
 
             <div className="space2">
-                <img 
-                    src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png" 
-                    alt="Healthcare furniture products overview" 
+                <img
+                    src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png"
+                    alt="Healthcare furniture products overview"
                     loading="lazy"
                 />
-                <div className="space2-heading">
-                    <h1>Products in Healthcare Spaces</h1>
-                    <p>Our Solutions for  Healthcare Spaces include, but are not limited to</p>
+                <div className="space2-heading office">
+                    <div className="space2-heading-con">
+                        <h1>Hospital Furniture: Comfort That Cares!</h1>
+                        <p>A hospital isn’t just a building - it’s a place where lives are healed, comfort is key, and
+                            efficiency matters. The right hospital furniture creates a space where doctors work smoothly,
+                            patients feel at ease, and every moment counts. Whether it’s an emergency room, a patient
+                            ward, or a doctor’s office, smartly designed furniture makes all the difference.</p>
+                    </div>
+                    <div className="space2-heading-con">
+                        <h2>Hospital Furniture That Supports Every Need</h2>
+                        <p>From treatment areas to waiting lounges, every space demands furniture that blends
+                            functionality with comfort. The right setup enhances both care and convenience.</p>
+                    </div>
                 </div>
 
                 <div className="cards-container">
                     {furnitureData.map((item) => (
                         <div key={item.id} className="card">
-                            <img 
-                                src={item.img} 
-                                alt={`${item.title} furniture for hospitals`} 
-                                className="card-image" 
+                            <img
+                                src={item.img}
+                                alt={`${item.title} furniture for hospitals`}
+                                className="card-image"
                                 loading="lazy"
                             />
                             <h3 className="card-title">{item.title}</h3>
                         </div>
                     ))}
+                </div>
+                <div className="space2-heading">
+                    <div className="space2-heading-con">
+                        <h3>Hospital Furniture That Enhances Healing</h3>
+                        <p>A well-designed hospital environment isn’t just about looks - it’s about making recovery
+                        smoother. When comfort meets care, healing happens faster!</p>
+                    </div>
                 </div>
             </div>
 

@@ -78,7 +78,7 @@ const Lab = () => {
         setFormData({ ...formData, location: city });
         setShowDropdown(false);
     };
-    
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -157,13 +157,13 @@ const Lab = () => {
             {/* SEO Meta Tags */}
             <Helmet>
                 <title>Buy High-quality Modular Laboratory Furniture by Nikshoo Furniture</title>
-                <meta 
-                    name="description" 
-                    content="Discover Nikshoo's modular Laboratory furniture, designed for adaptability and efficiency in modern laboratory settings. Our furniture solutions offer flexible configurations to fit any space, supporting diverse research needs with ergonomic design and durable materials. Explore our range to optimize your lab environment." 
+                <meta
+                    name="description"
+                    content="Discover Nikshoo's modular Laboratory furniture, designed for adaptability and efficiency in modern laboratory settings. Our furniture solutions offer flexible configurations to fit any space, supporting diverse research needs with ergonomic design and durable materials. Explore our range to optimize your lab environment."
                 />
-                <meta 
-                    name="keywords" 
-                    content="laboratory furniture, lab workstations, fume hoods, safety cabinets, animal house furniture, modular lab furniture, Nikshoo" 
+                <meta
+                    name="keywords"
+                    content="laboratory furniture, lab workstations, fume hoods, safety cabinets, animal house furniture, modular lab furniture, Nikshoo"
                 />
             </Helmet>
 
@@ -180,11 +180,23 @@ const Lab = () => {
                 </div>
             </div>
 
-            <div className="space2 lab">
+            <div className="space2 ">
                 <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985102/hero-main_ajhuae.png" alt="Laboratory Solutions" />
-                <div className="space2-heading">
-                    <h1>Products in Laboratory Spaces</h1>
-                    <p>Our Solutions for Laboratory Spaces include, but are not limited to</p>
+                <div className="space2-heading office">
+                    <div className="space2-heading-con">
+                        <h1>Laboratory Furniture: Where Science Meets Smart Design!</h1>
+                        <p>A great lab isn’t just about test tubes and microscopes - it’s about having the perfect setup
+                            for innovation. The right laboratory furniture ensures scientists, researchers, and students
+                            work efficiently in a space that’s organized, safe, and inspiring. Whether it’s a school lab or a
+                            high-tech research center, a well-designed workspace makes all the difference.</p>
+                    </div>
+                    <div className="space2-heading-con">
+                        <h2>Laboratory Furniture That Fits Every Experiment</h2>
+                        <p>Labs need furniture that’s durable, functional, and adaptable. From workstations to storage,
+                            every piece plays a role in creating a productive environment.</p>
+                    </div>
+
+
                 </div>
 
                 <div className="cards-container">
@@ -194,6 +206,16 @@ const Lab = () => {
                             <h3 className="card-title">{item.title}</h3>
                         </div>
                     ))}
+                </div>
+                <div className="space2-heading">
+
+                    <div className="space2-heading-con">
+                        <h3>Laboratory Furniture That Fuels Discovery</h3>
+                        <p>A well-equipped lab sparks curiosity and drives breakthroughs. When the workspace is
+                            designed for efficiency, science becomes more than a subject - it becomes an experience!</p>
+                    </div>
+
+
                 </div>
             </div>
 

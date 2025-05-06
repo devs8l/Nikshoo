@@ -75,6 +75,22 @@
 
 .space2-heading {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3vh;
+}
+.space2-heading-con p{
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+.lab-margin{
+  margin-top: 5vh;
+}
+.space2-heading-con{
+  width: 60%;
 }
 
 .space2>img {
@@ -226,20 +242,13 @@
   }
   
 
-  .space2-heading h1 {
-    display: none;
-  }
+ .space2-heading{
+  display: flex;
 
-  .space2-heading p {
-    width: 70%;
-    margin-left: 15%;
-    text-align: center;
-    display: none;
-    /* margin-top: -80%; */
-  }
+ }
 
   .cards-container {
-    margin-top: -100%;
+    /* margin-top: -100%; */
   }
 
 
@@ -250,8 +259,8 @@
   }
 
   .kit {
-    margin-top: -40%;
-    margin-bottom: -30%;
+    margin-top: -60%;
+    /* margin-bottom: -30%; */
   }
 
 
@@ -259,6 +268,16 @@
     font-size: 3vw;
     width: 100%;
     text-align: center;
+  }
+  .office{
+    margin-top: -60%;
+  }
+  .space-hero{
+    height: 90svh;
+  }
+  .space2-heading-con{
+    width: 90%;
+    /* margin-bottom: 3vh; */
   }
 }
 
