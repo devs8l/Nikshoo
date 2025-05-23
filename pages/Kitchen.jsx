@@ -200,16 +200,18 @@ const Kitchen = () => {
                 />
                 <div className="space2-heading ">
                     <div className="space2-heading-con">
-                        <h1>Hospital Furniture: Comfort That Cares!</h1>
-                        <p>A hospital isn’t just a building - it’s a place where lives are healed, comfort is key, and
-                            efficiency matters. The right hospital furniture creates a space where doctors work smoothly,
-                            patients feel at ease, and every moment counts. Whether it’s an emergency room, a patient
-                            ward, or a doctor’s office, smartly designed furniture makes all the difference.</p>
+                        <h1>Commercial Kitchen Equipment : Designed for Speed, Built for Success!</h1>
+                        <p>A busy kitchen is like a well-orchestrated symphony - every station, every tool, and every
+                            movement must be in perfect sync. That’s why a well-planned commercial kitchen isn’t just
+                            about cooking; it’s about creating a space that maximizes efficiency, maintains hygiene, and
+                            keeps the workflow smooth. The right setup allows chefs to focus on what they do best -
+                            crafting amazing dishes without unnecessary hassle.</p>
                     </div>
                     <div className="space2-heading-con">
-                        <h2>Hospital Furniture That Supports Every Need</h2>
-                        <p>From treatment areas to waiting lounges, every space demands furniture that blends
-                            functionality with comfort. The right setup enhances both care and convenience.</p>
+                        <h2>Commercial Kitchen Equipment That Works as Hard as You Do</h2>
+                        <p>From prep areas to high-performance appliances, every element in a kitchen must support
+                            speed, organization, and safety. A seamless design ensures that everything is within reach,
+                            making cooking a stress-free experience</p>
                     </div>
                 </div>
 
@@ -228,9 +230,10 @@ const Kitchen = () => {
                 </div>
                 <div className="space2-heading">
                     <div className="space2-heading-con">
-                        <h3>Hospital Furniture That Enhances Healing</h3>
-                        <p>A well-designed hospital environment isn’t just about looks - it’s about making recovery
-                            smoother. When comfort meets care, healing happens faster!</p>
+                        <h3>Commercial Kitchen Equipment That Transforms Cooking into an Art</h3>
+                        <p>A well-equipped space doesn’t just improve operations - it enhances creativity, consistency,
+                            and quality. When the kitchen is designed to perfection, every meal reflects the passion and
+                            precision behind it!</p>
                     </div>
                 </div>
             </div>
