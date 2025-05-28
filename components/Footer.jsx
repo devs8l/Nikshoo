@@ -126,7 +126,7 @@ const Footer = () => {
                                 <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985087/Container2_moobo2.png" alt="" />
                                 <h3>Reach us by phone:</h3>
                             </div>
-                            <p><u onClick={() => window.location.href = 'tel:+91 7415775000'} style={{ cursor: 'pointer' }}>+91{contactData.phone}</u></p>
+                            <p><u onClick={() => window.location.href = `tel:+91${contactData.phone}`} style={{ cursor: 'pointer' }}>+91{contactData.phone}</u></p>
                             <div className="c-top-heading">
                                 <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985087/Container3_vsvg4m.png" alt="" />
                                 <h3>Email us:</h3>

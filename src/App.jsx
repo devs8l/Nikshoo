@@ -56,7 +56,7 @@ function App() {
       {!isAdminRoute && !isLoading && <Navbar />}
 
       <div className="whatsapp-ct">
-        <a href="https://wa.me/+918103702839" target='_blank' rel="noopener noreferrer">
+        <a href="https://wa.me/+919993550133" target='_blank' rel="noopener noreferrer">
           <img src={navimg} alt="WhatsApp Icon" />
         </a>
         <Cookie />
