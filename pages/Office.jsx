@@ -153,6 +153,7 @@ const Office = () => {
                     content="office furniture, chairs, desks, tables, Nikshoo, executive chairs, meeting tables, office sofas"
                 />
             </Helmet>
+            {/* hero */}
 
             <div className="space-hero">
                 <img src="https://res.cloudinary.com/dicusurfx/image/upload/v1730985127/mobile-office-hero_phfgvu.png" className="mobile" alt="" loading='lazy' />
